@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ESI Registration (Employee State Insurance) - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">ESI Registration (Employee State Insurance)</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Provide Healthcare Benefits to Employees — ESI Compliant from Day 1</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Employer + Employee ESI Code</span>
+                    <span class="badge badge-primary">✦ Employee IP Numbers Generated</span>
+                    <span class="badge badge-info">✦ ESIC Portal Compliance</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is ESI Registration?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Employee State Insurance (ESI) is a self-financing social security and health insurance scheme for Indian workers, governed by the ESI Act, 1948. Any establishment employing 10 or more persons (in states where the threshold is 10) and whose employees earn ₹21,000 or less per month must register under ESIC (Employees' State Insurance Corporation). Employees contribute 0.75% of wages; employers contribute 3.25% — totalling 4% of wages deposited monthly with ESIC.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">ESI provides employees with medical care, sick benefits, maternity benefits, disability benefits, and dependent benefits — essentially a comprehensive health and social security net. ESI card holders can avail medical services at ESIC hospitals and dispensaries across India.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">For employers, ESI registration protects against labour law violations and provides a competitive edge in attracting quality employees.</p>
+                    <div style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Any establishment with 10+ employees where any employee earns ₹21,000/month or less must register under ESIC — non-compliance is a labour law violation.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs ESI Registration?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Employers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Any factory or establishment with 10+ employees (threshold varies by state)</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Wage-Based Applicability</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Establishments where any employee earns ₹21,000/month or less</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">New Employers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">New companies hiring first employees who want to offer ESIC health benefits</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">COMPLETE PACKAGE</span>
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">ESI Registration</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹2,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Employer code + employee enrollment</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Any employer with 10+ employees</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ESIC portal registration</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Employer code generation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Employee enrollment (IP number generation)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> First-month challan guidance</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ESIC card advisory</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> 1 year ESIC return filing and challan payment compliance</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹2,999</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil (ESIC registration is free)</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What if an employee earns more than ₹21,000/month?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Employees earning above ₹21,000/month (gross wages) are excluded from ESI coverage. If an existing ESI-covered employee gets a salary hike above ₹21,000, they continue in ESI coverage until the end of that contribution period.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is ESI applicable for contract workers and daily-wage employees?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — contract workers, temporary employees, and daily-wage workers covered under the establishment's payroll are all eligible for ESI coverage if their wages are within the threshold.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">ESI Registration</span><span style="font-weight:700;">₹2,999 one-time</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees</span><span style="font-weight:700;color:var(--success);">Nil</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Threshold</span><span style="font-weight:700;">10+ Employees</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Wage Ceiling</span><span style="font-weight:700;">₹21,000/month</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Compliance</span><span style="font-weight:700;">1 Year Included</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees</span><span style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ ESI Contribution</p>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Employee</span><span style="font-weight:600;">0.75% of Wages</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Employer</span><span style="font-weight:600;">3.25% of Wages</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Total</span><span style="font-weight:600;">4% Monthly</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">Benefits</span><span style="font-weight:600;">Medical + Maternity</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Register for ESI — VITTAX Gets Your ESIC Code and Employee Enrollment Done</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Employer + employee ESI code, IP numbers generated, ESIC portal compliance — provide healthcare benefits from day one</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
+                <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
