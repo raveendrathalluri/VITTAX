@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Audit & Assurance Services - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Audit &amp; Assurance Services</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Independent Verification · Stakeholder Confidence · Regulatory Compliance</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ All Types of Audit Under One Roof</span>
+                    <span class="badge badge-primary">✦ CA-Signed Reports</span>
+                    <span class="badge badge-info">✦ Regulatory &amp; Lender Accepted</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What are Audit &amp; Assurance Services?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Audit is the independent examination of financial records, processes, and controls by a qualified professional (Chartered Accountant) to express an opinion on their accuracy, completeness, and compliance with applicable standards. Assurance services provide confidence to management, investors, lenders, regulators, and other stakeholders that the information they are relying upon is reliable.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX offers following types of audit and assurance services and helps clients regarding other audits also, each serving a distinct purpose.</p>
+                </div>
+
+                <!-- AUDIT TYPES -->
+                <div style="display:flex;flex-direction:column;gap:16px;">
+
+                    <!-- INTERNAL AUDIT -->
+                    <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                            <span style="background:rgba(26,75,140,.08);color:var(--primary);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:50px;white-space:nowrap;">9.12A</span>
+                            <h3 style="font-size:.95rem;font-weight:700;color:var(--text);">Internal Audit</h3>
+                        </div>
+                        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">An Internal Audit is a voluntary (or mandatorily required under Rule 13 of the Companies Audit and Auditors Rules for certain classes of companies) examination of a company's internal controls, risk management, and governance processes. Unlike statutory audit (which is backward-looking), internal audit is forward-looking — identifying weaknesses in processes, fraud risks, and control gaps before they materialise into losses.</p>
+                        <div style="display:flex;flex-direction:column;gap:6px;">
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Who is it mandatory for:</strong> Listed companies and certain unlisted companies (Rule 13)</span></p>
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Voluntary applicability:</strong> Any business wanting to improve controls, reduce fraud risk, or prepare for PE/IPO</span></p>
+                        </div>
+                    </div>
+
+                    <!-- STOCK / ASSET AUDIT -->
+                    <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                            <span style="background:rgba(26,75,140,.08);color:var(--primary);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:50px;white-space:nowrap;">9.12B</span>
+                            <h3 style="font-size:.95rem;font-weight:700;color:var(--text);">Stock / Asset Audit</h3>
+                        </div>
+                        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">A Stock Audit (Physical Inventory Verification) and Fixed Asset Audit involve physically verifying the existence, condition, and valuation of inventory and fixed assets — and reconciling physical counts with book records. Banks require annual stock audits for businesses availing working capital / CC limits. Fixed asset audits are required for accurate depreciation, insurance valuation, and reporting.</p>
+                        <div style="display:flex;flex-direction:column;gap:6px;">
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Stock Audit:</strong> Businesses with CC/OD against stock pledged to banks — mandatory by lender</span></p>
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Fixed Asset Audit:</strong> Businesses wanting to clean up their fixed asset register for accurate accounts</span></p>
+                        </div>
+                    </div>
+
+                    <!-- MANAGEMENT AUDIT -->
+                    <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                            <span style="background:rgba(26,75,140,.08);color:var(--primary);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:50px;white-space:nowrap;">9.12C</span>
+                            <h3 style="font-size:.95rem;font-weight:700;color:var(--text);">Management Audit</h3>
+                        </div>
+                        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">A Management Audit evaluates the effectiveness, efficiency, and economy of management decisions and operational processes — going beyond financial records to examine how well the organisation is achieving its objectives. It is an advisory-level engagement that provides senior management with an independent assessment of whether their strategies, processes, and resources are aligned and optimised.</p>
+                        <div style="display:flex;flex-direction:column;gap:6px;">
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Who needs it:</strong> Companies whose board or PE investors want an independent view of operational efficiency</span></p>
+                        </div>
+                    </div>
+
+                    <!-- FORENSIC AUDIT -->
+                    <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+                            <span style="background:rgba(26,75,140,.08);color:var(--primary);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:50px;white-space:nowrap;">9.12D</span>
+                            <h3 style="font-size:.95rem;font-weight:700;color:var(--text);">Forensic Audit</h3>
+                        </div>
+                        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">A Forensic Audit is a specialised investigation of financial records to detect fraud, embezzlement, money laundering, or other financial crimes. It combines accounting expertise with investigative techniques — examining digital evidence, bank records, and transaction trails to establish facts that can be used in legal proceedings, regulatory investigations, or insurance claims. VITTAX's forensic team handles fraud investigation, financial due diligence for acquisitions, regulatory inquiries, and whistleblower complaint investigations.</p>
+                        <div style="display:flex;flex-direction:column;gap:6px;">
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Fraud Suspects:</strong> Companies suspecting employee fraud, vendor fraud, or financial misappropriation</span></p>
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Whistleblower Cases:</strong> Boards or audit committees investigating whistleblower complaints</span></p>
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">M&amp;A Due Diligence:</strong> Acquirers conducting financial due diligence on target companies</span></p>
+                            <p style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✔</span> <span><strong style="color:var(--text);">Legal Disputes:</strong> Litigants needing expert financial evidence for court proceedings</span></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <!-- INTERNAL AUDIT -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Internal Audit</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹9,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> onwards/qtr</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Risk-based internal audit programme</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Companies above ₹10 Cr turnover, PE-backed, Rule 13 applicants</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Risk assessment and audit plan</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Process walkthroughs</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Control testing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Audit findings report</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Management action plan tracking</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹9,999 onwards per quarter (or per engagement)</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- STOCK / ASSET AUDIT -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Stock / Asset Audit</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹4,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> onwards</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Physical verification and valuation</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Businesses with CC limits, manufacturing units, warehouses</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Physical inventory count support</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Book vs. physical reconciliation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Valuation methodology review</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Stock audit report for bank submission</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹4,999 onwards (small); ₹9,999+ larger warehouses</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- MANAGEMENT AUDIT -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Management Audit</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹14,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> onwards</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Operational effectiveness review</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Mid-to-large companies, PE-backed businesses, post-merger entities</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Process mapping and efficiency review</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Strategy vs. execution gap analysis</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Organisational structure review</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Recommendations report</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹14,999 onwards per engagement</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- FORENSIC AUDIT -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Forensic Audit</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹29,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> onwards</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Financial fraud investigation</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Companies, lenders, regulators, litigants needing fraud investigation</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Fraud risk assessment</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Transaction trail analysis</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Digital evidence review</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Witness interviews (management)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Forensic audit report (court-admissible)</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹29,999 onwards (based on scope)</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">When is a statutory audit mandatory for a private limited company?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Always — every private limited company must have its accounts audited by a Chartered Accountant every financial year, regardless of turnover or profit. There is no exemption for small companies from statutory audit under the Companies Act, 2013.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is CARO 2020?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Companies (Auditor's Report) Order, 2020 requires auditors to report on specific matters (fixed assets, inventory, loans, frauds, etc.) in addition to the main audit report. Applicable to most companies except certain small/private companies.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Internal Audit</span><span style="font-weight:700;">₹9,999/qtr onwards</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Stock / Asset Audit</span><span style="font-weight:700;">₹4,999 onwards</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Management Audit</span><span style="font-weight:700;">₹14,999 onwards</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;">
+                        <span style="color:var(--text-light);">Forensic Audit</span><span style="font-weight:700;">₹29,999 onwards</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Audit Types</span><span style="font-weight:700;">4 Specialisations</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Reports</span><span style="font-weight:700;">CA-Signed</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Compliance</span><span style="font-weight:700;">ICAI Standards</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees</span><span style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Audit Covers</p>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Internal</span><span style="font-weight:600;">Controls &amp; Risk</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Stock</span><span style="font-weight:600;">Physical Verification</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Management</span><span style="font-weight:600;">Operational Efficiency</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">Forensic</span><span style="font-weight:600;">Fraud Investigation</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Professional Audit Services — Independent, Credible, ICAI-Compliant. Talk to VITTAX</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">All types of audit under one roof — CA-signed reports, regulatory &amp; lender accepted</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
+                <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

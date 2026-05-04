@@ -1,0 +1,578 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Section 12A Registration (Income Tax Exemption for NGOs) - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
+                    Section 12A Registration (Income Tax Exemption for NGOs)</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Tax-Free Charitable Income — The
+                    Foundation of Every Compliant NGO</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Donations &amp; Grants Tax-Free</span>
+                    <span class="badge badge-primary">✦ Provisional + Final Registration</span>
+                    <span class="badge badge-info">✦ ITR-7 Filing Included</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Section 12A Registration?
+                    </h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Section 12A
+                        of the Income Tax Act, 1961 provides income tax exemption to charitable and religious trusts,
+                        NGOs, and Section 8 companies on their income — to the extent it is accumulated or set aside for
+                        charitable or religious purposes. Without 12A registration, every rupee of income received by an
+                        NGO (including donations, grants, and even bank interest) is fully taxable at the maximum
+                        marginal rate (approximately 30% + surcharge). 12A registration is therefore the single most
+                        important tax compliance requirement for any NGO immediately after its formation.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The Finance
+                        Act, 2020 brought landmark changes to the 12A/80G framework — making both registrations
+                        time-limited (renewable every 5 years instead of permanent as before), introducing provisional
+                        registration (3 months validity for new entities), and requiring re-registration for all
+                        existing registrants. All organisations registered under the old 12A regime must have obtained
+                        fresh registration under the new Section 12AB framework. VITTAX tracks these renewal deadlines
+                        for all client NGOs and files on time to avoid lapsing of exemption status.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">Post-registration, the trust
+                        must apply its income toward charitable purposes, maintain proper accounts, file annual ITR-7,
+                        and comply with the conditions of the registration — including not engaging in any activity for
+                        the benefit of a particular religious community (for trusts claiming exemption under Section
+                        11/12).</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Without 12A registration, every rupee of NGO income — including donations, grants, and bank
+                        interest — is fully taxable at approximately 30% + surcharge.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs 12A Registration?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Charitable Trusts</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Public charitable trusts registered
+                                    under Sub-Registrar or Charity Commissioner</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Registered Societies</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Societies registered under the
+                                    Societies Registration Act</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Section
+                                    8 Companies</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Section 8 Companies incorporated
+                                    under the Companies Act, 2013</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Religious Institutions</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Religious trusts and institutions
+                                    receiving donations from devotees</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Re-Registration</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Existing NGOs whose 12A
+                                    registration was granted before 2021 and requires renewal under 12AB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp;
+                        Timeline</h2>
+                    <div style="display:flex;flex-direction:column;gap:0;">
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    1</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Application on Income
+                                        Tax Portal</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–2
+                                        days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">File Form 10A (for
+                                    new/provisional registration) or Form 10AB (for final registration after 1 year of
+                                    activity) online on the Income Tax portal using DSC or Aadhaar OTP.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    2</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Document Upload</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–2
+                                        days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Upload registration
+                                    documents, Trust Deed / MOA, audited accounts (if applicable), activity details, and
+                                    the list of governing board members.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    3</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Principal
+                                        Commissioner Review</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–3
+                                        months</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">The Principal
+                                    Commissioner of Income Tax (Exemptions) reviews the application. May call for
+                                    additional documents or a hearing.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    4</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Provisional
+                                        Registration (New Entities)</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">Within
+                                        30 days typically</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">For newly
+                                    registered NGOs, a 3-year provisional 12A registration is granted. The NGO must
+                                    apply for final registration before the end of the provisional period.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    5</div>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Final Registration
+                                    </p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">1–3
+                                        months</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">After demonstrating
+                                    1–2 years of genuine charitable activity, apply for final 5-year registration using
+                                    Form 10AB.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
+                    <div style="display:flex;flex-direction:column;gap:16px;">
+                        <div>
+                            <p
+                                style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">
+                                Registration &amp; Governing Documents</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Trust
+                                    Deed (Sub-Registrar registered) / MOA &amp; AoA (for Society) / COI (for Section 8)
+                                </li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> PAN of
+                                    the trust / NGO</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> List of
+                                    trustees/directors/governing body members with PAN and Aadhaar</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p
+                                style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">
+                                Financial &amp; Activity Documents</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Audited
+                                    financial statements for last 3 years (if the organisation has been operational)
+                                </li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Activity
+                                    report — details of charitable work conducted, beneficiaries served, and programmes
+                                    run</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Bank
+                                    account statements and bank certificate</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Proof of
+                                    application of funds toward charitable purposes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p
+                                style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">
+                                Property (if applicable)</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Details
+                                    of immovable property held by the trust</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Title
+                                    documents for property held in trust name</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+
+                        <!-- 12A PROVISIONAL -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    12A Provisional Registration</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹6,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For newly formed NGOs (Form 10A)
+                                </p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Newly formed trusts, societies, and Section 8 companies within first year of
+                                activity</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Eligibility
+                                    check under Section 12A</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Application
+                                    on IT portal (Form 10A)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document
+                                    compilation and upload</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Query
+                                    response and hearing support</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Provisional
+                                    registration certificate</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹6,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- 12A FINAL -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    12A Final Registration</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹9,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For NGOs completing provisional
+                                    period (Form 10AB)</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: NGOs completing 1–2 years of activity under provisional 12A registration</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Activity
+                                    and financial review for eligibility</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Form 10AB
+                                    filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Hearing
+                                    support (if called by PCIT)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Final
+                                    5-year 12A certificate</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Post-registration ITR-7 advisory</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹9,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+
+                    <!-- 12A RE-REGISTRATION -->
+                    <div
+                        style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                        <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    12A Re-Registration</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹12,499<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For existing NGOs renewing under
+                                    the new 12AB framework</p>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="white-space:nowrap;align-self:center;">Get
+                                Started →</a>
+                        </div>
+                        <p
+                            style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                            Ideal for: All NGOs that received 12A registration before 2021 needing migration to 12AB</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Re-registration
+                                eligibility check</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Form 10AB
+                                preparation</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Compilation of
+                                activity and accounts for past 5 years</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> PCIT liaison
+                            </div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Fresh 5-year
+                                certificate</div>
+                        </div>
+                        <div
+                            style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                            VITTAX Fee: <strong style="color:var(--primary);">₹12,499</strong> &nbsp;|&nbsp; Govt. Fees:
+                            <strong style="color:var(--success);">Nil</strong></div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the difference
+                                between Section 11/12 and Section 10(23C)?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Section 11/12
+                                exemption applies to general public charitable and religious trusts that are registered
+                                under Section 12A/12AB. Section 10(23C) applies to specifically notified organisations —
+                                universities, hospitals, and certain educational institutions notified by the Central
+                                Government. Most small-to-medium NGOs and trusts register under Section 12A.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How much of the income must
+                                the NGO spend to get the exemption?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Under Section 11, a
+                                trust must apply at least 85% of its income toward charitable purposes in the same year
+                                to get the full exemption. The remaining up to 15% can be accumulated without specific
+                                approval. Amounts not spent can be accumulated under Section 11(2) for up to 5 years
+                                with PCIT notification.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What happens if the 12A
+                                registration lapses?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">If the 12A/12AB
+                                registration lapses (due to non-renewal), all income of the NGO becomes fully taxable
+                                immediately. Additionally, donors who contributed during the lapsed period lose their
+                                80G deduction. Lapsing is a critical risk — VITTAX proactively alerts all clients 6
+                                months before the renewal deadline.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can a trust that engaged in
+                                business activities still get 12A?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — provided the
+                                business is incidental to the main charitable purpose, and the entire income from
+                                business is applied toward charitable purposes. However, if the trust engages in
+                                commercial activities as its primary purpose, 12A registration may be denied or
+                                cancelled.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Provisional Registration</span><span
+                            style="font-weight:700;">₹6,999</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Final Registration</span><span
+                            style="font-weight:700;">₹9,999</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Re-Registration (12AB)</span><span
+                            style="font-weight:700;">₹12,499</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Provisional Validity</span><span
+                            style="font-weight:700;">3 Years</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Final Validity</span><span style="font-weight:700;">5
+                            Years</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Spend Requirement</span><span
+                            style="font-weight:700;">Min 85% of Income</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ 12A Covers</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Form</span><span style="font-weight:600;">10A (New) /
+                            10AB (Final)</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Tax Saving</span><span style="font-weight:600;">30%+ on
+                            All Income</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Renewal Alert</span><span style="font-weight:600;">6
+                            Months Before</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Filing</span><span style="font-weight:600;">ITR-7
+                            Annual</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get 12A Registration for Your NGO — VITTAX
+                Files, Follows Up, and Gets It Done</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Donations &amp; grants tax-free, provisional +
+                final registration, ITR-7 filing included — the foundation of every compliant NGO</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,345 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Trade Licence - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Trade Licence</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Permission to Trade — Issued by Your Local Municipal Authority</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Municipal Authority Approval</span>
+                    <span class="badge badge-primary">✦ Annual Renewal Managed</span>
+                    <span class="badge badge-info">✦ All Cities Covered</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is a Trade Licence?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">A Trade Licence (also called a Business Licence or Municipal Licence) is a certificate issued by the local municipal body — Municipal Corporation, Municipality, Gram Panchayat, or Town Panchayat — authorising a person or entity to carry on a specific trade or business from a particular premises within its jurisdictional limits. It is governed by the respective state's Municipal Acts and local body regulations, and varies in name and procedure from state to state (e.g., "Gumasta" in Maharashtra, "Trade Licence" in West Bengal and Karnataka, "Corporation Licence" in Tamil Nadu).</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">This license ensures that your business complies with local safety, health, and regulatory standards, helping you operate without legal interruptions. Operating without a valid trade licence attracts monetary penalties, forced closure, and in some states, criminal prosecution of the proprietor or director.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">Trade Licences are renewed annually (in most municipalities), and non-renewal attracts late fees and potential cancellation. VITTAX manages trade licence applications, renewals, and amendments for businesses across all major Indian cities and municipal jurisdictions, ensuring that your licence remains valid and correctly reflects your current business activity and address.</p>
+                    <div style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Operating without a valid trade licence attracts monetary penalties, forced closure, and in some states, criminal prosecution of the proprietor or director.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs a Trade Licence?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Retail Traders</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Shops, showrooms, retail outlets, supermarkets, and general merchants</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Food Businesses</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Restaurants, hotels, food stalls, cloud kitchens, and caterers</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Manufacturers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Manufacturing units, workshops, and small industrial establishments</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Medical Stores</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Chemists, pharmacies, and medical stores (in addition to Drug Licence)</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Service Businesses</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Garages, service centres, laundries, beauty salons, and personal service businesses</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Storage Facilities</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Godowns, warehouses, and storage facilities within municipal limits</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">All Commercial Establishments</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Any business operating from a commercial premises within a municipal area</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp; Timeline</h2>
+                    <div style="display:flex;flex-direction:column;gap:0;">
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">1</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Category Identification</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Identify the correct trade/business category as per the municipal body's licence classification list. Different categories have different fee structures and inspection requirements.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">2</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Document Preparation</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Compile identity, address, and premises documents; prepare the application form prescribed by the municipal body.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">3</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Application Filing</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Submit online (on the municipal corporation portal, where available) or in person at the municipal ward office. Pay prescribed fee.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">4</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Premises Inspection</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">7–30 days (municipality-dependent)</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Municipal inspector visits the premises to verify compliance with zoning, health, sanitation, and safety norms. VITTAX prepares you for inspection.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">5</div>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Licence Issuance</p>
+                                    <span style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">3–7 days post-inspection</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Upon satisfactory inspection, the Trade Licence is issued. It must be displayed prominently at the business premises at all times.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div>
+                            <p style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">Identity &amp; Business</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> PAN card and Aadhaar / identity proof of proprietor / director</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Certificate of Incorporation / partnership deed / proprietorship proof</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> GST Registration Certificate (GSTIN)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">Premises</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Rent agreement / lease deed (if rented) with NOC from landlord</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Property ownership documents (if owned)</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Latest property tax receipt of the premises</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Building plan / site plan (for manufacturing units)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <p style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">Other (Where Applicable)</p>
+                        <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                            <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> FSSAI licence copy (for food businesses)</li>
+                            <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Pollution NOC / Consent to Operate (for industries with effluents or emissions)</li>
+                            <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Fire NOC (for establishments above prescribed size or floor area)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+
+                        <!-- NEW APPLICATION -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Trade Licence — New Application</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Fresh trade licence for a new establishment</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: New shops, restaurants, offices, and establishments in any Indian city</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Category identification advisory</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Municipal application preparation &amp; filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Inspection readiness checklist</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Liaison with municipal authority</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Licence certificate procurement</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹1,999</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Municipal fee at actuals (₹500–10,000)</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- ANNUAL RENEWAL -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Annual Renewal</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Renewal of existing trade licence</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Existing trade licence holders needing hassle-free annual renewal</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Renewal application filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Payment of renewal fee</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Updated licence certificate</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Renewal calendar management</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹999/year</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Municipal renewal fee at actuals</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+
+                    <!-- MULTI-BRANCH -->
+                    <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                        <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;">
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Multi-Branch Licence</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹7,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> + Govt fees</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">New + renewal for up to 5 branches</p>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="white-space:nowrap;align-self:center;">Get Started →</a>
+                        </div>
+                        <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Retail chains, restaurant groups, multi-location businesses</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Application for up to 5 premises</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Category advisory for each branch</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Coordinated inspection support</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> All licences tracked on VITTAX compliance calendar</div>
+                        </div>
+                        <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹7,999 + Govt fees</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Municipal fees at actuals per branch</strong></div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is a Trade Licence the same as a Shop &amp; Establishment registration?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No — they are different registrations issued by different authorities. Shop &amp; Establishment is registered under the state Labour Department and governs working conditions and hours. Trade Licence is issued by the municipal body and governs the right to carry on a specific trade from specific premises. Most businesses need both.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Does a home-based business need a Trade Licence?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">It depends on the municipal body. Some municipalities exempt home-based micro enterprises below a certain turnover. Others require a licence even for home businesses. VITTAX checks the applicable municipal rules before advising.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What happens if I change my business activity after getting a Trade Licence?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">You must amend the Trade Licence to reflect the new business category before commencing the new activity. Operating under a different trade category than what is licensed is a violation. VITTAX manages amendments as part of our compliance retainer.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How far in advance should I renew my Trade Licence?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Most municipal bodies require renewal before December 31 (for the upcoming calendar year) or before the licence expiry date. Late renewal attracts penalties of 25%–100% of the licence fee in most cities. VITTAX sends reminders 60 days before expiry.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">New Application</span><span style="font-weight:700;">₹1,999</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Annual Renewal</span><span style="font-weight:700;">₹999/year</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;">
+                        <span style="color:var(--text-light);">Multi-Branch (5)</span><span style="font-weight:700;">₹7,999 + fees</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Inspection Timeline</span><span style="font-weight:700;">7–30 Days</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Renewal Reminder</span><span style="font-weight:700;">60 Days Prior</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Branches Covered</span><span style="font-weight:700;">Up to 5</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees</span><span style="font-weight:700;">₹500–10,000 Actuals</span></div>
+                </div>
+                <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Licence Covers</p>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Issued By</span><span style="font-weight:600;">Municipal Body</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Renewal</span><span style="font-weight:600;">Annual</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Late Penalty</span><span style="font-weight:600;">25%–100% of Fee</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">Display</span><span style="font-weight:600;">Mandatory at Premises</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get Your Trade Licence Done — VITTAX Manages Application, Inspection &amp; Renewal</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Municipal authority approval, annual renewal managed, all cities covered — operate without legal interruptions</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
+                <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

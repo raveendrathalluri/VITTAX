@@ -1,0 +1,597 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GST Returns Filing - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Tax &amp; Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">GST
+                    Returns — Monthly, QRMP &amp; Composition Scheme</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Never Miss a Filing Deadline —
+                    Monthly GST Compliance, Fully Managed</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ On-Time Filing Every Month</span>
+                    <span class="badge badge-primary">✦ Zero Late Fees Guaranteed</span>
+                    <span class="badge badge-info">✦ ITC-Matched Accuracy</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is GST Return Filing?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Every
+                        GST-registered business is legally required to file periodic returns reporting its outward
+                        supplies, inward supplies, and tax liability. The primary returns are <strong
+                            style="color:var(--text);">GSTR-1</strong> (outward supply details), <strong
+                            style="color:var(--text);">GSTR-3B</strong> (monthly summary return with tax payment), and
+                        <strong style="color:var(--text);">GSTR-2B</strong> (auto-populated ITC statement). Missing or
+                        delayed filings attract a late fee of <strong style="color:var(--danger);">₹50/day</strong>
+                        (₹20/day for nil returns) and block your customers from claiming ITC on purchases from you —
+                        creating business and relationship damage beyond just the penalty.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The <strong
+                            style="color:var(--text);">QRMP (Quarterly Return Monthly Payment)</strong> scheme allows
+                        eligible businesses with turnover up to ₹5 crores to file GSTR-1 and GSTR-3B quarterly, while
+                        paying tax monthly through a simplified challan — reducing the filing burden significantly. A
+                        taxpayer whose turnover is below Rs 1.5 crore can opt for <strong
+                            style="color:var(--text);">Composition Scheme</strong> with lower tax rates. No Input Tax
+                        Credit can be claimed by a dealer opting for composition scheme. Composition Scheme dealers file
+                        quarterly CMP-08 and annual GSTR-4 instead of regular monthly returns.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX provides end-to-end GST
+                        return filing — we collect your sales and purchase data, reconcile it, prepare all returns, and
+                        file them before the due date every month, every quarter. You focus on business; we handle the
+                        compliance.</p>
+                    <div
+                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+                        ⚠️ Late fees + 18% interest p.a. on delayed tax payments. Max late fee capped at ₹5,000 per
+                        return.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs This?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> All GST-registered businesses
+                            filing regular (monthly) returns — GSTR-1 + GSTR-3B</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses with turnover up to ₹5
+                            Cr opting for QRMP scheme (quarterly filing, monthly payment)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Composition Scheme dealers filing
+                            CMP-08 (quarterly) and GSTR-4 (annual)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses with high invoice
+                            volumes needing automated data preparation</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Companies where in-house team
+                            handles sales but needs CA oversight for GST filings</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses receiving GST notices
+                            for non-filing or mismatched ITC claims</div>
+                    </div>
+                </div>
+
+                <!-- RETURN FILING CALENDAR -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Return Filing Calendar</p>
+                    <div
+                        style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;">
+                        <table style="width:100%;border-collapse:collapse;font-size:.82rem;">
+                            <thead>
+                                <tr
+                                    style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);">
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">GST
+                                        Return</th>
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">
+                                        Description</th>
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">Type
+                                        of Tax Payer</th>
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">Due
+                                        Date and Other conditions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-1</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
+                                        Monthly/quarterly return for reporting outward supplies (sales).</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-primary">Regular
+                                            Taxpayer</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">Monthly:
+                                        11th of the following month<br>Quarterly: 13th of the month following the
+                                        quarter</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-2A<br><span
+                                            style="font-size:.72rem;font-weight:400;color:var(--text-light);">(Auto-generated)</span>
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Summary of
+                                        Inward Supplies and ITC available</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-info">All Taxpayers</span>
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">
+                                        Auto-generated, utilized for reconciliation purposes</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-3B</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Summary of
+                                        outward supplies &amp; ITC, tax payment</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-primary">Regular
+                                            Taxpayer</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">Monthly:
+                                        20th of the following month<br>Quarterly: 22nd or 24th of the month following
+                                        the quarter</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        CMP-08</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Quarterly
+                                        statement-cum-challan to declare self-assessed tax liability and make payments.
+                                    </td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-warning">Composition Scheme
+                                            Dealer</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">18th of the
+                                        month succeeding the quarter</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-4</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Annual
+                                        return</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-warning">Composition Scheme
+                                            Dealer</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">Annually:
+                                        30th of April following the end of the financial year</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-5/5A</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Outward
+                                        supplies</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-info">Non-Resident Taxpayer
+                                            and OIDAR service providers</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">13th
+                                        (GSTR-5) / 20th (GSTR-5A) of the following month</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-6</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Outward
+                                        supplies</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-info">Input Service
+                                            Distributor</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">13th of the
+                                        following month</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-7</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">TDS details
+                                    </td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-info">Tax Deducted at Source
+                                            (TDS)</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">10th of the
+                                        following month</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-8</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Tax
+                                        collected at source (TCS) by e-commerce operators</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-info">E-commerce
+                                            Operator</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">10th of the
+                                        following month</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-9</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Annual
+                                        return for regular taxpayers</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-primary">Regular Taxpayer
+                                            (Annual)</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">31st
+                                        December of the following financial year</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-9C</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Annual
+                                        reconciliation and audit for turnover Above ₹5 crore</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-primary">Taxpayers with
+                                            turnover exceeding ₹5 crore</span></td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">Filed along
+                                        with GSTR-9, by 31st December of the following financial year</td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-10</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Final return
+                                        upon cancellation/surrender of GST registration</td>
+                                    <td style="padding:10px 14px;"><span class="badge badge-warning">Taxpayers</span>
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">Within 3
+                                        months from the date of cancellation or date of cancellation order, whichever is
+                                        later</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS REQUIRED -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Documents / Data Required Monthly</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📤 Sales Data</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Sales invoices (B2B and
+                                    B2C)</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Credit notes and debit
+                                    notes issued</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Export invoices and
+                                    shipping bills (if applicable)</div>
+                            </div>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📥 Purchase Data</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Purchase invoices from
+                                    GST-registered vendors</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Import documents (if
+                                    applicable)</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> RCM purchase details
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                🏦 Bank / Payment Data</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> GST payment challans (if
+                                    self-paid)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Starter Returns</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹499<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Up to 50 invoices/month — ideal for
+                                    new businesses</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Proprietors, freelancers, and small businesses with low transaction volume
+                            </p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GSTR-1
+                                    preparation &amp; filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GSTR-3B
+                                    preparation &amp; filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Basic 2A/2B
+                                    ITC matching</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Monthly
+                                    filing summary report</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Email &amp;
+                                    WhatsApp support</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹499/month</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Standard Returns</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹1,499<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Up to 200 invoices/month — for
+                                    active businesses</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: SMEs, traders, and service businesses with moderate monthly invoice volume
+                            </p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Starter Returns</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GSTR-1 with
+                                    full B2B/B2C/export breakup</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ITC
+                                    reconciliation — 2A/2B vs. books</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Credit note
+                                    and debit note handling</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> RCM
+                                    computation &amp; advisory</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Monthly MIS
+                                    on GST payable vs. ITC</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹1,499/month</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Professional Returns</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹2,499<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Unlimited invoices — for
+                                    high-volume businesses</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Large businesses, distributors, and businesses with multi-branch GST filing
+                                needs</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Standard Returns</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Unlimited
+                                    invoice volume</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> QRMP scheme
+                                    management (if opted)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Composition
+                                    scheme filing (CMP-08 + GSTR-4)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Advance
+                                    ruling advisory (if required)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Dedicated
+                                    GST manager on call</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹2,499/month</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the late fee for
+                                delayed GST return filing?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Late fee is ₹50 per
+                                day (₹25 CGST + ₹25 SGST) for returns with tax liability. For nil returns, it is ₹20 per
+                                day. Additionally, interest at 18% p.a. is charged on late tax payments. Maximum late
+                                fee is capped at ₹5,000 per return.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the QRMP scheme and
+                                who is eligible?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">The Quarterly Return
+                                Monthly Payment (QRMP) scheme is for businesses with turnover up to ₹5 crores in the
+                                previous financial year. Under QRMP, GSTR-1 and GSTR-3B are filed quarterly, but tax is
+                                paid monthly through a simple PMT-06 challan. It reduces filing workload significantly.
+                            </p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What happens if I don't file
+                                GST returns?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Non-filing blocks you
+                                from filing subsequent returns, accumulates late fees and interest, triggers automated
+                                notices from the GST department, and — most critically — prevents your buyers from
+                                claiming ITC on purchases from you, damaging your business relationships.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I revise a GST return
+                                after filing?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">GSTR-3B cannot be
+                                revised once filed. Corrections can be made in the next period. GSTR-1 can be amended in
+                                subsequent filing periods using amendment tables. VITTAX proactively checks all data
+                                before filing to minimise errors.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is GSTR-2B and why does
+                                it matter?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">GSTR-2B is an
+                                auto-populated, static ITC statement generated on the 14th of every month based on your
+                                suppliers' GSTR-1 filings. You can only claim ITC that appears in your GSTR-2B. VITTAX
+                                reconciles your 2B against your purchase register every month to ensure you claim every
+                                rupee of eligible ITC.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Starter Returns</span><span
+                            style="font-weight:700;">₹499/mo</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Standard Returns</span><span
+                            style="font-weight:700;">₹1,499/mo</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Professional Returns</span><span
+                            style="font-weight:700;">₹2,499/mo</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Filing Frequency</span><span
+                            style="font-weight:700;">Monthly / Quarterly</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Late Fee</span><span
+                            style="font-weight:700;color:var(--danger);">₹50/day</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">ITC Matching</span><span
+                            style="font-weight:700;">GSTR-2B</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Due Dates
+                    </p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">GSTR-1</span><span style="font-weight:600;">11th of
+                            month</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">GSTR-3B</span><span style="font-weight:600;">20th of
+                            month</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">CMP-08</span><span style="font-weight:600;">18th post
+                            quarter</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">GSTR-9</span><span style="font-weight:600;">31st
+                            December</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Never Miss a GST Deadline Again</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Enrol in Monthly GST Management → We handle
+                filing, ITC matching &amp; compliance</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Enrol Now →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

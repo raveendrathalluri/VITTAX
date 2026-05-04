@@ -1,0 +1,401 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}FEMA / FDI / ODI Compliance - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">NRI &amp; International Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">FEMA /
+                    FDI / ODI Compliance</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Cross-Border Investments — FEMA
+                    Compliant, RBI Approved</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ FDI Reporting Done Right</span>
+                    <span class="badge badge-primary">✦ ODI Structuring &amp; Filings</span>
+                    <span class="badge badge-info">✦ RBI Approval Assistance</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is FEMA Compliance?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The Foreign
+                        Exchange Management Act, 1999 (FEMA) governs all foreign exchange transactions in India —
+                        including Foreign Direct Investment (FDI) into Indian companies, Overseas Direct Investment
+                        (ODI) by Indian entities abroad, External Commercial Borrowings (ECB), and cross-border asset
+                        transfers. FEMA is administered by the Reserve Bank of India (RBI) through its Authorised Dealer
+                        banks and Regional Offices.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">FEMA
+                        compliance involves filing mandatory reports (FC-GPR for FDI receipt, FC-TRS for share transfer,
+                        ODI returns for overseas investments), obtaining prior RBI approval for restricted transactions,
+                        and maintaining prescribed documents for RBI inspection. Non-compliance attracts penalties of up
+                        to 3 times the amount involved or ₹2 lakh per day — making this one of the most consequential
+                        compliance areas for cross-border businesses.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX's FEMA team assists
+                        startups receiving foreign funding, promoters investing abroad, companies with NRI shareholders,
+                        and businesses structuring international joint ventures — handling all filings, opinions, and
+                        RBI representations.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Non-compliance attracts penalties of up to 3 times the amount involved or ₹2 lakh per day —
+                        one of the most consequential compliance areas for cross-border businesses.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs FEMA Advisory?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Startups Receiving
+                                    FDI:</strong> Indian startups receiving FDI from foreign VCs, angels, or corporate
+                                investors</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Share
+                                    Transfers:</strong> Indian companies with NRI shareholders transferring
+                                shares</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Overseas
+                                    Expansion:</strong> Indian businesses establishing wholly-owned subsidiaries (WOS)
+                                abroad</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>NRI
+                                    Property:</strong> NRIs purchasing immovable property in India or repatriating sale
+                                proceeds</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>ECB
+                                    Borrowers:</strong> Companies raising External Commercial Borrowings (ECB) from
+                                foreign lenders</span></div>
+                    </div>
+                </div>
+
+                <!-- KEY FEMA SERVICES -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Key FEMA Services</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                🌍 FDI (Foreign Direct Investment)</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> FDI eligibility check —
+                                    sector, route (automatic vs. approval), entry conditions</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> FC-GPR filing on FIRMS
+                                    portal (within 30 days of allotment)</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> FC-TRS filing for share
+                                    transfer between resident and non-resident</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Annual Return on Foreign
+                                    Liabilities &amp; Assets (FLA return — July 15 deadline)</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                🌐 ODI (Overseas Direct Investment)</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> ODI structuring —
+                                    eligible routes, limits, conditions</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> APR (Annual Performance
+                                    Report) filing for overseas entities</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> RBI approval applications
+                                    for restricted ODI transactions</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📋 Other FEMA</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> NRI property purchase /
+                                    sale FEMA compliance</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> ECB structuring,
+                                    reporting, and end-use compliance</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Compounding of FEMA
+                                    contraventions (RBI compounding proceedings)</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    FC-GPR Filing</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹5,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        filing</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Single FDI reporting post equity
+                                    allotment</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Startups and companies receiving first FDI round</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FC-GPR
+                                    preparation and filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FIRMS
+                                    portal submission</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ARF if
+                                    applicable</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Compliance
+                                    checklist</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹5,999 per filing</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    FEMA Compliance Package</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹19,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/year</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Annual FEMA compliance for FDI
+                                    companies</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Companies with existing FDI and regular transactions</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FC-GPR /
+                                    FC-TRS filings</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FLA Annual
+                                    Return</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FEMA
+                                    opinion for transactions</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> RBI
+                                    correspondence support</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹19,999/year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    FEMA Advisory Retainer</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹39,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/year</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Ongoing FEMA &amp; RBI advisory</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Multi-round funded startups, holding structures, JVs</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Unlimited
+                                    FEMA opinions</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> All filings
+                                    included</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> RBI
+                                    approval drafting</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Compounding
+                                    assistance</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Quarterly
+                                    review call</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹39,999/year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the FLA return and
+                                who must file it?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">The Annual Return on
+                                Foreign Liabilities and Assets (FLA) must be filed by July 15 by every Indian
+                                company/LLP that has received FDI or made overseas investment — even if no new
+                                transactions occurred during the year. Non-filing attracts a flat penalty.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can FEMA contraventions be
+                                regularised?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — through RBI's
+                                Compounding mechanism. We assist with the compounding application, calculation of
+                                penalty, and representation before RBI.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">FC-GPR Filing</span><span
+                            style="font-weight:700;">₹5,999</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">FEMA Compliance Pack</span><span
+                            style="font-weight:700;">₹19,999/yr</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Advisory Retainer</span><span
+                            style="font-weight:700;">₹39,999/yr</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">FC-GPR Deadline</span><span style="font-weight:700;">30
+                            Days of Allotment</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">FLA Return Deadline</span><span
+                            style="font-weight:700;">July 15</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Max Penalty</span><span
+                            style="font-weight:700;color:var(--danger);">3x Amount / ₹2L/day</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key FEMA Forms
+                    </p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">FC-GPR</span><span style="font-weight:600;">FDI — Share
+                            Allotment</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">FC-TRS</span><span style="font-weight:600;">Share
+                            Transfer</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">FLA Return</span><span style="font-weight:600;">Annual
+                            (July 15)</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">APR</span><span style="font-weight:600;">ODI Annual
+                            Report</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Navigate FEMA Compliance with Confidence —
+                Consult VITTAX Today</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">FC-GPR, FC-TRS, FLA return, ODI filings, RBI
+                approvals — all handled by our FEMA specialists</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

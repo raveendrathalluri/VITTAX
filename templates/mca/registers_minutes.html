@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Statutory Registers, Minutes & Records Maintenance - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">MCA &amp; Corporate Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
+                    Statutory Registers, Minutes &amp; Records Maintenance</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Your Company's Legal Memory —
+                    Maintained Accurately, Available for Any Audit</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ All Statutory Registers Maintained</span>
+                    <span class="badge badge-primary">✦ Board Minutes Prepared Quarterly</span>
+                    <span class="badge badge-info">✦ Due Diligence Ready Records</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What are Statutory Registers?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Every
+                        company is required by the Companies Act, 2013 to maintain a comprehensive set of statutory
+                        registers at its Registered Office — Register of Members (MGT-1), Register of Directors (MBP-1),
+                        Register of Charges (CHG-7), Register of Loans and Investments, Register of Contracts with
+                        Related Parties, and several others. These registers are legal documents that must be available
+                        for inspection by shareholders, directors, or the ROC at any time. Failure to maintain statutory
+                        registers invites penalties of up to ₹1 lakh and continuing penalties of ₹500 per day.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Minutes of
+                        all Board Meetings and General Meetings are also mandatory legal records that must be recorded
+                        within 30 days of each meeting, signed by the Chairman of the meeting, and maintained in
+                        physical or digital form at the Registered Office. In the event of any corporate dispute,
+                        shareholder disagreement, regulatory inquiry, or M&amp;A due diligence, statutory registers and
+                        board minutes are the first documents reviewed — and incomplete or absent records create serious
+                        legal and reputational risk.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX offers statutory
+                        records maintenance as an ongoing annual service — maintaining all required registers in
+                        compliant format, preparing board and shareholder meeting minutes (ordinary and extraordinary),
+                        and ensuring your company's corporate records are always clean, complete, and audit-ready.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Failure to maintain statutory registers invites penalties of up to ₹1 lakh and continuing
+                        penalties of ₹500 per day.
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">ANNUAL
+                                SERVICE</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Annual Registers &amp; Minutes Maintenance</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹2,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/year</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Ongoing records management</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: All companies wanting professionally maintained statutory records</p>
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                        Maintenance of all required statutory registers</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Board
+                                        Meeting minutes — up to 4 per year</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> AGM
+                                        minutes preparation</li>
+                                </ul>
+                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Annual
+                                        disclosure updates (MBP-1, DIR-8, etc.)</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Records
+                                        available in digital format for audit</li>
+                                </ul>
+                            </div>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹2,999/year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can statutory registers be
+                                maintained digitally?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. The Companies Act
+                                allows maintenance of statutory registers in electronic form, subject to compliance with
+                                the applicable rules (including security, access controls, and audit trail
+                                requirements). VITTAX maintains records in secure digital format with version tracking.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Annual Registers &amp; Minutes</span><span
+                            style="font-weight:700;">₹2,999/yr</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Minutes Deadline</span><span style="font-weight:700;">30
+                            Days of Meeting</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Penalty (non-maintenance)</span><span
+                            style="font-weight:700;color:var(--danger);">Up to ₹1 Lakh</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Continuing Penalty</span><span
+                            style="font-weight:700;color:var(--danger);">₹500/day</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Digital Maintenance</span><span
+                            style="font-weight:700;color:var(--success);">Allowed</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Registers
+                    </p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Register of Members</span><span
+                            style="font-weight:600;">MGT-1</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Register of Directors</span><span
+                            style="font-weight:600;">MBP-1</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Register of Charges</span><span
+                            style="font-weight:600;">CHG-7</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Board Minutes</span><span style="font-weight:600;">Up to
+                            4/year</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Let VITTAX Maintain Your Company's
+                Statutory Records</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Enquire Today → We maintain all registers,
+                prepare board minutes, and keep your records audit-ready year-round</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Enquire Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

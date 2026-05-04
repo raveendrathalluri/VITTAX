@@ -1,0 +1,448 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GST Notices & Litigation Support - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Tax &amp; Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">GST
+                    Notices &amp; Litigation Support</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">A GST Notice Is Not the End —
+                    Expert Representation to Protect Your Business</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Timely Response Guaranteed</span>
+                    <span class="badge badge-primary">✦ Expert Legal Representation</span>
+                    <span class="badge badge-info">✦ Maximum Dispute Resolution</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is GST Notice Handling?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The GST
+                        department issues various types of notices — ASMT-10 (discrepancy notice after return scrutiny),
+                        DRC-01 (show cause notice for demand), GSTR-3A (non-filing notice), REG-17 (cancellation
+                        notice), and others. Each notice has a specific response deadline — typically 15 to 30 days —
+                        and non-response or inadequate response results in ex-parte orders, confirmed demands, and
+                        recovery proceedings against your business.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">GST
+                        litigation covers the entire legal and administrative journey — from responding to the initial
+                        notice, appearing before the Adjudicating Authority, filing an appeal before the GST Appellate
+                        Authority (First Appeal), and further appealing to the Appellate Tribunal (GST-AT) or High Court
+                        if necessary. Each stage has strict timelines and procedural requirements that require expert
+                        legal and tax knowledge.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX provides expert GST
+                        notice response and litigation support — our team reviews your notice, prepares a fact-based
+                        written response with supporting documents and legal citations, appears before GST officers on
+                        your behalf, and represents you at every level of the appellate hierarchy if needed.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Non-response or inadequate response results in ex-parte orders, confirmed demands, and
+                        recovery proceedings against your business.
+                    </div>
+                </div>
+
+                <!-- NOTICES TABLE -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Types of Notices and Their
+                        Complications — We Handle All Notices</p>
+                    <div
+                        style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;">
+                        <table style="width:100%;border-collapse:collapse;font-size:.82rem;">
+                            <thead>
+                                <tr
+                                    style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);">
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">Type
+                                    </th>
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">
+                                        Purpose</th>
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">
+                                        Action Required</th>
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">Time
+                                        Limit</th>
+                                    <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">If
+                                        Ignored</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        GSTR-3A</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Return not
+                                        filed</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">File Pending
+                                        return</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">15 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Best-Judgement assessment</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        ASMT-10</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Return
+                                        mismatch</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Explain / Pay
+                                        differential</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">30 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Demand order issued</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        ASMT-14</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Special
+                                        audit</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Cooperate with
+                                        audit</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">As notified
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Penalty &amp; Demand</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        REG-03</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Registration
+                                        clarification</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Submit explanation
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">7 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Application rejected</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        REG-17</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Cancel GST
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Justify
+                                        registration</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">7 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        GST cancelled</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        REG-23</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Revoke
+                                        cancellation</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Apply for
+                                        revocation</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">30 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Registration lost</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        CMP-05</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Composition
+                                        scheme violation</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Reply / exit
+                                        scheme</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">15 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Scheme withdrawn</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        CMP-07</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Wrong
+                                        Composition tax</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Pay differential
+                                        tax</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">As specified
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Tax Demand</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        RFD-08</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Refund issue
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Clarify refund
+                                        claim</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">15 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Refund rejected</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        RFD-09</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Refund
+                                        rejection</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Respond with
+                                        details</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">15 days</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Refund denied</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        DRC-01A</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Pre-SCN
+                                        intimation for voluntary tax payment</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Pay tax</td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">As specified
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Demand order issued</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        DRC-01</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Tax Demand
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Pay / file reply
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">As specified
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Recovery starts</td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
+                                        EWB-03</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">E-way bill
+                                        mismatch</td>
+                                    <td style="padding:10px 14px;font-size:.82rem;color:var(--text);">Explain movement
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--text-light);">As specified
+                                    </td>
+                                    <td style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
+                                        Penalty / Seizure</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Notice Response</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    From ₹2,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        (based on complexity)</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Single notice — written reply +
+                                    filing</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Businesses that received a single GST notice and need an expert response</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Notice
+                                    analysis and strategy</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Written
+                                    response drafting</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Supporting
+                                    document compilation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Filing on
+                                    GST portal</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Follow-up
+                                    tracking</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">From ₹2,999 (based on
+                                    complexity)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Full Litigation Support</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    From ₹9,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        (based on demand amount and complexity)</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">From notice through all appeals</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Businesses facing confirmed demands, major ITC reversals, or registration
+                                cancellation</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Notice
+                                    response (all types)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Representation before GST officer</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> First
+                                    appeal before Appellate Authority</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> High Court
+                                    petition preparation (if required)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Demand stay
+                                    application advisory</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> All
+                                    correspondence and follow-up</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">From ₹9,999 (based on demand amount
+                                    and complexity)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How many days do I have to
+                                respond to a GST notice?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Response timelines
+                                vary: ASMT-10 — typically 30 days. DRC-01 — 30 days from service. GSTR-3A — 15 days.
+                                REG-17 — 7 days. Missing the deadline results in ex-parte orders. VITTAX ensures timely
+                                response to every notice.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can a GST demand be reduced
+                                or eliminated at the appeal stage?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. A significant
+                                percentage of GST demands are reduced or eliminated at the First Appeal stage if the
+                                original notice was issued on incorrect legal grounds or insufficient evidence. VITTAX's
+                                litigation team has strong experience in winning relief at the appeal stage.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Notice Response</span><span style="font-weight:700;">From
+                            ₹2,999</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Full Litigation Support</span><span
+                            style="font-weight:700;">From ₹9,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Response Time</span><span style="font-weight:700;">Within
+                            24 Hours</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Notices Handled</span><span style="font-weight:700;">All
+                            Types</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Appeal Levels</span><span style="font-weight:700;">All
+                            Levels</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(231,76,60,.06);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--danger);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--danger);margin-bottom:8px;">⚡ Notice
+                        Deadlines</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(231,76,60,.1);font-size:.78rem;">
+                        <span style="color:var(--text-light);">ASMT-10</span><span style="font-weight:600;">30
+                            days</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(231,76,60,.1);font-size:.78rem;">
+                        <span style="color:var(--text-light);">DRC-01</span><span style="font-weight:600;">30
+                            days</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(231,76,60,.1);font-size:.78rem;">
+                        <span style="color:var(--text-light);">GSTR-3A</span><span style="font-weight:600;">15
+                            days</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">REG-17</span><span style="font-weight:600;">7 days</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Received a GST Notice?</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Talk to Our Expert Within 24 Hours → We analyse,
+                respond, and represent you at every stage</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Talk to Our Expert
+                    Within 24 Hours →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">View
+                    Plans</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

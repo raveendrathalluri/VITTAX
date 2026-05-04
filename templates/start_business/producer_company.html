@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Producer Company Registration - VITTAX{% endblock %}
+{% block extra_css %}
+<style>
+    .hero {
+        padding: 145px 0 95px;
+        background: radial-gradient(circle at top right, rgba(34, 197, 94, .14), transparent 28%), linear-gradient(135deg, #effdf5, #f8fffb);
+        text-align: center;
+        position: relative;
+        overflow: hidden
+    }
+
+    .hero:after {
+        content: '';
+        position: absolute;
+        left: -5%;
+        right: -5%;
+        bottom: -42px;
+        height: 90px;
+        background: #fff;
+        border-radius: 50% 50% 0 0/100% 100% 0 0
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 4vw, 3.8rem);
+        font-weight: 900;
+        margin-bottom: 14px
+    }
+
+    .hero p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: var(--text-light);
+        font-size: 1.08rem;
+        line-height: 1.85
+    }
+
+    .section {
+        padding: 90px 0
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 18px
+    }
+
+    .section p {
+        line-height: 1.9;
+        color: var(--text-light)
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: 0 16px 36px rgba(15, 23, 42, .08);
+        border: 1px solid rgba(34, 197, 94, .12)
+    }
+
+    .price {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #16a34a;
+        margin: 10px 0 14px
+    }
+
+    .faq details {
+        background: #fff;
+        border-radius: 18px;
+        padding: 18px 20px;
+        margin-bottom: 16px;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
+    }
+
+    .cta {
+        background: linear-gradient(135deg, #16a34a, #15803d);
+        color: #fff;
+        border-radius: 30px;
+        padding: 58px 38px;
+        text-align: center
+    }
+
+    .cta h2 {
+        color: #fff
+    }
+
+    .cta p {
+        color: rgba(255, 255, 255, .92)
+    }
+
+    @media(max-width:768px) {
+        .hero {
+            padding: 120px 0 72px
+        }
+
+        .section {
+            padding: 64px 0
+        }
+
+        .grid {
+            grid-template-columns: 1fr
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class='hero'>
+    <div class='container'><span class='section-tag'>START A BUSINESS</span>
+        <h1>Producer Company Registration</h1>
+        <p>Empower Farmers & Artisans — The FPO / Producer Company Structure</p><a href='#pricing'
+            class='btn btn-primary' style='margin-top:24px'>Get Started</a>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>What is a Producer Company?</h2>
+        <p>A Producer Company is a special category of company under the Companies Act, 2013 designed specifically for
+            primary producers — farmers, fishermen, artisans, weavers, and other persons engaged in any activity
+            connected with primary production (agriculture, horticulture, animal husbandry, forestry, fisheries, etc.).
+        </p>
+        <p>A Producer Company (also called Farmer Producer Organisation or FPO) allows individual producers to pool
+            resources, access institutional credit (NABARD, SFAC), procure inputs collectively at lower costs, and
+            market their produce collectively for better realisation. Minimum 10 individual producers or 2 producer
+            institutions are required to form a Producer Company.</p>
+        <p>The Government of India actively promotes FPOs/Producer Companies through subsidies, equity grants (up to ₹18
+            lakh per FPO from NABARD), credit guarantees (CGTMSE extended), and tax exemptions under the Income Tax Act
+            (100% deduction on profits for FPOs with turnover up to ₹100 crore).</p>
+    </div>
+</section>
+<section class='section' style='background:linear-gradient(180deg,#f2fff7,#ecfff4)'>
+    <div class='container'>
+        <h2>Why Choose a Producer Company?</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>✦ Income Tax Exemption</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ NABARD Grant Eligible</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ Collective Bargaining Power</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Who Should Register a Producer Company?</h2>
+        <div class='grid'>
+            <div class='card'>✔ Farmers’ Groups: Groups of 10+ farmers wanting to form an FPO for collective agriculture
+            </div>
+            <div class='card'>✔ Other Producers: Fishermen, weavers, artisans, and other primary producers</div>
+            <div class='card'>✔ NGOs & State Departments: NGOs and state agriculture departments promoting farmer
+                collectives</div>
+            <div class='card'>✔ Agri-tech Companies: Agri-tech companies structuring farmer-ownership models</div>
+        </div>
+    </div>
+</section>
+<section class='section' id='pricing' style='background:linear-gradient(180deg,#f2fff7,#ecfff4)'>
+    <div class='container'>
+        <h2>Pricing Plans</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>FPO REGISTRATION — Complete Producer Company registration</h3>
+                <div class='price'>₹14,999</div>
+                <p><strong>Ideal for:</strong> Farmer groups, NGO-promoted FPOs</p>
+                <p>✓ SPICe+ filing<br>✓ MOA + AOA (Producer Company format)<br>✓ COI + PAN<br>✓ NABARD registration
+                    advisory<br>✓ Income Tax Exemption advisory</p>
+                <p><strong>VITTAX Fee:</strong> ₹14,999 | <strong>Govt. Fees:</strong> MCA fees at actuals</p>
+            </div>
+            <div class='card'>
+                <h3>FPO COMPLETE PACKAGE — Registration + Compliance + Grant Advisory</h3>
+                <div class='price'>₹29,999</div>
+                <p><strong>Ideal for:</strong> Large farmer collectives seeking institutional funding</p>
+                <p>✓ Everything in Registration<br>✓ SFAC / NABARD equity grant application<br>✓ FPO compliance
+                    calendar<br>✓ CGTMSE credit advisory</p>
+                <p><strong>VITTAX Fee:</strong> ₹29,999 | <strong>Govt. Fees:</strong> MCA fees + Govt application fees
+                    at actuals</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container faq'>
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>Q: What is the income tax benefit for a Producer Company?</summary>
+            <p>A: Under Section 80PA (inserted by Finance Act, 2018), a producer company engaged in agricultural
+                activities with turnover up to ₹100 crore is eligible for 100% deduction of profits — effectively zero
+                income tax. This is a major advantage over other corporate structures.</p>
+        </details>
+        <details>
+            <summary>Q: How many members are required for a Producer Company?</summary>
+            <p>A: Minimum 10 individual producer members (farmers, fishermen, etc.) or 2 producer institutions (other
+                Producer Companies or cooperative societies). Maximum members — no statutory ceiling.</p>
+        </details>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <div class='cta'>
+            <h2>► Form Your Farmer Producer Organisation (FPO)</h2>
+            <p>VITTAX Specialises in Producer Companies</p><a href='#' class='btn btn-light'>Talk to Expert</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

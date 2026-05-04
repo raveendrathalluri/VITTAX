@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}LLP Annual Filings — Form 11 & Form 8 - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">MCA &amp; Corporate Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">LLP
+                    Annual Filings — Form 11 &amp; Form 8</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Keep Your LLP Compliant — File
+                    Form 11 and Form 8 Before the Deadline</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Form 11 by 30th May</span>
+                    <span class="badge badge-primary">✦ Form 8 by 30th October</span>
+                    <span class="badge badge-info">✦ Penalty of ₹100/Day Avoided</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What are the LLP Annual Filings?
+                    </h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Every
+                        Limited Liability Partnership (LLP) registered under the LLP Act, 2008 must file two annual
+                        forms with the MCA: Form 11 (Annual Return) — due by 30th May each year, and Form 8 (Statement
+                        of Account &amp; Solvency) — due by 30th October each year. Unlike companies, LLPs have no AGM
+                        requirement, but the annual filing obligation is equally strict. Non-filing attracts a penalty.
+                        Late fee is based whether LLP is small LLP or not and based on total contribution amount.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">Form 11 is a comprehensive
+                        annual return disclosing the LLP's partners, their capital contributions, changes in partners
+                        during the year, and business activities summary. Form 8 contains the Statement of Account
+                        (P&amp;L and Balance Sheet) and a Solvency declaration by designated partners — confirming that
+                        the LLP is able to pay its debts. For LLPs with annual turnover above ₹40 lakhs or capital
+                        contribution above ₹25 lakhs, the financial statements in Form 8 must be audited by a Practicing
+                        Chartered Accountant.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Non-filing attracts a penalty of ₹100/day. The MCA can initiate strike-off proceedings
+                        against LLPs with continued non-compliance under Section 75 of the LLP Act.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs This?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> All LLPs registered under the LLP
+                            Act, 2008 — mandatory regardless of turnover or activity</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Dormant LLPs with no business
+                            activity — annual filing is still mandatory</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> LLPs in their first year — first
+                            Form 11 due 30 May after incorporation year end</div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    LLP Annual Filing — Both Forms</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹3,999</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Form 11 + Form 8</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: All LLPs — active or dormant — with standard compliance requirements</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Form 11
+                                    (Annual Return) preparation and filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Form 8
+                                    (Statement of Account &amp; Solvency) preparation and filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> P&amp;L and
+                                    Balance Sheet in LLP format</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Solvency
+                                    declaration drafting</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MCA
+                                    acknowledgement</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹3,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    LLP Filing + Auditor verification &amp; signing</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹4,999</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For LLPs requiring audited accounts
+                                    in Form 8</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: LLPs with turnover above ₹40 lakhs or capital contribution above ₹25 lakhs
+                            </p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in standard LLP Annual Filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Audit
+                                    verification &amp; signing with CA for Form 8</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Audited
+                                    financial statements in LLP format</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Auditor's
+                                    certificate for Form 8 attachment</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹4,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--text);">Nil (Audit fee extra depending on
+                                    turnover)</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the difference
+                                between Form 11 and Form 8?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Form 11 is the Annual
+                                Return — it reports information about partners, their capital, changes during the year,
+                                and business activities. It is due by 30th May. Form 8 is the financial statement form —
+                                it contains the P&amp;L, Balance Sheet, and solvency declaration. It is due by 30th
+                                October. Both are mandatory every year.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is audit mandatory for all
+                                LLPs?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Audit is mandatory
+                                only for LLPs with annual turnover above ₹40 lakhs or capital contribution above ₹25
+                                lakhs. Other LLPs file self-certified financial statements in Form 8 signed by
+                                designated partners.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can an LLP be struck off for
+                                non-filing?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. The MCA can
+                                initiate strike-off proceedings against LLPs with continued non-compliance under Section
+                                75 of the LLP Act. Designated partners can also be declared defaulters, affecting their
+                                ability to hold directorships.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">LLP Annual Filing</span><span
+                            style="font-weight:700;">₹3,999</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Filing + Auditor Signing</span><span
+                            style="font-weight:700;">₹4,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Form 11 Deadline</span><span
+                            style="font-weight:700;">30th May</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Form 8 Deadline</span><span style="font-weight:700;">30th
+                            October</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Audit Required</span><span
+                            style="font-weight:700);">Turnover &gt;₹40L</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil (if on time)</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Filing
+                        Details</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Form 11</span><span style="font-weight:600;">Annual
+                            Return</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Form 8</span><span style="font-weight:600;">Financial
+                            Statements</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Audit Threshold</span><span style="font-weight:600;">₹40L
+                            turnover / ₹25L capital</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Strike-off Risk</span><span
+                            style="font-weight:600;">Section 75 LLP Act</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Keep Your LLP Compliant</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">File Form 11 and Form 8 on Time → We prepare,
+                verify, and file both forms before the deadline every year</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">File Form 11 and
+                    Form 8 on Time →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

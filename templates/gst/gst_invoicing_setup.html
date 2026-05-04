@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GST Invoicing & System Setup - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Tax &amp; Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">GST
+                    Invoicing &amp; System Setup</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Get Your Business GST-Ready from
+                    Day One — Right Invoices, Right System</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ ITC-Safe Invoices</span>
+                    <span class="badge badge-primary">✦ Software Configured Correctly</span>
+                    <span class="badge badge-info">✦ E-Invoice Ready</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is GST Invoicing Setup?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">A
+                        GST-compliant invoice is not just a billing document — it is a legal instrument that determines
+                        your customer's right to claim Input Tax Credit. A non-compliant invoice (missing GSTIN, wrong
+                        HSN/SAC code, incorrect tax rate split) can result in ITC rejection for your buyers and notices
+                        for your business. Getting your invoicing system right from the start is critical.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">GST
+                        Invoicing Setup covers the configuration of your accounting software (Tally Prime, Zoho Books,
+                        QuickBooks, or any ERP) for correct GST treatment — including HSN/SAC code mapping for all your
+                        products/services, tax rate configuration, invoice templates compliant with GST Rules, and
+                        e-invoice setup for businesses liable under the e-invoicing mandate (currently applicable to
+                        businesses with turnover above ₹5 crores).</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX also provides training
+                        to your accounts team on correct invoicing practices, credit note issuance, and maintenance of
+                        GST-required records — so your entire invoicing workflow is compliant and audit-proof from day
+                        one.</p>
+                    <div
+                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+                        ⚠️ A non-compliant invoice can result in ITC rejection for your buyers and notices for your
+                        business.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs This?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> New businesses setting up their
+                            accounting system for the first time after GST registration</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses migrating from
+                            Tally.ERP 9 to Tally Prime or from manual invoicing to software</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses with turnover above ₹5
+                            crores needing e-invoice (IRN) integration</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Companies with multiple products
+                            at different GST rates needing HSN/SAC code mapping</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses whose customers have
+                            received ITC rejection due to invoice format errors</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Exporters needing export invoices
+                            and LUT-linked zero-rated invoice templates</div>
+                    </div>
+                </div>
+
+                <!-- WHAT'S INCLUDED -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">What's Included in GST System Setup?
+                    </p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> HSN/SAC code identification for
+                            all your products and services</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> GST rate configuration (0%, 5%,
+                            12%, 18%, 28%, cess, composition)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Invoice template design — tax
+                            invoice, bill of supply, export invoice, RCM invoice</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Software configuration: Tally
+                            Prime / Zoho Books / QuickBooks / Excel-based</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> E-invoice (IRN) portal setup and
+                            IRP integration (for applicable businesses)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> E-Way Bill integration with
+                            invoicing software (for applicable goods)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Credit note and debit note
+                            templates and workflow setup</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Training session for your
+                            accounts team (2–3 hours)</div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Basic Setup</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        (one-time)</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Software configuration + invoice
+                                    templates</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: New small businesses and proprietors setting up for the first time</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> HSN/SAC
+                                    code mapping (up to 50 products/services)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GST rate
+                                    configuration in your software</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Standard
+                                    invoice template setup (Tally/Zoho/Excel)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> 1-hour team
+                                    training session</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999 (one-time)</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Professional Setup</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹3,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        (one-time)</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Full system + e-invoice integration
+                                </p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Growing businesses with e-invoicing obligation or complex product mix</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Basic Setup</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Up to 200
+                                    HSN/SAC codes</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Export
+                                    invoice and LUT-linked template setup</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> E-invoice
+                                    (IRN) portal registration and IRP integration</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Credit note
+                                    / debit note / RCM invoice templates</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> 2-hour team
+                                    training + documentation</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹3,999 (one-time)</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is e-invoicing and is it
+                                mandatory for me?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">E-invoicing is the
+                                system where B2B invoices are generated through the Invoice Registration Portal (IRP)
+                                and assigned a unique Invoice Reference Number (IRN). It is currently mandatory for
+                                businesses with aggregate turnover above ₹5 crores in any financial year. VITTAX checks
+                                your applicability and sets up the entire system.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What happens if I issue a
+                                non-GST-compliant invoice?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Your buyer cannot
+                                claim ITC on non-compliant invoices. You may also face notices from the GST department
+                                for incorrect reporting. Common errors include missing GSTIN, wrong HSN code, incorrect
+                                CGST/SGST/IGST split, and absence of place of supply.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Which accounting software
+                                does VITTAX support?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">We work with Tally
+                                Prime, Zoho Books, QuickBooks Online, Busy Accounting, and custom Excel-based systems.
+                                We also assist with migration from one software to another.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Basic Setup</span><span
+                            style="font-weight:700;">₹1,999</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Professional Setup</span><span
+                            style="font-weight:700;">₹3,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Setup Time</span><span style="font-weight:700;">48
+                            Hours</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">E-Invoice Ready</span><span
+                            style="font-weight:700;color:var(--success);">Yes</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Team Training</span><span
+                            style="font-weight:700;">Included</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Software We
+                        Support</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Tally Prime</span><span style="font-weight:600;">✔
+                            Supported</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Zoho Books</span><span style="font-weight:600;">✔
+                            Supported</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">QuickBooks</span><span style="font-weight:600;">✔
+                            Supported</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Excel-based</span><span style="font-weight:600;">✔
+                            Supported</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Set Up GST-Compliant Invoicing in 48 Hours
+            </h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Talk to Our GST Team → We configure your
+                software, map HSN codes, and train your team</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Talk to Our GST
+                    Team →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">View
+                    Plans</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

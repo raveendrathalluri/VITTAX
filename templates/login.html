@@ -1,0 +1,188 @@
+{# ═══════════════ templates/login.html ═══════════════ #}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login - VITTAX{% endblock %}
+{% block extra_css %}
+<style>
+    .auth-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #e8f0fe, #f0f7ff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 16px 40px
+    }
+
+    .auth-card {
+        background: var(--white);
+        border-radius: 24px;
+        box-shadow: 0 24px 64px rgba(26, 75, 140, .18);
+        width: 100%;
+        max-width: 480px;
+        overflow: hidden
+    }
+
+    .auth-header {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        padding: 40px;
+        text-align: center
+    }
+
+    .auth-header img {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        object-fit: contain
+    }
+
+    .auth-header h1 {
+        color: var(--white);
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-bottom: 6px
+    }
+
+    .auth-header p {
+        color: rgba(255, 255, 255, .8);
+        font-size: .92rem
+    }
+
+    .auth-body {
+        padding: 36px 40px
+    }
+
+    .form-group {
+        margin-bottom: 20px
+    }
+
+    .form-label {
+        display: block;
+        font-weight: 600;
+        font-size: .9rem;
+        color: var(--text);
+        margin-bottom: 8px
+    }
+
+    .form-label span {
+        color: var(--danger)
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        font-size: .95rem;
+        font-family: inherit;
+        transition: var(--transition);
+        outline: none;
+        color: var(--text)
+    }
+
+    .form-control:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(26, 75, 140, .1)
+    }
+
+    .input-icon {
+        position: relative
+    }
+
+    .input-icon i {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-light);
+        font-size: .9rem
+    }
+
+    .input-icon .form-control {
+        padding-left: 42px
+    }
+
+    .btn-full {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        font-size: 1rem
+    }
+
+    .auth-footer {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #f0f0f0;
+        font-size: .9rem;
+        color: var(--text-light)
+    }
+
+    .auth-footer a {
+        color: var(--primary);
+        font-weight: 600
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 24px 0;
+        color: var(--text-light);
+        font-size: .85rem
+    }
+
+    .divider::before,
+    .divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: #e2e8f0
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="auth-page">
+    <div class="auth-card">
+        <div class="auth-header">
+            {% load static %}<img src="{% static 'images/logo.jpg' %}" alt="VITTAX">
+            <h1>Welcome Back!</h1>
+            <p>Login to access your VITTAX dashboard</p>
+        </div>
+        <div class="auth-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="form-label">Username <span>*</span></label>
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i>
+                        <input name="username" type="text" class="form-control" placeholder="Enter your username"
+                            required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password <span>*</span></label>
+                    <div class="input-icon">
+                        <i class="fas fa-lock"></i>
+                        <input name="password" type="password" class="form-control" placeholder="Enter your password"
+                            required id="passInput">
+                        <i class="fas fa-eye" style="left:auto;right:14px;cursor:pointer" onclick="togglePass()"></i>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-sign-in-alt"></i> Login to
+                    Dashboard</button>
+            </form>
+            <div class="auth-footer" style="border:none;padding:20px 0 0">
+                Don't have an account? <a href="{% url 'register' %}">Register Free</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script>
+    function togglePass() {
+        const i = document.getElementById('passInput')
+        i.type = i.type === 'password' ? 'text' : 'password'
+    }
+</script>
+{% endblock %}

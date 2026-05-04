@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GST Refund Services - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Tax &amp; Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">GST
+                    Refund Services</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Recover Your GST Cash — Faster,
+                    Cleaner, Without Rejection</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Every Rupee Recovered</span>
+                    <span class="badge badge-primary">✦ Rejection-Proof Applications</span>
+                    <span class="badge badge-info">✦ Fast Sanction Tracking</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What are GST Refunds?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">GST refunds
+                        are available in several situations — exporters who pay IGST on exports, exporters who claim
+                        refund of accumulated ITC under the LUT route, businesses where ITC has accumulated due to
+                        inverted duty structure (input tax rate higher than output tax rate), excess tax paid by
+                        mistake, refund of tax paid under wrong head, and refunds in special economic zones. Claiming a
+                        GST refund involves filing a formal application (RFD-01) on the GST portal with supporting
+                        documents, followed by officer review and sanction.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The GST
+                        refund process is time-bound — the department must acknowledge within 15 days and sanction
+                        within 60 days (subject to extensions and provisional refunds). However, in practice, refund
+                        applications are frequently rejected for documentation deficiencies, incorrect calculations, or
+                        non-matching GSTR data. A rejected refund means restarting the process, delaying your cash flow
+                        significantly.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX's GST refund
+                        specialists prepare and file meticulous refund applications with all required documents and
+                        calculations, track the status proactively, respond to any officer queries (RFD-08), and follow
+                        up until the refund is credited to your bank account.</p>
+                    <div
+                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+                        ⚠️ A rejected refund means restarting the process — delaying your cash flow significantly.
+                        VITTAX ensures rejection-proof applications.
+                    </div>
+                </div>
+
+                <!-- WHO CAN CLAIM -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Can Claim GST Refunds?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Exporters who paid IGST on
+                            exports — refund of IGST paid (shipping bill route)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Exporters under LUT — accumulated
+                            ITC refund on zero-rated supplies</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Manufacturers/businesses with
+                            inverted duty structure (buying at higher GST rate than selling)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> SEZ suppliers — refund of IGST or
+                            ITC on supplies to SEZ units/developers</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses that paid excess tax
+                            by mistake (wrong head — CGST/SGST/IGST error)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Businesses making supplies to
+                            embassies, UN agencies, and specified international organisations</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Cancelled GST registrations with
+                            balance in electronic cash ledger</div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Standard Refund Filing</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹3,499<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        application</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For export or ITC refund
+                                    applications</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Exporters and businesses filing their first GST refund application</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Refund
+                                    eligibility assessment</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> RFD-01
+                                    application preparation and filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Supporting
+                                    document compilation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Query
+                                    response (RFD-08)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Refund
+                                    status tracking</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹3,499 per refund application</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Recurring Refund Management</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹2,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/quarter per
+                                        GSTIN</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For businesses with
+                                    monthly/quarterly refund claims</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Regular exporters and inverted duty structure businesses</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> All filings
+                                    in Standard plan</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Quarterly
+                                    refund application preparation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ITC
+                                    accumulation optimisation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Bank credit
+                                    confirmation tracking</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Interest
+                                    claim advisory (if delayed sanction)</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹2,999/quarter per GSTIN</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How long does a GST refund
+                                take?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">The law mandates
+                                acknowledgement within 15 days and sanction within 60 days from the date of complete
+                                application. In practice, simple export refunds (IGST route) are processed faster (15–30
+                                days), while ITC refunds and inverted duty refunds can take 60–90 days. VITTAX ensures
+                                applications are complete and follows up proactively.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the inverted duty
+                                structure refund?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">When you buy inputs at
+                                a higher GST rate than the rate at which you sell your products (e.g., buying raw
+                                material at 18% and selling finished goods at 5%), ITC accumulates and cannot be
+                                utilized. In such cases, you can claim a refund of the accumulated ITC under Section
+                                54(3) of the CGST Act.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Standard Refund Filing</span><span
+                            style="font-weight:700;">₹3,499</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Recurring Refund Management</span><span
+                            style="font-weight:700;">₹2,999/qtr</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Acknowledgement</span><span
+                            style="font-weight:700;">Within 15 Days</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Sanction Timeline</span><span
+                            style="font-weight:700;">Within 60 Days</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Application Form</span><span
+                            style="font-weight:700;">RFD-01</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Refund
+                        Categories</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Export (IGST)</span><span
+                            style="font-weight:600;">Shipping Bill Route</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Export (LUT)</span><span style="font-weight:600;">ITC
+                            Accumulation</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Inverted Duty</span><span style="font-weight:600;">Sec
+                            54(3)</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">SEZ Supplies</span><span style="font-weight:600;">IGST /
+                            ITC Route</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Recover Your Accumulated GST Credit</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">File Your Refund Application Today → We prepare,
+                file, track, and follow up until the refund hits your bank account</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">File Your Refund
+                    Application Today →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

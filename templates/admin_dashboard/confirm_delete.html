@@ -1,0 +1,22 @@
+{# ════════ templates/admin_dashboard/confirm_delete.html ════════ #}
+{% extends 'admin_dashboard/base.html' %}
+{% block page_title %}Confirm Delete{% endblock %}
+{% block content %}
+<div style="max-width:480px;margin:40px auto">
+  <div class="form-card" style="text-align:center;padding:48px 32px">
+    <div
+      style="width:72px;height:72px;background:rgba(231,76,60,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:#e74c3c">
+      <i class="fas fa-trash-alt"></i></div>
+    <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:8px">Delete {{ type }}?</h2>
+    <p style="color:#718096;margin-bottom:28px">Are you sure you want to delete <strong>{{ obj }}</strong>? This action
+      cannot be undone.</p>
+    <div style="display:flex;gap:12px;justify-content:center">
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Yes, Delete</button>
+      </form>
+      <a href="javascript:history.back()" class="btn btn-outline">Cancel</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

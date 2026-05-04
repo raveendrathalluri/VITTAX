@@ -1,0 +1,317 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Trust Registration - VITTAX{% endblock %}
+{% block extra_css %}
+<style>
+    .hero {
+        padding: 145px 0 95px;
+        background: radial-gradient(circle at top right, rgba(14, 165, 233, .14), transparent 28%), linear-gradient(135deg, #eefcff, #f8feff);
+        text-align: center;
+        position: relative;
+        overflow: hidden
+    }
+
+    .hero:after {
+        content: '';
+        position: absolute;
+        left: -5%;
+        right: -5%;
+        bottom: -42px;
+        height: 90px;
+        background: #fff;
+        border-radius: 50% 50% 0 0/100% 100% 0 0
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 4vw, 3.8rem);
+        font-weight: 900;
+        margin-bottom: 14px
+    }
+
+    .hero p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: var(--text-light);
+        font-size: 1.08rem;
+        line-height: 1.85
+    }
+
+    .section {
+        padding: 90px 0
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 18px
+    }
+
+    .section p,
+    .section li {
+        line-height: 1.9;
+        color: var(--text-light)
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: 0 16px 36px rgba(15, 23, 42, .08);
+        border: 1px solid rgba(14, 165, 233, .12)
+    }
+
+    .price {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #0284c7;
+        margin: 10px 0 14px
+    }
+
+    .faq details {
+        background: #fff;
+        border-radius: 18px;
+        padding: 18px 20px;
+        margin-bottom: 16px;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
+    }
+
+    .cta {
+        background: linear-gradient(135deg, #0284c7, #0369a1);
+        color: #fff;
+        border-radius: 30px;
+        padding: 58px 38px;
+        text-align: center
+    }
+
+    .cta h2 {
+        color: #fff
+    }
+
+    .cta p {
+        color: rgba(255, 255, 255, .92)
+    }
+
+    ul.clean {
+        padding-left: 18px;
+        margin: 0
+    }
+
+    .mutedbg {
+        background: linear-gradient(180deg, #f0fbff, #eaf8ff)
+    }
+
+    @media(max-width:768px) {
+        .hero {
+            padding: 120px 0 72px
+        }
+
+        .section {
+            padding: 64px 0
+        }
+
+        .grid {
+            grid-template-columns: 1fr
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class='hero'>
+    <div class='container'><span class='section-tag'>START A BUSINESS</span>
+        <h1>Trust Registration</h1>
+        <p>Register Your Charitable Trust Legally — Compliant, Credible, Tax-Exempt</p><a href='#pricing'
+            class='btn btn-primary' style='margin-top:24px'>Get Started</a>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>What is a Trust?</h2>
+        <p>A Trust is a legal arrangement in which one party (the Settlor or Author) transfers property or assets to
+            another party (the Trustee) to hold and manage for the benefit of identified beneficiaries or for a
+            charitable purpose. In India, trusts are primarily governed by the Indian Trusts Act, 1882 (for private
+            trusts) and various state-level Public Trusts.</p>
+        <p>There are two broad categories: (a) Private Trusts — created for the benefit of specific, identified
+            beneficiaries; and (b) Public Charitable Trusts — created for the benefit of the general public or an
+            identifiable section thereof for education, poverty relief, medical relief, religion, knowledge, or general
+            public utility.</p>
+        <p>A Trust requires a minimum of two trustees, a Trust Deed, and registration with the Sub-Registrar and/or
+            Charity Commissioner where applicable. After obtaining 12A and 80G registration, eligible trusts receive tax
+            exemptions and donors receive deduction benefits.</p>
+    </div>
+</section>
+<section class='section mutedbg'>
+    <div class='container'>
+        <h2>Why Choose Trust Structure?</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>✦ Charitable Purpose Protected</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ 12A & 80G Tax Exemptions</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ FCRA & CSR Funding Ready</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Types of Trusts We Register</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>Public Charitable Trust</h3>
+                <ul class='clean'>
+                    <li>Educational trusts</li>
+                    <li>Medical trusts</li>
+                    <li>Religious trusts</li>
+                    <li>Social welfare trusts</li>
+                    <li>Environmental trusts</li>
+                </ul>
+            </div>
+            <div class='card'>
+                <h3>Private Trust</h3>
+                <ul class='clean'>
+                    <li>Family trusts</li>
+                    <li>Discretionary trusts</li>
+                    <li>Specific / Determinate trusts</li>
+                    <li>HUF trusts</li>
+                </ul>
+            </div>
+            <div class='card'>
+                <h3>Other Structures</h3>
+                <ul class='clean'>
+                    <li>Waqf charitable trust</li>
+                    <li>Waqf advisory & liaison</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Who Should Register a Trust?</h2>
+        <div class='grid'>
+            <div class='card'>✔ NGO Founders</div>
+            <div class='card'>✔ Families for Succession</div>
+            <div class='card'>✔ Educational Institutions</div>
+            <div class='card'>✔ Healthcare Non-Profits</div>
+            <div class='card'>✔ Religious Bodies</div>
+            <div class='card'>✔ Corporate CSR Arms</div>
+            <div class='card'>✔ FCRA Applicants</div>
+            <div class='card'>✔ Property-Holding Trusts</div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Registration Process & Timeline</h2>
+        <div class='grid'>
+            <div class='card'><strong>Step 1:</strong> Consultation & Structure Advisory<br><small>1–2 days</small>
+            </div>
+            <div class='card'><strong>Step 2:</strong> Trust Deed Drafting<br><small>3–5 days</small></div>
+            <div class='card'><strong>Step 3:</strong> Stamp Paper & Execution<br><small>1–2 days</small></div>
+            <div class='card'><strong>Step 4:</strong> Sub-Registrar Registration<br><small>1–3 days</small></div>
+            <div class='card'><strong>Step 5:</strong> Charity Commissioner Registration<br><small>30–90 days</small>
+            </div>
+            <div class='card'><strong>Step 6:</strong> PAN & Bank Account<br><small>5–7 days</small></div>
+            <div class='card'><strong>Step 7:</strong> 12A & 80G Registration<br><small>30–90 days</small></div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Documents Required</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>Settlor</h3>
+                <p>PAN, Aadhaar/Passport/Voter ID, address proof, photograph, trust corpus/property details.</p>
+            </div>
+            <div class='card'>
+                <h3>Trustees</h3>
+                <p>PAN, ID proof, address proof, photograph, consent letter.</p>
+            </div>
+            <div class='card'>
+                <h3>Trust Office</h3>
+                <p>Address proof, rent agreement/NOC, signed Trust Deed.</p>
+            </div>
+            <div class='card'>
+                <h3>12A / 80G</h3>
+                <p>Registered Trust Deed, PAN, bank details, statements, activity report (if existing).</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section mutedbg' id='pricing'>
+    <div class='container'>
+        <h2>Pricing Plans</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>PRIVATE TRUST — Family / estate / succession trust</h3>
+                <div class='price'>₹6,999</div>
+                <p><strong>Ideal for:</strong> Families for estate planning, HUF succession, private wealth trusts</p>
+                <p>✓ Trust Deed drafting (private trust format)<br>✓ Notarisation advisory<br>✓ Sub-Registrar
+                    registration<br>✓ PAN application<br>✓ Bank account advisory</p>
+                <p><strong>VITTAX Fee:</strong> ₹6,999 | Govt. Fees at actuals</p>
+            </div>
+            <div class='card'>
+                <h3>PUBLIC CHARITABLE TRUST — NGO / educational / medical trust</h3>
+                <div class='price'>₹12,999</div>
+                <p><strong>Ideal for:</strong> NGO founders, educational institutions, medical trusts</p>
+                <p>✓ Trust Deed drafting<br>✓ Sub-Registrar registration<br>✓ PAN + bank advisory<br>✓ Compliance
+                    calendar<br>✓ 12A / 80G advisory</p>
+                <p><strong>VITTAX Fee:</strong> ₹12,999 | Govt. Fees at actuals</p>
+            </div>
+            <div class='card'>
+                <h3>COMPLETE NGO TRUST PACKAGE</h3>
+                <div class='price'>₹24,999</div>
+                <p><strong>Ideal for:</strong> Complete donor-ready NGO setup</p>
+                <p>✓ Trust Deed drafting<br>✓ Sub-Registrar registration<br>✓ Charity Commissioner registration<br>✓ PAN
+                    + bank account<br>✓ 12A registration<br>✓ 80G registration<br>✓ Udyam / DPIIT advisory<br>✓ FCRA
+                    eligibility advisory<br>✓ 1-year compliance calendar</p>
+                <p><strong>VITTAX Fee:</strong> ₹24,999 | Govt. Fees at actuals</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container faq'>
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>Q: Trust vs Society vs Section 8 Company?</summary>
+            <p>A: All are valid non-profit structures with different governance models and registration authorities.</p>
+        </details>
+        <details>
+            <summary>Q: Is Charity Commissioner registration always required?</summary>
+            <p>A: Depends on state laws. Some states require it in addition to Sub-Registrar registration.</p>
+        </details>
+        <details>
+            <summary>Q: Can a Trust own immovable property?</summary>
+            <p>A: Yes, a registered Trust can own land/buildings in its own name subject to proper conveyance.</p>
+        </details>
+        <details>
+            <summary>Q: What is 12A registration?</summary>
+            <p>A: It provides income tax exemption for eligible trusts/NGOs.</p>
+        </details>
+        <details>
+            <summary>Q: What is 80G registration?</summary>
+            <p>A: It allows eligible donors to claim deduction benefits on donations.</p>
+        </details>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <div class='cta'>
+            <h2>► Register Your Trust the Right Way</h2>
+            <p>VITTAX Handles Deed, Registration & Tax Exemptions</p><a href='#' class='btn btn-light'>Talk to
+                Expert</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

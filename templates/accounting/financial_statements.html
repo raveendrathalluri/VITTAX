@@ -1,0 +1,450 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Financial Statements Preparation - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Accounting &amp; Payroll</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
+                    Financial Statements Preparation</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Investor-Grade Financials —
+                    Prepared with Precision</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Schedule III Compliant</span>
+                    <span class="badge badge-primary">✦ Audit-Ready Statements</span>
+                    <span class="badge badge-info">✦ Investor &amp; Bank Ready</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What are Financial Statements?
+                    </h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Financial
+                        statements are the formal, structured records of a business's financial activities and position
+                        — comprising the Profit &amp; Loss Account (Income Statement), Balance Sheet, Statement of
+                        Changes in Equity (SOCIE), Cash Flow Statement, and Notes to Accounts. They are required for
+                        filing income tax returns, applying for loans, conducting statutory audits, satisfying ROC
+                        filings, and attracting investors.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">VITTAX
+                        prepares GAAP-compliant (Indian GAAP / Ind AS as applicable) financial statements for companies
+                        and LLPs AND Guidance note compliant financial statements for partnerships, proprietorships, and
+                        trusts. Our team ensures all disclosures are complete, schedules are properly annexed, and the
+                        financials truly reflect the economic reality of your business.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">For companies, we also prepare
+                        financials in the prescribed Schedule III format under the Companies Act, 2013, ready for board
+                        adoption and statutory audit. For XBRL filers, we prepare XBRL-tagged financials as required by
+                        MCA.</p>
+                    <div
+                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+                        ⚠️ Incomplete disclosures or non-compliant formats can result in audit qualifications, ROC
+                        rejections, and loan application failures.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs This?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Companies:</strong>
+                                Private limited companies needing MCA-compliant Schedule III financials</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>LLPs:</strong> LLPs
+                                required to file financial statements with MCA</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Loan
+                                    Seekers:</strong> Businesses applying for bank loans, overdraft, or letter of
+                                credit</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Startups:</strong>
+                                Startups preparing investor pitch decks or funding rounds</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Firms:</strong>
+                                Partnership firms, proprietorships filing ITR-3/5</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Finalization
+                                    Cases:</strong> Entities whose books are maintained informally and need year-end
+                                finalization</span></div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Our Process</p>
+                    <div style="display:flex;flex-direction:column;gap:8px;">
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                1</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Trial Balance Review</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Obtain and review
+                                    the trial balance; identify missing entries, reclassifications needed.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                2</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Adjustments &amp;
+                                    Provisions</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Pass depreciation,
+                                    provision for tax, audit adjustments, accruals, and prepayments.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                3</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Draft Financials</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Prepare draft
+                                    P&amp;L, Balance Sheet, Cash Flow, and Schedules/Notes.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                4</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Review &amp; Approval</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Share with
+                                    management/auditor for review; incorporate feedback.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                5</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Final Delivery</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Deliver final
+                                    signed/finalized statements in Word, Excel, and PDF formats.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS REQUIRED -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Documents Required</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📊 Accounting Records</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Trial balance as of
+                                    year-end</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Previous year financial
+                                    statements</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Fixed asset register with
+                                    depreciation workings</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📋 Supporting Data</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Loan statements, bank
+                                    statements as at year-end</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Stock/inventory valuation
+                                    certificate</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Trade debtors / creditors
+                                    ageing lists</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Audit adjustments from
+                                    statutory auditor (if applicable)</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Proprietorship / Partnership</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹2,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">P&amp;L + Balance Sheet + Notes</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Sole proprietors, firms, professionals</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Trading
+                                    &amp; P&amp;L account</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Balance
+                                    Sheet with schedules</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ITR-3/5
+                                    ready format</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹2,999 per year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Company / LLP</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹5,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Schedule III Financials + Notes to
+                                    Accounts</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Private limited companies, LLPs</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Schedule
+                                    III P&amp;L &amp; Balance Sheet</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Cash Flow
+                                    Statement</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Notes to
+                                    Accounts</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MCA / XBRL
+                                    ready</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹5,999 per year (+ based on turnover
+                                    &amp; complexity)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Enterprise / Holding</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹14,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Group / Consolidated Financials</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Holding companies, group entities, PE-backed companies</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Consolidated financials (parent + subsidiaries)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Elimination
+                                    workings</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Segment
+                                    reporting</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Ind AS
+                                    compliance check</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹14,999 per year (+ based on no.of
+                                    organisations involved)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do you prepare financials for
+                                the auditor or after audit?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Both. We prepare draft
+                                financials for the auditor to audit, and also incorporate post-audit adjustments for
+                                final statements.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What if my books have not
+                                been maintained properly?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">We offer a
+                                "reconstruction" service — rebuilding books from available bank statements, invoices,
+                                and records before preparing financials.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can you prepare XBRL-tagged
+                                financials for MCA filing?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. Our XBRL team
+                                prepares and validates XBRL-tagged financials for companies required to file XBRL with
+                                MCA.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Proprietorship / Partnership</span><span
+                            style="font-weight:700;">₹2,999/yr</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Company / LLP</span><span
+                            style="font-weight:700;">₹5,999/yr</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Enterprise / Holding</span><span
+                            style="font-weight:700;">₹14,999/yr</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Standard</span><span style="font-weight:700;">Indian
+                            GAAP</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Company Format</span><span
+                            style="font-weight:700;">Schedule III</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">XBRL Ready</span><span
+                            style="font-weight:700;color:var(--success);">Yes</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Statements
+                        Prepared</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">P&amp;L Account</span><span style="font-weight:600;">✔
+                            All Plans</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Balance Sheet</span><span style="font-weight:600;">✔ All
+                            Plans</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Cash Flow</span><span
+                            style="font-weight:600;">Company/LLP+</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Consolidated</span><span
+                            style="font-weight:600;">Enterprise Plan</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get Audit-Ready Financial Statements —
+                Talk to VITTAX Now</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Schedule III compliant, investor-ready,
+                XBRL-tagged financials — delivered with precision every year</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

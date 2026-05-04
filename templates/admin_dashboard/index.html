@@ -1,0 +1,127 @@
+{# ════════ admin_dashboard/index.html ════════ #}
+{% extends 'admin_dashboard/base.html' %}
+{% block title %}Admin Dashboard - VITTAX{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+{% block page_subtitle %}Welcome back, {{ request.user.get_full_name|default:request.user.username }}!{% endblock %}
+{% block content %}
+<div class="stats-row">
+    <div class="stat-card blue">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-value">{{ total_users }}</div>
+        <div class="stat-label">Total Users</div>
+    </div>
+    <div class="stat-card green">
+        <div class="stat-icon"><i class="fas fa-th-list"></i></div>
+        <div class="stat-value">{{ total_services }}</div>
+        <div class="stat-label">Active Services</div>
+    </div>
+    <div class="stat-card orange">
+        <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+        <div class="stat-value">{{ total_applications }}</div>
+        <div class="stat-label">Applications</div>
+    </div>
+    <div class="stat-card red">
+        <div class="stat-icon"><i class="fas fa-envelope"></i></div>
+        <div class="stat-value">{{ unread_contacts }}</div>
+        <div class="stat-label">Unread Messages</div>
+    </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px">
+    <div class="data-card">
+        <div class="data-card-header">
+            <span class="data-card-title">Recent Users</span>
+            <a href="{% url 'admin_users' %}" class="btn btn-outline btn-sm">View All</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Joined</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in recent_users %}
+                <tr>
+                    <td><strong>{{ u.get_full_name|default:u.username }}</strong></td>
+                    <td style="color:var(--text-light);font-size:.85rem">{{ u.email }}</td>
+                    <td style="color:var(--text-light);font-size:.82rem">{{ u.date_joined|date:"M d, Y" }}</td>
+                    <td>
+                        <span class="badge {% if u.is_active %}badge-success{% else %}badge-danger{% endif %}">
+                            {% if u.is_active %}Active{% else %}Inactive{% endif %}
+                        </span>
+                    </td>
+
+                </tr>
+                {% empty %}<tr>
+                    <td colspan="4" style="text-align:center;color:var(--text-light);padding:24px">No users yet</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="data-card">
+        <div class="data-card-header">
+            <span class="data-card-title">Recent Messages</span>
+            <a href="{% url 'admin_contacts' %}" class="btn btn-outline btn-sm">View All</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in recent_contacts %}
+                <tr>
+                    <td><strong>{{ c.name }}</strong></td>
+                    <td style="font-size:.85rem;color:var(--text-light)">{{ c.subject|truncatechars:30 }}</td>
+                    <td style="font-size:.82rem;color:var(--text-light)">{{ c.created_at|date:"M d" }}</td>
+                </tr>
+                {% empty %}<tr>
+                    <td colspan="3" style="text-align:center;color:var(--text-light);padding:24px">No messages</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="data-card">
+    <div class="data-card-header">
+        <span class="data-card-title">Recent Service Applications</span>
+        <a href="{% url 'admin_applications' %}" class="btn btn-outline btn-sm">View All</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Service</th>
+                <th>Applied</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for app in recent_apps %}
+            <tr>
+                <td><strong>{{ app.user.username }}</strong></td>
+                <td>{{ app.service.name }}</td>
+                <td style="font-size:.85rem;color:var(--text-light)">{{ app.applied_at|date:"M d, Y" }}</td>
+                <td><span
+                        class="badge {% if app.status == 'completed' %}badge-success{% elif app.status == 'rejected' %}badge-danger{% elif app.status == 'in_progress' %}badge-info{% else %}badge-warning{% endif %}">
+                        {{app.get_status_display}}</span></td>
+                <td><a href="{% url 'admin_app_status' app.pk %}" class="btn btn-primary btn-sm">Update</a></td>
+            </tr>
+            {% empty %}<tr>
+                <td colspan="5" style="text-align:center;color:var(--text-light);padding:24px">No applications</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

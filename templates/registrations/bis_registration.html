@@ -1,0 +1,469 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIS Registration (Bureau of Indian Standards) - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">BIS
+                    Registration (Bureau of Indian Standards)</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Sell in India Legally — BIS
+                    Certification for Products &amp; Manufacturers</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ ISI Mark for Manufacturers</span>
+                    <span class="badge badge-primary">✦ CRS for Electronics Importers</span>
+                    <span class="badge badge-info">✦ QCO Compliance Ensured</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is BIS Registration?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The Bureau
+                        of Indian Standards (BIS) is India's national standards body under the Ministry of Consumer
+                        Affairs. BIS certification — represented by the ISI Mark (for products) or the BIS hallmark (for
+                        gold and silver jewellery) — is mandatory for a wide range of products sold in India. Under the
+                        Bureau of Indian Standards Act, 2016 and the Quality Control Orders (QCOs) issued by various
+                        Ministries, certain products cannot be manufactured, imported, or sold in India unless they bear
+                        the BIS ISI Mark, demonstrating conformity to the relevant Indian Standard (IS code).</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">There are
+                        two primary schemes: (a) Product Certification Scheme (ISI Mark) — for domestic manufacturers;
+                        and (b) Compulsory Registration Scheme (CRS) — for electronics and IT products (laptops, mobile
+                        phones, chargers, LED lights, etc.) that must be registered with BIS before import or sale.
+                        Import of QCO-notified products without BIS registration is prohibited at Indian customs and
+                        attracts confiscation and penalty.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX assists domestic
+                        manufacturers with ISI Mark applications (including factory audits, test reports, and BIS portal
+                        filings) and importers/electronics companies with CRS registration — handling the complete
+                        process from identifying the applicable IS standard and testing laboratory to obtaining the BIS
+                        licence or registration number.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Import of QCO-notified products without BIS registration is prohibited at Indian customs and
+                        attracts confiscation and penalty.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs BIS Certification?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Manufacturers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Manufacturers of cement, steel,
+                                    electrical cables, helmets, LPG cylinders, packaged water, and 400+ other notified
+                                    products</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Electronics Importers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Importers of laptops, mobiles,
+                                    chargers, LED bulbs, smart meters, and other QCO-notified electronics</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Jewellers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Jewellery manufacturers and
+                                    retailers dealing in gold and silver (BIS Hallmarking)</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Govt
+                                    Tender Bidders</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Indian manufacturers supplying to
+                                    government tenders where ISI Mark is a qualifying criterion</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Foreign
+                                    Manufacturers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Foreign manufacturers exporting to
+                                    India under the Foreign Manufacturers Certification Scheme (FMCS)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KEY SCHEMES -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Key BIS Schemes</h2>
+                    <div style="display:flex;flex-direction:column;gap:16px;">
+
+                        <div style="border-left:3px solid var(--primary);padding-left:14px;">
+                            <p style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:8px;">Product
+                                Certification (ISI Mark) — Domestic Manufacturers</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Identify
+                                    applicable Indian Standard (IS) code for your product</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Factory
+                                    audit by BIS officer to verify production and quality systems</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Product
+                                    testing at BIS-recognised laboratory</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Grant of
+                                    licence with BIS ISI Mark</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Annual
+                                    surveillance audit and renewal</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-left:3px solid var(--primary);padding-left:14px;">
+                            <p style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:8px;">Compulsory
+                                Registration Scheme (CRS) — Electronics</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                                    Applicable to 80+ electronics categories under the Electronics &amp; IT Goods QCO
+                                </li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Product
+                                    testing at BIS-recognised lab; filing on BIS online portal</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                                    Registration certificate with unique R-number valid for 2 years</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Import
+                                    and sale permitted only after R-number allotment</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-left:3px solid var(--primary);padding-left:14px;">
+                            <p style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:8px;">Hallmarking
+                                — Jewellery</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Mandatory
+                                    since June 2021 for gold jewellery sold by registered jewellers</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> HUID
+                                    (Hallmark Unique Identification) number on each jewellery article</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Testing
+                                    at BIS-licensed Assaying &amp; Hallmarking Centres (AHCs)</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+
+                        <!-- CRS REGISTRATION -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    CRS Registration (Electronics)</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹10,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        product</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">BIS Compulsory Registration for
+                                    electronics import/sale</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Electronics importers, OEMs, laptop/mobile/charger sellers in India</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> IS standard
+                                    identification</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Test lab
+                                    coordination</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> BIS portal
+                                    application &amp; filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> R-number
+                                    certificate</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Renewal
+                                    advisory</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹10,999 per product</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">₹10,000–20,000 + testing
+                                    at actuals</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- ISI MARK -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    ISI Mark — Product Certification</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹19,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">BIS product certification for
+                                    domestic manufacturers</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Indian manufacturers of QCO-notified products</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> IS code
+                                    identification</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Factory
+                                    pre-audit preparation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Test lab
+                                    coordination</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> BIS
+                                    application and factory audit support</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Licence
+                                    grant follow-up</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹19,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">BIS fee + testing + audit at
+                                    actuals</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+
+                    <!-- JEWELLER HALLMARKING -->
+                    <div
+                        style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                        <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Jeweller Hallmarking Setup</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹6,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">BIS jeweller registration + HUID
+                                    process</p>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="white-space:nowrap;align-self:center;">Get
+                                Started →</a>
+                        </div>
+                        <p
+                            style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                            Ideal for: Gold jewellery manufacturers, retailers, exporters</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> BIS jeweller
+                                registration</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> AHC
+                                identification near your location</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> HUID process
+                                advisory</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Compliance
+                                calendar for annual renewal</div>
+                        </div>
+                        <div
+                            style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                            VITTAX Fee: <strong style="color:var(--primary);">₹6,999</strong> &nbsp;|&nbsp; Govt. Fees:
+                            <strong style="color:var(--success);">₹1,500 registration fee + hallmarking charges at
+                                actuals</strong></div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">My product is not in the QCO
+                                list — do I still need BIS?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">If your product is not
+                                notified under any Quality Control Order, BIS certification is voluntary (not
+                                mandatory). However, ISI Mark on a non-notified product can enhance market credibility.
+                                VITTAX checks the latest QCO notifications before advising.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How long does CRS
+                                registration take?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Typically 4–8 weeks
+                                from the date of product sample submission to the test lab, assuming no additional
+                                queries from BIS. VITTAX expedites by pre-checking documentation before submission.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can a foreign manufacturer
+                                get BIS certification for products exported to India?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — through the
+                                Foreign Manufacturers Certification Scheme (FMCS), foreign manufacturers can obtain BIS
+                                ISI Mark. The process involves an overseas factory audit by a BIS team. VITTAX
+                                coordinates with the foreign manufacturer and BIS for FMCS applications.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the penalty for
+                                selling BIS-notified products without the ISI Mark?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Under the BIS Act,
+                                2016, selling or importing QCO-notified products without BIS certification attracts a
+                                fine of ₹1 lakh to ₹5 lakh and/or imprisonment up to 2 years. Repeat violations attract
+                                higher penalties. Goods can also be seized at customs.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">CRS Registration</span><span
+                            style="font-weight:700;">₹10,999/product</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">ISI Mark</span><span
+                            style="font-weight:700;">₹19,999</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Hallmarking Setup</span><span
+                            style="font-weight:700;">₹6,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">CRS Timeline</span><span style="font-weight:700;">4–8
+                            Weeks</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">CRS Validity</span><span style="font-weight:700;">2
+                            Years</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Max Penalty</span><span style="font-weight:700;">₹5 Lakh
+                            + 2 Yrs</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Schemes</span><span style="font-weight:700;">ISI / CRS /
+                            Hallmark</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ BIS Schemes
+                    </p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">ISI Mark</span><span style="font-weight:600;">Domestic
+                            Manufacturers</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">CRS</span><span style="font-weight:600;">Electronics 80+
+                            Categories</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Hallmark</span><span style="font-weight:600;">Gold &amp;
+                            Silver Jewellery</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">FMCS</span><span style="font-weight:600;">Foreign
+                            Manufacturers</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get Your BIS / ISI Mark Registration —
+                VITTAX Manages the Complete Process</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">ISI Mark for manufacturers, CRS for electronics
+                importers, QCO compliance ensured — sell in India legally</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

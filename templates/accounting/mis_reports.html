@@ -1,0 +1,454 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}MIS Reports (Management Information System) - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Accounting &amp; Payroll</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">MIS
+                    Reports (Management Information System)</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Decide with Data — Monthly
+                    Insights That Drive Growth</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Actuals vs Budget Tracked</span>
+                    <span class="badge badge-primary">✦ Product-wise Profitability</span>
+                    <span class="badge badge-info">✦ One Report — Full Picture</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What are MIS Reports?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Management
+                        Information System (MIS) reports are structured financial and operational summaries designed to
+                        help business owners and managers make informed decisions. Unlike basic accounting reports
+                        (which only show what happened), MIS reports analyse trends, compare actuals vs. budgets,
+                        highlight exceptions, and provide forward-looking insights.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">VITTAX
+                        designs and delivers customised monthly MIS packages that include a P&amp;L dashboard,
+                        departmental/product-wise profitability, cash flow summary, working capital position, key
+                        ratios, and variance analysis against targets. Reports are delivered in clean Excel/PDF/html
+                        formats or interactive dashboards.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">A good MIS report answers:
+                        "How did my business perform this month, and what do I need to act on?" — without requiring you
+                        to be a finance expert.</p>
+                    <div
+                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+                        ⚠️ Business owners relying on gut feeling rather than data are making decisions in the dark —
+                        MIS reports fix this.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs MIS Reports?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Decision
+                                    Makers:</strong> Business owners who rely on gut feeling rather than data for
+                                decisions</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Startups:</strong>
+                                Startups with investor board meetings requiring financial updates</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Multi-Segment
+                                    Businesses:</strong> SMEs managing multiple product lines, regions, or
+                                departments</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Bank
+                                    Covenants:</strong> Companies with bank covenants requiring periodic financial
+                                reporting</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Management
+                                    Teams:</strong> CFOs and management teams needing real-time operational
+                                visibility</span></div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Our Process</p>
+                    <div style="display:flex;flex-direction:column;gap:8px;">
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                1</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">MIS Design</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Understand your
+                                    KPIs, reporting needs, and decision framework; design a custom MIS template.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                2</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Data Integration</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Connect to your
+                                    accounting software; set up automated data pulls where possible.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                3</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Monthly Data Processing
+                                </p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Compile actuals,
+                                    compute variances, calculate ratios.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                4</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Report Preparation &amp;
+                                    Review</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Prepare full MIS
+                                    deck with commentary; internal quality review.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                5</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Delivery &amp; Discussion
+                                </p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Deliver to
+                                    management; available for walkthrough call.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- STANDARD MIS COMPONENTS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Standard MIS Components</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📊 Financial Reports</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Monthly P&amp;L — actual
+                                    vs. budget vs. prior year</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Balance Sheet summary
+                                    with working capital analysis</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Cash flow summary
+                                    (operational, investing, financing)</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📈 Operational Reports</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Revenue by
+                                    product/service/segment/region</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Gross margin &amp;
+                                    contribution analysis</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Debtors ageing &amp;
+                                    collection efficiency</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Key financial ratios
+                                    (liquidity, profitability, leverage)</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Basic MIS</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹1,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Monthly P&amp;L + Balance Sheet
+                                    summary</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Small businesses, solo founders</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Monthly
+                                    P&amp;L dashboard</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Balance
+                                    Sheet summary</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Top 5 KPIs
+                                </li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999/month</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Standard MIS</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹3,499<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Full financial + operational
+                                    dashboard</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: SMEs, growing businesses with multiple segments</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Basic</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Cash flow
+                                    summary</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Product/segment P&amp;L</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Actuals vs.
+                                    budget</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Key ratios
+                                </li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹3,499/month</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Board-Ready MIS</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹5,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
+                                </p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Investor/board level reporting
+                                    package</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: VC-backed startups, board-governed companies</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Standard</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Board
+                                    presentation deck</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Commentary
+                                    &amp; insights</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> KPI
+                                    dashboard (interactive)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Walkthrough
+                                    call included</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹5,999/month</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can you create MIS if my
+                                books are in Tally?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. We extract data
+                                from Tally, process it, and build the MIS reports externally in Excel or Power BI
+                                dashboards.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can we customise the MIS
+                                format?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Absolutely. The first
+                                month is a design phase where we build exactly what you need.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do you offer budget
+                                preparation too?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — annual budget
+                                preparation is offered as an add-on at ₹9,999 per year.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Basic MIS</span><span
+                            style="font-weight:700;">₹1,999/mo</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Standard MIS</span><span
+                            style="font-weight:700;">₹3,499/mo</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Board-Ready MIS</span><span
+                            style="font-weight:700;">₹5,999/mo</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Delivery</span><span style="font-weight:700;">By 5th of
+                            Month</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Budget Add-On</span><span
+                            style="font-weight:700;">₹9,999/yr</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Walkthrough Call</span><span
+                            style="font-weight:700;">Board Plan</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Report Formats
+                    </p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Excel Dashboard</span><span style="font-weight:600;">✔
+                            All Plans</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">PDF Report</span><span style="font-weight:600;">✔ All
+                            Plans</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Interactive Dashboard</span><span
+                            style="font-weight:600;">Board Plan</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Board Deck</span><span style="font-weight:600;">Board
+                            Plan</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get Your Monthly MIS Report — Know Your
+                Numbers, Drive Your Business</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Custom-designed, data-driven monthly reports
+                delivered by the 5th of every month — no finance expertise needed</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

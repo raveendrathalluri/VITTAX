@@ -1,0 +1,342 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Register Free - VITTAX{% endblock %}
+
+{% block extra_css %}
+<style>
+    .auth-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #e8f0fe, #f0f7ff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 90px 16px 40px;
+    }
+
+    .auth-card {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 24px 64px rgba(26, 75, 140, .16);
+        width: 100%;
+        max-width: 580px;
+        overflow: hidden;
+    }
+
+    .auth-header {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        padding: 36px;
+        text-align: center;
+    }
+
+    .auth-header .logo-box {
+        width: 56px;
+        height: 56px;
+        background: rgba(255, 255, 255, .18);
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 14px;
+    }
+
+    .auth-header .logo-box img {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        object-fit: contain
+    }
+
+    .auth-header h1 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 6px
+    }
+
+    .auth-header p {
+        color: rgba(255, 255, 255, .8);
+        font-size: .9rem
+    }
+
+    .auth-body {
+        padding: 32px 36px
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px
+    }
+
+    .form-col-full {
+        grid-column: span 2
+    }
+
+    .form-group {
+        margin-bottom: 4px
+    }
+
+    .form-label {
+        display: block;
+        font-weight: 600;
+        font-size: .85rem;
+        color: var(--text);
+        margin-bottom: 7px
+    }
+
+    .form-label .req {
+        color: var(--danger)
+    }
+
+    .input-wrap {
+        position: relative
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-light);
+        font-size: .88rem;
+        pointer-events: none;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 11px 14px;
+        border: 2px solid #e2e8f0;
+        border-radius: 9px;
+        font-size: .92rem;
+        font-family: inherit;
+        outline: none;
+        transition: var(--transition);
+        color: var(--text);
+    }
+
+    .form-control.has-icon {
+        padding-left: 40px
+    }
+
+    .form-control:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(26, 75, 140, .1)
+    }
+
+    .field-error {
+        color: var(--danger);
+        font-size: .78rem;
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .error-box {
+        background: rgba(231, 76, 60, .08);
+        border-left: 3px solid var(--danger);
+        border-radius: 8px;
+        padding: 10px 14px;
+        margin-bottom: 16px;
+        font-size: .85rem;
+        color: var(--danger);
+    }
+
+    .terms-text {
+        font-size: .82rem;
+        color: var(--text-light);
+        text-align: center;
+        margin: 8px 0 16px;
+    }
+
+    .terms-text a {
+        color: var(--primary);
+        font-weight: 600
+    }
+
+    .btn-full {
+        width: 100%;
+        justify-content: center;
+        padding: 13px;
+        font-size: .97rem
+    }
+
+    .login-link {
+        text-align: center;
+        padding-top: 16px;
+        font-size: .88rem;
+        color: var(--text-light);
+    }
+
+    .login-link a {
+        color: var(--primary);
+        font-weight: 700
+    }
+
+    @media(max-width:500px) {
+        .form-grid {
+            grid-template-columns: 1fr
+        }
+
+        .form-col-full {
+            grid-column: span 1
+        }
+
+        .auth-body {
+            padding: 24px 20px
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="auth-page">
+    <div class="auth-card">
+
+        <!-- Header -->
+        <div class="auth-header">
+            <div class="logo-box">
+                <img src="{% static 'images/logo.jpg' %}" alt="VITTAX">
+            </div>
+            <h1>Create Free Account</h1>
+            <p>Join 13 lakh+ Indians filing smarter with VITTAX</p>
+        </div>
+
+        <!-- Body -->
+        <div class="auth-body">
+
+            <!-- Form-level errors -->
+            {% if form.non_field_errors %}
+            <div class="error-box">
+                {% for error in form.non_field_errors %}
+                <div><i class="fas fa-exclamation-circle"></i> {{ error }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <form method="post" novalidate>
+                {% csrf_token %}
+
+                <div class="form-grid">
+
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" name="first_name" class="form-control" placeholder="First name"
+                            value="{{ form.first_name.value|default:'' }}">
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" name="last_name" class="form-control" placeholder="Last name"
+                            value="{{ form.last_name.value|default:'' }}">
+                    </div>
+
+                    <!-- Username -->
+                    <div class="form-group form-col-full">
+                        <label class="form-label">Username <span class="req">*</span></label>
+                        <div class="input-wrap">
+                            <i class="fas fa-at input-icon"></i>
+                            <input type="text" name="username" class="form-control has-icon"
+                                placeholder="Choose a username" value="{{ form.username.value|default:'' }}" required>
+                        </div>
+                        {% if form.username.errors %}
+                        <div class="field-error">
+                            <i class="fas fa-exclamation-circle"></i>
+                            {{ form.username.errors.0 }}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group form-col-full">
+                        <label class="form-label">Email Address <span class="req">*</span></label>
+                        <div class="input-wrap">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" name="email" class="form-control has-icon" placeholder="your@email.com"
+                                value="{{ form.email.value|default:'' }}" required>
+                        </div>
+                        {% if form.email.errors %}
+                        <div class="field-error">
+                            <i class="fas fa-exclamation-circle"></i>
+                            {{ form.email.errors.0 }}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-phone input-icon"></i>
+                            <input type="tel" name="phone" class="form-control has-icon" placeholder="+91 XXXXX XXXXX"
+                                value="{{ form.phone.value|default:'' }}">
+                        </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="form-group">
+                        <label class="form-label">City</label>
+                        <div class="input-wrap">
+                            <i class="fas fa-map-marker-alt input-icon"></i>
+                            <input type="text" name="city" class="form-control has-icon" placeholder="Your city"
+                                value="{{ form.city.value|default:'' }}">
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label class="form-label">Password <span class="req">*</span></label>
+                        <div class="input-wrap">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" name="password1" id="id_password1" class="form-control has-icon"
+                                placeholder="Create password" required>
+                        </div>
+                        {% if form.password1.errors %}
+                        <div class="field-error">
+                            <i class="fas fa-exclamation-circle"></i>
+                            {{ form.password1.errors.0 }}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label class="form-label">Confirm Password <span class="req">*</span></label>
+                        <div class="input-wrap">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" name="password2" id="id_password2" class="form-control has-icon"
+                                placeholder="Repeat password" required>
+                        </div>
+                        {% if form.password2.errors %}
+                        <div class="field-error">
+                            <i class="fas fa-exclamation-circle"></i>
+                            {{ form.password2.errors.0 }}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                </div><!-- /form-grid -->
+
+                <div class="terms-text">
+                    By registering you agree to our
+                    <a href="#">Terms of Service</a> and
+                    <a href="#">Privacy Policy</a>.
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-rocket"></i> Create Free Account
+                </button>
+
+            </form>
+
+            <div class="login-link">
+                Already have an account?
+                <a href="{% url 'login' %}">Login here →</a>
+            </div>
+
+        </div><!-- /auth-body -->
+    </div><!-- /auth-card -->
+</div>
+{% endblock %}

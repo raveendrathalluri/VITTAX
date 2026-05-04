@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Personal Financial Planning - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+<div class="container">
+
+  <!-- HEADER -->
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+    <div>
+      <span class="section-tag">Other Services</span>
+      <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Personal Financial Planning</h1>
+      <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Your Money, Your Future — Plan With Confidence</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="badge badge-success">✦ Fee-Based, Unbiased Advice</span>
+        <span class="badge badge-primary">✦ Tax + Investment Together</span>
+        <span class="badge badge-info">✦ Comprehensive Life-Goals Roadmap</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+      <a href="#pricing" class="btn btn-primary">View Plans →</a>
+      <a href="#" class="btn btn-outline">Talk to Expert</a>
+    </div>
+  </div>
+
+  <!-- BODY GRID -->
+  <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+    <!-- LEFT COLUMN -->
+    <div style="display:flex;flex-direction:column;gap:24px;">
+
+      <!-- WHAT IS -->
+      <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+        <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Personal Financial Planning?</h2>
+        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Personal financial planning is a comprehensive, goal-oriented approach to managing your personal finances — covering income &amp; expense budgeting, investment planning (mutual funds, stocks, real estate, PPF/NPS), insurance adequacy, tax planning, retirement planning, children's education planning, and estate planning. Unlike ad-hoc financial decisions, a financial plan integrates all aspects of your personal finance into a coherent roadmap aligned with your life goals and risk appetite.</p>
+        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX's personal financial planning service is delivered by qualified CAs and NISM-certified advisors who understand the tax and investment dimensions together — a critical difference from standalone investment advisors who focus only on products. Our advice is fee-based and unbiased — we do not earn commissions on products we recommend, ensuring our interests are fully aligned with yours.</p>
+        <div style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+          ⚠️ Banks and agents earn commissions on products they sell — creating a conflict of interest. VITTAX charges a flat fee and recommends what is best for you, regardless of commissions.
+        </div>
+      </div>
+
+      <!-- WHO NEEDS -->
+      <div>
+        <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs Personal Financial Planning?</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Peak Earners:</strong> Salaried professionals and business owners in the 30–55 age bracket</span></div>
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Windfall Recipients:</strong> Individuals with windfall gains (property sale, inheritance, business sale)</span></div>
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>NRIs:</strong> NRIs with India investments and foreign income to coordinate</span></div>
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Parents:</strong> Families planning children's education funding 5–15 years ahead</span></div>
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Pre-Retirees:</strong> Pre-retirees (10 years from retirement) reviewing their retirement corpus</span></div>
+        </div>
+      </div>
+
+      <!-- PRICING -->
+      <div id="pricing">
+        <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+          <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+            <div>
+              <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Financial Health Check</p>
+              <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹3,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
+              <p style="font-size:.78rem;color:var(--text-light);">One-time review and recommendations</p>
+            </div>
+            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Individuals seeking a financial reality check</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Current financial snapshot analysis</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Gap vs. goals identification</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Top 5 actionable recommendations</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Tax optimisation quick wins</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> One time consultation</li>
+            </ul>
+            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹3,999 one-time</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+          </div>
+
+          <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+            <div>
+              <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Comprehensive Financial Plan</p>
+              <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹6,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
+              <p style="font-size:.78rem;color:var(--text-light);">Full plan across all life goals</p>
+            </div>
+            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Families, HNIs, NRIs wanting a complete financial roadmap</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Income, expenses, net worth statement</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Goal-wise investment allocation</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Insurance adequacy review</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Retirement corpus projection</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Tax-efficient investment strategy</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Written financial plan document</li>
+            </ul>
+            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹6,999 one-time</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+          </div>
+
+          <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+            <div>
+              <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Financial Planning Retainer</p>
+              <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹9,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">/year</span></p>
+              <p style="font-size:.78rem;color:var(--text-light);">Ongoing advice + annual review</p>
+            </div>
+            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Individuals wanting year-round financial guidance</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Annual plan update</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Quarterly portfolio review</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Tax planning every year-start &amp; end</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Insurance &amp; estate review</li>
+              <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Unlimited queries via WhatsApp/email</li>
+            </ul>
+            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹9,999/year</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div>
+        <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do you recommend specific mutual funds or stocks?</p>
+            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">We recommend asset classes and fund categories based on your goal and risk profile. Specific fund selection is part of the Comprehensive Plan. We do not earn commissions on any product we recommend.</p>
+          </div>
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How is this different from going to a bank or insurance agent?</p>
+            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Banks and agents earn commissions on products they sell — creating a conflict of interest. VITTAX charges a flat fee and recommends what is best for you, regardless of commissions.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+      <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+        <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">Financial Health Check</span><span style="font-weight:700;">₹3,999</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">Comprehensive Plan</span><span style="font-weight:700;">₹6,999</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Annual Retainer</span><span style="font-weight:700;">₹9,999/yr</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+          <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+          <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+        </div>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+        <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">Advisor Qualification</span><span style="font-weight:700;">CA + NISM</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">Commission Earned</span><span style="font-weight:700;color:var(--success);">Nil (Fee-Only)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">Portfolio Review</span><span style="font-weight:700;">Quarterly (Retainer)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees</span><span style="font-weight:700;color:var(--success);">Nil</span></div>
+      </div>
+      <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+        <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Areas Covered</p>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;"><span style="color:var(--text-light);">Investment Planning</span><span style="font-weight:600;">✔ Included</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;"><span style="color:var(--text-light);">Tax Planning</span><span style="font-weight:600;">✔ Included</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;"><span style="color:var(--text-light);">Retirement Planning</span><span style="font-weight:600;">✔ Included</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">Insurance &amp; Estate</span><span style="font-weight:600;">✔ Included</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+    <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Take Control of Your Financial Future — Book a Planning Session with VITTAX</h3>
+    <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Fee-based, unbiased advice — tax and investment integrated for your life goals</p>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+      <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
+      <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
+    </div>
+  </div>
+
+</div>
+</div>
+{% endblock %}

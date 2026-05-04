@@ -1,0 +1,456 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}NRI Income Tax Return (ITR) Filing - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">NRI &amp; International Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">NRI
+                    Income Tax Return (ITR) Filing</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">India Income? File Correctly —
+                    Avoid Double Taxation</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Residential Status Determined</span>
+                    <span class="badge badge-primary">✦ DTAA Benefits Applied</span>
+                    <span class="badge badge-info">✦ TDS Refunds Claimed</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is NRI ITR Filing?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">
+                        Non-Resident Indians (NRIs) — those who spend fewer than 182 days in India in a financial year
+                        (or fewer than 60 days in certain conditions) — have specific income tax obligations in India.
+                        An NRI is taxable in India only on income that accrues or arises in India, or is received in
+                        India. This includes rental income from Indian property, capital gains on sale of Indian assets,
+                        interest on NRO accounts, dividend from Indian shares, and professional income from Indian
+                        sources.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">VITTAX's
+                        NRI ITR filing service covers complete determination of residential status, computation of
+                        India-sourced income, application of DTAA (Double Taxation Avoidance Agreement) benefits, TDS
+                        credit claims, and filing of the correct ITR form (typically ITR-2 for NRIs). We ensure you
+                        don't overpay tax due to missed treaty benefits and help you claim TDS refunds where applicable.
+                    </p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">Filing deadlines are the same
+                        as for residents — July 31 for ITR-1 &amp; 2 and July 31 for ITR-3 of most NRIs, October 31 if
+                        tax audit applies. Late filing attracts interest under Sections 423/424/425 [old Act sections
+                        234A/B/C] and late fees under Section 428 [old Act section 234F].</p>
+                    <div
+                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+                        ⚠️ Late filing attracts interest under Sections 423/424/425 [old Act sections 234A/B/C] and late
+                        fees under Section 428 [old Act section 234F].
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs NRI ITR Filing?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Property
+                                    Owners:</strong> NRIs with rental income from Indian property</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Capital
+                                    Gains:</strong> NRIs who sold Indian property, shares, or mutual funds</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>NRO Account
+                                    Holders:</strong> NRIs with NRO fixed deposit interest or savings account
+                                interest</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>India
+                                    Employees:</strong> NRIs who received salary/professional income from Indian
+                                companies</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Inheritance
+                                    Recipients:</strong> NRIs who received inheritance or gifts from Indian
+                                relatives</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Compliance-First
+                                    NRIs:</strong> NRIs who want to establish clean India tax compliance records</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Our Process</p>
+                    <div style="display:flex;flex-direction:column;gap:8px;">
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                1</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Residential Status
+                                    Assessment</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Determine
+                                    residential status (NR / RNOR / ROR) based on day-count and intention.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                2</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Income Identification</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Identify all
+                                    India-sourced income and applicable TDS deductions.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                3</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DTAA Review</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Apply relevant
+                                    DTAA provisions to exempt or reduce tax where applicable.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                4</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">ITR Computation &amp;
+                                    Filing</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Compute tax
+                                    liability, generate ITR, and file on Income Tax Portal.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                5</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Acknowledgement &amp;
+                                    Refund</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Provide ITR-V
+                                    acknowledgement; track and communicate refund status.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS REQUIRED -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Documents Required</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                🪪 Identity &amp; Status</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> PAN card, Passport copy,
+                                    current country of residence details</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Day count in India during
+                                    the financial year</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                📋 Income Documents</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Form 168 [old- Form 26AS]
+                                    / AIS from Income Tax portal</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> NRO/NRE interest
+                                    certificates from Indian banks</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Rental agreements and
+                                    rental receipts (for property income)</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Capital gains statement
+                                    (from broker or mutual fund)</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> TDS certificates (Form
+                                    131 [old-Form16A]) from tenants/banks</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Basic NRI ITR</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Income from salary/interest only
+                                </p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: NRIs with simple India income — interest, salary</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Residential
+                                    status determination</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ITR-2
+                                    filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DTAA
+                                    benefit check</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> TDS
+                                    reconciliation</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999 per year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Standard NRI ITR</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹3,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Rental income + capital gains</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: NRIs with property or investment income</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Basic</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Rental
+                                    income computation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Capital
+                                    gains calculation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Property
+                                    TDS credit claim</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹3,999 per year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Comprehensive NRI ITR</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹5,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Business income + FEMA + DTAA
+                                    complex cases</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: NRIs with business interests, multiple income sources</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Standard</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Business/professional income in India</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Complex
+                                    DTAA application</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Lower TDS
+                                    certificate (Form 128 [old-Form 13]) assistance</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹5,999 per year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do NRIs need to file ITR in
+                                India if all tax is deducted at source?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Not mandatory if
+                                income is below ₹2.5 lakh or only TDS-deducted income. But filing is recommended to
+                                claim TDS refunds and maintain a clean compliance record.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is RNOR status?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Resident but Not
+                                Ordinarily Resident — a transitional status for returning NRIs in their first 1–3 years.
+                                RNOR persons are taxed similarly to NRIs on foreign income.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can you help with ITRs for
+                                past unfiled years?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. Updated returns
+                                (ITR-U) can be filed for up to 4 preceding assessment years. We handle late filings and
+                                help minimise penalties.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Basic NRI ITR</span><span
+                            style="font-weight:700;">₹1,999/yr</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Standard NRI ITR</span><span
+                            style="font-weight:700;">₹3,999/yr</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Comprehensive NRI ITR</span><span
+                            style="font-weight:700;">₹5,999/yr</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">NRI Day Threshold</span><span
+                            style="font-weight:700;">&lt; 182 Days</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Typical ITR Form</span><span
+                            style="font-weight:700;">ITR-2</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Filing Deadline</span><span style="font-weight:700;">31st
+                            July</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Residential
+                        Status Types</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">NR</span><span
+                            style="font-weight:600;">Non-Resident</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">RNOR</span><span style="font-weight:600;">Resident Not
+                            Ord. Resident</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">ROR</span><span style="font-weight:600;">Resident &amp;
+                            Ord. Resident</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Past Year ITR-U</span><span style="font-weight:600;">Up to
+                            4 Years</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">File Your NRI ITR Correctly — Let VITTAX
+                Handle India Tax for You</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Residential status, DTAA benefits, TDS refunds —
+                all handled by NRI tax specialists, every year</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

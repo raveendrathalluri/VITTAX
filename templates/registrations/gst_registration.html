@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GST Registration - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">GST Registration</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Your GSTIN in 1–3 Days — Mandatory, Simple, Done Right</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ GSTIN in 1–3 Working Days</span>
+                    <span class="badge badge-primary">✦ Correct Category Advised</span>
+                    <span class="badge badge-info">✦ ITC Benefits Unlocked</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is GST Registration?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Goods and Services Tax (GST) is India's unified indirect tax on the supply of goods and services. Every business whose aggregate annual turnover exceeds ₹40 lakh (goods) or ₹20 lakh (services) must register for GST and obtain a GSTIN (GST Identification Number).</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">GST registration is not merely a compliance requirement — it is a business necessity. Without GSTIN, you cannot charge GST on invoices, claim Input Tax Credit (ITC) on purchases, supply to GST-registered businesses who need input credit, list on major e-commerce platforms, or participate in government tenders. A GSTIN also signals business credibility and professionalism to customers and partners.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX handles the complete registration process: preparing all documents, filing the application on the GST portal, responding to any notice from the GST officer (clarification/rejection), and obtaining the GSTIN Certificate within 1–3 working days of application. We also guide you on the correct GST category (regular, composition, or voluntary registration) based on your business model.</p>
+                    <div style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Without GSTIN, you cannot claim ITC, list on e-commerce platforms, or participate in government tenders.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs GST Registration?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Threshold-Crossed Businesses</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Businesses with turnover above ₹40 lakh (goods) / ₹20 lakh (services)</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Interstate Suppliers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Businesses making interstate supply — mandatory regardless of turnover</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">E-commerce Sellers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">E-commerce sellers on Amazon, Flipkart, Meesho, etc.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Importers / Exporters</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Businesses importing or exporting goods/services</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Voluntary Registration</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Businesses voluntarily registering for credibility and ITC benefits</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Newly Incorporated Entities</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Companies, LLPs, and firms incorporated recently needing GST from Day 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp; Timeline</h2>
+                    <div style="display:flex;flex-direction:column;gap:0;">
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">1</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Document Preparation</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Gather all required documents; VITTAX prepares the application package.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">2</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">GST Portal Application</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">File Part-A of the GST registration form on GST portal; obtain Temporary Reference Number (TRN).</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">3</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Part-B Filing</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–2 days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Fill Part-B with business details, director/partner details, bank account, and upload documents; DSC or EVC signing.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">4</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">ARN Generation</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">Same day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Application submitted; Application Reference Number (ARN) generated; status tracking begins.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">5</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Officer Approval / Clarification</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–3 working days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">GST officer reviews; may raise query (responded within 7 days) or approve directly.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">6</div>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">GSTIN Certificate</p>
+                                    <span style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">Same day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">GSTIN issued; registration certificate downloaded from GST portal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div>
+                            <p style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">For Proprietorship</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> PAN and Aadhaar of proprietor</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Bank account details</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Business address proof (electricity bill and rent agreement)</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Photograph of proprietor</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">For Company / LLP / Partnership Firm</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> COI (Certificate of Incorporation) and PAN of the entity</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> PAN, Aadhaar, and photograph of all directors/partners</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Company bank account details</li>
+                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Registered office address proof (electricity bill + NOC from owner + rent agreement)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <!-- BASIC GST REGISTRATION -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Basic GST Registration</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹1,499<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Single GSTIN for one state</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Any new business needing their first GSTIN</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document preparation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GST portal filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Clarification response</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GSTIN certificate</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Filing advisory for first month</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹1,499</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- MULTI-STATE REGISTRATION -->
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Multi-State Registration</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹3,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">GSTIN for 2–5 states</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Businesses operating in multiple states</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Registration in up to 5 states</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> All document preparation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> All clarification responses</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GST compliance calendar for all states</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹3,999</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is GST registration free?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — there is no government fee for GST registration. VITTAX's service fee covers professional preparation, filing, and follow-up to ensure first-time approval.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I register voluntarily even if my turnover is below the threshold?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — voluntary GST registration is permitted. It allows you to issue GST invoices, claim ITC on purchases, and supply to registered businesses who need input credit. Recommended if your customers are GST-registered businesses.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the Composition Scheme and who should opt for it?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">The Composition Scheme allows small businesses (turnover up to ₹1.5 crore) to pay GST at a flat rate (1–5%) on turnover instead of the standard rate, with simplified quarterly filing. However, composition dealers cannot charge GST on invoices or claim ITC. Best suited for small retailers and manufacturers supplying to end consumers.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do I need GST registration if I only sell on Amazon or Flipkart?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — e-commerce sellers must register for GST regardless of turnover, as e-commerce marketplaces are required to collect TCS (Tax Collected at Source) from registered sellers. Unregistered sellers cannot supply through e-commerce operators.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What if my application is rejected?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">VITTAX responds to all officer queries within the stipulated time. If an application is rejected, we reapply immediately after identifying and resolving the reason for rejection. Our first-time approval rate is above 97%.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Basic Registration</span><span style="font-weight:700;">₹1,499</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Multi-State (2–5)</span><span style="font-weight:700;">₹3,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Delivery Time</span><span style="font-weight:700;">1–3 Working Days</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Approval Rate</span><span style="font-weight:700;">97%+ First Time</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">States Covered</span><span style="font-weight:700;">Up to 5 States</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees</span><span style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Registration Covers</p>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Category</span><span style="font-weight:600;">Regular / Composition</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Filing</span><span style="font-weight:600;">Portal + DSC / EVC</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Follow-up</span><span style="font-weight:600;">Till Certificate Issued</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">Advisory</span><span style="font-weight:600;">First Month Included</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get Your GSTIN in 1–3 Days — Apply with VITTAX Now</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">GSTIN in 1–3 working days, correct category advised, ITC benefits unlocked — done right from day one</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
+                <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

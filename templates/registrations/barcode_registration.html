@@ -1,0 +1,544 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Barcode Registration (GS1 India) - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
+                    Barcode Registration (GS1 India)</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Official Barcodes for Your
+                    Products — Sell on Any Retail or E-commerce Platform</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Globally Unique Product Identity</span>
+                    <span class="badge badge-primary">✦ Amazon &amp; Flipkart Compatible</span>
+                    <span class="badge badge-info">✦ Retail &amp; Export Ready</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is GS1 Barcode Registration?
+                    </h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">A barcode
+                        is a machine-readable representation of data (typically a product's identity and price) used for
+                        automatic identification and data capture (AIDC) at retail checkout counters, warehouses, and
+                        e-commerce fulfilment centres. GS1 is the global non-profit organisation that administers the
+                        international barcode numbering system — the EAN-13 barcode (used in India and internationally)
+                        and the UPC-A barcode (used in the USA/Canada) are both GS1 standards.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">GS1 India
+                        is the country chapter of GS1 Global, operating under the Quality Council of India. When you
+                        register with GS1 India, you receive a unique Global Company Prefix (GCP) — a 7–9 digit
+                        company-specific number that forms the base of all your product barcodes (GTINs — Global Trade
+                        Item Numbers). Each product SKU (size/colour/variant) gets its own unique GTIN, encoded into the
+                        barcode printed on the product label.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">GS1 barcodes are the only
+                        barcodes accepted by major Indian retailers (D-Mart, Reliance Retail, Big Bazaar, Spencer's),
+                        all leading e-commerce platforms (Amazon India, Flipkart — Amazon specifically requires GS1
+                        GTINs for brand-owner listings), and international export markets. Using unofficial or random
+                        barcodes downloaded from non-GS1 sources can result in product rejection by retailers and
+                        deactivation of listings on e-commerce platforms.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Using unofficial or random barcodes from non-GS1 sources can result in product rejection by
+                        retailers and deactivation of e-commerce listings.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs GS1 Barcode
+                        Registration?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">FMCG
+                                    Manufacturers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">FMCG brands, packaged food
+                                    companies, and consumer goods manufacturers</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Amazon
+                                    / Flipkart Sellers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">E-commerce sellers listing products
+                                    on Amazon India (Brand Registry requires GTIN)</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Exporters</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Exporters supplying to
+                                    international retailers (Walmart, Tesco, Carrefour) who require GS1 barcodes</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Pharma
+                                    &amp; MedTech</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Pharmaceutical companies and
+                                    medical device manufacturers (GS1 barcodes for track-and-trace)</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Retail
+                                    Brands</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Retail brands wanting products to
+                                    be scannable at any POS terminal in India</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Product
+                                    Startups</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Startups launching physical
+                                    products and wanting to be shelf-ready from Day 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp;
+                        Timeline</h2>
+                    <div style="display:flex;flex-direction:column;gap:0;">
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    1</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">GS1 India Membership
+                                        Application</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1
+                                        day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Apply for GS1 India
+                                    membership online at gs1india.org. Choose the correct membership tier based on your
+                                    number of product SKUs.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    2</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Document Submission
+                                        &amp; Payment</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–2
+                                        days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Submit company KYC
+                                    documents and pay the one-time registration fee + annual subscription online.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    3</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">GCP Allotment</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">3–7
+                                        working days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">GS1 India allots
+                                    your unique Global Company Prefix (GCP). You receive membership certificate and
+                                    access to the GS1 India member portal.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    4</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">GTIN Generation</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">Immediate
+                                        (self-service on portal)</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Use the GS1 India
+                                    member portal to generate individual GTINs for each product SKU. Each GTIN is unique
+                                    to one product-size-variant combination.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    5</div>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Barcode Image
+                                        Generation</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">Immediate
+                                        (via portal or software)</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Generate standard
+                                    EAN-13 barcode images (in EPS/PNG/SVG format) using your GTINs — for use on product
+                                    labels, packaging, and e-commerce listings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">PAN card of the company
+                                / proprietor / LLP</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">GST Registration
+                                Certificate</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Certificate of
+                                Incorporation / Udyam certificate / Partnership deed (as applicable)</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Address proof of the
+                                registered office</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Authorised signatory
+                                KYC — PAN and Aadhaar / ID proof</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">GS1 India Membership Tiers</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+
+                        <!-- STARTUP / MICRO -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Startup / Micro</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹2,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        service fee</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Up to 10 GTINs</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Micro enterprises, startups with 1–10 product variants</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GS1 India
+                                    membership</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Global
+                                    Company Prefix (GCP)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Up to 10
+                                    GTINs (product barcodes)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Barcode
+                                    image generation guidance</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Amazon/Flipkart listing advisory</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹2,999</strong> &nbsp;|&nbsp; GS1 Fee:
+                                <strong style="color:var(--success);">₹5,000 one-time + ₹2,500/year</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- SMALL BUSINESS -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Small Business</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹5,499<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        service fee</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Up to 100 GTINs</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: FMCG brands, e-commerce sellers, food manufacturers with 11–100 SKUs</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GS1 India
+                                    membership</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GCP + up to
+                                    100 GTINs</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Barcode
+                                    image files for all GTINs</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Product
+                                    labelling advisory</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Amazon
+                                    Brand Registry barcode guidance</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹5,499</strong> &nbsp;|&nbsp; GS1 Fee:
+                                <strong style="color:var(--success);">₹10,000 one-time + ₹5,000/year</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+
+                    <!-- MEDIUM / LARGE -->
+                    <div
+                        style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                        <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Medium / Large</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹14,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        service fee</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">1,000+ GTINs</p>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="white-space:nowrap;align-self:center;">Get
+                                Started →</a>
+                        </div>
+                        <p
+                            style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                            Ideal for: Established manufacturers, exporters, organised retail brands</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GS1 India
+                                membership — higher tier</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GCP + 1,000+
+                                GTINs</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> EDI &amp;
+                                supply chain integration advisory</div>
+                            <div style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                    style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Export market
+                                barcode compliance guidance</div>
+                        </div>
+                        <div
+                            style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                            VITTAX Fee: <strong style="color:var(--primary);">₹14,999</strong> &nbsp;|&nbsp; GS1 Fee:
+                            <strong style="color:var(--success);">₹25,000+ one-time + annual subscription</strong></div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I use barcodes I find
+                                online or generate using free barcode software?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No — barcodes
+                                generated without a GS1-allocated GCP are unofficial and not unique. They can conflict
+                                with another company's products in retail systems, leading to incorrect scanning at POS.
+                                Amazon and major retailers specifically require GS1-sourced GTINs.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is one barcode per product or
+                                per variant?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">One GTIN per SKU —
+                                meaning each unique combination of product + size + colour + flavour needs its own
+                                barcode. A 500ml and a 1-litre bottle of the same product are two separate GTINs.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do GS1 barcodes expire?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">GS1 membership is
+                                renewed annually. As long as your membership is active, your GTINs remain valid. Lapsed
+                                membership does not invalidate barcodes already printed, but you cannot generate new
+                                GTINs or maintain your GS1 company data.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I use one barcode for
+                                selling in both India and international markets?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — GS1 GTINs are
+                                globally unique. An EAN-13 barcode registered in India is accepted at retailers and
+                                e-commerce platforms worldwide. This is a key advantage of GS1 over any non-standard
+                                barcode.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Startup / Micro (10 GTINs)</span><span
+                            style="font-weight:700;">₹2,999</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Small Business (100 GTINs)</span><span
+                            style="font-weight:700;">₹5,499</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Medium / Large (1,000+)</span><span
+                            style="font-weight:700;">₹14,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">GCP Allotment</span><span style="font-weight:700;">3–7
+                            Working Days</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Barcode Type</span><span style="font-weight:700;">EAN-13
+                            / UPC-A</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Renewal</span><span style="font-weight:700;">Annual
+                            Membership</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Validity</span><span style="font-weight:700;">Global &amp;
+                            Permanent</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Accepted By
+                    </p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">E-commerce</span><span style="font-weight:600;">Amazon,
+                            Flipkart</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Retail</span><span style="font-weight:600;">D-Mart,
+                            Reliance Retail</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Export</span><span style="font-weight:600;">Walmart,
+                            Tesco, Carrefour</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Format</span><span style="font-weight:600;">EPS / PNG /
+                            SVG</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get Your GS1 Barcodes — VITTAX Registers
+                Your Products with GS1 India</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Globally unique product identity, Amazon &amp;
+                Flipkart compatible, retail &amp; export ready — shelf-ready from day one</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

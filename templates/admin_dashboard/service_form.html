@@ -1,0 +1,72 @@
+
+{# ════════ templates/admin_dashboard/service_form.html ════════ #}
+{% extends 'admin_dashboard/base.html' %}
+{% block page_title %}{{ action }} Service{% endblock %}
+{% block content %}
+<div style="max-width:700px">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+    <a href="{% url 'admin_services' %}" class="btn btn-outline btn-sm"><i class="fas fa-arrow-left"></i> Back</a>
+    <h2 style="font-size:1.2rem;font-weight:700">{{ action }} Service</h2>
+  </div>
+  <div class="form-card">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Service Name *</label>
+          <input name="name" type="text" class="form-control" value="{{ service.name|default:'' }}" required placeholder="e.g. ITR Filing">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Category *</label>
+          <select name="category" class="form-control" required>
+            <option value="">-- Select --</option>
+            <option value="Start_a_Business" {% if service.category == 'Start_a_Business' %}selected{% endif %}>Start a Business</option>
+            <option value="Registrations" {% if service.category == 'Registrations' %}selected{% endif %}>Registrations</option>
+            <option value="GST_Indirect_Tax" {% if service.category == 'GST_Indirect_Tax' %}selected{% endif %}>GST & Indirect Tax</option>
+            <option value="income_tax" {% if service.category == 'income_tax' %}selected{% endif %}>Income Tax</option>
+            <option value="mca_corporate" {% if service.category == 'mca_corporate' %}selected{% endif %}>MCA & Corporate</option>
+            <option value="accounting_payroll" {% if service.category == 'accounting_payroll' %}selected{% endif %}>Accounting & Payroll</option>
+            <option value="nri_international_services" {% if service.category == 'nri_international_services' %}selected{% endif %}>NRI & International Services</option>
+            <option value="virtual_cfo_advisory" {% if service.category == 'virtual_cfo_advisory' %}selected{% endif %}>Virtual CFO & Advisory</option>
+            <option value="other" {% if service.category == 'other' %}selected{% endif %}>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Short Description *</label>
+        <input name="short_description" type="text" class="form-control" value="{{ service.short_description|default:'' }}" required placeholder="One-line description">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Full Description *</label>
+        <textarea name="description" class="form-control" required>{{ service.description|default:'' }}</textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Price (₹) *</label>
+          <input name="price" type="number" min="0" step="0.01" class="form-control" value="{{ service.price|default:'0' }}" required>
+          <small style="color:#718096">Use 0 for free services</small>
+        </div>
+        <div class="form-group">
+          <label class="form-label">FontAwesome Icon</label>
+          <input name="icon" type="text" class="form-control" value="{{ service.icon|default:'fas fa-file-alt' }}" placeholder="fas fa-file-alt">
+          <small style="color:#718096">e.g. fas fa-file-invoice</small>
+        </div>
+      </div>
+      <div style="display:flex;gap:24px;margin-bottom:24px">
+        <label class="form-check">
+          <input type="checkbox" name="is_featured" {% if service.is_featured %}checked{% endif %}>
+          Mark as Featured
+        </label>
+        <label class="form-check">
+          <input type="checkbox" name="is_active" {% if service.is_active or action == 'Add' %}checked{% endif %}>
+          Active (visible on site)
+        </label>
+      </div>
+      <div style="display:flex;gap:12px">
+        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> {{ action }} Service</button>
+        <a href="{% url 'admin_services' %}" class="btn btn-outline">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

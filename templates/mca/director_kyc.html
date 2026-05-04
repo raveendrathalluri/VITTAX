@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Director's KYC, DIN & DSC - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">MCA &amp; Corporate Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
+                    Director's KYC, DIN &amp; DSC</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Keep Every Director Active and
+                    Compliant — Annual DIR-3 KYC and Fresh DIN/DSC Support</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ DIN KYC by 30th Sept</span>
+                    <span class="badge badge-primary">✦ Deactivation Avoided</span>
+                    <span class="badge badge-info">✦ Fresh DIN &amp; DSC in 1 Day</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Director KYC?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">DIR-3 KYC
+                        (Director Identification Number Know Your Customer) is an annual filing that every person who
+                        holds a DIN (Director Identification Number) or DPIN (Designated Partner Identification Number)
+                        must complete by 30th September each year. The DIR-3 KYC verifies the director's personal
+                        details — name, address, email, and mobile number — and ensures the DIN/DPIN remains active. If
+                        a director fails to file DIR-3 KYC by the deadline, the DIN/DPIN is automatically deactivated by
+                        the MCA. A deactivated DIN means the director cannot sign, file, or approve any MCA documents —
+                        effectively freezing all company filings until the DIN is reactivated by paying a ₹5,000
+                        reactivation fee and filing the KYC form.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">DIN/DPIN is a unique 8-digit
+                        number allotted by the MCA to every individual who wishes to become a director of a company or
+                        designated partner of an LLP. It is a one-time registration that lasts for life — but requires
+                        annual KYC to stay active. DSC (Digital Signature Certificate) is the electronic equivalent of a
+                        physical signature — mandatory for company/LLP incorporation, ROC filings, GST, income tax
+                        audits, and e-tenders. Without a valid DSC, no director can digitally sign company documents.
+                    </p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ If DIR-3 KYC is not filed by 30th September, the DIN is automatically deactivated.
+                        Reactivation requires ₹5,000 government fee.
+                    </div>
+                </div>
+
+                <!-- PROCESS & TIMELINE -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Process &amp; Timeline</p>
+                    <div style="display:flex;flex-direction:column;gap:8px;">
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                1</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DIR-3 KYC Web Filing
+                                    &nbsp;<span style="font-size:.75rem;font-weight:500;color:var(--text-light);">[Same
+                                        Day]</span></p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Director logs in
+                                    to MCA portal and completes the OTP-verified KYC form using Aadhaar-linked mobile
+                                    and email. VITTAX guides the director through the process and provides CA signature
+                                    of filing.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                2</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DIN Application (Fresh)
+                                    &nbsp;<span style="font-size:.75rem;font-weight:500;color:var(--text-light);">[1–2
+                                        Days]</span></p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">For new directors:
+                                    Form DIR-3 or SPICe+ incorporation process includes DIN allotment. Takes 1–2 working
+                                    days after form submission.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                3</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DSC Application
+                                    &nbsp;<span style="font-size:.75rem;font-weight:500;color:var(--text-light);">[Same
+                                        Day]</span></p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">We collect PAN,
+                                    Aadhaar, and photo. eKYC verification via video call. Class 3 DSC issued on USB
+                                    token within same day.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Director KYC (DIR-3)</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹499<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        director</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Annual filing for active DINs</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: All directors and designated partners with existing DINs — annual requirement
+                            </p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DIR-3 KYC
+                                    web filing preparation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> OTP
+                                    verification support</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MCA KYC
+                                    acknowledgement</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹499 per director</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--text);">Nil (if DIN was deactivated
+                                    — reactivation fee to Govt is ₹5000.)</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Fresh DIN Allotment</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹999</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For new directors being appointed
+                                </p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: New directors being appointed to existing companies or LLPs</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DIR-3 form
+                                    preparation and filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document
+                                    verification</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DIN
+                                    allotment and activation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Director
+                                    appointment resolution drafting</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Class 3 DSC — 2 Year</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> incl.
+                                        token</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">For directors, signatories, and
+                                    professionals</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Directors, CAs, company secretaries, and authorised signatories</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document
+                                    collection and eKYC verification</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> USB token
+                                    setup</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DSC
+                                    issuance and installation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Multiple-use activation (MCA, IT, GST, EPFO, etc.)</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999 (inclusive token and
+                                    certificate)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What happens if I don't file
+                                Director KYC (DIR-3) by 30th September?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Your DIN is
+                                deactivated the next day (1st October). You cannot sign any MCA documents, filings, or
+                                resolutions until the DIN is reactivated. Reactivation requires paying ₹5,000 government
+                                fee and filing the KYC form.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can one person hold multiple
+                                DINs?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No. One individual can
+                                hold only one DIN. If you have been allotted multiple DINs by mistake, the extra DINs
+                                must be surrendered by filing DIR-5.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How long is a DSC valid?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">DSCs are valid for 1,
+                                2, or 3 years from the date of issuance. VITTAX recommends the 2-year DSC for cost
+                                efficiency. Renewal is required before expiry.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Director KYC (DIR-3)</span><span
+                            style="font-weight:700;">₹499/director</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Fresh DIN Allotment</span><span
+                            style="font-weight:700;">₹999</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Class 3 DSC (2 Year)</span><span
+                            style="font-weight:700;">₹1,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">KYC Deadline</span><span style="font-weight:700;">30th
+                            September</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Reactivation Fee</span><span
+                            style="font-weight:700;color:var(--danger);">₹5,000</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">DIN Delivery</span><span style="font-weight:700;">1–2
+                            Days</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">DSC Delivery</span><span style="font-weight:700;">Same
+                            Day</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Facts</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">DIN</span><span style="font-weight:600;">8-digit
+                            number</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">KYC Form</span><span style="font-weight:600;">DIR-3 KYC
+                            Web</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">DSC Type</span><span style="font-weight:600;">Class
+                            3</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">DSC Validity</span><span style="font-weight:600;">2
+                            Years</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">File Director KYC Before 30th September
+            </h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Protect Your DIN Today → We guide every step —
+                KYC filing, fresh DIN allotment, and same-day DSC issuance</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Protect Your DIN
+                    Today →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

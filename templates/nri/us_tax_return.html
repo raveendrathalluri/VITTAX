@@ -1,0 +1,433 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}US Tax Return Filing (Form 1040 / 1040-NR) - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">NRI &amp; International Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">US Tax
+                    Return Filing (Form 1040 / 1040-NR)</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">US Tax Done Right — For Indians
+                    in America &amp; Americans in India</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ India-US DTAA Applied</span>
+                    <span class="badge badge-primary">✦ FBAR &amp; FATCA Compliant</span>
+                    <span class="badge badge-info">✦ IRS E-filed Returns</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Form 1040 / 1040-NR?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The United
+                        States taxes its citizens and residents on worldwide income. Form 1040 is the standard US
+                        individual income tax return for US citizens and resident aliens (Green Card holders and
+                        Substantial Presence Test residents). Form 1040-NR is the return for non-resident aliens with US
+                        source income. Indian nationals working in the US on H1B, L1, or O1 visas — and US citizens
+                        living in India — all have US filing obligations that require expertise in both Indian and US
+                        tax law.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">VITTAX's US
+                        tax practice handles Form 1040/1040-NR preparation with expertise in India-US DTAA provisions,
+                        FBAR (FinCEN 114) reporting for Indian bank accounts above $10,000, Form 8938 (FATCA),
+                        India-source income disclosure, and the Foreign Earned Income Exclusion (FEIE — Form 2555) or
+                        Foreign Tax Credit (Form 1116) to avoid double taxation.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">We file electronically with
+                        the IRS and provide year-round support for IRS notices and queries.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ FBAR penalty for non-filing: up to $10,000 per violation. US citizens must file even if
+                        living in India — there is no income threshold exemption from filing.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs US Tax Filing?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Work Visa
+                                    Holders:</strong> Indian nationals on H1B / L1 / O1 visas in the US</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Green Card
+                                    Holders:</strong> Green Card holders, including those living back in India</span>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>US Citizens in
+                                    India:</strong> US citizens with India income (salary, rent, capital gains)</span>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Returning
+                                    NRIs:</strong> Returning Indians who spent part of the year in the US (Substantial
+                                Presence)</span></div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>FBAR
+                                    Filers:</strong> US residents with Indian bank accounts exceeding $10,000 (FBAR
+                                mandatory)</span></div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Our Process</p>
+                    <div style="display:flex;flex-direction:column;gap:8px;">
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                1</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Residency &amp; Filing
+                                    Status</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Determine US
+                                    residency status (SPT/GC/citizen) and correct filing form.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                2</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">Income Compilation</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Collect W-2s,
+                                    1099s, India income details, and foreign account data.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                3</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DTAA &amp; FTC/FEIE</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Apply India-US
+                                    DTAA, compute FTC (Form 1116) or FEIE (Form 2555) to eliminate double tax.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                4</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">FBAR &amp; FATCA</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">File FinCEN 114
+                                    (FBAR) and Form 8938 (FATCA) where applicable.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
+                            <div
+                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                5</div>
+                            <div>
+                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">E-filing with IRS</p>
+                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Electronically
+                                    file Form 1040/1040-NR and schedule state returns if applicable.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS REQUIRED -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Documents Required</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                🇺🇸 US Income</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> W-2 (salary),
+                                    1099-INT/DIV/MISC (investment income), K-1 (partnership income)</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Prior year 1040 return
+                                    copy (if available)</div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
+                            <p
+                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
+                                🇮🇳 India Income &amp; Accounts</p>
+                            <div style="display:flex;flex-direction:column;gap:7px;">
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> India income details —
+                                    salary, rent, capital gains, interest</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> Indian bank account
+                                    details (for FBAR if balance &gt; $10,000)</div>
+                                <div
+                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
+                                    <span style="color:var(--success);flex-shrink:0;">•</span> India ITR and Form 26AS
+                                    (for FTC computation)</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Basic 1040</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹6,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">W-2 only + FBAR</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: H1B/L1 employees with simple W-2 income</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Form 1040
+                                    preparation &amp; e-filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FBAR
+                                    (FinCEN 114) if needed</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> India-US
+                                    DTAA review</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹6,999 per year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil (IRS filing is free)</strong>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Standard 1040</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹9,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">W-2 + India income + FTC</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: GC holders and US citizens with India income</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Basic</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> India
+                                    income reporting on 1040</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Foreign Tax
+                                    Credit (Form 1116)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Form 8938
+                                    (FATCA) if needed</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹9,999 per year</strong> &nbsp;|&nbsp;
+                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Comprehensive</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹19,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Business income + Schedules + State
+                                    returns</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Self-employed, consultants, business owners in US</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Standard</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Schedule
+                                    C/E/F business income</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> State
+                                    income tax return (up to 2 states)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Self-employment tax computation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FEIE (Form
+                                    2555) option analysis</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹19,999 per year</strong>
+                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--text);">State filing fees if
+                                    applicable</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I avoid double taxation
+                                on India salary while in the US?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — using the
+                                Foreign Tax Credit (Form 1116), taxes paid in India reduce your US liability
+                                dollar-for-dollar on the same income.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is FBAR separate from the tax
+                                return?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — FBAR (FinCEN
+                                114) is filed separately on the BSA e-filing website, not with the IRS. It is due April
+                                15 (auto-extended to October 15). Penalty for non-filing: up to $10,000 per violation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Basic 1040</span><span
+                            style="font-weight:700;">₹6,999/yr</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Standard 1040</span><span
+                            style="font-weight:700;">₹9,999/yr</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Comprehensive</span><span
+                            style="font-weight:700;">₹19,999/yr</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">IRS Filing</span><span
+                            style="font-weight:700;color:var(--success);">Free (E-filed)</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">FBAR Deadline</span><span style="font-weight:700;">Apr 15
+                            (Oct ext.)</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">FBAR Threshold</span><span style="font-weight:700;">&gt;
+                            $10,000</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">FBAR Non-filing Penalty</span><span
+                            style="font-weight:700;color:var(--danger);">Up to $10,000</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Forms</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Form 1040</span><span style="font-weight:600;">US
+                            Citizens / GC</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Form 1040-NR</span><span
+                            style="font-weight:600;">Non-Resident Aliens</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">FinCEN 114</span><span
+                            style="font-weight:600;">FBAR</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Form 8938</span><span style="font-weight:600;">FATCA</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">File Your US Tax Return Correctly —
+                India-US Dual Tax Expertise at VITTAX</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">DTAA applied, FBAR filed, FTC computed, IRS
+                e-filed — complete US tax compliance for Indians in America</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ADT-1 — Auditor Appointment & Reappointment - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">MCA &amp; Corporate Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">ADT-1
+                    — Auditor Appointment &amp; Reappointment</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Appoint Your Statutory Auditor
+                    the Right Way — ADT-1 Filed in 48 Hours</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Filed Within 15 Days of AGM</span>
+                    <span class="badge badge-primary">✦ Consent Letter Included</span>
+                    <span class="badge badge-info">✦ Penalty-Free Compliance</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is ADT-1?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Form ADT-1
+                        is filed with the ROC to inform the MCA about the appointment or reappointment of a Statutory
+                        Auditor. Under Section 139 of the Companies Act, every company must appoint a Chartered
+                        Accountant firm as its Statutory Auditor at the first Annual General Meeting and reappoint (for
+                        up to 5 consecutive years, subject to rotation rules) at each subsequent AGM. ADT-1 must be
+                        filed within 15 days of the AGM at which the auditor is appointed or ratified. Late filing
+                        attracts a penalty of ₹300 per day (minimum ₹1,000, maximum ₹3 lakhs for companies).</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">First-time auditor
+                        appointments — including at the time of company incorporation — must also be intimated via ADT-1
+                        within 30 days of the Board Meeting at which the first auditor is appointed. VITTAX prepares the
+                        consent letter from the auditor, the board resolution for appointment, and the ADT-1 e-form —
+                        all in a compliant, properly formatted package. We help in finding the suitable Statutory
+                        Auditor of your Business.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Late filing attracts a penalty of ₹300 per day — minimum ₹1,000, maximum ₹3 lakhs for
+                        companies.
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">MANDATORY
+                                FILING</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    ADT-1 Filing</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹499</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Standard auditor appointment /
+                                    reappointment</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: All companies appointing or reappointing statutory auditors</p>
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Auditor
+                                        consent letter (in prescribed format)</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Board
+                                        resolution for auditor appointment</li>
+                                </ul>
+                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ADT-1
+                                        e-form preparation and MCA filing</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MCA
+                                        acknowledgement</li>
+                                </ul>
+                            </div>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹499</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is ADT-1 required every year?
+                            </p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">If the auditor is
+                                appointed for 5 consecutive years at the AGM, ADT-1 must be filed each year — even if it
+                                is just a ratification (not a new appointment). Technically, from FY 2023-24, the annual
+                                ratification requirement has been removed for 5-year appointments, but the ADT-1 is
+                                still needed at each formal appointment.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Who can be a statutory
+                                auditor?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Only a Chartered
+                                Accountant firm (or an individual CA in practice) can be appointed as a Statutory
+                                Auditor. The auditor must not be disqualified under Section 141 — including existing
+                                relationship with the company, outstanding payments, or specific professional
+                                involvements.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">ADT-1 Filing</span><span
+                            style="font-weight:700;">₹499</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Filing Deadline</span><span style="font-weight:700;">15
+                            Days of AGM</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">First Appointment</span><span style="font-weight:700;">30
+                            Days of BM</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Late Fee</span><span
+                            style="font-weight:700;color:var(--danger);">₹300/day</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Max Penalty</span><span
+                            style="font-weight:700;color:var(--danger);">₹3 Lakhs</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Facts</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Governing Section</span><span
+                            style="font-weight:600;">Section 139</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Auditor Term</span><span style="font-weight:600;">Up to 5
+                            Years</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Eligible Auditor</span><span style="font-weight:600;">CA
+                            Firm / Individual</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Disqualification</span><span
+                            style="font-weight:600;">Section 141</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Appoint Your Statutory Auditor Correctly
+            </h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">File ADT-1 Today → We prepare the consent letter,
+                board resolution, and ADT-1 e-form — all within 48 hours</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">File ADT-1 Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

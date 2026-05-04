@@ -1,0 +1,580 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Startup India Registration - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
+                    Startup India Registration</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Join India's Official Startup
+                    Ecosystem — Benefits, Network &amp; Recognition</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Official DPIIT Recognition</span>
+                    <span class="badge badge-primary">✦ Tax &amp; Labour Law Benefits</span>
+                    <span class="badge badge-info">✦ Startup India Certificate</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Startup India
+                        Registration?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Startup
+                        India is a flagship initiative of the Government of India, launched on January 16, 2016, with
+                        the objective of building a strong ecosystem for innovation and entrepreneurship in India. The
+                        programme is implemented by the Department for Promotion of Industry and Internal Trade (DPIIT).
+                        Registering on the Startup India portal and obtaining recognition as a "Startup" under the DPIIT
+                        definition is the first step toward accessing a wide range of government benefits exclusively
+                        available to recognised startups.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">To be
+                        eligible, a startup must: be incorporated as a Private Limited Company, LLP, or Registered
+                        Partnership Firm; be less than 10 years old from the date of incorporation; have an annual
+                        turnover not exceeding ₹100 crore in any previous financial year; and be working toward
+                        innovation, development, or improvement of products/processes/services with high potential for
+                        employment generation or wealth creation.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX handles the Startup
+                        India registration application end-to-end — including drafting the innovation description (the
+                        most critical part of the application), compiling supporting evidence, and tracking the
+                        application to approval. Our application success rate is above 95% because we know exactly how
+                        DPIIT evaluates innovation descriptions.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Incorporation alone does not make you a DPIIT-recognised startup — you must apply,
+                        demonstrate innovation, and receive an official recognition certificate.
+                    </div>
+                </div>
+
+                <!-- WHO SHOULD REGISTER -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Should Register on Startup
+                        India?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Tech
+                                    Startups</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Tech and product startups with an
+                                    innovative product, process, or service</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">All
+                                    Innovative Ventures</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Social startups, edtech,
+                                    healthtech, fintech, agritech ventures</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Tax
+                                    Exemption Seekers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Startups applying for Section
+                                    80-IAC income tax exemption (3-year tax holiday)</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">
+                                    Compliance Simplification</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Startups wanting self-certification
+                                    under 9 labour laws and 3 environment laws</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">IP
+                                    Filers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Startups seeking faster processing
+                                    of patent and trademark applications (80% fee rebate on patents)</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Funding
+                                    Seekers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Startups applying for Startup India
+                                    Seed Fund, SIDBI Fund of Funds, or government grants</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BENEFITS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Benefits of Startup India / DPIIT
+                        Recognition</h2>
+                    <div style="display:flex;flex-direction:column;gap:16px;">
+
+                        <div style="border-left:3px solid var(--primary);padding-left:14px;">
+                            <p style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:8px;">Tax
+                                Benefits</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Section
+                                    80-IAC — 100% income tax exemption on profits for 3 consecutive years (out of first
+                                    10 years)</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Section
+                                    54GB — Capital gains exemption when individuals invest sale proceeds into a
+                                    recognised startup</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-left:3px solid var(--primary);padding-left:14px;">
+                            <p style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:8px;">Regulatory
+                                Benefits</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                                    Self-certification under 9 labour laws (no inspector visits for 3–5 years)</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                                    Self-certification under 3 environment laws (for green-category industries)</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                                    Fast-track exit mechanism under the Insolvency and Bankruptcy Code (90-day wind-up)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style="border-left:3px solid var(--primary);padding-left:14px;">
+                            <p style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:8px;">
+                                Intellectual Property Benefits</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> 80%
+                                    rebate on patent filing fees + fast-track examination under Startup Patent Program
+                                </li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> 50%
+                                    rebate on trademark filing fees (TM-A form)</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-left:3px solid var(--primary);padding-left:14px;">
+                            <p style="font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:8px;">Funding
+                                &amp; Network</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Access to
+                                    Startup India Seed Fund Scheme (SISFS) — up to ₹50 lakh grants/soft loans</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> SIDBI
+                                    Fund of Funds — government-backed VC funds investing in recognised startups</li>
+                                <li
+                                    style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);">
+                                    <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> GeM
+                                    portal — startups can list products/services without prior turnover/experience
+                                    requirement</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp;
+                        Timeline</h2>
+                    <div style="display:flex;flex-direction:column;gap:0;">
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    1</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Eligibility Check</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1
+                                        day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Verify that the
+                                    entity meets all eligibility criteria — age, structure, turnover, and innovative
+                                    nature.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    2</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Innovation
+                                        Description Drafting</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">2–3
+                                        days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Write a compelling
+                                    innovation description (500–1,000 words) explaining what is new/innovative about the
+                                    product/service/process — the most critical element of the application.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    3</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Portal Application
+                                    </p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1
+                                        day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Register on
+                                    startupindia.gov.in; file the DPIIT recognition application with the innovation
+                                    description and supporting documents.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    4</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">DPIIT Review</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">3–15
+                                        working days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">DPIIT reviews the
+                                    application; may request clarifications. VITTAX responds to all queries within the
+                                    deadline.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    5</div>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Recognition
+                                        Certificate</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">7–20
+                                        working days total</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">DPIIT issues the
+                                    startup recognition certificate with a unique DPIIT Number. The startup can now
+                                    access all DPIIT-linked benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Certificate of
+                                Incorporation (COI) or LLP/Partnership registration certificate</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">PAN of the entity</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Proof of funding
+                                received / patents filed / awards won (if any — optional but strengthens application)
+                            </p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Innovation description
+                                — a detailed write-up on what the business does that is new, innovative, or scalable</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Authorised signatory
+                                details (director/partner PAN and Aadhaar)</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <!-- STARTUP INDIA REGISTRATION -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Startup India Registration</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹3,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">DPIIT recognition application —
+                                    end-to-end</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: All eligible startups — Pvt Ltd, LLP, registered partnership</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Eligibility
+                                    check</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Innovation
+                                    description drafting</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Portal
+                                    application filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Query
+                                    response (if raised)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DPIIT
+                                    recognition certificate</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Benefits
+                                    activation advisory note</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹3,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- STARTUP INDIA + 80-IAC -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Startup India + 80-IAC Tax Exemption</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹12,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">DPIIT recognition + Section 80-IAC
+                                    application</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Profitable startups seeking 3-year income tax holiday on business profits</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Startup India Registration</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Section
+                                    80-IAC eligibility assessment</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> 80-IAC
+                                    application to DIPP/CBDT</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Interview
+                                    preparation (if required)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Tax
+                                    exemption order follow-up</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹12,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is every new company
+                                automatically a "Startup" under DPIIT?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No — incorporation
+                                alone does not make you a DPIIT-recognised startup. You must apply on the Startup India
+                                portal, demonstrate that your business is innovative, and receive an official
+                                recognition certificate from DPIIT. The recognition is not automatic.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What makes a business
+                                "innovative" for DPIIT purposes?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">DPIIT looks for one of
+                                three criteria: (a) work toward development or improvement of a product/process/service
+                                with high employment or wealth creation potential; (b) scalable business model with high
+                                potential; or (c) use of technology or IP in a novel way. VITTAX drafts innovation
+                                descriptions that clearly establish this for your specific business.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can a business older than 10
+                                years apply for Startup India recognition?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No — the entity must
+                                be less than 10 years old from its date of incorporation. Additionally, it must not have
+                                been formed by splitting or reconstructing an existing business.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Startup India Registration</span><span
+                            style="font-weight:700;">₹3,999</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">With 80-IAC Exemption</span><span
+                            style="font-weight:700;">₹12,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Approval Time</span><span style="font-weight:700;">7–20
+                            Working Days</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Success Rate</span><span
+                            style="font-weight:700;">95%+</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Tax Holiday</span><span style="font-weight:700;">3 Years
+                            (80-IAC)</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Benefits
+                    </p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Patent Rebate</span><span style="font-weight:600;">80%
+                            Fee Reduction</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">TM Rebate</span><span style="font-weight:600;">50% Fee
+                            Reduction</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Seed Fund</span><span style="font-weight:600;">Up to ₹50
+                            Lakh</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Labour Laws</span><span style="font-weight:600;">Self-Cert
+                            (9 Laws)</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get DPIIT Recognition in 7–20 Days —
+                VITTAX Drafts the Innovation Description that Gets Approved</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Official DPIIT recognition, tax &amp; labour law
+                benefits, Startup India certificate — join India's official startup ecosystem</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

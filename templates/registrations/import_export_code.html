@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Import Export Code (IEC) Registration - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Import Export Code (IEC) Registration</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Your Licence to Trade Globally — Permanent, No Renewal Needed</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ 1–2 Day Processing</span>
+                    <span class="badge badge-primary">✦ Lifetime Validity</span>
+                    <span class="badge badge-info">✦ Export Benefits Unlocked</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is an IEC?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">An Import Export Code (IEC) is a 10-digit unique identifier issued by the Directorate General of Foreign Trade (DGFT), Ministry of Commerce, Government of India. It is mandatory for every business or individual engaged in importing goods into India or exporting goods out of India. No customs clearance can happen without a valid IEC — it is checked at every port of entry and exit.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">IEC is also required to receive foreign currency payments through banking channels for exports, apply for export benefits under schemes like RoDTEP, SEIS, and EPCG, and register on government export portals and platforms. For service exporters (e.g., software, consulting), IEC is required when receiving foreign remittances.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">The IEC is permanent — once issued, it does not expire or require renewal. However, IEC holders must update their details (address, bank account, etc.) on the DGFT portal annually. VITTAX completes IEC registration within 1–2 working days of document submission.</p>
+                    <div style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ No customs clearance can happen without a valid IEC — it is checked at every port of entry and exit.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs IEC?</h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Importers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Businesses importing raw materials, machinery, or goods from abroad</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Exporters</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Businesses exporting products to international markets</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">IT / Software Exporters</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Software companies receiving foreign remittances for offshore services</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">E-commerce Exporters</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">E-commerce sellers on Amazon Global, eBay, Etsy, or other platforms</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Trade Fair Participants</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Individuals or businesses participating in international trade fairs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp; Timeline</h2>
+                    <div style="display:flex;flex-direction:column;gap:0;">
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">1</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Document Preparation</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Compile PAN, bank details, address proof, and entity registration documents.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">2</div>
+                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">DGFT Portal Application</p>
+                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">File IEC application on DGFT portal with DSC or Aadhaar-based OTP signing.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">3</div>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">IEC Certificate</p>
+                                    <span style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">1 working day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">DGFT issues IEC certificate electronically — downloadable from DGFT portal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+                        <li style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">PAN card of the applicant (entity or individual)</p>
+                        </li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Aadhaar card (for OTP-based e-sign) or DSC</p>
+                        </li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Bank certificate / cancelled cheque in applicant's name</p>
+                        </li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Address proof of the business</p>
+                        </li>
+                        <li style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">COI / partnership deed / Udyam certificate (for business entities)</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">LIFETIME VALIDITY</span>
+                            <div>
+                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">IEC Registration</p>
+                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹1,499<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">DGFT filing + certificate</p>
+                            </div>
+                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Any business needing to import or export</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document compilation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DGFT portal filing</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> IEC certificate</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Export benefits advisory note</li>
+                            </ul>
+                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹1,499</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil (DGFT fee ₹500 — included)</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is IEC required for export of services (software, consulting)?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — service exporters receiving foreign currency remittances above a threshold must have IEC to receive payment through banking channels and to file LUT (Letter of Undertaking) for zero-rated GST on exports.</p>
+                        </div>
+                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can an individual (not a business) get IEC?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — individuals can apply for IEC using their personal PAN and bank account. This is useful for freelancers and individual exporters.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">IEC Registration</span><span style="font-weight:700;">₹1,499 one-time</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees (DGFT)</span><span style="font-weight:700;color:var(--success);">₹500 Included</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Processing Time</span><span style="font-weight:700;">1–2 Working Days</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Validity</span><span style="font-weight:700;">Lifetime</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Issued By</span><span style="font-weight:700;">DGFT</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Annual Update</span><span style="font-weight:700;">DGFT Portal Required</span></div>
+                </div>
+                <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ IEC Unlocks</p>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Customs</span><span style="font-weight:600;">Import &amp; Export Clearance</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Schemes</span><span style="font-weight:600;">RoDTEP, SEIS, EPCG</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Payments</span><span style="font-weight:600;">Foreign Remittances</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">GST</span><span style="font-weight:600;">LUT for Zero-Rated Export</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Get Your IEC in 1 Day — VITTAX Files on the DGFT Portal for You</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">1–2 day processing, lifetime validity, export benefits unlocked — your licence to trade globally</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
+                <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

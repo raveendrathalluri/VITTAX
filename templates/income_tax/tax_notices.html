@@ -1,0 +1,490 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Tax Notices & Assessment Representation - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Income Tax &amp; Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Tax
+                    Notices &amp; Assessment Representation</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Got an Income Tax Notice? Don't
+                    Panic — Expert CA Representation, Every Step of the Way</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ All Notice Types Handled</span>
+                    <span class="badge badge-primary">✦ Timely Response Guaranteed</span>
+                    <span class="badge badge-info">✦ Officer Appearances Included</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Income Tax Notice
+                        Handling?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The Income
+                        Tax Department issues different types of notices for various reasons — Section 139(9)
+                        [new-section 263(7)] for defective return, Section 143(1)(a) [new-section 270(1)] for
+                        adjustments and demand, Section 143(2) [new-section 270] for scrutiny assessment, Section 148
+                        [new-section 280] for assessment of escaped income (up to 10 years back), Section 131 [new-131]
+                        for summons, Section 245 [new-438] for refund adjustment against demand, and various AIS
+                        mismatch intimations. Each notice demands a specific response — factual, legal, or procedural —
+                        within a strict timeline that typically ranges from 15 to 30 days.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Failure to
+                        respond to an income tax notice results in ex-parte assessment — where the IT officer computes
+                        income based solely on available information, often resulting in a significantly inflated
+                        demand. Incorrect responses — especially to scrutiny notices under Section 143(2) [new-270] or
+                        Section 148 [new-280] — can open up additional years for scrutiny and escalate the matter
+                        unnecessarily. A well-crafted, factually complete, legally grounded response is the most
+                        effective tool to close a notice at the first level itself.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX's tax professionals
+                        handle the complete notice response lifecycle — from analysing the notice and identifying the
+                        correct response strategy, preparing a detailed written reply with supporting documentation,
+                        filing it on the IT portal, and appearing before the Assessing Officer if required.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ Failure to respond results in ex-parte assessment — the IT officer computes income without
+                        your input, often resulting in a significantly inflated demand.
+                    </div>
+                </div>
+
+                <!-- NOTICES TABLE -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Types of Notices We Handle</p>
+                    <div
+                        style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;">
+                        <div style="overflow-x:auto;">
+                            <table style="width:100%;border-collapse:collapse;font-size:.78rem;min-width:700px;">
+                                <thead>
+                                    <tr
+                                        style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);">
+                                        <th style="padding:11px 12px;text-align:left;font-weight:600;font-size:.75rem;">
+                                            Notice / Order</th>
+                                        <th style="padding:11px 12px;text-align:left;font-weight:600;font-size:.75rem;">
+                                            Section (1961)</th>
+                                        <th style="padding:11px 12px;text-align:left;font-weight:600;font-size:.75rem;">
+                                            Section (2025)</th>
+                                        <th style="padding:11px 12px;text-align:left;font-weight:600;font-size:.75rem;">
+                                            Due Date / Time Limit</th>
+                                        <th style="padding:11px 12px;text-align:left;font-weight:600;font-size:.75rem;">
+                                            Action to be Taken</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Notice for
+                                            Filing Return</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">142(1)(i)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">268</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">15–30 days (as specified)
+                                        </td>
+                                        <td style="padding:9px 12px;color:var(--text);">File pending ITR and respond
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Defective
+                                            Return Notice</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">139(9)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">263 (9)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 15 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Rectify errors and file
+                                            corrected return</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Intimation
+                                        </td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">143(1)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">269(1)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">30 days (if discrepancy)
+                                        </td>
+                                        <td style="padding:9px 12px;color:var(--text);">Verify and rectify</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Scrutiny
+                                            Notice</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">143(2)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">269(2)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">15–30 days (as specified)
+                                        </td>
+                                        <td style="padding:9px 12px;color:var(--text);">Submit documents / explanations
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Scrutiny /
+                                            regular assessment order</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">143(3)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">269(3)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 30 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Accept and pay demand OR file
+                                            appeal to CIT(A) / NFAC</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Best Judgment
+                                            Assessment</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">144</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">271</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 30 days (usually)
+                                        </td>
+                                        <td style="padding:9px 12px;color:var(--text);">Respond and Appeal to CIT(A)
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Show Cause
+                                            Notice for Reassessment</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">148A</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">281</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 15 days (or time
+                                            specified)</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Explain why reassessment should
+                                            not be initiated</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Reassessment
+                                            Notice</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">148</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">280</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">As per notice</td>
+                                        <td style="padding:9px 12px;color:var(--text);">File return and respond</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Reassessment
+                                            Order</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">147</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">279</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 30 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Accept and pay demand OR appeal
+                                            to CIT(A)</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Notice -
+                                            Power to call for any information</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">133</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">259</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">As per notice</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Provide documents/information
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Notice of
+                                            Demand after assessment</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">156</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">289</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 30 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Pay or appeal to CIT(A)</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Recovery
+                                            Notice</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">221, 222</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">412, 413</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">Immediate/30 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Pay or stay</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Show Cause
+                                            Notice for Penalty</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">274</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">439</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">usually 10-30 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Submit detailed written
+                                            explanation</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Penalty Order
+                                            for Under/mis-reporting</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">270A</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">439</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">As per notice</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Reply to SCN; file appeal to
+                                            CIT(A) if penalty imposed</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Search &amp;
+                                            Seizure Authorisation</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">132</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">247</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">Immediate</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Allow Search (Legal handling)
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Survey</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">133A</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">253</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">Immediate</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Provide records</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Appeal to
+                                            CIT(A)</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">246A</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">357</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 30 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Appeal to CIT(A)</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Appeal to
+                                            ITAT</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">253</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">362</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">60 days from CIT(A) order
+                                        </td>
+                                        <td style="padding:9px 12px;color:var(--text);">Appeal to ITAT</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Appeal to
+                                            High Court</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">260A</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">365</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">120 days from ITAT order
+                                        </td>
+                                        <td style="padding:9px 12px;color:var(--text);">Appeal to High Court</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Dispute
+                                            Resolution Panel (DRP) — Notice</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">144C</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">275</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">within 30 days</td>
+                                        <td style="padding:9px 12px;color:var(--text);">File detailed objections with
+                                            DRP</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:9px 12px;font-weight:600;color:var(--primary);">Faceless
+                                            Assessment</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">144B</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">273</td>
+                                        <td style="padding:9px 12px;color:var(--text-light);">As per notice</td>
+                                        <td style="padding:9px 12px;color:var(--text);">Respond online</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Notice Response</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹2,999–₹7,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);"> (based on
+                                        notice type and complexity)</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Written reply with documentation
+                                </p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Taxpayers who received a notice and need an expert response drafted</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Notice
+                                    analysis and strategy</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Complete
+                                    written response drafting</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Supporting
+                                    document preparation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Online
+                                    filing of response on IT portal</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Follow-up
+                                    communication</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹2,999–₹7,999 (based on notice type
+                                    and complexity)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Full Assessment Representation</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹9,999–₹29,999<span
+                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);"> (based on
+                                        demand amount)</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Scrutiny / reassessment from start
+                                    to closure</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Businesses or individuals facing full scrutiny assessment or reassessment</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
+                                    in Notice Response</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Officer
+                                    appearances (up to 3 hearings in initial assessment)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Objections
+                                    before DRP (Dispute Resolution Panel) if required</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                    Rectification application filing (Section 154) if demand is erroneous</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Full
+                                    assessment case management from notice to order</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹9,999–₹29,999 (based on demand
+                                    amount)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Why did I receive a Section
+                                143(1)(a) [new-269(1)] notice?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">This notice is issued
+                                when the Income Tax Department's Centralised Processing Centre (CPC) identifies a
+                                mismatch between the income/tax reported in your ITR and the data in AIS, Form 26AS, or
+                                TDS records. It proposes adjustments to your return and issues a demand or revised
+                                refund. VITTAX analyses the adjustment, determines if it is correct or erroneous, and
+                                files the appropriate response.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I ignore a Section 143(2)
+                                [new-269(2)] scrutiny notice?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Absolutely not.
+                                Ignoring a Section 143(2) [new-269(2)] notice results in an ex-parte assessment under
+                                Section 144 — where the Assessing Officer passes an order based on available information
+                                without your response, typically resulting in large additions to income and tax demand.
+                                You must respond within the stipulated time with complete documentation.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How far back can the Income
+                                Tax Department reassess?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Normally, income tax
+                                assessment can be reopened for 3 years prior to the end of the relevant assessment year.
+                                If income escaped is above ₹50 lakhs, the period extends to 10 years. For cases
+                                involving search or survey, different timelines apply.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Notice Response</span><span
+                            style="font-weight:700;">₹2,999–₹7,999</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Full Assessment Representation</span><span
+                            style="font-weight:700;">₹9,999–₹29,999</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Response Time</span><span style="font-weight:700;">Within
+                            24 Hours</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Notice Types</span><span style="font-weight:700;">All
+                            Types</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Officer Appearances</span><span
+                            style="font-weight:700;">Included</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(231,76,60,.06);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--danger);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--danger);margin-bottom:8px;">⚡ Critical
+                        Deadlines</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(231,76,60,.1);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Defective Return</span><span style="font-weight:600;">15
+                            days</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(231,76,60,.1);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Scrutiny Notice</span><span
+                            style="font-weight:600;">15–30 days</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(231,76,60,.1);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Appeal to CIT(A)</span><span style="font-weight:600;">30
+                            days</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Appeal to ITAT</span><span style="font-weight:600;">60
+                            days</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Received an IT Notice?</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Talk to a CA Within 24 Hours — Free Initial
+                Consultation → We analyse, respond, and represent you at every stage</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Talk to a CA
+                    Within 24 Hours →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">View
+                    Plans</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

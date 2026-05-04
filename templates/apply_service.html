@@ -1,0 +1,43 @@
+{# ════════ templates/apply_service.html ════════ #}
+{% extends 'base.html' %}
+{% block title %}Apply for {{ service.name }} - VITTAX{% endblock %}
+{% block content %}
+<div style="padding:120px 0 80px;background:#f8fafc;min-height:100vh">
+    <div style="max-width:680px;margin:0 auto;padding:0 24px">
+        <div style="background:#fff;border-radius:20px;box-shadow:0 8px 32px rgba(26,75,140,.1);overflow:hidden">
+            <div style="background:linear-gradient(135deg,#1a4b8c,#2980d9);padding:32px;color:#fff">
+                <h1 style="font-size:1.5rem;font-weight:800;margin-bottom:6px">Apply: {{ service.name }}</h1>
+                <p style="opacity:.8;font-size:.92rem">{{ service.short_description }}</p>
+                <div style="margin-top:16px;font-size:1.5rem;font-weight:900">{% if service.price == 0 %}FREE{% else
+                    %}₹{{ service.price }}{% endif %}</div>
+            </div>
+            <div style="padding:32px">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div style="margin-bottom:20px">
+                        <label style="display:block;font-weight:600;font-size:.88rem;margin-bottom:8px">Additional Notes
+                            (optional)</label>
+                        <textarea name="notes"
+                            style="width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:10px;font-family:inherit;font-size:.92rem;outline:none;resize:vertical;min-height:100px"
+                            placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                    <div style="margin-bottom:24px">
+                        <label style="display:block;font-weight:600;font-size:.88rem;margin-bottom:8px">Upload Documents
+                            (optional)</label>
+                        <input type="file" name="documents"
+                            style="width:100%;padding:10px;border:2px dashed #e2e8f0;border-radius:10px;font-size:.9rem">
+                        <p style="font-size:.78rem;color:#718096;margin-top:6px">Accepted: PDF, DOC, JPG, PNG (Max 10MB)
+                        </p>
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                        style="width:100%;justify-content:center;padding:14px;font-size:1rem"><i
+                            class="fas fa-paper-plane"></i> Submit Application</button>
+                    <a href="{% url 'services' %}"
+                        style="display:block;text-align:center;margin-top:14px;color:#718096;font-size:.9rem">← Back to
+                        Services</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

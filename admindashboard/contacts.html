@@ -1,0 +1,43 @@
+{# ════════ admin_dashboard/contacts.html ════════ #}
+{# Save separately
+{% extends 'admin_dashboard/base.html' %}
+{% block page_title %}Contact Messages{% endblock %}
+{% block content %}
+<div class="data-card">
+    <div class="data-card-header"><span class="data-card-title">All Messages ({{ contacts.count }})</span></div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in contacts %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><strong>{{ c.name }}</strong></td>
+                <td>{{ c.email }}</td>
+                <td>{{ c.phone|default:'-' }}</td>
+                <td>{{ c.subject }}</td>
+                <td>{{ c.created_at|date:"M d, Y H:i" }}</td>
+                <td>
+                    <a href="{% url 'admin_contact_delete' c.pk %}" class="btn btn-danger btn-sm"><i
+                            class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7" style="text-align:center;padding:32px;color:var(--text-light)">No messages</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+#}

@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Advance Tax Planning & Computation - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Income Tax &amp; Compliance</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
+                    Advance Tax Planning &amp; Computation</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Pay Tax in Advance — Avoid
+                    Interest, Maintain Cash Flow Discipline</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Four Instalments Planned Correctly</span>
+                    <span class="badge badge-primary">✦ No 234B/234C [new-424/425] Interest</span>
+                    <span class="badge badge-info">✦ Cash Flow-Friendly Tax Payment</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Advance Tax?</h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Advance Tax
+                        is the payment of income tax in instalments during the financial year itself — before the
+                        financial year ends — rather than paying the entire tax at the time of filing your ITR. It is
+                        mandatory for any taxpayer whose total tax liability for the year (after TDS) is expected to be
+                        ₹10,000 or more. Advance tax is payable in four instalments: 15% by 15th June, 45% by 15th
+                        September, 75% by 15th December, and 100% by 15th March. Failure to pay advance tax results in
+                        interest under Section 234B [new-section 424] (for default) and Section 234C [new-section 425]
+                        (for short payment of each instalment) at 1% per month.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">For business owners, HNIs, and
+                        professionals — especially those with variable income, capital gains from asset sales, or
+                        freelance earnings — advance tax planning involves estimating the year's total income as
+                        accurately as possible each quarter, computing the tax due, adjusting for TDS already deducted,
+                        and planning cash flows for the advance tax payments without disrupting working capital. Getting
+                        this right avoids a large year-end tax bill and the associated interest.</p>
+                    <div
+                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
+                        ⚠️ Failure to pay advance tax results in interest under Section 234B [new-section 424] and
+                        Section 234C [new-section 425] at 1% per month.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs This?</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Business owners with profits not
+                            subject to TDS</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Freelancers and professionals
+                            with irregular income patterns</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> HNIs expecting capital gains from
+                            property or investment sales during the year</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Salaried individuals with
+                            significant non-salary income (rent, dividends, capital gains)</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Retired individuals living on
+                            interest, dividends, and investment withdrawals</div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
+                            <span style="color:var(--success);flex-shrink:0;">✔</span> Companies and LLPs computing
+                            advance tax for the first time</div>
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+                    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">RECOMMENDED</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Advance Tax Advisory</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">/year
+                                        (4 quarterly computations)</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Quarterly instalment planning</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: Self-employed individuals, HNIs, and small business owners</p>
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Annual
+                                        income projection and tax estimation</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                        Quarterly advance tax computation</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Challan
+                                        preparation for each instalment</li>
+                                </ul>
+                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                        Adjustment for TDS already deducted</li>
+                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
+                                        Year-end reconciliation with actual tax</li>
+                                </ul>
+                            </div>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999/year (4 quarterly
+                                    computations)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
+                                    style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What interest applies if I
+                                underpay advance tax?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Section 234C
+                                [new-section 425]: 1% per month (or part month) on the shortfall for each instalment
+                                that is less than the required percentage (15%/45%/75%/100%). Section 234B [new-section
+                                424]: 1% per month on the total tax underpaid from April to the date of filing the
+                                return. VITTAX ensures you pay the right amount each quarter.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do salaried employees need to
+                                pay advance tax?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">For salaried
+                                employees, TDS deducted by the employer generally covers the advance tax obligation.
+                                However, if you have additional income (rent, capital gains, interest, freelance) and
+                                the total tax liability after TDS exceeds ₹10,000 — you must pay advance tax on the
+                                additional income.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Advance Tax Advisory</span><span
+                            style="font-weight:700;">₹1,999/yr</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Threshold</span><span style="font-weight:700;">Tax &gt;
+                            ₹10,000</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Instalments</span><span style="font-weight:700;">4 per
+                            Year</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Interest (Default)</span><span
+                            style="font-weight:700;color:var(--danger);">1%/month</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Instalment
+                        Schedule</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">15th June</span><span style="font-weight:600;">15% of
+                            Tax</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">15th September</span><span style="font-weight:600;">45%
+                            of Tax</span></div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">15th December</span><span style="font-weight:600;">75% of
+                            Tax</span></div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">15th March</span><span style="font-weight:600;">100% of
+                            Tax</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Plan Your Advance Tax for This Year</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Avoid Interest with VITTAX → We compute each
+                instalment, prepare challans, and keep you on track all year</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Avoid Interest
+                    with VITTAX →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'admin_dashboard/base.html' %}
+
+{% block page_title %}Services{% endblock %}
+
+{% block content %}
+<div class="page-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+    <div class="page-title">Services ({{ services.count }})</div>
+    <a href="{% url 'admin_service_add' %}" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Add Service
+    </a>
+</div>
+
+<div class="data-card">
+    <table>
+        <thead>
+            <tr>
+                <th>Icon</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Featured</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for svc in services %}
+            <tr>
+                <td>
+                    <i class="{{ svc.icon }}" style="font-size:1.3rem;color:var(--primary)"></i>
+                </td>
+
+                <td><strong>{{ svc.name }}</strong></td>
+                <td>{{ svc.get_category_display }}</td>
+                <td>₹{{ svc.price }}</td>
+
+                <td>
+                    {% if svc.is_featured %}
+                    <span class="badge badge-warning">Yes</span>
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+
+                <td>
+                    <span class="badge {% if svc.is_active %}badge-success{% else %}badge-danger{% endif %}">
+                        {% if svc.is_active %}
+                        Active
+                        {% else %}
+                        Inactive
+                        {% endif %}
+                    </span>
+                </td>
+
+                <td class="action-btns">
+                    <a href="{% url 'admin_service_edit' svc.pk %}" class="btn btn-primary btn-sm">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <a href="{% url 'admin_service_delete' svc.pk %}" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7" style="text-align:center;padding:30px;color:var(--text-light)">
+                    No services found
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

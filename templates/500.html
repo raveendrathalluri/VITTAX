@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Server Error</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #1e3a8a;
+            --primary-blue: #2563eb;
+            --primary-light: #3b82f6;
+            --background-light: #e0eef7;
+            --card-white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success-green: #10b981;
+            --warning-orange: #f59e0b;
+            --danger-red: #ef4444;
+            --border-light: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #fef2f2 0%, #fff5f5 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* ── Floating Background Elements ── */
+        .floating-element {
+            position: fixed;
+            opacity: 0.08;
+            font-weight: 900;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .float-1 {
+            font-size: 20rem;
+            top: 5%;
+            left: 5%;
+            color: var(--danger-red);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .float-2 {
+            font-size: 18rem;
+            bottom: 10%;
+            right: 8%;
+            color: var(--warning-orange);
+            animation: float 10s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(-5deg);
+            }
+        }
+
+        /* ── Container ── */
+        .error-container {
+            text-align: center;
+            max-width: 700px;
+            z-index: 10;
+            position: relative;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Error Code ── */
+        .error-code {
+            font-size: 9rem;
+            font-weight: 900;
+            color: var(--danger-red);
+            margin-bottom: 20px;
+            line-height: 1;
+            animation: slideDown 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            letter-spacing: -3px;
+            text-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ── Status Badge ── */
+        .status-badge {
+            display: inline-block;
+            background: #fee2e2;
+            color: var(--danger-red);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* ── Error Icon ── */
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(-15px) rotate(-5deg);
+            }
+
+            75% {
+                transform: translateX(15px) rotate(5deg);
+            }
+        }
+
+        /* ── Title ── */
+        .error-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            animation: slideUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Description ── */
+        .error-description {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            animation: slideUp 0.8s ease 0.3s both;
+        }
+
+        /* ── Alert Box ── */
+        .alert-box {
+            background: #fef3c7;
+            border-left: 4px solid var(--warning-orange);
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            animation: slideUp 0.8s ease 0.4s both;
+        }
+
+        .alert-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--warning-orange);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .alert-text {
+            font-size: 0.95rem;
+            color: #92400e;
+            line-height: 1.6;
+        }
+
+        /* ── Card Content ── */
+        .error-card {
+            background: var(--card-white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            animation: slideUp 0.8s ease 0.5s both;
+            border: 1px solid var(--border-light);
+        }
+
+        .card-section {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .card-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .timestamp-display {
+            background: #f0f4f8;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: var(--primary-dark);
+            word-break: break-all;
+            border-left: 3px solid var(--danger-red);
+        }
+
+        .suggestions-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .suggestions-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        .suggestions-list li::before {
+            content: '→';
+            color: var(--danger-red);
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Buttons ── */
+        .button-group {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 10px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+            color: white;
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(30, 58, 138, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--card-white);
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-large {
+            padding: 16px 36px;
+            font-size: 1.05rem;
+        }
+
+        /* ── Footer ── */
+        .error-footer {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            animation: fadeIn 0.8s ease 0.7s both;
+        }
+
+        .footer-text {
+            margin-bottom: 8px;
+        }
+
+        .error-code-display {
+            font-family: 'Courier New', monospace;
+            color: var(--danger-red);
+            font-weight: 600;
+        }
+
+        .reference-id {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: var(--primary-dark);
+            margin-top: 8px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 1.8rem;
+            }
+
+            .error-description {
+                font-size: 1rem;
+            }
+
+            .error-card {
+                padding: 24px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .float-1 {
+                font-size: 12rem;
+            }
+
+            .float-2 {
+                font-size: 10rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element float-1">500</div>
+    <div class="floating-element float-2">⚠️</div>
+
+    <!-- 500 Error Container -->
+    <div class="error-container" id="error500">
+        <div class="status-badge">Critical Error</div>
+
+        <div class="error-icon">⚠️</div>
+
+        <div class="error-code">500</div>
+
+        <h1 class="error-title">Server Error</h1>
+
+        <p class="error-description">
+            Something unexpected happened on our end. Our team has been notified and is working to resolve this issue
+            immediately.
+        </p>
+
+        <div class="alert-box">
+            <div class="alert-title">What Happened?</div>
+            <div class="alert-text">
+                An unexpected internal server error occurred. This is not something you caused, and we apologize for the
+                inconvenience. Our technical team is actively investigating this issue.
+            </div>
+        </div>
+
+        <div class="error-card">
+            <div class="card-section">
+                <div class="section-title">Error Information</div>
+                <div class="timestamp-display" id="error-timestamp">{{ error_time }}</div>
+            </div>
+
+            <div class="card-section">
+                <div class="section-title">What You Can Do</div>
+                <ul class="suggestions-list">
+                    <li>Try refreshing the page in a few moments</li>
+                    <li>Clear your browser cache and cookies</li>
+                    <li>Contact our support team for immediate assistance</li>
+                    <li>Return to the homepage and try again</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-primary btn-large" onclick="location.reload()">
+                🔄 Refresh Page
+            </button>
+            <a href="/" class="btn btn-secondary btn-large">
+                🏠 Go to Homepage
+            </a>
+        </div>
+
+        <div class="error-footer">
+            <div class="footer-text">Error Code: <span class="error-code-display">500</span> | Internal Server Error
+            </div>
+            <div class="reference-id">Reference ID: <span id="error-reference">ERR-0000000000</span></div>
+            <div class="footer-text">Please provide the reference ID when contacting support</div>
+        </div>
+    </div>
+
+    <script>
+        // Generate timestamp
+        const now = new Date();
+        document.getElementById('error-timestamp').textContent = now.toISOString();
+
+        // Generate unique error reference ID
+        const errorRef = 'ERR-' + Date.now().toString().slice(-10) + Math.random().toString(36).substr(2, 9).toUpperCase();
+        document.getElementById('error-reference').textContent = errorRef;
+
+        // Log error details
+        console.error('500 Server Error');
+        console.error('Error Reference:', errorRef);
+        console.error('Timestamp:', now.toISOString());
+        console.error('URL:', window.location.href);
+    </script>
+</body>
+
+</html>

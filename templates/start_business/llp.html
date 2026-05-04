@@ -1,0 +1,1413 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}LLP Registration - VITTAX{% endblock %}
+
+{% block extra_css %}
+<style>
+    .sp-wrap {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .sp-header {
+        background: linear-gradient(135deg, #EEF4FF 0%, #F7F9FC 60%, #fff 100%);
+        border-bottom: 1px solid #E2E8F0;
+        padding: 32px 0 28px;
+        margin-top: 70px;
+    }
+
+    .sp-header .inner {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .sp-breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: .76rem;
+        font-weight: 600;
+        color: #718096;
+        margin-bottom: 14px;
+    }
+
+    .sp-breadcrumb a {
+        color: #1a4b8c;
+        text-decoration: none;
+    }
+
+    .sp-breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .sp-breadcrumb .sep {
+        color: #CBD5E0;
+    }
+
+    .sp-header h1 {
+        font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+        font-weight: 800;
+        letter-spacing: -.025em;
+        color: #1a202c;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    .sp-header h1 em {
+        font-style: normal;
+        color: #1a4b8c;
+    }
+
+    .sp-header .sub {
+        font-size: .93rem;
+        color: #718096;
+        line-height: 1.65;
+        max-width: 580px;
+        margin-bottom: 20px;
+    }
+
+    .sp-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .sp-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: #fff;
+        border: 1px solid #E2E8F0;
+        border-radius: 20px;
+        padding: 5px 12px;
+        font-size: .78rem;
+        font-weight: 700;
+        color: #1a202c;
+        white-space: nowrap;
+    }
+
+    .sp-badge .dot {
+        width: 6px;
+        height: 6px;
+        background: #22C55E;
+        border-radius: 50%;
+    }
+
+    .sp-meta-btns {
+        display: flex;
+        gap: 8px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .sp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: .84rem;
+        padding: 9px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all .2s;
+        cursor: pointer;
+        border: none;
+        white-space: nowrap;
+    }
+
+    .sp-btn-primary {
+        background: linear-gradient(135deg, #1a4b8c, #2980d9);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(26, 75, 140, .25);
+    }
+
+    .sp-btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 22px rgba(26, 75, 140, .35);
+        color: #fff;
+    }
+
+    .sp-btn-outline {
+        background: #fff;
+        color: #1a202c;
+        border: 1.5px solid #E2E8F0;
+    }
+
+    .sp-btn-outline:hover {
+        border-color: #1a4b8c;
+        color: #1a4b8c;
+    }
+
+    .sp-body {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 36px 24px 60px;
+        display: grid;
+        grid-template-columns: 1fr 288px;
+        gap: 36px;
+        align-items: start;
+    }
+
+    .sp-main {
+        min-width: 0;
+    }
+
+    .sp-sidebar {
+        position: sticky;
+        top: 90px;
+    }
+
+    .sp-sidebar-card {
+        background: #fff;
+        border: 1px solid #E2E8F0;
+        border-radius: 14px;
+        box-shadow: 0 6px 28px rgba(15, 34, 68, .10);
+        overflow: hidden;
+        margin-bottom: 14px;
+    }
+
+    .sp-sc-head {
+        background: linear-gradient(135deg, #1a4b8c, #2980d9);
+        padding: 16px 18px;
+    }
+
+    .sp-sc-head h3 {
+        color: #fff;
+        font-size: .95rem;
+        font-weight: 800;
+        margin: 0 0 2px;
+    }
+
+    .sp-sc-head p {
+        color: rgba(255, 255, 255, .72);
+        font-size: .76rem;
+        margin: 0;
+    }
+
+    .sp-sc-body {
+        padding: 14px 18px 0;
+    }
+
+    .sp-price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #F1F5F9;
+    }
+
+    .sp-price-row:last-child {
+        border-bottom: none;
+    }
+
+    .sp-price-row .pname {
+        font-size: .8rem;
+        font-weight: 700;
+        color: #1a202c;
+    }
+
+    .sp-price-row .pname small {
+        display: block;
+        font-size: .7rem;
+        color: #718096;
+        font-weight: 500;
+        margin-top: 1px;
+    }
+
+    .sp-price-row .pamt {
+        font-size: 1.05rem;
+        font-weight: 900;
+        color: #1a4b8c;
+    }
+
+    .sp-sc-cta {
+        padding: 14px 18px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sp-sc-cta .sp-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .sp-sc-note {
+        font-size: .7rem;
+        color: #718096;
+        text-align: center;
+        margin: 2px 0 0;
+    }
+
+    .sp-glance {
+        background: #F7F9FC;
+        border: 1px solid #E2E8F0;
+        border-radius: 14px;
+        padding: 16px;
+    }
+
+    .sp-glance h4 {
+        font-size: .75rem;
+        font-weight: 800;
+        color: #1a202c;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        margin: 0 0 12px;
+    }
+
+    .sp-gi {
+        display: flex;
+        gap: 9px;
+        align-items: flex-start;
+        margin-bottom: 9px;
+    }
+
+    .sp-gi:last-child {
+        margin-bottom: 0;
+    }
+
+    .sp-gi-dot {
+        width: 20px;
+        height: 20px;
+        background: #EEF4FF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .65rem;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .sp-gi p {
+        font-size: .78rem;
+        color: #718096;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .sp-gi p strong {
+        color: #1a202c;
+        display: block;
+        font-weight: 700;
+    }
+
+    .sp-sec {
+        margin-bottom: 36px;
+    }
+
+    .sp-sec-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #EEF4FF;
+    }
+
+    .sp-sec-title h2 {
+        font-size: 1.08rem;
+        font-weight: 800;
+        color: #1a202c;
+        letter-spacing: -.01em;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .sp-prose p {
+        font-size: .91rem;
+        line-height: 1.85;
+        color: #718096;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .sp-prose p:last-child {
+        margin-bottom: 0;
+    }
+
+    .sp-infobox {
+        background: #EEF4FF;
+        border-left: 3px solid #1a4b8c;
+        border-radius: 0 10px 10px 0;
+        padding: 12px 16px;
+        margin-top: 14px;
+    }
+
+    .sp-infobox p {
+        font-size: .83rem;
+        color: #1a4b8c;
+        font-weight: 600;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .sp-successbox {
+        background: #F0FDF4;
+        border-left: 3px solid #22C55E;
+        border-radius: 0 10px 10px 0;
+        padding: 12px 16px;
+        margin-top: 10px;
+    }
+
+    .sp-successbox p {
+        font-size: .83rem;
+        color: #166534;
+        font-weight: 600;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .sp-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .sp-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .sp-adv {
+        background: #F7F9FC;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        transition: all .2s;
+    }
+
+    .sp-adv:hover {
+        background: #fff;
+        box-shadow: 0 4px 16px rgba(26, 75, 140, .08);
+        border-color: rgba(26, 75, 140, .15);
+        transform: translateY(-2px);
+    }
+
+    .sp-adv-icon {
+        width: 34px;
+        height: 34px;
+        background: rgba(26, 75, 140, .08);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+
+    .sp-adv h4 {
+        font-size: .84rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0 0 3px;
+    }
+
+    .sp-adv p {
+        font-size: .76rem;
+        color: #718096;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .sp-who {
+        background: #F7F9FC;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 12px 14px;
+        display: flex;
+        gap: 9px;
+        align-items: flex-start;
+    }
+
+    .sp-chk {
+        width: 20px;
+        height: 20px;
+        background: #1a4b8c;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: .58rem;
+        font-weight: 900;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .sp-who h4 {
+        font-size: .82rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0 0 2px;
+    }
+
+    .sp-who p {
+        font-size: .75rem;
+        color: #718096;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    .sp-doc {
+        background: #F7F9FC;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 12px 14px;
+        display: flex;
+        gap: 9px;
+        align-items: flex-start;
+    }
+
+    .sp-doc-ic {
+        font-size: 17px;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .sp-doc h4 {
+        font-size: .82rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0 0 4px;
+    }
+
+    .sp-doc p {
+        font-size: .76rem;
+        color: #718096;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    .sp-steps {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sp-step {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        position: relative;
+        padding-bottom: 18px;
+    }
+
+    .sp-step:last-child {
+        padding-bottom: 0;
+    }
+
+    .sp-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 14px;
+        top: 32px;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, #1a4b8c, #93C5FD);
+    }
+
+    .sp-step-num {
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(135deg, #1a4b8c, #2980d9);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+        font-weight: 800;
+        flex-shrink: 0;
+        z-index: 1;
+    }
+
+    .sp-step-body h4 {
+        font-size: .88rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0 0 2px;
+        padding-top: 3px;
+    }
+
+    .sp-step-body p {
+        font-size: .78rem;
+        color: #718096;
+        line-height: 1.5;
+        margin: 0 0 5px;
+    }
+
+    .sp-step-tag {
+        display: inline-block;
+        background: rgba(26, 75, 140, .08);
+        color: #1a4b8c;
+        font-size: .68rem;
+        font-weight: 700;
+        padding: 2px 10px;
+        border-radius: 20px;
+    }
+
+    /* compare table */
+    .sp-compare {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: .82rem;
+    }
+
+    .sp-compare th {
+        background: #EEF4FF;
+        color: #1a4b8c;
+        font-weight: 800;
+        padding: 10px 14px;
+        text-align: left;
+        font-size: .76rem;
+        letter-spacing: .04em;
+    }
+
+    .sp-compare td {
+        padding: 9px 14px;
+        border-bottom: 1px solid #F1F5F9;
+        color: #718096;
+        vertical-align: top;
+        line-height: 1.5;
+    }
+
+    .sp-compare tr:last-child td {
+        border-bottom: none;
+    }
+
+    .sp-compare td:first-child {
+        font-weight: 700;
+        color: #1a202c;
+        white-space: nowrap;
+    }
+
+    .sp-compare .yes {
+        color: #16a34a;
+        font-weight: 700;
+    }
+
+    .sp-compare .no {
+        color: #dc2626;
+        font-weight: 700;
+    }
+
+    .sp-price-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .sp-pc {
+        background: #fff;
+        border: 1.5px solid #E2E8F0;
+        border-radius: 14px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: all .2s;
+    }
+
+    .sp-pc:hover {
+        box-shadow: 0 8px 28px rgba(26, 75, 140, .10);
+        transform: translateY(-3px);
+    }
+
+    .sp-pc.feat {
+        border-color: #1a4b8c;
+        background: linear-gradient(160deg, #EEF4FF 0%, #fff 65%);
+    }
+
+    .sp-ribbon {
+        position: absolute;
+        top: 14px;
+        right: -28px;
+        background: linear-gradient(135deg, #1a4b8c, #2980d9);
+        color: #fff;
+        font-size: .6rem;
+        font-weight: 800;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        padding: 4px 40px;
+        transform: rotate(45deg);
+    }
+
+    .sp-pc-lbl {
+        font-size: .66rem;
+        font-weight: 800;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: #1a4b8c;
+        background: rgba(26, 75, 140, .08);
+        padding: 3px 10px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .sp-pc h3 {
+        font-size: .88rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0 0 10px;
+        line-height: 1.35;
+    }
+
+    .sp-amount {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #1a202c;
+        letter-spacing: -.03em;
+        line-height: 1;
+    }
+
+    .sp-amount sup {
+        font-size: .9rem;
+        vertical-align: super;
+    }
+
+    .sp-ideal {
+        font-size: .72rem;
+        color: #718096;
+        font-style: italic;
+        margin: 6px 0 12px;
+    }
+
+    .sp-pc hr {
+        border: none;
+        border-top: 1px solid #E2E8F0;
+        margin: 10px 0;
+    }
+
+    .sp-pc ul {
+        list-style: none;
+        margin: 0 0 12px;
+        padding: 0;
+    }
+
+    .sp-pc ul li {
+        font-size: .8rem;
+        color: #1a202c;
+        padding: 5px 0;
+        border-bottom: 1px solid #F7F9FC;
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    .sp-pc ul li::before {
+        content: '✓';
+        background: #1a4b8c;
+        color: #fff;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .56rem;
+        font-weight: 900;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .sp-gnote {
+        font-size: .7rem;
+        color: #718096;
+        background: #F7F9FC;
+        border-radius: 7px;
+        padding: 7px 9px;
+        margin-bottom: 12px;
+    }
+
+    .sp-pc .sp-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sp-faq {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sp-faq-item {
+        background: #F7F9FC;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: border-color .2s;
+    }
+
+    .sp-faq-item details[open] {
+        background: #fff;
+        border-color: rgba(26, 75, 140, .2);
+    }
+
+    .sp-faq-item summary {
+        padding: 13px 16px;
+        font-size: .87rem;
+        font-weight: 700;
+        color: #1a202c;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sp-faq-item summary::after {
+        content: '+';
+        width: 22px;
+        height: 22px;
+        background: rgba(26, 75, 140, .08);
+        color: #1a4b8c;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .95rem;
+        font-weight: 400;
+        flex-shrink: 0;
+        transition: all .18s;
+    }
+
+    .sp-faq-item details[open] summary::after {
+        transform: rotate(45deg);
+        background: #1a4b8c;
+        color: #fff;
+    }
+
+    .sp-faq-item .sp-ans {
+        padding: 0 16px 14px;
+        border-top: 1px solid #E2E8F0;
+        padding-top: 12px;
+        font-size: .84rem;
+        color: #718096;
+        line-height: 1.8;
+    }
+
+    .sp-cta {
+        background: linear-gradient(135deg, #0f2f5e 0%, #1a4b8c 100%);
+        border-radius: 14px;
+        padding: 28px 24px;
+        text-align: center;
+        margin-top: 36px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sp-cta::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, .04) 1px, transparent 0);
+        background-size: 26px 26px;
+    }
+
+    .sp-cta h3 {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 7px;
+        position: relative;
+    }
+
+    .sp-cta p {
+        font-size: .82rem;
+        color: rgba(255, 255, 255, .6);
+        margin: 0 0 18px;
+        line-height: 1.65;
+        position: relative;
+    }
+
+    .sp-cta-btns {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .sp-btn-white {
+        background: #fff;
+        color: #1a202c;
+        font-weight: 700;
+    }
+
+    .sp-btn-white:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+        color: #1a202c;
+    }
+
+    .sp-btn-ghost-w {
+        background: transparent;
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, .3);
+    }
+
+    .sp-btn-ghost-w:hover {
+        background: rgba(255, 255, 255, .08);
+        border-color: rgba(255, 255, 255, .55);
+        color: #fff;
+    }
+
+    .sp-cta-trust {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin-top: 14px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .sp-cta-trust span {
+        font-size: .72rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, .42);
+    }
+
+    @media(max-width:900px) {
+        .sp-body {
+            grid-template-columns: 1fr;
+        }
+
+        .sp-sidebar {
+            position: static;
+        }
+
+        .sp-grid-2,
+        .sp-grid-3,
+        .sp-price-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .sp-meta-btns {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .sp-meta {
+            row-gap: 8px;
+        }
+
+        .sp-compare {
+            font-size: .76rem;
+        }
+    }
+
+    @media(max-width:600px) {
+        .sp-header {
+            padding: 24px 0 20px;
+        }
+
+        .sp-body {
+            padding: 24px 16px 40px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="sp-wrap">
+
+    <!-- PAGE HEADER -->
+    <div class="sp-header">
+        <div class="inner">
+            <div class="sp-breadcrumb">
+                <a href="/">Home</a><span class="sep">/</span>
+                <a href="#">Start a Business</a><span class="sep">/</span>
+                <span>LLP Registration</span>
+            </div>
+            <h1>Limited Liability Partnership <em>(LLP)</em> Registration</h1>
+            <p class="sub">Partnership flexibility + corporate protection — the perfect hybrid structure governed by the
+                LLP Act, 2008.</p>
+            <div class="sp-meta">
+                <span class="sp-badge"><span class="dot"></span> Incorporated in 10–15 Days</span>
+                <span class="sp-badge">Limited Liability</span>
+                <span class="sp-badge">✓ Separate Legal Entity</span>
+                <div class="sp-meta-btns">
+                    <a href="#pricing" class="sp-btn sp-btn-primary">View Plans →</a>
+                    <a href="{% url 'contact' %}" class="sp-btn sp-btn-outline">Talk to Expert</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="sp-body">
+        <div class="sp-main">
+
+            <!-- WHAT IS -->
+            <div class="sp-sec">
+                <div class="sp-sec-title">
+                    <h2>What is an LLP?</h2>
+                </div>
+                <div class="sp-prose">
+                    <p>A Limited Liability Partnership (LLP) is a modern hybrid business structure that combines the
+                        flexibility and tax efficiency of a partnership with the limited liability protection of a
+                        company. Governed by the Limited Liability Partnership Act, 2008, an LLP is a separate legal
+                        entity — it can own property, enter contracts, and sue or be sued in its own name.</p>
+                    <p>Unlike a general partnership, partners in an LLP are not personally liable for the wrongful acts
+                        of other partners or for the firm's debts beyond their agreed contribution. This makes LLP the
+                        preferred structure for professionals, consultants, and service businesses that want liability
+                        protection without the full compliance burden of a Pvt Ltd company.</p>
+                    <p>VITTAX provides end-to-end support including DSC procurement, DPIN application, name reservation
+                        via RUN-LLP, FiLLiP filing, LLP Agreement drafting, Form 3 filing, PAN, TAN, and
+                        post-incorporation compliance guidance.</p>
+                    <div class="sp-successbox">
+                        <p>✓ Key advantage: Partners' personal assets are protected — liability is limited to their
+                            agreed contribution to the LLP.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WHY LLP -->
+            <div class="sp-sec">
+                <div class="sp-sec-title">
+                    <h2>Why Choose an LLP?</h2>
+                </div>
+                <div class="sp-grid-2">
+                    <div class="sp-adv">
+                        <div class="sp-adv-icon">🛡️</div>
+                        <div>
+                            <h4>Limited Liability Protection</h4>
+                            <p>Partners' personal assets are shielded from business debts and other partners' wrongful
+                                acts.</p>
+                        </div>
+                    </div>
+                    <div class="sp-adv">
+                        <div class="sp-adv-icon">🏛️</div>
+                        <div>
+                            <h4>Separate Legal Entity</h4>
+                            <p>Can own property, open bank accounts, and enter contracts in the LLP's own name.</p>
+                        </div>
+                    </div>
+                    <div class="sp-adv">
+                        <div class="sp-adv-icon">📋</div>
+                        <div>
+                            <h4>Lower Compliance than Pvt Ltd</h4>
+                            <p>Only Form 8 and Form 11 annually. No board meetings, no statutory auditor below ₹40L
+                                turnover.</p>
+                        </div>
+                    </div>
+                    <div class="sp-adv">
+                        <div class="sp-adv-icon">💰</div>
+                        <div>
+                            <h4>Tax Efficient</h4>
+                            <p>Taxed at 30% on profits. No dividend distribution tax. Partners' salary and interest are
+                                deductible.</p>
+                        </div>
+                    </div>
+                    <div class="sp-adv">
+                        <div class="sp-adv-icon">🔄</div>
+                        <div>
+                            <h4>Flexible Management</h4>
+                            <p>LLP Agreement defines roles, profit-sharing, and decision-making — no rigid Companies Act
+                                rules.</p>
+                        </div>
+                    </div>
+                    <div class="sp-adv">
+                        <div class="sp-adv-icon">🌍</div>
+                        <div>
+                            <h4>FDI Permitted</h4>
+                            <p>Foreign nationals and NRIs can be partners. FDI allowed under automatic route in most
+                                sectors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LLP vs PARTNERSHIP vs PVT LTD -->
+            <div class="sp-sec">
+                <div class="sp-sec-title">
+                    <h2>LLP vs Partnership vs Pvt Ltd</h2>
+                </div>
+                <div style="overflow-x:auto;border-radius:12px;border:1px solid #E2E8F0;">
+                    <table class="sp-compare">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Partnership</th>
+                                <th>LLP</th>
+                                <th>Pvt Ltd</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Legal Entity</td>
+                                <td class="no">No</td>
+                                <td class="yes">Yes</td>
+                                <td class="yes">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Liability</td>
+                                <td class="no">Unlimited</td>
+                                <td class="yes">Limited</td>
+                                <td class="yes">Limited</td>
+                            </tr>
+                            <tr>
+                                <td>Min. Partners / Members</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Equity Funding</td>
+                                <td class="no">Not possible</td>
+                                <td class="no">Very limited</td>
+                                <td class="yes">Possible</td>
+                            </tr>
+                            <tr>
+                                <td>Annual Compliance</td>
+                                <td>Low</td>
+                                <td>Moderate</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Audit Requirement</td>
+                                <td>If turnover &gt;₹1Cr</td>
+                                <td>If turnover &gt;₹40L</td>
+                                <td>Mandatory</td>
+                            </tr>
+                            <tr>
+                                <td>Ideal For</td>
+                                <td>Small traders</td>
+                                <td>Professionals, services</td>
+                                <td>Startups, funding</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- WHO SHOULD -->
+            <div class="sp-sec">
+                <div class="sp-sec-title">
+                    <h2>Who Should Register an LLP?</h2>
+                </div>
+                <div class="sp-grid-2">
+                    <div class="sp-who">
+                        <div class="sp-chk">✓</div>
+                        <div>
+                            <h4>CA / Law / Architecture Firms</h4>
+                            <p>Professional firms needing liability protection without company-level compliance.</p>
+                        </div>
+                    </div>
+                    <div class="sp-who">
+                        <div class="sp-chk">✓</div>
+                        <div>
+                            <h4>Consulting &amp; IT Service Firms</h4>
+                            <p>Service businesses with multiple partners that want a formal structure.</p>
+                        </div>
+                    </div>
+                    <div class="sp-who">
+                        <div class="sp-chk">✓</div>
+                        <div>
+                            <h4>Business Partners</h4>
+                            <p>Two or more individuals wanting liability protection without a Pvt Ltd structure.</p>
+                        </div>
+                    </div>
+                    <div class="sp-who">
+                        <div class="sp-chk">✓</div>
+                        <div>
+                            <h4>Family Businesses</h4>
+                            <p>Multiple family members as partners with defined roles and profit-sharing in the LLP
+                                Agreement.</p>
+                        </div>
+                    </div>
+                    <div class="sp-who">
+                        <div class="sp-chk">✓</div>
+                        <div>
+                            <h4>Cost-Conscious Businesses</h4>
+                            <p>Lower ROC compliance and no mandatory audit below ₹40 lakh turnover.</p>
+                        </div>
+                    </div>
+                    <div class="sp-who">
+                        <div class="sp-chk">✓</div>
+                        <div>
+                            <h4>NRI / Foreign Partners</h4>
+                            <p>FDI allowed in LLPs under the automatic route in most permitted sectors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOCUMENTS -->
+            <div class="sp-sec">
+                <div class="sp-sec-title">
+                    <h2>Documents Required</h2>
+                </div>
+                <div class="sp-grid-2">
+                    <div class="sp-doc">
+                        <span class="sp-doc-ic">👤</span>
+                        <div>
+                            <h4>For Designated Partners</h4>
+                            <p>PAN card, Aadhaar card, mobile &amp; email, address proof (bank statement / utility
+                                bill), passport-size photo. Passport required for foreign nationals.</p>
+                        </div>
+                    </div>
+                    <div class="sp-doc">
+                        <span class="sp-doc-ic">🏢</span>
+                        <div>
+                            <h4>Registered Office Proof</h4>
+                            <p>Ownership proof or NOC from owner + rental agreement. Latest utility bill (electricity /
+                                water) not older than 2 months.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROCESS -->
+            <div class="sp-sec">
+                <div class="sp-sec-title">
+                    <h2>Registration Process &amp; Timeline</h2>
+                </div>
+                <div class="sp-steps">
+                    <div class="sp-step">
+                        <div class="sp-step-num">1</div>
+                        <div class="sp-step-body">
+                            <h4>DSC Procurement</h4>
+                            <p>Digital Signature Certificates obtained for all designated partners — required for MCA
+                                filings.</p>
+                            <span class="sp-step-tag">Same Day</span>
+                        </div>
+                    </div>
+                    <div class="sp-step">
+                        <div class="sp-step-num">2</div>
+                        <div class="sp-step-body">
+                            <h4>Name Reservation via RUN-LLP</h4>
+                            <p>Proposed LLP name checked for availability and reserved on the MCA portal.</p>
+                            <span class="sp-step-tag">1–2 Days</span>
+                        </div>
+                    </div>
+                    <div class="sp-step">
+                        <div class="sp-step-num">3</div>
+                        <div class="sp-step-body">
+                            <h4>LLP Agreement Drafting</h4>
+                            <p>Comprehensive LLP Agreement drafted covering contribution, profit-sharing, partner roles,
+                                and exit clauses.</p>
+                            <span class="sp-step-tag">1–2 Days</span>
+                        </div>
+                    </div>
+                    <div class="sp-step">
+                        <div class="sp-step-num">4</div>
+                        <div class="sp-step-body">
+                            <h4>FiLLiP Filing</h4>
+                            <p>Form for Incorporation of LLP (FiLLiP) filed on MCA portal with all partner and office
+                                details.</p>
+                            <span class="sp-step-tag">1 Day</span>
+                        </div>
+                    </div>
+                    <div class="sp-step">
+                        <div class="sp-step-num">5</div>
+                        <div class="sp-step-body">
+                            <h4>Certificate of Incorporation</h4>
+                            <p>MCA reviews and issues the Certificate of Incorporation along with the LLPIN number.</p>
+                            <span class="sp-step-tag">2–7 Working Days</span>
+                        </div>
+                    </div>
+                    <div class="sp-step">
+                        <div class="sp-step-num">6</div>
+                        <div class="sp-step-body">
+                            <h4>Form 3 Filing + PAN / TAN</h4>
+                            <p>LLP Agreement filed via Form 3 within 30 days of incorporation. PAN and TAN applied for
+                                the LLP.</p>
+                            <span class="sp-step-tag">Within 30 Days of COI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRICING -->
+            <div class="sp-sec" id="pricing">
+                <div class="sp-sec-title">
+                    <h2>Pricing Plans</h2>
+                </div>
+                <div class="sp-price-cards">
+                    <div class="sp-pc">
+                        <span class="sp-pc-lbl">Basic LLP</span>
+                        <h3>Incorporation with COI and PAN</h3>
+                        <div class="sp-amount"><sup>₹</sup>5,999</div>
+                        <p class="sp-ideal">Ideal for service businesses, professionals &amp; 2-partner LLPs</p>
+                        <hr>
+                        <ul>
+                            <li>Name Reservation (RUN-LLP)</li>
+                            <li>2 DSCs for Designated Partners</li>
+                            <li>LLP Agreement Drafting</li>
+                            <li>FiLLiP Filing</li>
+                            <li>Form 3 Filing</li>
+                            <li>COI + LLPIN + PAN</li>
+                        </ul>
+                        <p class="sp-gnote">+ Govt. fees: MCA fees + DSC fees (~₹2,000–3,500 at actuals)</p>
+                        <a href="{% url 'contact' %}" class="sp-btn sp-btn-primary">Get Started →</a>
+                    </div>
+                    <div class="sp-pc feat">
+                        <div class="sp-ribbon">Popular</div>
+                        <span class="sp-pc-lbl">Standard LLP</span>
+                        <h3>Incorporation + GSTIN + Compliance Setup</h3>
+                        <div class="sp-amount"><sup>₹</sup>7,999</div>
+                        <p class="sp-ideal">Ideal for multi-partner LLPs and professional firms</p>
+                        <hr>
+                        <ul>
+                            <li>Everything in Basic</li>
+                            <li>TAN Application</li>
+                            <li>GST Registration (GSTIN)</li>
+                            <li>Bank Account Advisory</li>
+                            <li>Annual Compliance Calendar</li>
+                            <li>Post-Registration Advisory Call</li>
+                        </ul>
+                        <p class="sp-gnote">+ Govt. fees: MCA + DSC fees at actuals</p>
+                        <a href="{% url 'contact' %}" class="sp-btn sp-btn-primary">Get Started →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="sp-sec">
+                <div class="sp-sec-title">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="sp-faq">
+                    <div class="sp-faq-item">
+                        <details>
+                            <summary>What is the difference between LLP and Pvt Ltd?</summary>
+                            <div class="sp-ans">LLP has lower annual compliance (Form 8 + Form 11 vs multiple ROC
+                                filings for Pvt Ltd), no mandatory statutory audit below ₹40L turnover, and more
+                                flexibility in management. However, Pvt Ltd is better suited for equity funding, venture
+                                capital, and ESOPs. Choose LLP if you are a service or professional firm; choose Pvt Ltd
+                                if you plan to raise external investment.</div>
+                        </details>
+                    </div>
+                    <div class="sp-faq-item">
+                        <details>
+                            <summary>Can an LLP receive FDI (Foreign Direct Investment)?</summary>
+                            <div class="sp-ans">Yes. LLPs are permitted to receive FDI under the automatic route in
+                                sectors where 100% FDI is allowed, subject to RBI and FEMA regulations. Sectors
+                                requiring government approval are excluded. NRIs and foreign nationals can be designated
+                                partners.</div>
+                        </details>
+                    </div>
+                    <div class="sp-faq-item">
+                        <details>
+                            <summary>What are the annual compliance requirements for an LLP?</summary>
+                            <div class="sp-ans">An LLP must file Form 11 (Annual Return) by 30 May and Form 8 (Statement
+                                of Accounts) by 30 October each year. A statutory audit is mandatory if turnover exceeds
+                                ₹40 lakh or contribution exceeds ₹25 lakh. Income tax return must be filed annually.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="sp-faq-item">
+                        <details>
+                            <summary>Can designated partners take a salary from the LLP?</summary>
+                            <div class="sp-ans">Yes. Remuneration paid to partners is deductible in the LLP's hands
+                                subject to Income Tax Act provisions and as specified in the LLP Agreement. Interest on
+                                capital contribution (up to 12%) is also deductible if mentioned in the agreement.</div>
+                        </details>
+                    </div>
+                    <div class="sp-faq-item">
+                        <details>
+                            <summary>Can an LLP be converted to a Private Limited Company?</summary>
+                            <div class="sp-ans">Yes. An LLP can be converted to a Pvt Ltd Company under Section 366 of
+                                the Companies Act, 2013, using the URC-1 form. This is commonly done when the business
+                                plans to raise equity investment or bring in external shareholders.</div>
+                        </details>
+                    </div>
+                    <div class="sp-faq-item">
+                        <details>
+                            <summary>What is the minimum number of partners for an LLP?</summary>
+                            <div class="sp-ans">A minimum of 2 designated partners is required, at least one of whom
+                                must be a resident of India. There is no upper limit on the total number of partners in
+                                an LLP.</div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="sp-cta">
+                <h3>Register Your LLP with VITTAX Today</h3>
+                <p>End-to-end support — DSC, name reservation, FiLLiP, LLP Agreement, Form 3, PAN, GST &amp; compliance
+                    calendar.</p>
+                <div class="sp-cta-btns">
+                    <a href="#pricing" class="sp-btn sp-btn-white">View Pricing →</a>
+                    <a href="{% url 'contact' %}" class="sp-btn sp-btn-ghost-w">💬 Talk to Expert</a>
+                </div>
+                <div class="sp-cta-trust">
+                    <span>✓ No Hidden Fees</span>
+                    <span>✓ Expert CA Assistance</span>
+                    <span>✓ 365-Day Support</span>
+                </div>
+            </div>
+
+        </div><!-- /sp-main -->
+
+        <!-- SIDEBAR -->
+        <div class="sp-sidebar">
+            <div class="sp-sidebar-card">
+                <div class="sp-sc-head">
+                    <h3>Quick Enquiry</h3>
+                    <p>Get started with the right plan</p>
+                </div>
+                <div class="sp-sc-body">
+                    <div class="sp-price-row">
+                        <div class="pname">Basic LLP<small>COI + PAN + Form 3</small></div>
+                        <div class="pamt">₹5,999</div>
+                    </div>
+                    <div class="sp-price-row">
+                        <div class="pname">Standard LLP<small>+ GST + Compliance Setup</small></div>
+                        <div class="pamt">₹7,999</div>
+                    </div>
+                </div>
+                <div class="sp-sc-cta">
+                    <a href="{% url 'contact' %}" class="sp-btn sp-btn-primary">🚀 Get Started Now</a>
+                    <a href="{% url 'contact' %}" class="sp-btn sp-btn-outline">💬 Talk to Expert</a>
+                    <p class="sp-sc-note">Free advisory call included with every plan</p>
+                </div>
+            </div>
+
+            <div class="sp-glance">
+                <h4>At a Glance</h4>
+                <div class="sp-gi">
+                    <div class="sp-gi-dot">⏱</div>
+                    <p><strong>Incorporation Time</strong>10–15 working days</p>
+                </div>
+                <div class="sp-gi">
+                    <div class="sp-gi-dot">👥</div>
+                    <p><strong>Min. Partners</strong>2 Designated Partners</p>
+                </div>
+                <div class="sp-gi">
+                    <div class="sp-gi-dot">🛡️</div>
+                    <p><strong>Liability</strong>Limited to contribution</p>
+                </div>
+                <div class="sp-gi">
+                    <div class="sp-gi-dot">₹</div>
+                    <p><strong>Min. Capital</strong>None required</p>
+                </div>
+                <div class="sp-gi">
+                    <div class="sp-gi-dot">📋</div>
+                    <p><strong>Annual Filings</strong>Form 8 + Form 11</p>
+                </div>
+                <div class="sp-gi">
+                    <div class="sp-gi-dot">🔍</div>
+                    <p><strong>Audit</strong>If turnover &gt; ₹40 lakh</p>
+                </div>
+                <div class="sp-gi">
+                    <div class="sp-gi-dot">🌍</div>
+                    <p><strong>FDI</strong>Allowed (automatic route)</p>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /sp-body -->
+</div><!-- /sp-wrap -->
+{% endblock %}

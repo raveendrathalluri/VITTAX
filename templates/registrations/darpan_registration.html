@@ -1,0 +1,492 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Darpan Registration (NGO-Darpan Portal) - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Other Services</span>
+                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Darpan
+                    Registration (NGO-Darpan Portal)</h1>
+                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">The Mandatory NGO Identity —
+                    Apply for Govt Grants &amp; CSR Funds</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <span class="badge badge-success">✦ Mandatory for Govt Grants</span>
+                    <span class="badge badge-primary">✦ Required for FCRA Application</span>
+                    <span class="badge badge-info">✦ CSR Donor Confidence</span>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:24px;">
+
+                <!-- WHAT IS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is NGO-Darpan Registration?
+                    </h2>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">NGO-Darpan
+                        is an online interface portal developed by NITI Aayog in collaboration with the National
+                        Informatics Centre (NIC) to maintain a database of voluntary organisations and NGOs in India. It
+                        serves as the central repository of information about civil society organisations — their
+                        registration details, area of work, financial information, and governance — enabling the
+                        government, donors, and the general public to verify the authenticity and track record of an NGO
+                        before engaging with it.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">NGO-Darpan
+                        registration (obtaining a unique Darpan ID) is mandatory for any NGO, trust, society, or Section
+                        8 company seeking: (a) government grants from central government ministries or departments; (b)
+                        CSR funding from corporate donors (as the MCA requires corporate CSR committees to verify NGO
+                        credentials through Darpan); and (c) FCRA registration for receiving foreign contributions. From
+                        2021, the MHA requires all FCRA applicants to furnish their NGO-Darpan unique ID as part of the
+                        FCRA application.</p>
+                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">Beyond mandatory compliance, a
+                        Darpan ID signals credibility — it demonstrates that the NGO has undergone a basic identity
+                        verification by NITI Aayog, making donors and government grant-makers more confident in the
+                        organisation. VITTAX manages the Darpan registration including uploading annual reports,
+                        financial statements, and governance data as required by the portal.</p>
+                    <div
+                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+                        ⚠️ From 2021, Darpan ID is mandatory for FCRA registration — you need Darpan first, FCRA second.
+                    </div>
+                </div>
+
+                <!-- WHO NEEDS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Needs Darpan Registration?
+                    </h2>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Govt
+                                    Grant Applicants</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">NGOs, trusts, and societies
+                                    applying for government ministry grants</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">CSR
+                                    Fund Seekers</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">NGOs listed on CSR portals seeking
+                                    corporate donations under Section 135</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">FCRA
+                                    Applicants</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Organisations applying for FCRA
+                                    registration (Darpan ID is mandatory in FCRA Form FC-3A)</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Govt
+                                    Scheme Participants</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Development organisations, SHGs,
+                                    and NGOs wanting to participate in government schemes and tenders</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
+                            <div>
+                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">New
+                                    NGOs</p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Newly registered NGOs wanting to
+                                    establish credibility with donors from Day 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp;
+                        Timeline</h2>
+                    <div style="display:flex;flex-direction:column;gap:0;">
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    1</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Portal Registration
+                                    </p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1
+                                        day</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Register on the
+                                    NGO-Darpan portal using the NGO's name and email ID. OTP-based verification.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    2</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Organisation Profile
+                                    </p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–2
+                                        days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Fill complete
+                                    organisation profile — registration details, objectives, legal entity type,
+                                    governing board, address, areas of work.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    3</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Document Upload</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–2
+                                        days</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Upload registration
+                                    certificate, MOA/Trust Deed, audited financial statements (last 3 years if
+                                    available), and governance documents.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    4</div>
+                                <div
+                                    style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;">
+                                </div>
+                            </div>
+                            <div style="padding-bottom:20px;flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Unique ID Generation
+                                    </p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">Immediate</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Darpan unique ID
+                                    (format: TS/20XX/XXXXXXXX) is generated immediately upon successful profile
+                                    submission.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:14px;align-items:flex-start;">
+                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+                                <div
+                                    style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">
+                                    5</div>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Annual Update</p>
+                                    <span
+                                        style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">Annual
+                                        — March 31 deadline</span>
+                                </div>
+                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Financial
+                                    statements, activity reports, and governance data must be updated annually to keep
+                                    the Darpan profile current.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Registration
+                                certificate — Trust Deed (Sub-Registrar stamped) / MOA of Society / COI of Section 8
+                                Company</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">PAN of the NGO / Trust
+                                / Society</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">12A registration
+                                certificate (if obtained)</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">List of governing board
+                                members / trustees with their identity proofs</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Audited financial
+                                statements for last 1–3 years (if available)</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Annual report /
+                                activities report</p>
+                        </li>
+                        <li
+                            style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
+                            <span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span>
+                            <p style="font-size:.83rem;color:var(--text-light);line-height:1.6;">Bank account details of
+                                the organisation</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+                        <!-- DARPAN REGISTRATION -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Darpan Registration</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);">
+                                        one-time</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">NGO-Darpan profile setup + unique
+                                    ID</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: All NGOs, trusts, societies, and Section 8 companies seeking govt grants or
+                                FCRA</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Portal
+                                    registration and profile creation</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document
+                                    upload and verification</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Unique
+                                    Darpan ID procurement</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Grant and
+                                    CSR eligibility advisory</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                        <!-- DARPAN + ANNUAL COMPLIANCE -->
+                        <div
+                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+                            <span
+                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
+                            <div>
+                                <p
+                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
+                                    Darpan + Annual Compliance</p>
+                                <p
+                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
+                                    ₹3,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
+                                        year</span></p>
+                                <p style="font-size:.78rem;color:var(--text-light);">Registration + annual profile
+                                    update for 1 year</p>
+                            </div>
+                            <p
+                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
+                                Ideal for: NGOs wanting ongoing Darpan compliance managed by VITTAX</p>
+                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Darpan
+                                    registration (full service)</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Annual
+                                    financial data and activity update</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Compliance
+                                    calendar reminder</li>
+                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
+                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Grant
+                                    opportunity advisory</li>
+                            </ul>
+                            <div
+                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
+                                VITTAX Fee: <strong style="color:var(--primary);">₹3,999</strong> &nbsp;|&nbsp; Govt.
+                                Fees: <strong style="color:var(--success);">Nil</strong></div>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex;flex-direction:column;gap:10px;">
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is Darpan registration the
+                                same as FCRA registration?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No — they are
+                                separate. Darpan registration gives you a unique NGO identity number on the NITI Aayog
+                                portal. FCRA registration (from MHA) gives you the legal permission to receive foreign
+                                contributions. However, from 2021, Darpan ID is mandatory to file for FCRA registration.
+                                You need Darpan first, FCRA second.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is Darpan ID mandatory for
+                                CSR funds?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">While not legally
+                                mandated by statute, the CSR rules under the Companies Act (Schedule VII) require
+                                companies to verify NGO credentials before releasing CSR funds. Most corporate CSR
+                                committees require a Darpan ID as part of their due diligence. Many government CSR
+                                portals also require Darpan ID for NGO listing.</p>
+                        </div>
+                        <div
+                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can a newly registered NGO
+                                with no financial history get a Darpan ID?</p>
+                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — there is no
+                                minimum age or financial track record requirement for Darpan registration. New NGOs can
+                                register immediately after obtaining their Trust Deed or Section 8 COI and PAN.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Darpan Registration</span><span
+                            style="font-weight:700;">₹1,999 one-time</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Darpan + Annual Compliance</span><span
+                            style="font-weight:700;">₹3,999/year</span></div>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">ID Format</span><span
+                            style="font-weight:700;">TS/20XX/XXXXXXXX</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Annual Deadline</span><span
+                            style="font-weight:700;">March 31</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
+                        <span style="color:var(--text-light);">Issued By</span><span style="font-weight:700;">NITI Aayog
+                            / NIC</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
+                            style="color:var(--text-light);">Govt. Fees</span><span
+                            style="font-weight:700;color:var(--success);">Nil</span></div>
+                </div>
+                <div
+                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Darpan ID
+                        Enables</p>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">Govt Grants</span><span style="font-weight:600;">Ministry
+                            Grants</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">CSR Funds</span><span style="font-weight:600;">Section
+                            135 Donors</span>
+                    </div>
+                    <div
+                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
+                        <span style="color:var(--text-light);">FCRA</span><span style="font-weight:600;">Mandatory
+                            Prerequisite</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
+                            style="color:var(--text-light);">Credibility</span><span style="font-weight:600;">NITI Aayog
+                            Verified</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Register on NGO-Darpan Today — VITTAX Sets
+                Up Your NGO's National Identity</h3>
+            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Mandatory for govt grants, required for FCRA
+                application, CSR donor confidence — establish your NGO's credibility from day one</p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
+                    →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

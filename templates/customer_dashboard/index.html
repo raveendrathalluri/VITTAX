@@ -1,0 +1,146 @@
+{# ════════ customer_dashboard/index.html ════════ #}
+{% extends 'customer_dashboard/base.html' %}
+{% block title %}My Dashboard - VITTAX{% endblock %}
+{% block page_title %}Welcome, {{ request.user.first_name|default:request.user.username }}! 👋{% endblock %}
+{% block content %}
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px">
+    <div class="card" style="border-top:3px solid var(--primary);text-align:center">
+        <div style="font-size:2rem;font-weight:900;color:var(--primary)">{{ total_apps }}</div>
+        <div style="color:var(--text-light);font-size:.88rem;margin-top:6px">Total Applications</div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--accent);text-align:center">
+        <div style="font-size:2rem;font-weight:900;color:var(--accent)">{{ pending }}</div>
+        <div style="color:var(--text-light);font-size:.88rem;margin-top:6px">Pending</div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--success);text-align:center">
+        <div style="font-size:2rem;font-weight:900;color:var(--success)">{{ completed }}</div>
+        <div style="color:var(--text-light);font-size:.88rem;margin-top:6px">Completed</div>
+    </div>
+</div>
+
+<!-- Profile Info -->
+<div class="card"
+    style="margin-bottom:24px;background:linear-gradient(135deg,rgba(26,75,140,.04),rgba(41,128,217,.04));border:1.5px solid rgba(26,75,140,.1)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+        <h3 style="font-size:1.05rem;font-weight:700">My Profile</h3>
+        <a href="{% url 'profile' %}" class="btn btn-outline btn-sm"><i class="fas fa-edit"></i> Edit</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <div>
+            <div
+                style="font-size:.78rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-bottom:4px">
+                Full Name</div>
+            <div style="font-weight:600">{{ request.user.get_full_name|default:'Not set' }}</div>
+        </div>
+        <div>
+            <div
+                style="font-size:.78rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-bottom:4px">
+                Email</div>
+            <div style="font-weight:600">{{ request.user.email|default:'Not set' }}</div>
+        </div>
+        <div>
+            <div
+                style="font-size:.78rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-bottom:4px">
+                Phone</div>
+            <div style="font-weight:600">{{ request.user.phone|default:'Not set' }}</div>
+        </div>
+        <div>
+            <div
+                style="font-size:.78rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-bottom:4px">
+                City</div>
+            <div style="font-weight:600">{{ request.user.city|default:'Not set' }}</div>
+        </div>
+        <div>
+            <div
+                style="font-size:.78rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-bottom:4px">
+                PAN</div>
+            <div style="font-weight:600">{{ request.user.pan_number|default:'Not set' }}</div>
+        </div>
+        <div>
+            <div
+                style="font-size:.78rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-bottom:4px">
+                GST No.</div>
+            <div style="font-weight:600">{{ request.user.gst_number|default:'Not set' }}</div>
+        </div>
+    </div>
+</div>
+
+<!-- Applications -->
+<div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+        <h3 style="font-size:1.05rem;font-weight:700">My Service Applications</h3>
+        <a href="{% url 'services' %}" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Apply for Service</a>
+    </div>
+    {% if applications %}
+    <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse">
+            <thead>
+                <tr style="background:#f8fafc">
+                    <th
+                        style="padding:12px 14px;text-align:left;font-size:.78rem;font-weight:700;color:var(--text-light);text-transform:uppercase;border-bottom:1px solid #edf2f7">
+                        Service</th>
+                    <th
+                        style="padding:12px 14px;text-align:left;font-size:.78rem;font-weight:700;color:var(--text-light);text-transform:uppercase;border-bottom:1px solid #edf2f7">
+                        Applied On</th>
+                    <th
+                        style="padding:12px 14px;text-align:left;font-size:.78rem;font-weight:700;color:var(--text-light);text-transform:uppercase;border-bottom:1px solid #edf2f7">
+                        Status</th>
+                    <th
+                        style="padding:12px 14px;text-align:left;font-size:.78rem;font-weight:700;color:var(--text-light);text-transform:uppercase;border-bottom:1px solid #edf2f7">
+                        Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for app in applications %}
+                <tr>
+                    <td style="padding:14px;border-bottom:1px solid #f7f8fa"><strong>{{ app.service.name }}</strong>
+                    </td>
+                    <td style="padding:14px;border-bottom:1px solid #f7f8fa;color:var(--text-light);font-size:.88rem">{{
+                        app.applied_at|date:"M d, Y" }}</td>
+                    <td style="padding:14px;border-bottom:1px solid #f7f8fa">
+                        <span
+                            class="badge {% if app.status == 'completed' %}badge-success{% elif app.status == 'rejected' %}badge-danger{% elif app.status == 'in_progress' %}badge-info{% else %}badge-warning{% endif %}">{{
+                            app.get_status_display }}</span>
+                    </td>
+                    <td style="padding:14px;border-bottom:1px solid #f7f8fa;color:var(--text-light);font-size:.85rem">{{
+                        app.notes|default:'-'|truncatechars:40 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div style="text-align:center;padding:48px;color:var(--text-light)">
+        <i class="fas fa-file-alt" style="font-size:3rem;margin-bottom:16px;opacity:.3;display:block"></i>
+        <div style="font-size:1rem;font-weight:600;margin-bottom:8px">No applications yet</div>
+        <div style="font-size:.9rem;margin-bottom:20px">Apply for our services to get started with your tax filing</div>
+        <a href="{% url 'services' %}" class="btn btn-primary"><i class="fas fa-rocket"></i> Browse Services</a>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Services Promo -->
+{% if services %}
+<div style="margin-top:24px">
+    <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:16px">Available Services</h3>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        {% for svc in services %}
+        <div class="card" style="border-top:2px solid var(--primary);transition:.3s ease;cursor:pointer"
+            onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+            <div
+                style="width:44px;height:44px;background:rgba(26,75,140,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px">
+                <i class="{{ svc.icon }}" style="color:var(--primary);font-size:1.1rem"></i>
+            </div>
+            <h4 style="font-size:.95rem;font-weight:700;margin-bottom:6px">{{ svc.name }}</h4>
+            <p style="font-size:.83rem;color:var(--text-light);line-height:1.5;margin-bottom:14px">{{
+                svc.short_description|truncatechars:80 }}</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-weight:800;color:var(--primary)">₹{{ svc.price }}</span>
+                <a href="{% url 'apply_service' svc.slug %}" class="btn btn-primary btn-sm">Apply Now</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endblock %}

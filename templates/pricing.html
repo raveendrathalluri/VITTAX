@@ -1,0 +1,192 @@
+{# ═══════════════════════════════════════════ templates/pricing.html Save this as a SEPARATE file:
+templates/pricing.html ═══════════════════════════════════════════ #}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Pricing - VITTAX{% endblock %}
+
+{% block extra_css %}
+<style>
+    .page-hero {
+        padding: 120px 0 64px;
+        background: linear-gradient(135deg, #e8f0fe, #f0f7ff);
+        text-align: center
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+        margin-bottom: 12px
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 64px 0
+    }
+
+    .price-card {
+        background: var(--white);
+        border-radius: 18px;
+        padding: 32px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: 2px solid transparent;
+        position: relative;
+    }
+
+    .price-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 48px rgba(26, 75, 140, .14)
+    }
+
+    .price-card.featured {
+        border-color: var(--primary)
+    }
+
+    .featured-badge {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--primary);
+        color: #fff;
+        padding: 5px 18px;
+        border-radius: 50px;
+        font-size: .78rem;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .price-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: rgba(26, 75, 140, .08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        color: var(--primary);
+        margin-bottom: 18px
+    }
+
+    .price-name {
+        font-size: 1.1rem;
+        font-weight: 800;
+        margin-bottom: 6px
+    }
+
+    .price-cat {
+        font-size: .8rem;
+        color: var(--text-light);
+        margin-bottom: 16px
+    }
+
+    .price-amount {
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: var(--primary);
+        margin-bottom: 4px
+    }
+
+    .price-amount.free {
+        color: var(--success)
+    }
+
+    .price-desc {
+        font-size: .88rem;
+        color: var(--text-light);
+        line-height: 1.6;
+        margin: 16px 0 24px;
+        min-height: 60px
+    }
+
+    .price-btn {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: .92rem;
+        display: block;
+        transition: var(--transition)
+    }
+
+    @media(max-width:900px) {
+        .pricing-grid {
+            grid-template-columns: 1fr 1fr
+        }
+    }
+
+    @media(max-width:600px) {
+        .pricing-grid {
+            grid-template-columns: 1fr
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <span class="section-tag">PRICING</span>
+        <h1>Simple, <span style="color:var(--primary)">Transparent</span> Pricing</h1>
+        <p style="color:var(--text-light);max-width:520px;margin:0 auto;font-size:1rem;line-height:1.7">
+            No hidden charges. Pay only for what you need.
+            Expert CA support included with every plan.
+        </p>
+    </div>
+</section>
+
+<section style="background:var(--bg)">
+    <div class="container">
+        {% if services %}
+        <div class="pricing-grid">
+            {% for svc in services %}
+            <div class="price-card {% if svc.is_featured %}featured{% endif %}" data-animate>
+                {% if svc.is_featured %}
+                <div class="featured-badge">⭐ Popular</div>
+                {% endif %}
+                <div class="price-icon"><i class="{{ svc.icon }}"></i></div>
+                <div class="price-name">{{ svc.name }}</div>
+                <div class="price-cat">{{ svc.get_category_display }}</div>
+                <div class="price-amount {% if svc.price == 0 %}free{% endif %}">
+                    {% if svc.price == 0 %}FREE{% else %}₹{{ svc.price }}{% endif %}
+                </div>
+                <div class="price-desc">{{ svc.short_description }}</div>
+                {% if user.is_authenticated %}
+                <a href="{% url 'apply_service' svc.slug %}" class="btn btn-primary price-btn">
+                    <i class="fas fa-rocket"></i> Apply Now
+                </a>
+                {% else %}
+                <a href="{% url 'register' %}" class="btn btn-primary price-btn">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div style="text-align:center;padding:80px;color:var(--text-light)">
+            <i class="fas fa-box-open" style="font-size:3rem;opacity:.3;display:block;margin-bottom:16px"></i>
+            <p>No services available yet. Please check back soon!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section style="padding:64px 0;background:var(--white);text-align:center">
+    <div class="container" data-animate>
+        <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:12px">
+            Not sure which plan is right for you?
+        </h2>
+        <p style="color:var(--text-light);margin-bottom:24px">
+            Talk to our experts for free — we'll recommend the perfect plan.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">
+            <i class="fas fa-comments"></i> Get Free Consultation
+        </a>
+    </div>
+</section>
+{% endblock %}

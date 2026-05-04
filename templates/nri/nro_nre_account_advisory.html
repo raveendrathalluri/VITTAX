@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}NRO / NRE Account Advisory - VITTAX{% endblock %}
+
+{% block content %}
+<div style="padding:100px 0 60px;background:var(--bg);">
+<div class="container">
+
+  <!-- HEADER -->
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
+    <div>
+      <span class="section-tag">NRI &amp; International Services</span>
+      <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">NRO / NRE Account Advisory</h1>
+      <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Right Account, Right Tax Treatment — Maximise Your India Returns</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="badge badge-success">✦ NRO vs NRE Clarity</span>
+        <span class="badge badge-primary">✦ Tax-Free Interest Planning</span>
+        <span class="badge badge-info">✦ FEMA-Compliant Account Use</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
+      <a href="#pricing" class="btn btn-primary">View Plans →</a>
+      <a href="#" class="btn btn-outline">Talk to Expert</a>
+    </div>
+  </div>
+
+  <!-- BODY GRID -->
+  <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+
+    <!-- LEFT COLUMN -->
+    <div style="display:flex;flex-direction:column;gap:24px;">
+
+      <!-- WHAT IS -->
+      <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
+        <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is NRO / NRE Advisory?</h2>
+        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">NRIs maintaining bank accounts in India must use the correct account type for different purposes: NRO (Non-Resident Ordinary) accounts hold India-earned income (rent, dividends, salary) and are taxable in India; NRE (Non-Resident External) accounts hold foreign-earned income remitted to India and are tax-free in India plus freely repatriable. FCNR (Foreign Currency Non-Resident) deposits are held in foreign currency, protect against rupee depreciation, and are tax-free.</p>
+        <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX advises NRIs on the correct account structure, tax implications of each account type, DTAA benefits on NRO interest, strategies for transferring funds between NRO and NRE accounts (subject to RBI conditions), and compliance requirements. Incorrect account usage can lead to FEMA violations and avoidable tax liability.</p>
+        <div style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
+          ⚠️ Incorrect account usage can lead to FEMA violations and avoidable tax liability — proper NRO/NRE structuring is essential for every NRI.
+        </div>
+      </div>
+
+      <!-- ACCOUNT COMPARISON -->
+      <div>
+        <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">NRO vs NRE vs FCNR — At a Glance</p>
+        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;">
+          <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:.82rem;min-width:500px;">
+              <thead>
+                <tr style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);">
+                  <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">Feature</th>
+                  <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">NRO Account</th>
+                  <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">NRE Account</th>
+                  <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">FCNR Deposit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                  <td style="padding:10px 14px;font-weight:600;color:var(--primary);">Purpose</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">India-earned income</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Foreign income remitted to India</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Foreign currency deposits</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                  <td style="padding:10px 14px;font-weight:600;color:var(--primary);">Taxability in India</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--danger);font-weight:500;">Taxable</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--success);font-weight:500;">Tax-Free</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--success);font-weight:500;">Tax-Free</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
+                  <td style="padding:10px 14px;font-weight:600;color:var(--primary);">Repatriation</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Up to USD 1M/year</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--success);font-weight:500;">Freely Repatriable</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--success);font-weight:500;">Freely Repatriable</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 14px;font-weight:600;color:var(--primary);">Currency</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Indian Rupee</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Indian Rupee</td>
+                  <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Foreign Currency</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING -->
+      <div id="pricing">
+        <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
+        <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+
+          <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
+            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">ONE-TIME ADVISORY</span>
+            <div>
+              <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">NRO/NRE Advisory</p>
+              <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time advisory</span></p>
+              <p style="font-size:.78rem;color:var(--text-light);">Account structuring &amp; tax planning advisory</p>
+            </div>
+            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: NRIs setting up or restructuring India bank accounts</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Account type recommendation</li>
+                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Tax implication analysis</li>
+                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DTAA benefit on NRO interest</li>
+              </ul>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> NRO-to-NRE transfer advisory</li>
+                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Written advice note</li>
+              </ul>
+            </div>
+            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹1,999 one-time advisory</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
+            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div>
+        <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is interest on NRE fixed deposits really tax-free in India?</p>
+            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — interest earned on NRE accounts and FCNR deposits is completely exempt from Indian income tax under Section 10(4) of the Income Tax Act, as long as the account holder maintains NRI status.</p>
+          </div>
+          <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
+            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I transfer money from my NRO to NRE account?</p>
+            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — up to USD 1 million per year, subject to TDS payment on NRO funds, CA certificate, and bank's FEMA compliance process. VITTAX manages this end-to-end.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
+      <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+        <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">NRO/NRE Advisory</span><span style="font-weight:700;">₹1,999 one-time</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
+          <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+          <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+        </div>
+      </div>
+      <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
+        <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">NRE Interest Tax</span><span style="font-weight:700;color:var(--success);">Tax-Free</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">NRO Interest Tax</span><span style="font-weight:700;color:var(--danger);">Taxable</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;"><span style="color:var(--text-light);">NRO Transfer Limit</span><span style="font-weight:700;">USD 1M/yr</span></div>
+        <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Govt. Fees</span><span style="font-weight:700;color:var(--success);">Nil</span></div>
+      </div>
+      <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
+        <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Tax Sections</p>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;"><span style="color:var(--text-light);">NRE/FCNR Exemption</span><span style="font-weight:600;">Section 10(4)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;"><span style="color:var(--text-light);">NRO TDS Rate</span><span style="font-weight:600;">30% (+ surcharge)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;"><span style="color:var(--text-light);">DTAA on NRO</span><span style="font-weight:600;">Can Reduce TDS</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">Written Advisory</span><span style="font-weight:600;">✔ Included</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
+    <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Optimise Your NRI Banking — Get Expert Account Advisory from VITTAX</h3>
+    <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">NRO vs NRE clarity, tax-free interest planning, DTAA benefits, FEMA-compliant transfer — all in one advisory</p>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+      <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
+      <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
+    </div>
+  </div>
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'admin_dashboard/base.html' %}
+
+{% block page_title %}Edit User{% endblock %}
+{% block page_subtitle %}Modify user account details{% endblock %}
+
+{% block content %}
+<div class="data-card" style="max-width:700px;margin:auto">
+
+    <div class="data-card-header">
+        <span class="data-card-title">Edit User</span>
+    </div>
+
+    <form method="post" style="padding:20px">
+        {% csrf_token %}
+
+        <div class="form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+            <div>
+                <label>First Name</label>
+                {{ form.first_name }}
+            </div>
+
+            <div>
+                <label>Last Name</label>
+                {{ form.last_name }}
+            </div>
+
+            <div style="grid-column:1/3">
+                <label>Username</label>
+                {{ form.username }}
+            </div>
+
+            <div style="grid-column:1/3">
+                <label>Email</label>
+                {{ form.email }}
+            </div>
+
+            <div>
+                <label>Phone</label>
+                {{ form.phone }}
+            </div>
+
+            <div>
+                <label>City</label>
+                {{ form.city }}
+            </div>
+
+            <div style="grid-column:1/3">
+                <label>Status</label>
+                {{ form.is_active }}
+            </div>
+
+        </div>
+
+        <div style="margin-top:24px;display:flex;gap:12px">
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+
+            <a href="{% url 'admin_users' %}" class="btn btn-outline">
+                Cancel
+            </a>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

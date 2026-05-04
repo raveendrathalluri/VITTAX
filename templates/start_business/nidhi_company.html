@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Nidhi Company Registration - VITTAX{% endblock %}
+{% block extra_css %}
+<style>
+    .hero {
+        padding: 145px 0 95px;
+        background: radial-gradient(circle at top right, rgba(168, 85, 247, .14), transparent 28%), linear-gradient(135deg, #f7f0ff, #fcf8ff);
+        text-align: center;
+        position: relative;
+        overflow: hidden
+    }
+
+    .hero:after {
+        content: '';
+        position: absolute;
+        left: -5%;
+        right: -5%;
+        bottom: -42px;
+        height: 90px;
+        background: #fff;
+        border-radius: 50% 50% 0 0/100% 100% 0 0
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 4vw, 3.8rem);
+        font-weight: 900;
+        margin-bottom: 14px
+    }
+
+    .hero p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: var(--text-light);
+        font-size: 1.08rem;
+        line-height: 1.85
+    }
+
+    .section {
+        padding: 90px 0
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 18px
+    }
+
+    .section p {
+        line-height: 1.9;
+        color: var(--text-light)
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: 0 16px 36px rgba(15, 23, 42, .08);
+        border: 1px solid rgba(168, 85, 247, .12)
+    }
+
+    .price {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #9333ea;
+        margin: 10px 0 14px
+    }
+
+    .faq details {
+        background: #fff;
+        border-radius: 18px;
+        padding: 18px 20px;
+        margin-bottom: 16px;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
+    }
+
+    .cta {
+        background: linear-gradient(135deg, #9333ea, #7e22ce);
+        color: #fff;
+        border-radius: 30px;
+        padding: 58px 38px;
+        text-align: center
+    }
+
+    .cta h2 {
+        color: #fff
+    }
+
+    .cta p {
+        color: rgba(255, 255, 255, .92)
+    }
+
+    @media(max-width:768px) {
+        .hero {
+            padding: 120px 0 72px
+        }
+
+        .section {
+            padding: 64px 0
+        }
+
+        .grid {
+            grid-template-columns: 1fr
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class='hero'>
+    <div class='container'><span class='section-tag'>START A BUSINESS</span>
+        <h1>Nidhi Company Registration</h1>
+        <p>Community Savings & Lending — A Members-Only Financial Cooperative</p><a href='#pricing'
+            class='btn btn-primary' style='margin-top:24px'>Get Started</a>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>What is a Nidhi Company?</h2>
+        <p>A Nidhi Company is a type of Non-Banking Financial Company (NBFC) that operates exclusively for the benefit
+            of its members — accepting deposits from members and lending to members for mutual benefit. Governed by the
+            Nidhi Rules, 2014 and Section 406 of the Companies Act, 2013, Nidhi Companies operate on the principle of
+            thrift and savings among members, similar to a cooperative but in company form.</p>
+        <p>A Nidhi Company does not need an RBI licence (unlike other NBFCs) as long as it deals only with its members.
+            Within 1 year of incorporation, a Nidhi must have at least 200 members, net owned funds of ₹10 lakh, and
+            maintain an unencumbered deposit ratio of at least 1:20 (for every ₹20 in deposits, maintain ₹1 in liquid
+            assets). The MCA has tightened Nidhi rules since 2022 — it is critical to comply from Day 1.</p>
+        <p>Nidhi Companies are popular in Tamil Nadu, Karnataka, and other southern states as a community savings
+            mechanism. They are an alternative to chit funds — legally recognised and better regulated.</p>
+    </div>
+</section>
+<section class='section' style='background:linear-gradient(180deg,#faf5ff,#f5edff)'>
+    <div class='container'>
+        <h2>Why Choose a Nidhi Company?</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>✦ No RBI Licence Required</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ Members-Only Deposits & Loans</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ Community Financial Trust</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Who Should Register a Nidhi Company?</h2>
+        <div class='grid'>
+            <div class='card'>✔ Community Groups: Community groups wanting to create a savings and lending pool for
+                members</div>
+            <div class='card'>✔ Local Entrepreneurs: Entrepreneurs setting up a localised financial cooperative in a
+                town/district</div>
+            <div class='card'>✔ Chit Fund Operators: Existing informal chit fund operators wanting to formalise under
+                Nidhi structure</div>
+        </div>
+    </div>
+</section>
+<section class='section' id='pricing' style='background:linear-gradient(180deg,#faf5ff,#f5edff)'>
+    <div class='container'>
+        <h2>Pricing Plans</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>NIDHI INCORPORATION — Complete incorporation + compliance advisory</h3>
+                <div class='price'>₹10,999</div>
+                <p><strong>Ideal for:</strong> Community groups, localised financial cooperatives</p>
+                <p>✓ Company name with "Nidhi Limited"<br>✓ MOA + AOA (Nidhi-compliant)<br>✓ SPICe+ filing<br>✓ COI +
+                    PAN<br>✓ Nidhi Rules compliance advisory</p>
+                <p><strong>VITTAX Fee:</strong> ₹10,999 | <strong>Govt. Fees:</strong> MCA fees + stamp duty at actuals
+                    (~₹3,000–5,000)</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container faq'>
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>Q: Can a Nidhi Company accept deposits from non-members?</summary>
+            <p>A: No — a Nidhi Company can ONLY accept deposits from and lend to its registered members. Accepting
+                deposits from the public (non-members) is a violation of Nidhi Rules and NBFC regulations and attracts
+                severe penalties.</p>
+        </details>
+        <details>
+            <summary>Q: What happens if a Nidhi does not meet the 200-member target in 1 year?</summary>
+            <p>A: The company must apply to the Regional Director (MCA) for extension. Failure to meet membership and
+                fund criteria can result in cancellation of Nidhi status and conversion to a regular NBFC requiring RBI
+                licence.</p>
+        </details>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <div class='cta'>
+            <h2>► Register Your Nidhi Company Correctly from Day 1</h2>
+            <p>Consult VITTAX</p><a href='#' class='btn btn-light'>Talk to Expert</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

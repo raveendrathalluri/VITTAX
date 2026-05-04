@@ -1,0 +1,289 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact Us - VITTAX{% endblock %}
+{% block extra_css %}
+<style>
+    .contact-hero {
+        padding: 120px 0 60px;
+        background: linear-gradient(135deg, #e8f0fe, #f0f7ff);
+        text-align: center
+    }
+
+    .contact-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+        color: var(--text);
+        margin-bottom: 12px
+    }
+
+    .contact-hero p {
+        color: var(--text-light);
+        font-size: 1.05rem;
+        max-width: 560px;
+        margin: 0 auto
+    }
+
+    .contact-section {
+        padding: 80px 0;
+        background: var(--white)
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 56px;
+        align-items: start
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 8px
+    }
+
+    .contact-info p {
+        color: var(--text-light);
+        line-height: 1.7;
+        margin-bottom: 32px
+    }
+
+    .info-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+        border-radius: 14px;
+        background: var(--bg);
+        margin-bottom: 16px;
+        transition: var(--transition)
+    }
+
+    .info-card:hover {
+        background: rgba(26, 75, 140, .05);
+        transform: translateX(4px)
+    }
+
+    .info-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1.1rem;
+        flex-shrink: 0
+    }
+
+    .info-text h4 {
+        font-weight: 700;
+        font-size: .95rem;
+        margin-bottom: 4px
+    }
+
+    .info-text p {
+        color: var(--text-light);
+        font-size: .88rem;
+        margin: 0
+    }
+
+    .contact-form-card {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        padding: 40px;
+        border: 1.5px solid rgba(26, 75, 140, .08)
+    }
+
+    .contact-form-card h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 6px
+    }
+
+    .contact-form-card p {
+        color: var(--text-light);
+        margin-bottom: 28px;
+        font-size: .93rem
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px
+    }
+
+    .form-group {
+        margin-bottom: 20px
+    }
+
+    .form-label {
+        display: block;
+        font-weight: 600;
+        font-size: .88rem;
+        color: var(--text);
+        margin-bottom: 7px
+    }
+
+    .form-label .req {
+        color: var(--danger)
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        font-size: .93rem;
+        font-family: inherit;
+        transition: var(--transition);
+        outline: none;
+        color: var(--text);
+        background: var(--white)
+    }
+
+    .form-control:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(26, 75, 140, .1)
+    }
+
+    textarea.form-control {
+        resize: vertical;
+        min-height: 130px
+    }
+
+    .btn-full {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        font-size: 1rem
+    }
+
+    .map-placeholder {
+        border-radius: 16px;
+        overflow: hidden;
+        height: 200px;
+        background: linear-gradient(135deg, #e8f0fe, #dbeafe);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 3rem;
+        margin-top: 32px
+    }
+
+    @media(max-width:768px) {
+        .contact-grid {
+            grid-template-columns: 1fr
+        }
+
+        .form-row {
+            grid-template-columns: 1fr
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class="contact-hero" data-animate>
+    <div class="container">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h1>Contact <span style="color:var(--primary)">VITTAX</span></h1>
+        <p>Talk to our tax experts for free — we'll assess your income sources and recommend the perfect filing plan.
+        </p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info" data-animate>
+                <h2>We're Here to Help</h2>
+                <p>Our expert team is available 7 days a week to help you with all your tax and financial queries.</p>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-phone"></i></div>
+                    <div class="info-text">
+                        <h4>Call Us</h4>
+                        <p>+91 98765 43210<br>Mon-Sat, 9AM–7PM</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h4>Email Us</h4>
+                        <p>info@vittax.com<br>Reply within 24 hours</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="info-text">
+                        <h4>WhatsApp</h4>
+                        <p>+91 98765 43210<br>Quick chat support</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-text">
+                        <h4>Visit Us</h4>
+                        <p>India (Pan India Services)<br>Online & Virtual</p>
+                    </div>
+                </div>
+                <div class="map-placeholder"><i class="fas fa-map-marked-alt"></i></div>
+            </div>
+
+            <div class="contact-form-card" data-animate>
+                <h2>Send Us a Message</h2>
+                <p>Fill in the form and our team will get back to you within 24 hours.</p>
+                <form method="post" id="contactForm" novalidate>
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Full Name <span class="req">*</span></label>
+                            <input name="name" type="text" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input name="phone" type="tel" class="form-control" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address <span class="req">*</span></label>
+                        <input name="email" type="email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject <span class="req">*</span></label>
+                        <select name="subject" class="form-control" required>
+                            <option value="">-- Select Subject --</option>
+                            <option>ITR Filing Query</option>
+                            <option>GST Registration</option>
+                            <option>GST Returns</option>
+                            <option>Tax Planning</option>
+                            <option>Accounting Services</option>
+                            <option>Pricing Query</option>
+                            <option>Technical Support</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message <span class="req">*</span></label>
+                        <textarea name="message" class="form-control" placeholder="Describe your query in detail..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block extra_js %}
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        const btn = document.getElementById('submitBtn')
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...'
+        btn.disabled = true
+    })
+</script>
+{% endblock %}

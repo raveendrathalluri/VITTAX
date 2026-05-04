@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}One Person Company (OPC) Registration - VITTAX{% endblock %}
+{% block extra_css %}
+<style>
+    .hero {
+        padding: 145px 0 95px;
+        background: radial-gradient(circle at top right, rgba(37, 99, 235, .14), transparent 28%), linear-gradient(135deg, #eef4ff, #f8fbff);
+        text-align: center;
+        position: relative;
+        overflow: hidden
+    }
+
+    .hero:after {
+        content: '';
+        position: absolute;
+        left: -5%;
+        right: -5%;
+        bottom: -42px;
+        height: 90px;
+        background: #fff;
+        border-radius: 50% 50% 0 0/100% 100% 0 0
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 4vw, 3.8rem);
+        font-weight: 900;
+        margin-bottom: 14px
+    }
+
+    .hero p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: var(--text-light);
+        font-size: 1.08rem;
+        line-height: 1.85
+    }
+
+    .section {
+        padding: 90px 0
+    }
+
+    .section h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 18px
+    }
+
+    .section p {
+        line-height: 1.9;
+        color: var(--text-light)
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: 0 16px 36px rgba(15, 23, 42, .08);
+        border: 1px solid rgba(26, 75, 140, .08)
+    }
+
+    .price {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: var(--primary);
+        margin: 10px 0 14px
+    }
+
+    .faq details {
+        background: #fff;
+        border-radius: 18px;
+        padding: 18px 20px;
+        margin-bottom: 16px;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
+    }
+
+    .cta {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        border-radius: 30px;
+        padding: 58px 38px;
+        text-align: center
+    }
+
+    .cta h2 {
+        color: #fff
+    }
+
+    .cta p {
+        color: rgba(255, 255, 255, .92)
+    }
+
+    @media(max-width:768px) {
+        .hero {
+            padding: 120px 0 72px
+        }
+
+        .section {
+            padding: 64px 0
+        }
+
+        .grid {
+            grid-template-columns: 1fr
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class='hero'>
+    <div class='container'><span class='section-tag'>START A BUSINESS</span>
+        <h1>One Person Company (OPC) Registration</h1>
+        <p>All the Benefits of a Pvt Ltd — For Solo Entrepreneurs</p><a href='#pricing' class='btn btn-primary'
+            style='margin-top:24px'>Get Started</a>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>What is a One Person Company?</h2>
+        <p>A One Person Company (OPC) is a hybrid business structure introduced by the Companies Act, 2013, allowing a
+            single individual to form a company with limited liability — combining the simplicity of a proprietorship
+            with the legal protection and credibility of a company.</p>
+        <p>Unlike a proprietorship, an OPC is a separate legal entity, its debts are not the owner’s personal debts, and
+            it can own property, enter contracts, and sue or be sued in its own name.</p>
+        <p>An OPC requires one director and a nominee director. VITTAX assist with DSC, DIN, name approval, SPICe+
+            incorporation filing, MOA/AOA drafting, PAN, TAN, and post-registration compliance guidance.</p>
+        <p>An OPC must convert to a Private/Public Limited Company if paid-up share capital exceeds ₹50 Lakhs OR average
+            annual turnover exceeds ₹2 Crores.</p>
+    </div>
+</section>
+<section class='section' style='background:linear-gradient(180deg,#f8fbff,#f4f8ff)'>
+    <div class='container'>
+        <h2>Why Choose OPC?</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>✦ Single-Person Company</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ Limited Liability</h3>
+            </div>
+            <div class='card'>
+                <h3>✦ No Co-Founder Needed</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Who Should Register an OPC?</h2>
+        <div class='grid'>
+            <div class='card'>✔ Solo Professionals: consultants and freelancers wanting a corporate identity</div>
+            <div class='card'>✔ Independent Practitioners: CAs, doctors, architects, engineers</div>
+            <div class='card'>✔ Solo E-commerce Sellers</div>
+            <div class='card'>✔ NRI Entrepreneurs wanting India business</div>
+            <div class='card'>✔ Proprietorship Upgrade businesses</div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Incorporation Process & Timeline</h2>
+        <div class='grid'>
+            <div class='card'><strong>Step 1:</strong> Name Reservation<br><small>1–2 days</small></div>
+            <div class='card'><strong>Step 2:</strong> DSC & Nominee Consent<br><small>1 day</small></div>
+            <div class='card'><strong>Step 3:</strong> Document Preparation<br><small>1–2 days</small></div>
+            <div class='card'><strong>Step 4:</strong> SPICe+ Filing<br><small>1 day</small></div>
+            <div class='card'><strong>Step 5:</strong> Certificate of Incorporation<br><small>3–7 working days</small>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <h2>Documents Required</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>For Sole Director/Member</h3>
+                <p>• PAN card, Aadhaar card, Mobile number and mail ID<br>• Address proof<br>• Photograph</p>
+            </div>
+            <div class='card'>
+                <h3>For Nominee Director</h3>
+                <p>• PAN card and proof documents<br>• Written consent (INC-3)</p>
+            </div>
+            <div class='card'>
+                <h3>Registered Office</h3>
+                <p>• Ownership proof / NOC + rental agreement<br>• Utility bill</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section' id='pricing' style='background:linear-gradient(180deg,#f8fbff,#f4f8ff)'>
+    <div class='container'>
+        <h2>Pricing Plans</h2>
+        <div class='grid'>
+            <div class='card'>
+                <h3>BASIC OPC — Incorporation with COI, PAN, TAN</h3>
+                <div class='price'>₹4,999</div>
+                <p><strong>Ideal for:</strong> First-time solo entrepreneurs, professionals</p>
+                <p>✓ Name reservation<br>✓ DSC (sole director)<br>✓ MOA + AOA (OPC format)<br>✓ INC-3 nominee
+                    consent<br>✓ SPICe+ filing<br>✓ COI + PAN + TAN</p>
+                <p><strong>VITTAX Fee:</strong> ₹4,999 | Govt. Fees: MCA fees + DSC certificate fee (~₹1,500–3,000)</p>
+            </div>
+            <div class='card'>
+                <h3>STANDARD OPC — Incorporation + GSTIN + bank letter</h3>
+                <div class='price'>₹6,999</div>
+                <p><strong>Ideal for:</strong> Solo consultants, NRI entrepreneurs</p>
+                <p>✓ Everything in Basic<br>✓ GSTIN application<br>✓ Bank account advisory<br>✓ Post-incorporation
+                    call<br>✓ Compliance calendar</p>
+                <p><strong>VITTAX Fee:</strong> ₹6,999 | Govt. Fees: MCA fees + DSC certificate fee</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section'>
+    <div class='container faq'>
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>Q: What is the role of the nominee in an OPC?</summary>
+            <p>A: The nominee becomes member only if sole member dies or becomes incapacitated.</p>
+        </details>
+        <details>
+            <summary>Q: Can an OPC have employees?</summary>
+            <p>A: Yes — any number of employees. Restriction is only on members/shareholders.</p>
+        </details>
+        <details>
+            <summary>Q: When must an OPC convert to a Pvt Ltd?</summary>
+            <p>A: When paid-up capital exceeds ₹50 lakh or turnover exceeds ₹2 crore as applicable.</p>
+        </details>
+        <details>
+            <summary>Q: Can a person be member of more than one OPC?</summary>
+            <p>A: No — only one OPC at a time.</p>
+        </details>
+        <details>
+            <summary>Q: Is audit mandatory for OPC?</summary>
+            <p>A: Yes. Proper books and statutory audit every year.</p>
+        </details>
+    </div>
+</section>
+<section class='section'>
+    <div class='container'>
+        <div class='cta'>
+            <h2>► Register Your OPC and Get Full Legal Protection</h2>
+            <p>VITTAX Makes It Simple</p>
+            <<a href="{% url 'contact' %}" class="btn btn-light">Talk to
+                Expert</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,337 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GST Registration - VITTAX{% endblock %}
+
+{% block content %}
+
+<div style="padding: 100px 0 60px; background: var(--bg);">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div
+            style="display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:36px;">
+            <div>
+                <span class="section-tag">Tax &amp; Compliance</span>
+                <h1 style="font-size:1.9rem; font-weight:800; color:var(--text); margin-bottom:8px; line-height:1.2;">
+                    GST Registration</h1>
+                <p style="font-size:.9rem; color:var(--text-light); margin-bottom:14px;">Your First Step to Legal
+                    Business in India — Get GST Registered in 1–5 Days</p>
+                <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                    <span class="badge badge-primary">⚡ Setup in 1–5 Days</span>
+                    <span class="badge badge-info">📄 GSTIN Issued</span>
+                    <span class="badge badge-success">⭐ Expert Support</span>
+                </div>
+            </div>
+            <div style="display:flex; gap:10px; flex-shrink:0; padding-top:6px;">
+                <a href="#pricing" class="btn btn-primary">View Plans →</a>
+                <a href="#" class="btn btn-outline">Talk to Expert</a>
+            </div>
+        </div>
+
+        <!-- BODY GRID -->
+        <div style="display:grid; grid-template-columns:1fr 300px; gap:28px; align-items:start;">
+
+            <!-- LEFT COLUMN -->
+            <div style="display:flex; flex-direction:column; gap:24px;">
+
+                <!-- WHAT IS GST -->
+                <div
+                    style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px;">
+                    <h2 style="font-size:1.05rem; font-weight:700; margin-bottom:12px;">What is GST Registration?</h2>
+                    <p style="font-size:.88rem; color:var(--text-light); line-height:1.7; margin-bottom:10px;">Goods and
+                        Services Tax (GST) is India's unified indirect tax that replaced VAT, Service Tax, Excise Duty,
+                        and other levies. GST Registration allows businesses to legally collect GST, claim Input Tax
+                        Credit (ITC), and file GST returns.</p>
+                    <p style="font-size:.88rem; color:var(--text-light); line-height:1.7;">GST Registration is mandatory
+                        for businesses exceeding ₹40 lakhs (goods) or ₹20 lakhs (services). Businesses below ₹1.5 crore
+                        can opt for the Composition Scheme. Small taxpayers up to ₹5 crore can file under QRMP scheme.
+                    </p>
+                    <div
+                        style="background:rgba(243,156,18,.08); border-left:3px solid var(--accent); border-radius:8px; padding:11px 14px; font-size:.83rem; color:#7d4e00; margin-top:14px;">
+                        ⚠️ Operating without GST when required attracts penalties up to 100% of the tax amount.
+                    </div>
+                </div>
+
+                <!-- WHY CHOOSE -->
+                <div>
+                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Why Choose GST Registration?</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> Legal Business Compliance
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> Input Tax Credit Benefits
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> Nationwide Business Expansion
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> Government Recognition
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHO SHOULD REGISTER -->
+                <div>
+                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Who Should Register?</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> Businesses above threshold
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> E-commerce sellers
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> Importers &amp; Exporters
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            <span style="color:var(--success);">✔</span> Interstate suppliers
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCUMENTS -->
+                <div>
+                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Documents Required</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            📋 PAN Card &amp; Aadhaar</div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            🏠 Address Proof</div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            🏦 Bank Details</div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
+                            📁 Business Proof</div>
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div>
+                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Setup Process &amp; Timeline</p>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        {% for step in steps %}
+                        <div
+                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
+                            <div
+                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                {{ forloop.counter }}</div>
+                            <div>
+                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">{{ step.title }}</p>
+                                <p style="font-size:.78rem; color:var(--text-light);">{{ step.desc }}</p>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div
+                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
+                            <div
+                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                1</div>
+                            <div>
+                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">Document Collection</p>
+                                <p style="font-size:.78rem; color:var(--text-light);">Day 1 — Gather all required
+                                    documents</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
+                            <div
+                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                2</div>
+                            <div>
+                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">GST Portal Registration
+                                </p>
+                                <p style="font-size:.78rem; color:var(--text-light);">Day 1 — Create account &amp; set
+                                    up profile</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
+                            <div
+                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                3</div>
+                            <div>
+                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">Application Filing</p>
+                                <p style="font-size:.78rem; color:var(--text-light);">Day 1 — Submit your GST
+                                    registration application</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
+                            <div
+                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                4</div>
+                            <div>
+                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">Officer Verification
+                                </p>
+                                <p style="font-size:.78rem; color:var(--text-light);">Day 1–4 — Government review and
+                                    validation</p>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
+                            <div
+                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                5</div>
+                            <div>
+                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">GSTIN Issuance</p>
+                                <p style="font-size:.78rem; color:var(--text-light);">Day 2–5 — Receive your GST
+                                    Identification Number</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div id="pricing">
+                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Pricing Plans</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                        <div
+                            style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px; display:flex; flex-direction:column; gap:14px; border:2px solid transparent;">
+                            <p
+                                style="font-size:.72rem; font-weight:700; color:var(--text-light); text-transform:uppercase; letter-spacing:.05em;">
+                                Starter</p>
+                            <p style="font-size:2rem; font-weight:800; color:var(--primary); line-height:1;">₹1,499</p>
+                            <p style="font-size:.8rem; color:var(--text-light);">GST Registration only</p>
+                            <ul style="list-style:none; display:flex; flex-direction:column; gap:7px;">
+                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
+                                        style="color:var(--success); font-weight:700;">✓</span> Application Filing</li>
+                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
+                                        style="color:var(--success); font-weight:700;">✓</span> ARN Tracking</li>
+                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
+                                        style="color:var(--success); font-weight:700;">✓</span> GSTIN Delivery</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px; display:flex; flex-direction:column; gap:14px; border:2px solid var(--primary); position:relative;">
+                            <span
+                                style="position:absolute; top:-11px; right:16px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); font-size:.68rem; font-weight:700; padding:3px 10px; border-radius:50px;">POPULAR</span>
+                            <p
+                                style="font-size:.72rem; font-weight:700; color:var(--text-light); text-transform:uppercase; letter-spacing:.05em;">
+                                Complete</p>
+                            <p style="font-size:2rem; font-weight:800; color:var(--primary); line-height:1;">₹3,499</p>
+                            <p style="font-size:.8rem; color:var(--text-light);">GST + Compliance</p>
+                            <ul style="list-style:none; display:flex; flex-direction:column; gap:7px;">
+                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
+                                        style="color:var(--success); font-weight:700;">✓</span> GST Registration</li>
+                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
+                                        style="color:var(--success); font-weight:700;">✓</span> Returns Filing</li>
+                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
+                                        style="color:var(--success); font-weight:700;">✓</span> Advisory Support</li>
+                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
+                                        style="color:var(--success); font-weight:700;">✓</span> Dedicated Manager</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Frequently Asked Questions</p>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:14px 18px;">
+                            <p style="font-size:.88rem; font-weight:600; margin-bottom:5px;">Is GST mandatory for my
+                                business?</p>
+                            <p style="font-size:.82rem; color:var(--text-light); line-height:1.6;">Depends on turnover —
+                                mandatory above ₹40L (goods) or ₹20L (services). Voluntary registration is also possible
+                                below the threshold.</p>
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:14px 18px;">
+                            <p style="font-size:.88rem; font-weight:600; margin-bottom:5px;">How long does GST
+                                registration take?</p>
+                            <p style="font-size:.82rem; color:var(--text-light); line-height:1.6;">Typically 1–5
+                                business days after all documents are submitted and verified by the government officer.
+                            </p>
+                        </div>
+                        <div
+                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:14px 18px;">
+                            <p style="font-size:.88rem; font-weight:600; margin-bottom:5px;">Can I use my home address
+                                for GST?</p>
+                            <p style="font-size:.82rem; color:var(--text-light); line-height:1.6;">Yes, home address is
+                                accepted as a principal place of business for sole proprietors and small businesses.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div style="position:sticky; top:90px; display:flex; flex-direction:column; gap:16px;">
+                <div
+                    style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px;">
+                    <h3 style="font-size:.9rem; font-weight:700; margin-bottom:16px;">Quick Enquiry</h3>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
+                        <span style="color:var(--text-light);">Starter Setup</span><span
+                            style="font-weight:700;">₹1,499</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; padding:9px 0; font-size:.85rem;"><span
+                            style="color:var(--text-light);">Complete Setup</span><span
+                            style="font-weight:700;">₹3,499</span></div>
+                    <div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
+                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
+                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
+                    </div>
+                </div>
+                <div
+                    style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px;">
+                    <h3 style="font-size:.9rem; font-weight:700; margin-bottom:16px;">At a Glance</h3>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
+                        <span style="color:var(--text-light);">Setup Time</span><span style="font-weight:700;">1–5
+                            Days</span>
+                    </div>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
+                        <span style="color:var(--text-light);">Documentation</span><span
+                            style="font-weight:700;">Easy</span>
+                    </div>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
+                        <span style="color:var(--text-light);">Compliance</span><span
+                            style="font-weight:700;">Mandatory</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; padding:9px 0; font-size:.85rem;"><span
+                            style="color:var(--text-light);">Liability</span><span
+                            style="font-weight:700;">Applicable</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary)); border-radius:var(--radius); padding:48px 32px; text-align:center; color:var(--white); margin-top:36px;">
+            <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px;">Set Up Your GST Registration in 3–5 Days
+            </h3>
+            <p style="font-size:.9rem; opacity:.82; margin-bottom:24px;">We handle everything from filing to GSTIN
+                issuance — hassle free</p>
+            <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-lg"
+                    style="background:var(--white); color:var(--primary); font-weight:700;">View Pricing →</a>
+                <a href="#" class="btn btn-lg"
+                    style="background:transparent; border:2px solid rgba(255,255,255,.55); color:var(--white);">Talk to
+                    Expert</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{# ════════ admin_dashboard/applications.html ════════ #}
+{# Save separately #}
+{% extends 'admin_dashboard/base.html' %}
+{% block page_title %}Contact Messages{% endblock %}
+{% block content %}
+<div class="data-card">
+    <div class="data-card-header"><span class="data-card-title">Recent Service Applications
+            ({{recent_apps.count}})</span></div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Service</th>
+                <th>Applied</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for app in recent_apps %}
+            <tr>
+                <td><strong>{{ app.user.username }}</strong></td>
+                <td>{{ app.service.name }}</td>
+                <td style="font-size:.85rem;color:var(--text-light)">{{ app.applied_at|date:"M d, Y" }}</td>
+                <td><span
+                        class="badge {% if app.status == 'completed' %}badge-success{% elif app.status == 'rejected' %}badge-danger{% elif app.status == 'in_progress' %}badge-info{% else %}badge-warning{% endif %}">{{
+                        app.get_status_display }}</span></td>
+                <td><a href="{% url 'admin_app_status' app.pk %}" class="btn btn-primary btn-sm">Update</a></td>
+            </tr>
+            {% empty %}<tr>
+                <td colspan="5" style="text-align:center;color:var(--text-light);padding:24px">No applications</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+#}
