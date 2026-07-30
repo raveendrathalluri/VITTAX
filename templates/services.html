@@ -1,351 +1,943 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Services - VITTAX{% endblock %}
+
+{% block title %}Complete Service Index & Pricing - VITTAX{% endblock %}
 
 {% block extra_css %}
 <style>
-    .services-hero {
-        padding: 120px 0 64px;
-        background: linear-gradient(135deg, #e8f0fe, #f0f7ff);
-        text-align: center;
-    }
+  /* ── SERVICES HERO ── */
+  .svc-hero-section {
+    background: #081b38;
+    color: var(--white);
+    padding: 130px 36px 72px;
+    text-align: center;
+  }
 
-    .services-hero h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 900;
-        margin-bottom: 12px;
-    }
+  .svc-hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-    /* Filter tabs */
-    .filter-bar {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 40px;
-    }
+  .svc-hero-badge {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #93c5fd;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
 
-    .filter-tab {
-        padding: 8px 22px;
-        border-radius: 50px;
-        border: 1.5px solid #e2e8f0;
-        background: #fff;
-        font-size: .87rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: var(--transition);
-        color: var(--text-light);
-        font-family: inherit;
-    }
+  .svc-hero-title {
+    font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -0.6px;
+    margin-bottom: 18px;
+    line-height: 1.15;
+  }
 
-    .filter-tab.active,
-    .filter-tab:hover {
-        background: var(--primary);
-        color: #fff;
-        border-color: var(--primary);
-    }
+  .svc-hero-desc {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.65;
+    max-width: 720px;
+    margin: 0 auto;
+  }
 
-    /* Services grid */
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
+  /* ── MAIN CATALOG LAYOUT ── */
+  .svc-catalog-section {
+    padding: 60px 36px 90px;
+    background: #f4f7fc;
+  }
 
-    .service-card {
-        background: #fff;
-        border-radius: var(--radius);
-        padding: 28px;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
-        border: 1.5px solid transparent;
-        position: relative;
-        overflow: hidden;
-    }
+  .svc-catalog-container {
+    max-width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 36px;
+    align-items: start;
+  }
 
-    .service-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 48px rgba(26, 75, 140, .14);
-        border-color: rgba(26, 75, 140, .15);
-    }
+  /* ── LEFT SIDEBAR ── */
+  .svc-sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
-    .svc-popular {
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        background: var(--accent);
-        color: #fff;
-        font-size: .7rem;
-        font-weight: 700;
-        padding: 3px 10px;
-        border-radius: 50px;
-    }
+  /* Category Filter Box */
+  .sidebar-box {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 16px rgba(10, 34, 70, 0.04);
+  }
 
-    .svc-icon {
-        width: 54px;
-        height: 54px;
-        border-radius: 14px;
-        background: rgba(26, 75, 140, .08);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.35rem;
-        color: var(--primary);
-        margin-bottom: 18px;
-        transition: var(--transition);
-    }
+  .sidebar-box-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f5f9;
+  }
 
-    .service-card:hover .svc-icon {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: #fff;
-    }
+  .cat-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
 
-    .svc-cat {
-        font-size: .72rem;
-        font-weight: 700;
-        color: var(--secondary);
-        text-transform: uppercase;
-        letter-spacing: .5px;
-        margin-bottom: 7px;
-    }
+  .cat-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: #334155;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+    width: 100%;
+  }
 
-    .svc-name {
-        font-size: 1.05rem;
-        font-weight: 700;
-        margin-bottom: 10px
-    }
+  .cat-nav-btn:hover {
+    background: #f1f5f9;
+    color: #0a2246;
+  }
 
-    .svc-desc {
-        font-size: .88rem;
-        color: var(--text-light);
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
+  .cat-nav-btn.active {
+    background: #0a2246;
+    color: var(--white) !important;
+  }
 
-    .svc-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 16px;
-        border-top: 1px solid #f0f4f8;
-    }
+  /* Fee Estimator Widget */
+  .estimator-card {
+    background: #0a2246;
+    color: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 30px rgba(10, 34, 70, 0.15);
+  }
 
-    .svc-price {
-        font-size: 1.2rem;
-        font-weight: 900;
-        color: var(--primary);
-    }
+  .estimator-card h4 {
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
 
-    .svc-price.free {
-        color: var(--success)
-    }
+  .estimator-card p {
+    font-size: 0.82rem;
+    color: #93c5fd;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
 
-    .svc-actions {
-        display: flex;
-        gap: 8px
-    }
+  .estimator-selected-status {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    min-height: 24px;
+    font-style: italic;
+  }
 
-    /* Empty state */
-    .empty-state {
-        grid-column: span 3;
-        text-align: center;
-        padding: 64px 24px;
-        color: var(--text-light);
-    }
+  .estimator-total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 20px;
+  }
 
-    .empty-state i {
-        font-size: 3.5rem;
-        opacity: .25;
-        display: block;
-        margin-bottom: 18px;
-    }
+  .estimator-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #93c5fd;
+  }
 
-    /* CTA banner */
-    .cta-banner {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        border-radius: 20px;
-        padding: 48px;
-        text-align: center;
-        margin-top: 56px;
-    }
+  .estimator-val {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--white);
+  }
 
-    .cta-banner h2 {
-        color: #fff;
-        font-size: 1.8rem;
-        font-weight: 900;
-        margin-bottom: 10px
-    }
+  .btn-estimator-quote {
+    background: var(--white);
+    color: #0a2246;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.84rem;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .cta-banner p {
-        color: rgba(255, 255, 255, .82);
-        margin-bottom: 24px;
-        font-size: .98rem
-    }
+  .btn-estimator-quote:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+  }
 
-    @media(max-width:900px) {
-        .services-grid {
-            grid-template-columns: 1fr 1fr
-        }
-    }
+  /* ── RIGHT MAIN CATALOG ── */
+  .svc-main-catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
 
-    @media(max-width:600px) {
-        .services-grid {
-            grid-template-columns: 1fr
-        }
+  /* Control Search & Sort Bar */
+  .svc-control-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--white);
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(10, 34, 70, 0.04);
+  }
 
-        .empty-state {
-            grid-column: span 1
-        }
-    }
+  .svc-search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .svc-search-wrap i {
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+
+  .svc-search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #0f172a;
+  }
+
+  .svc-sort-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+    color: #64748b;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .svc-sort-select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #0a2246;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* Section Groups */
+  .cat-section-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cat-section-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #0a2246;
+    letter-spacing: -0.3px;
+  }
+
+  .cards-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* Individual Service Card */
+  .svc-item-card {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+  }
+
+  .svc-item-card:hover {
+    border-color: #0a2246;
+    box-shadow: 0 12px 32px rgba(10, 34, 70, 0.08);
+    transform: translateY(-3px);
+  }
+
+  .svc-card-tag {
+    align-self: flex-start;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    background: #f1f5f9;
+    color: #1e40af;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .svc-card-tag.rec {
+    background: rgba(255, 255, 255, 0.2);
+    color: #93c5fd;
+  }
+
+  .svc-card-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0a2246;
+    margin-bottom: 8px;
+  }
+
+  .svc-card-desc {
+    font-size: 0.88rem;
+    color: #475467;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+
+  .svc-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .svc-price-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .svc-price-lbl {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    text-transform: uppercase;
+  }
+
+  .svc-price-amt {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #0a2246;
+  }
+
+  .btn-svc-action {
+    background: #0a2246;
+    color: var(--white) !important;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-svc-action:hover {
+    background: #163868;
+  }
+
+  .btn-svc-outline {
+    border: 1.5px solid #cbd5e1;
+    color: #0a2246 !important;
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    transition: var(--transition);
+  }
+
+  .btn-svc-outline:hover {
+    border-color: #0a2246;
+    background: #f8fafc;
+  }
+
+  /* Featured Navy Incorporation Card */
+  .svc-item-card.featured-navy {
+    background: #081b38;
+    color: var(--white);
+    border: none;
+  }
+
+  .svc-item-card.featured-navy .svc-card-title {
+    color: var(--white);
+  }
+
+  .svc-item-card.featured-navy .svc-card-desc {
+    color: #93c5fd;
+  }
+
+  .svc-item-card.featured-navy .svc-card-footer {
+    border-top-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .svc-item-card.featured-navy .svc-price-lbl {
+    color: #93c5fd;
+  }
+
+  .svc-item-card.featured-navy .svc-price-amt {
+    color: var(--white);
+  }
+
+  .btn-svc-white {
+    background: var(--white);
+    color: #0a2246 !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.82rem;
+    transition: var(--transition);
+  }
+
+  .btn-svc-white:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+  }
+
+  /* Center Banner Link */
+  .catalog-link-banner {
+    text-align: center;
+    padding: 36px;
+    background: var(--white);
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+    margin-top: 12px;
+  }
+
+  .catalog-link-banner p {
+    font-size: 0.95rem;
+    color: #475467;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .btn-view-all-svc {
+    border: 1.5px solid #0a2246;
+    color: #0a2246 !important;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.84rem;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: var(--transition);
+  }
+
+  .btn-view-all-svc:hover {
+    background: #0a2246;
+    color: var(--white) !important;
+  }
+
+  /* ── LARGE ENTERPRISES SECTION ── */
+  .enterprise-section {
+    background: #edf3f9;
+    padding: 90px 36px;
+  }
+
+  .enterprise-container {
+    max-width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .enterprise-img-box {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(10, 34, 70, 0.12);
+  }
+
+  .enterprise-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .enterprise-content h2 {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 900;
+    color: #0a2246;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .enterprise-content p {
+    font-size: 0.96rem;
+    color: #475467;
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .enterprise-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+
+  .enterprise-feat-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .enterprise-feat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #0a2246;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .enterprise-feat-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0a2246;
+    margin-bottom: 4px;
+  }
+
+  .enterprise-feat-desc {
+    font-size: 0.88rem;
+    color: #64748b;
+  }
+
+  .enterprise-actions-row {
+    display: flex;
+    gap: 16px;
+  }
+
+  .btn-schedule-call {
+    background: #0a2246;
+    color: var(--white) !important;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+  }
+
+  .btn-schedule-call:hover {
+    background: #163868;
+    transform: translateY(-2px);
+  }
+
+  .btn-whatsapp-support {
+    background: var(--white);
+    color: #0a2246 !important;
+    border: 1.5px solid #cbd5e1;
+    padding: 13px 26px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+  }
+
+  .btn-whatsapp-support:hover {
+    border-color: #0a2246;
+    background: #f8fafc;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .svc-catalog-container { grid-template-columns: 1fr; }
+    .enterprise-container { grid-template-columns: 1fr; gap: 40px; }
+    .cards-grid-2col { grid-template-columns: 1fr; }
+  }
 </style>
 {% endblock %}
 
 {% block content %}
 
-<!-- HERO -->
-<section class="services-hero">
-    <div class="container">
-        <span class="section-tag">OUR SERVICES</span>
-        <h1>Comprehensive <span style="color:var(--primary)">Financial Services</span></h1>
-        <p style="color:var(--text-light);font-size:1rem;max-width:540px;margin:0 auto;line-height:1.7">
-            Everything you need for your financial compliance —
-            tax filing, GST, accounting, and more — all under one roof.
-        </p>
-    </div>
+<!-- ═══ HERO SECTION ═══ -->
+<section class="svc-hero-section">
+  <div class="svc-hero-container">
+    <span class="svc-hero-badge">PROFESSIONAL FEE SCHEDULE</span>
+    <h1 class="svc-hero-title">Complete Service Index &amp; Pricing</h1>
+    <p class="svc-hero-desc">
+      Transparent, fixed-fee professional services. Browse our extensive directory of compliance, tax, and corporate filing solutions tailored for businesses and individuals.
+    </p>
+  </div>
 </section>
 
-<!-- SERVICES LIST -->
-<section class="section" style="background:var(--bg)">
-    <div class="container">
+<!-- ═══ CATALOG & SIDEBAR ═══ -->
+<section class="svc-catalog-section">
+  <div class="svc-catalog-container">
 
-        <!-- Filter Tabs -->
-        <div class="filter-bar">
-            <button class="filter-tab active" onclick="filterCards('all', this)">
-                All Services
-            </button>
-            <button class="filter-tab" onclick="filterCards('Start_a_Business', this)">
-                <i class="fas fa-file-invoice"></i> Start a Business
-            </button>
-            <button class="filter-tab" onclick="filterCards('Registrations', this)">
-                <i class="fas fa-receipt"></i> Registrations
-            </button>
-            <button class="filter-tab" onclick="filterCards('GST_Indirect_Tax', this)">
-                <i class="fas fa-book"></i> GST & Indirect Tax
-            </button>
-            <button class="filter-tab" onclick="filterCards('income_tax', this)">
-                <i class="fas fa-chart-line"></i> Income Tax
-            </button>
-            <button class="filter-tab" onclick="filterCards('mca_corporate', this)">
-                <i class="fas fa-chart-line"></i> MCA & Corporate
-            </button>
-            <button class="filter-tab" onclick="filterCards('accounting_payroll', this)">
-                <i class="fas fa-chart-line"></i> Accounting & Payroll
-            </button>
-            <button class="filter-tab" onclick="filterCards('nri_international_services', this)">
-                <i class="fas fa-chart-line"></i> NRI & International Services
-            </button>
-            <button class="filter-tab" onclick="filterCards('virtual_cfo_advisory', this)">
-                <i class="fas fa-chart-line"></i> Virtual CFO & Advisory
-            </button>
-            <button class="filter-tab" onclick="filterCards('other', this)">
-                <i class="fas fa-chart-line"></i> Others
-            </button>
+    <!-- Left Sidebar Column -->
+    <aside class="svc-sidebar-column">
+      
+      <!-- Category Filter Box -->
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">FILTER CATEGORY</div>
+        <div class="cat-nav-list">
+          <button class="cat-nav-btn active" onclick="filterCategory('all', this)">
+            All Services
+          </button>
+          <button class="cat-nav-btn" onclick="filterCategory('gst', this)">
+            GST &amp; Indirect Tax
+          </button>
+          <button class="cat-nav-btn" onclick="filterCategory('income_tax', this)">
+            Income Tax
+          </button>
+          <button class="cat-nav-btn" onclick="filterCategory('mca', this)">
+            MCA &amp; Corporate
+          </button>
+          <button class="cat-nav-btn" onclick="filterCategory('accounting', this)">
+            Accounting &amp; Payroll
+          </button>
+          <button class="cat-nav-btn" onclick="filterCategory('nri', this)">
+            NRI &amp; International
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive Fee Estimator Card -->
+      <div class="estimator-card">
+        <h4>Fee Estimator</h4>
+        <p>Add services to estimate your total compliance cost.</p>
+        
+        <div class="estimator-selected-status" id="estimatorStatus">
+          No services selected yet.
         </div>
 
-        <!-- Cards Grid -->
-        <div class="services-grid" id="servicesGrid">
+        <div class="estimator-total-row">
+          <span class="estimator-label">Total (Est.)</span>
+          <span class="estimator-val" id="totalFeeVal">₹0</span>
+        </div>
 
-            {% if services %}
-            {% for svc in services %}
-            <div class="service-card" data-cat="{{ svc.category }}" data-animate>
+        <a href="{% url 'contact' %}" class="btn-estimator-quote">
+          Proceed to Quote
+        </a>
+      </div>
 
-                {% if svc.is_featured %}
-                <div class="svc-popular">⭐ Popular</div>
-                {% endif %}
+    </aside>
 
-                <div class="svc-icon">
-                    <i class="{{ svc.icon }}"></i>
-                </div>
+    <!-- Right Main Catalog Column -->
+    <main class="svc-main-catalog">
+      
+      <!-- Search & Sort Control Bar -->
+      <div class="svc-control-bar">
+        <div class="svc-search-wrap">
+          <i class="fas fa-search"></i>
+          <input type="text" id="svcSearchInput" class="svc-search-input" placeholder="Search services (e.g. GSTR 9...)" onkeyup="searchServices()">
+        </div>
+        <div class="svc-sort-wrap">
+          <span>Sort by:</span>
+          <select id="svcSortSelect" class="svc-sort-select" onchange="sortServices()">
+            <option value="popular">Most Popular</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
 
-                <div class="svc-cat">{{ svc.get_category_display }}</div>
-                <div class="svc-name">{{ svc.name }}</div>
-                <div class="svc-desc">{{ svc.short_description }}</div>
-
-                <div class="svc-footer">
-                    <div class="svc-price {% if svc.price == 0 %}free{% endif %}">
-                        {% if svc.price == 0 %}
-                        FREE
-                        {% else %}
-                        &#8377;{{ svc.price }}
-                        {% endif %}
-                    </div>
-                    <div class="svc-actions">
-                        <a href="{% url 'service_detail' svc.slug %}" class="btn btn-outline btn-sm">
-                            Details
-                        </a>
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'apply_service' svc.slug %}" class="btn btn-primary btn-sm">
-                            <i class="fas fa-rocket"></i> Apply
-                        </a>
-                        {% else %}
-                        <a href="{% url 'register' %}" class="btn btn-primary btn-sm">
-                            <i class="fas fa-rocket"></i> Get Started
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-
+      <!-- Section 1: GST & Indirect Tax -->
+      <div class="cat-section-group" data-group="gst">
+        <h3 class="cat-section-title">GST &amp; Indirect Tax</h3>
+        
+        <div class="cards-grid-2col">
+          
+          <div class="svc-item-card" data-category="gst" data-name="GST Registration" data-price="999">
+            <span class="svc-card-tag">REGISTRATION</span>
+            <div class="svc-card-title">GST Registration</div>
+            <div class="svc-card-desc">Quick filing for new entities from GST IN setup including documentation review.</div>
+            <div class="svc-card-footer">
+              <div class="svc-price-block">
+                <span class="svc-price-lbl">STARTS FROM</span>
+                <span class="svc-price-amt">₹999</span>
+              </div>
+              <button class="btn-svc-action" onclick="toggleFeeEstimator(this, 'GST Registration', 999)">
+                Book Now <i class="fas fa-arrow-right"></i>
+              </button>
             </div>
-            {% endfor %}
+          </div>
+
+          <div class="svc-item-card" data-category="gst" data-name="GST Monthly Returns" data-price="1499">
+            <span class="svc-card-tag">COMPLIANCE</span>
+            <div class="svc-card-title">GST Monthly Returns</div>
+            <div class="svc-card-desc">End-to-end filing GSTR-1 &amp; GSTR-3B monthly packs for small businesses.</div>
+            <div class="svc-card-footer">
+              <div class="svc-price-block">
+                <span class="svc-price-lbl">STARTS FROM</span>
+                <span class="svc-price-amt">₹1,499</span>
+              </div>
+              <button class="btn-svc-action" onclick="toggleFeeEstimator(this, 'GST Monthly Returns', 1499)">
+                Book Now <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="svc-item-card" data-category="gst" data-name="GST Health Check" data-price="4999">
+            <span class="svc-card-tag">AUDIT</span>
+            <div class="svc-card-title">GST Health Check</div>
+            <div class="svc-card-desc">Detailed audit of previous filings to detect anomalies and optimize tax output.</div>
+            <div class="svc-card-footer">
+              <div class="svc-price-block">
+                <span class="svc-price-lbl">STARTS FROM</span>
+                <span class="svc-price-amt">₹4,999</span>
+              </div>
+              <a href="{% url 'contact' %}" class="btn-svc-outline">Inquire</a>
+            </div>
+          </div>
+
+          <div class="svc-item-card" data-category="gst" data-name="GST Refund Services" data-price="9999">
+            <span class="svc-card-tag">REFUND</span>
+            <div class="svc-card-title">GST Refund Services</div>
+            <div class="svc-card-desc">Expert filing for inverted duty structure refund claims with follow-ups.</div>
+            <div class="svc-card-footer">
+              <div class="svc-price-block">
+                <span class="svc-price-lbl">STARTS FROM</span>
+                <span class="svc-price-amt">₹9,999</span>
+              </div>
+              <a href="{% url 'contact' %}" class="btn-svc-outline">Inquire</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section 2: Startup & Business -->
+      <div class="cat-section-group" data-group="mca">
+        <h3 class="cat-section-title">Startup &amp; Business</h3>
+        
+        <div class="cards-grid-2col">
+          
+          <div class="svc-item-card featured-navy" data-category="mca" data-name="Private Limited Company" data-price="7499">
+            <span class="svc-card-tag rec">RECOMMENDED</span>
+            <div class="svc-card-title">Private Limited Company</div>
+            <div class="svc-card-desc">Complete incorporation suite including DSC, DIN, MOA/AOA drafting, PAN/TAN registration, and 1-year compliance roadmap.</div>
+            <div class="svc-card-footer">
+              <div class="svc-price-block">
+                <span class="svc-price-lbl">ALL-INCLUSIVE PACKAGE</span>
+                <span class="svc-price-amt">₹7,499</span>
+              </div>
+              <button class="btn-svc-white" onclick="toggleFeeEstimator(this, 'Private Limited Company', 7499)">
+                Start Incorporation
+              </button>
+            </div>
+          </div>
+
+          <div class="svc-item-card" data-category="mca" data-name="LLP Setup" data-price="4899">
+            <span class="svc-card-tag">POPULAR</span>
+            <div class="svc-card-title">LLP Setup</div>
+            <div class="svc-card-desc">Low maintenance legal structure ideal for professional partnerships.</div>
+            <div class="svc-card-footer">
+              <div class="svc-price-block">
+                <span class="svc-price-lbl">STARTS FROM</span>
+                <span class="svc-price-amt">₹4,899</span>
+              </div>
+              <button class="btn-svc-action" onclick="toggleFeeEstimator(this, 'LLP Setup', 4899)">
+                Select LLP
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section 3: Dynamic Services from Django backend -->
+      {% if services %}
+      <div class="cat-section-group" data-group="dynamic">
+        <h3 class="cat-section-title">Additional Services</h3>
+        <div class="cards-grid-2col">
+          {% for svc in services %}
+          <div class="svc-item-card" data-category="{{ svc.category }}" data-name="{{ svc.name }}" data-price="{{ svc.price }}">
+            {% if svc.is_featured %}
+            <span class="svc-card-tag">FEATURED</span>
             {% else %}
-            <div class="empty-state">
-                <i class="fas fa-box-open"></i>
-                <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:8px">
-                    No services available yet
-                </h3>
-                <p>Please check back soon or contact us for more information.</p>
-                <a href="{% url 'contact' %}" class="btn btn-primary" style="margin-top:20px">
-                    <i class="fas fa-comments"></i> Contact Us
-                </a>
-            </div>
+            <span class="svc-card-tag">{{ svc.get_category_display }}</span>
             {% endif %}
+            <div class="svc-card-title">{{ svc.name }}</div>
+            <div class="svc-card-desc">{{ svc.short_description }}</div>
+            <div class="svc-card-footer">
+              <div class="svc-price-block">
+                <span class="svc-price-lbl">PRICE</span>
+                <span class="svc-price-amt">₹{{ svc.price }}</span>
+              </div>
+              <a href="{% url 'service_detail' svc.slug %}" class="btn-svc-action">
+                View Details
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
 
-        </div><!-- /services-grid -->
+      <!-- Center Banner Link -->
+      <div class="catalog-link-banner">
+        <p>Looking for something else? We offer 50+ specialized compliance services for every business lifecycle.</p>
+        <a href="{% url 'contact' %}" class="btn-view-all-svc">
+          View All Services
+        </a>
+      </div>
 
-        <!-- CTA Banner -->
-        <div class="cta-banner" data-animate>
-            <h2>Not Sure Which Service You Need?</h2>
-            <p>
-                Talk to our experts for free — we'll assess your needs
-                and recommend the right plan for you.
-            </p>
-            <a href="{% url 'contact' %}" class="btn btn-accent btn-lg">
-                <i class="fas fa-comments"></i> Get Free Consultation
-            </a>
+    </main>
+
+  </div>
+</section>
+
+<!-- ═══ LARGE ENTERPRISES SECTION ═══ -->
+<section class="enterprise-section">
+  <div class="enterprise-container">
+    
+    <div class="enterprise-img-box">
+      <img src="{% static 'images/boardroom_meeting.png' %}" alt="Large Enterprise Boardroom Meeting" class="enterprise-img">
+    </div>
+
+    <div class="enterprise-content">
+      <h2>Tailored Compliance for Large Enterprises</h2>
+      <p>
+        If your business requires a customized compliance bundle or has complex internal reporting needs, our senior team is ready to build a bespoke plan for you.
+      </p>
+
+      <div class="enterprise-features-list">
+        <div class="enterprise-feat-item">
+          <div class="enterprise-feat-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div>
+            <div class="enterprise-feat-title">Free Initial Consultation</div>
+            <div class="enterprise-feat-desc">Discuss your compliance strategy with a senior CA partner.</div>
+          </div>
         </div>
 
+        <div class="enterprise-feat-item">
+          <div class="enterprise-feat-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div>
+            <div class="enterprise-feat-title">Dedicated Account Manager</div>
+            <div class="enterprise-feat-desc">Single point of contact for all your group company filings.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="enterprise-actions-row">
+        <a href="{% url 'contact' %}" class="btn-schedule-call">
+          Schedule a Call
+        </a>
+        <a href="https://wa.me/917670873088" target="_blank" class="btn-whatsapp-support">
+          <i class="fab fa-whatsapp" style="color:#12b76a"></i> WhatsApp Support
+        </a>
+      </div>
     </div>
+
+  </div>
 </section>
 
 {% endblock %}
 
 {% block extra_js %}
 <script>
-    function filterCards(cat, clickedBtn) {
-        /* update active tab */
-        document.querySelectorAll('.filter-tab').forEach(function (b) {
-            b.classList.remove('active');
-        });
-        clickedBtn.classList.add('active');
+  let selectedFeeItems = {};
 
-        /* show / hide cards */
-        document.querySelectorAll('.service-card').forEach(function (card) {
-            if (cat === 'all' || card.dataset.cat === cat) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
+  function toggleFeeEstimator(btn, name, price) {
+    if (selectedFeeItems[name]) {
+      delete selectedFeeItems[name];
+      btn.style.opacity = '1';
+    } else {
+      selectedFeeItems[name] = price;
+      btn.style.opacity = '0.7';
     }
+
+    updateFeeEstimatorDisplay();
+  }
+
+  function updateFeeEstimatorDisplay() {
+    const keys = Object.keys(selectedFeeItems);
+    let total = 0;
+    keys.forEach(k => total += selectedFeeItems[k]);
+
+    const statusEl = document.getElementById('estimatorStatus');
+    const totalEl = document.getElementById('totalFeeVal');
+
+    if (keys.length === 0) {
+      statusEl.innerHTML = 'No services selected yet.';
+      totalEl.innerHTML = '₹0';
+    } else {
+      statusEl.innerHTML = keys.join(', ');
+      totalEl.innerHTML = '₹' + total.toLocaleString('en-IN');
+    }
+  }
+
+  function filterCategory(cat, btn) {
+    document.querySelectorAll('.cat-nav-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.svc-item-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (cat === 'all' || cardCat === cat) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function searchServices() {
+    const query = document.getElementById('svcSearchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.svc-item-card');
+
+    cards.forEach(card => {
+      const title = card.getAttribute('data-name').toLowerCase();
+      if (title.includes(query)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
 </script>
 {% endblock %}
