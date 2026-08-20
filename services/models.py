@@ -4,11 +4,15 @@ from accounts.models import CustomUser
 
 class Service(models.Model):
     CATEGORY_CHOICES = [
-        ('tax', 'Tax Filing'),
-        ('gst', 'GST Services'),
-        ('accounting', 'Accounting'),
-        ('investment', 'Investment'),
-        ('other', 'Other'),
+        ('Start_a_Business', 'Start a Business'),
+        ('Registrations', 'Registrations'),
+        ('GST_Indirect_Tax', 'GST & Indirect Tax'),
+        ('income_tax', 'Income Tax'),
+        ('mca_corporate', 'MCA & Corporate'),
+        ('accounting_payroll', 'Accounting & Payroll'),
+        ('nri_international_services', 'NRI & International Services'),
+        ('virtual_cfo_advisory', 'Virtual CFO & Advisory'),
+        ('other', 'Others'),
     ]
     name = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)

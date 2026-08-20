@@ -10,8 +10,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Playfair+Display:ital,wght@1,400;1,600;1,700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Playfair+Display:ital,wght@1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
       --primary: #0a2246;
@@ -218,7 +220,7 @@
       transform: translateX(100%);
       transition: var(--transition);
       z-index: 999;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .nav-mobile.open {
@@ -259,9 +261,20 @@
       pointer-events: all;
     }
 
-    .toast.success { border-color: var(--success); color: #067647; }
-    .toast.error { border-color: var(--danger); color: #b42318; }
-    .toast.warning { border-color: var(--accent); color: #b54708; }
+    .toast.success {
+      border-color: var(--success);
+      color: #067647;
+    }
+
+    .toast.error {
+      border-color: var(--danger);
+      color: #b42318;
+    }
+
+    .toast.warning {
+      border-color: var(--accent);
+      color: #b54708;
+    }
 
     .toast-close {
       margin-left: auto;
@@ -269,11 +282,20 @@
       opacity: 0.5;
     }
 
-    .toast-close:hover { opacity: 1; }
+    .toast-close:hover {
+      opacity: 1;
+    }
 
     @keyframes toastIn {
-      from { opacity: 0; transform: translateX(100%); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     /* ── FOOTER ── */
@@ -395,15 +417,36 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .nav-links, .nav-actions { display: none; }
-      .hamburger { display: flex; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
     }
 
     @media (max-width: 640px) {
-      .nav-inner { padding: 0 20px; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .nav-inner {
+        padding: 0 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
     }
   </style>
   {% block extra_css %}{% endblock %}
@@ -421,12 +464,15 @@
       </a>
 
       <div class="nav-links">
-        <a href="{% url 'home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">HOME</a>
-        <a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">ABOUT US</a>
-        <a href="{% url 'services' %}" class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">SERVICES</a>
-        <a href="{% url 'services' %}" class="nav-link">INDUSTRIES</a>
+        <a href="{% url 'home' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">HOME</a>
+        <a href="{% url 'about' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">ABOUT US</a>
+        <a href="{% url 'services' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">SERVICES</a>
         <a href="{% url 'pricing' %}" class="nav-link">RESOURCES</a>
-        <a href="{% url 'contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">CONTACT US</a>
+        <a href="{% url 'contact' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">CONTACT US</a>
       </div>
 
       <div class="nav-actions">
@@ -495,7 +541,8 @@
             <img src="{% static 'images/logo.jpg' %}" alt="VITTAX Logo">
             <span>VITTAX</span>
           </div>
-          <p>Precision-driven tax compliance and advisory for high-income earners, founders, executives, and consultants across India and globally.</p>
+          <p>Precision-driven tax compliance and advisory for high-income earners, founders, executives, and consultants
+            across India and globally.</p>
           <div class="footer-social">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -533,7 +580,8 @@
           <div class="footer-contact-item">
             <i class="fas fa-map-marker-alt"></i> Financial District, Hyderabad, India
           </div>
-          <a href="{% url 'contact' %}" class="btn-consultation" style="margin-top:16px; width:100%; justify-content:center;">
+          <a href="{% url 'contact' %}" class="btn-consultation"
+            style="margin-top:16px; width:100%; justify-content:center;">
             REQUEST A CALL BACK
           </a>
         </div>
