@@ -1,0 +1,814 @@
+{# ═══════════════════════════════════════════
+templates/about.html
+═══════════════════════════════════════════ #}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us - India's Next-Gen Accounting & Finance Platform | VITTAX{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ── DESIGN SYSTEM & TYPOGRAPHY ── */
+    :root {
+        --brand-dark: #080b12;
+        --brand-card-dark: #0f1523;
+        --brand-accent: #c49a45;
+        --brand-accent-light: #dfb76c;
+        --text-primary: #091322;
+        --text-secondary: #475467;
+        --text-muted: #94a3b8;
+        --bg-light-blue: #f0f4fe;
+        --bg-neutral: #f8fafc;
+        --border-subtle: #e2e8f0;
+    }
+
+    .serif-italic {
+        font-family: var(--font-serif), 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        font-weight: 500;
+        color: var(--brand-accent);
+    }
+
+    .container-custom {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .section-tag-gold {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #94a3b8;
+        margin-bottom: 14px;
+    }
+
+    /* ── HERO SECTION ── */
+    .hero-about {
+        padding: 130px 0 80px;
+        background: #ffffff;
+        position: relative;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.3rem, 3.8vw, 3.5rem);
+        font-weight: 800;
+        color: var(--text-primary);
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+        margin-bottom: 22px;
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        line-height: 1.75;
+        margin-bottom: 32px;
+        max-width: 580px;
+    }
+
+    .hero-badges {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #f8fafc;
+        border: 1px solid var(--border-subtle);
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #334155;
+    }
+
+    .badge-pill i {
+        color: var(--brand-accent);
+        font-size: 0.95rem;
+    }
+
+    /* Hero Right Media */
+    .hero-media-wrap {
+        position: relative;
+    }
+
+    .hero-img-box {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(9, 19, 34, 0.08);
+        height: 440px;
+        background: #f1f5f9;
+    }
+
+    .hero-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hero-quote-card {
+        position: absolute;
+        bottom: -24px;
+        left: -30px;
+        background: var(--brand-dark);
+        color: #ffffff;
+        padding: 24px 28px;
+        border-radius: 14px;
+        max-width: 360px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        z-index: 10;
+    }
+
+    .quote-icon {
+        font-family: var(--font-serif), Georgia, serif;
+        font-size: 2.2rem;
+        color: var(--brand-accent);
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+
+    .quote-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        font-style: italic;
+        color: #e2e8f0;
+        margin: 0;
+    }
+
+    /* ── STATS COUNTER BAR ── */
+    .stats-bar {
+        background: var(--brand-dark);
+        color: #ffffff;
+        padding: 48px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+        font-weight: 800;
+        font-family: var(--font-serif), Georgia, serif;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+
+    .stat-number span {
+        color: var(--brand-accent);
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        color: #94a3b8;
+    }
+
+    /* ── OUR EXPERTISE SECTION ── */
+    .expertise-section {
+        background: var(--bg-neutral);
+        padding: 100px 0;
+    }
+
+    .section-header-center {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 60px;
+    }
+
+    .section-header-center h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+    }
+
+    .section-header-center p {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+    }
+
+    .expertise-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .exp-card {
+        border-radius: 16px;
+        padding: 38px;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .exp-card-white {
+        background: #ffffff;
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .exp-card-white:hover {
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        transform: translateY(-3px);
+    }
+
+    .exp-card-tint {
+        background: var(--bg-light-blue);
+        border: 1px solid rgba(29, 78, 216, 0.08);
+    }
+
+    .exp-icon-top {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: rgba(196, 154, 69, 0.12);
+        color: var(--brand-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+    }
+
+    .exp-card h3 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 14px;
+    }
+
+    .exp-card p {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 24px;
+    }
+
+    .exp-link {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--text-primary);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--transition);
+    }
+
+    .exp-link i {
+        transition: var(--transition);
+        font-size: 0.85rem;
+    }
+
+    .exp-link:hover {
+        color: var(--secondary);
+    }
+
+    .exp-link:hover i {
+        transform: translateX(4px);
+    }
+
+    .exp-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .exp-list li {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: #334155;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .exp-list li::before {
+        content: '•';
+        color: var(--brand-accent);
+        font-size: 1.4rem;
+        line-height: 1;
+    }
+
+    .exp-card-wide {
+        grid-column: span 1;
+    }
+
+    /* ── UNWAVERING COMMITMENT DARK SECTION ── */
+    .commitment-section {
+        background: var(--brand-dark);
+        color: #ffffff;
+        padding: 110px 0;
+        position: relative;
+    }
+
+    .commitment-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+    }
+
+    .commitment-left h2 {
+        font-size: clamp(2.2rem, 3.5vw, 3rem);
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.2;
+        margin-bottom: 18px;
+    }
+
+    .commitment-left p.lead-text {
+        font-size: 1rem;
+        color: #94a3b8;
+        line-height: 1.7;
+        margin-bottom: 40px;
+    }
+
+    .pillars-list {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .pillar-item {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .pillar-icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--brand-accent);
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .pillar-info h4 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 6px;
+    }
+
+    .pillar-info p {
+        font-size: 0.92rem;
+        color: #94a3b8;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* 2x2 Photo Grid */
+    .photo-grid-2x2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .photo-tile {
+        border-radius: 14px;
+        overflow: hidden;
+        height: 230px;
+        background: var(--brand-card-dark);
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .photo-tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(20%) contrast(105%);
+        transition: var(--transition);
+    }
+
+    .photo-tile:hover img {
+        filter: grayscale(0%) contrast(100%);
+        transform: scale(1.04);
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+        background: #ffffff;
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(2.2rem, 3.5vw, 3rem);
+        font-weight: 800;
+        color: var(--text-primary);
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
+
+    .cta-content p {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        max-width: 620px;
+        margin: 0 auto 36px;
+        line-height: 1.7;
+    }
+
+    .cta-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .btn-dark-action {
+        background: var(--brand-dark);
+        color: #ffffff !important;
+        padding: 14px 32px;
+        border-radius: 6px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        transition: var(--transition);
+        box-shadow: 0 6px 20px rgba(8, 11, 18, 0.2);
+    }
+
+    .btn-dark-action:hover {
+        background: #182235;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(8, 11, 18, 0.3);
+    }
+
+    .btn-outline-action {
+        background: #ffffff;
+        border: 1.5px solid #cbd5e1;
+        color: var(--text-primary) !important;
+        padding: 13px 30px;
+        border-radius: 6px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        transition: var(--transition);
+    }
+
+    .btn-outline-action:hover {
+        border-color: var(--brand-dark);
+        background: #f8fafc;
+        transform: translateY(-2px);
+    }
+
+    /* ── RESPONSIVE MEDIA QUERIES ── */
+    @media (max-width: 1024px) {
+
+        .hero-grid,
+        .commitment-grid {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        .hero-quote-card {
+            position: relative;
+            bottom: auto;
+            left: auto;
+            margin-top: 16px;
+            max-width: 100%;
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 36px;
+        }
+
+        .expertise-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .hero-about {
+            padding: 100px 0 60px;
+        }
+
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .photo-grid-2x2 {
+            grid-template-columns: 1fr;
+        }
+
+        .photo-tile {
+            height: 200px;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .btn-dark-action,
+        .btn-outline-action {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- ═══ 1. HERO SECTION ═══ -->
+<section class="hero-about">
+    <div class="container-custom">
+        <div class="hero-grid">
+
+            <div class="hero-content">
+                <span class="section-tag-gold">OUR LEGACY &amp; MISSION</span>
+                <h1>India's Next-Generation <br><span class="serif-italic">Accounting &amp; Finance</span> Platform.
+                </h1>
+                <p>
+                    We are a team of qualified Chartered Accountants committed to delivering excellence in Assurance,
+                    Taxation, Advisory, and Compliance services to individuals, startups, and established enterprises
+                    across India.
+                </p>
+
+                <div class="hero-badges">
+                    <div class="badge-pill">
+                        <i class="fas fa-shield-check"></i>
+                        <span>ISO Certified &amp; Secure</span>
+                    </div>
+                    <div class="badge-pill">
+                        <i class="fas fa-user-tie"></i>
+                        <span>3,000+ Expert CAs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-media-wrap">
+                <div class="hero-img-box">
+                    <img src="{% static 'images/boardroom_meeting.png' %}" alt="VITTAX Executive Boardroom"
+                        onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80'">
+                </div>
+
+                <div class="hero-quote-card">
+                    <div class="quote-icon">”</div>
+                    <p class="quote-text">
+                        "Our mission is to deliver value-added financial solutions with integrity, accuracy and
+                        professionalism."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 2. STATS COUNTER BAR ═══ -->
+<section class="stats-bar">
+    <div class="container-custom">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">10<span>+</span></div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">13L<span>+</span></div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15<span>+</span></div>
+                <div class="stat-label">Industries Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100<span>%</span></div>
+                <div class="stat-label">Commitment</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 3. OUR EXPERTISE SECTION ═══ -->
+<section class="expertise-section">
+    <div class="container-custom">
+
+        <div class="section-header-center">
+            <h2>Our Expertise</h2>
+            <p>Providing a spectrum of integrated professional services under one roof.</p>
+        </div>
+
+        <div class="expertise-grid">
+
+            <!-- Card 1: Assurance Services -->
+            <div class="exp-card exp-card-white">
+                <div>
+                    <div class="exp-icon-top">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Assurance Services</h3>
+                    <p>
+                        Our audit approach is designed to provide high-quality, transparent insights
+                        that build trust with stakeholders. From statutory audits to internal controls,
+                        we ensure complete compliance.
+                    </p>
+                </div>
+                <a href="{% url 'services' %}" class="exp-link">
+                    EXPLORE ASSURANCE <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Card 2: Taxation -->
+            <div class="exp-card exp-card-tint">
+                <div>
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                        <h3 style="margin-top:0;">Taxation</h3>
+                        <div class="exp-icon-top"
+                            style="margin-bottom:0; background:rgba(29, 78, 216, 0.1); color:var(--secondary);">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                    </div>
+                    <p style="margin-top: 14px;">
+                        End-to-end tax planning, compliance, and advisory to maximize your savings
+                        and minimize risk.
+                    </p>
+                    <ul class="exp-list">
+                        <li>Income Tax Filing</li>
+                        <li>GST Optimization</li>
+                        <li>International Tax</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3: Advisory -->
+            <div class="exp-card exp-card-white">
+                <div>
+                    <div class="exp-icon-top">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advisory</h3>
+                    <p>
+                        Actionable insights and strategic advisory to help your business grow
+                        with confidence in volatile markets and complex financial structures.
+                    </p>
+                </div>
+                <a href="{% url 'services' %}" class="exp-link">
+                    LEARN MORE <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Card 4: Regulatory Compliance -->
+            <div class="exp-card exp-card-tint">
+                <div style="display:flex; gap:20px; align-items:flex-start; justify-content:space-between;">
+                    <div>
+                        <h3 style="margin-top:0;">Regulatory Compliance</h3>
+                        <p style="margin-bottom:0;">
+                            In an era of ever-changing regulations, we keep your business ahead of the curve.
+                            Comprehensive support for ROC, RBI, and FEMA compliance.
+                        </p>
+                    </div>
+                    <div class="exp-icon-top"
+                        style="margin-bottom:0; flex-shrink:0; background:#ffffff; color:var(--brand-accent); box-shadow: 0 4px 12px rgba(0,0,0,0.06); width:52px; height:52px; border-radius:12px;">
+                        <i class="fas fa-gavel" style="font-size:1.4rem;"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 4. UNWAVERING COMMITMENT DARK SECTION ═══ -->
+<section class="commitment-section">
+    <div class="container-custom">
+        <div class="commitment-grid">
+
+            <!-- Left Column Text & Pillars -->
+            <div class="commitment-left">
+                <h2>Our Firm's <span class="serif-italic">Unwavering</span><br>Commitment</h2>
+                <p class="lead-text">
+                    We are a team of experienced professionals providing a wide range of financial,
+                    taxation and advisory services. Our approach is built on three core pillars that define our
+                    identity.
+                </p>
+
+                <div class="pillars-list">
+
+                    <div class="pillar-item">
+                        <div class="pillar-icon-box">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="pillar-info">
+                            <h4>Absolute Trust</h4>
+                            <p>Confidentiality is at the heart of everything we do. Your financial data is protected by
+                                bank-grade security protocols.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-item">
+                        <div class="pillar-icon-box">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="pillar-info">
+                            <h4>Radical Transparency</h4>
+                            <p>Clear communication, upfront pricing, and zero hidden complexities. We explain the 'why'
+                                behind every financial decision.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-item">
+                        <div class="pillar-icon-box">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="pillar-info">
+                            <h4>Measurable Value</h4>
+                            <p>We don't just file papers; we optimize your financial health. Our goal is to add tangible
+                                value at every touchpoint.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column 2x2 Photo Grid -->
+            <div class="photo-grid-2x2">
+                <div class="photo-tile">
+                    <img src="{% static 'images/hero_workspace.png' %}" alt="Modern Executive Desk Setup"
+                        onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="photo-tile">
+                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
+                        alt="Tax Compliance Documents">
+                </div>
+                <div class="photo-tile">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+                        alt="CAs Collaborating">
+                </div>
+                <div class="photo-tile">
+                    <img src="{% static 'images/office_building.png' %}" alt="Modern Financial Center Building"
+                        onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80'">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 5. CALL TO ACTION (CTA) SECTION ═══ -->
+<section class="cta-section">
+    <div class="container-custom">
+        <div class="cta-content">
+            <span class="section-tag-gold">READY TO START?</span>
+            <h2>Experience Smarter <br><span class="serif-italic" style="color:var(--text-primary);">Financial
+                    Planning</span> Today.</h2>
+            <p>
+                Join over 13 Lakh+ satisfied businesses and happy users who trust VITTAX for their
+                accounting and financial excellence.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="{% url 'contact' %}" class="btn-dark-action">
+                    BOOK A CONSULTATION
+                </a>
+                <a href="{% url 'pricing' %}" class="btn-outline-action">
+                    DOWNLOAD CREDENTIALS
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
