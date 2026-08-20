@@ -1,0 +1,614 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - VITTAX{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ── CONTACT HERO ── */
+    .contact-hero-section {
+        padding: 130px 36px 60px;
+        background: linear-gradient(180deg, #f4f7fc 0%, #eef3f9 100%);
+        text-align: center;
+    }
+
+    .contact-hero-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .contact-tagline {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #1e40af;
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    .contact-hero-title {
+        font-size: clamp(2.4rem, 4vw, 3.6rem);
+        font-weight: 900;
+        color: #0a2246;
+        line-height: 1.15;
+        letter-spacing: -0.8px;
+        margin-bottom: 20px;
+    }
+
+    .contact-hero-title .serif-italic {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 600;
+        color: #0a2246;
+    }
+
+    .contact-hero-desc {
+        font-size: 1.05rem;
+        color: #475467;
+        line-height: 1.65;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    /* ── MAIN CONTACT SECTION ── */
+    .contact-main-section {
+        padding: 60px 36px 90px;
+        background: var(--white);
+    }
+
+    .contact-main-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 36px;
+        align-items: start;
+    }
+
+    /* Left Form Card */
+    .contact-form-card {
+        background: var(--white);
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 44px 40px;
+        box-shadow: 0 10px 30px rgba(10, 34, 70, 0.05);
+    }
+
+    .form-card-title {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #0a2246;
+        margin-bottom: 8px;
+    }
+
+    .form-card-subtitle {
+        font-size: 0.92rem;
+        color: #64748b;
+        line-height: 1.5;
+        margin-bottom: 32px;
+    }
+
+    .contact-form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .form-row-2col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-group-label {
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #1e293b;
+    }
+
+    .form-group-input,
+    .form-group-select,
+    .form-group-textarea {
+        width: 100%;
+        padding: 13px 16px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 0.92rem;
+        font-family: inherit;
+        color: #0f172a;
+        background: #ffffff;
+        transition: var(--transition);
+        outline: none;
+    }
+
+    .form-group-input:focus,
+    .form-group-select:focus,
+    .form-group-textarea:focus {
+        border-color: #0a2246;
+        box-shadow: 0 0 0 3px rgba(10, 34, 70, 0.08);
+    }
+
+    .form-group-textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .btn-submit-navy {
+        background: #0a2246;
+        color: var(--white);
+        padding: 16px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 0.9rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: var(--transition);
+        width: 100%;
+        margin-top: 10px;
+        box-shadow: 0 6px 20px rgba(10, 34, 70, 0.18);
+    }
+
+    .btn-submit-navy:hover {
+        background: #163868;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(10, 34, 70, 0.25);
+    }
+
+    /* Right Column Cards */
+    .contact-side-column {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* Headquarters Dark Card */
+    .hq-card {
+        background: #0b1f3c;
+        color: var(--white);
+        border-radius: 16px;
+        padding: 40px 32px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 12px 36px rgba(10, 34, 70, 0.16);
+    }
+
+    /* Vector map background pattern effect */
+    .hq-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 16px 16px;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    .hq-title {
+        font-size: 1.25rem;
+        font-weight: 900;
+        color: var(--white);
+        margin-bottom: 32px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hq-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 36px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hq-info-item {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .hq-info-icon {
+        font-size: 1rem;
+        color: #93c5fd;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    .hq-info-label {
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #94a3b8;
+        margin-bottom: 4px;
+    }
+
+    .hq-info-val {
+        font-size: 0.92rem;
+        color: var(--white);
+        line-height: 1.5;
+        font-weight: 600;
+    }
+
+    .hq-actions-row {
+        display: flex;
+        gap: 12px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .btn-whatsapp-green {
+        flex: 1;
+        background: #12b76a;
+        color: var(--white) !important;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: var(--transition);
+    }
+
+    .btn-whatsapp-green:hover {
+        background: #0ea5e9;
+        transform: translateY(-2px);
+    }
+
+    .btn-map-square {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        transition: var(--transition);
+    }
+
+    .btn-map-square:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Happy Clients Light Card */
+    .clients-card {
+        background: #edf3f9;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 28px 24px;
+    }
+
+    .clients-top-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .client-avatars-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .client-avatar-mini {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--white);
+        margin-left: -8px;
+        background: #0a2246;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.72rem;
+        font-weight: 800;
+    }
+
+    .client-avatar-mini:first-child {
+        margin-left: 0;
+    }
+
+    .clients-label-text {
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #1e293b;
+    }
+
+    .clients-quote-text {
+        font-size: 0.88rem;
+        font-style: italic;
+        color: #475467;
+        line-height: 1.6;
+    }
+
+    /* ── VISIT OUR OFFICE FULL-WIDTH BANNER ── */
+    .office-banner-section {
+        padding: 0 36px 90px;
+        background: var(--white);
+    }
+
+    .office-banner-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(10, 34, 70, 0.12);
+    }
+
+    .office-bg-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .office-glass-overlay {
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(16px);
+        border-radius: 12px;
+        padding: 28px 32px;
+        max-width: 380px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .office-glass-overlay h3 {
+        font-size: 1.25rem;
+        font-weight: 900;
+        color: #0a2246;
+        margin-bottom: 8px;
+    }
+
+    .office-glass-overlay p {
+        font-size: 0.88rem;
+        color: #475467;
+        line-height: 1.55;
+        margin-bottom: 16px;
+    }
+
+    .office-hours-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #0a2246;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+        .contact-main-container {
+            grid-template-columns: 1fr;
+        }
+
+        .form-row-2col {
+            grid-template-columns: 1fr;
+        }
+
+        .office-glass-overlay {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+            margin: 16px;
+        }
+
+        .office-bg-img {
+            height: 280px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .contact-hero-section {
+            padding-top: 110px;
+        }
+
+        .contact-form-card {
+            padding: 28px 20px;
+        }
+
+        .hq-card {
+            padding: 28px 20px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ═══ HERO SECTION ═══ -->
+<section class="contact-hero-section">
+    <div class="contact-hero-container">
+        <span class="contact-tagline">GET IN TOUCH</span>
+        <h1 class="contact-hero-title">
+            Expert Guidance is a <span class="serif-italic">Message Away.</span>
+        </h1>
+        <p class="contact-hero-desc">
+            Connect with our team of Chartered Accountants for comprehensive financial clarity, regulatory compliance,
+            and
+            strategic growth advisory.
+        </p>
+    </div>
+</section>
+
+<!-- ═══ MAIN CONTACT SECTION ═══ -->
+<section class="contact-main-section">
+    <div class="contact-main-container">
+
+        <!-- Left Form Card: Book a Consultation -->
+        <div class="contact-form-card">
+            <h2 class="form-card-title">Book a Consultation</h2>
+            <p class="form-card-subtitle">
+                Fill out the form below and one of our experts will contact you within 24 hours.
+            </p>
+
+            <form method="post" id="contactForm">
+                {% csrf_token %}
+                <div class="contact-form-grid">
+
+                    <div class="form-row-2col">
+                        <div class="form-group-item">
+                            <label class="form-group-label">FULL NAME <span class="req">*</span></label>
+                            <input type="text" name="name" class="form-group-input" placeholder="Enter Your Full Name"
+                                required>
+                        </div>
+                        <div class="form-group-item">
+                            <label class="form-group-label">EMAIL ADDRESS<span class="req">*</span></label>
+                            <input type="email" name="email" class="form-group-input"
+                                placeholder="Enter Your Email Address" required>
+                        </div>
+                        <div class="form-group-item">
+                            <label class="form-group-label">Phone Number<span class="req">*</span></label>
+                            <input type="phone" name="phone" class="form-group-input" placeholder="+91 XXXXX XXXXX"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-item">
+                        <label class="form-group-label">SERVICE NEEDED<span class="req">*</span></label>
+                        <select name="subject" class="form-group-select" required placeholder="Select a Service">
+                            <option value="" disabled selected>Select a Service</option>
+                            <option value="ITR Filing Query">ITR Filing Query</option>
+                            <option value="GST Registration & Returns">GST Registration &amp; Returns</option>
+                            <option value="Company Formation">Company Formation</option>
+                            <option value="Accounting & Payroll">Accounting &amp; Payroll</option>
+                            <option value="Notice Defense & Advisory">Notice Defense &amp; Advisory</option>
+                            <option value="Other Financial Query">Other Financial Query</option>
+                        </select>
+                    </div>
+                    <div class="form-group-item">
+                        <label class="form-group-label">MESSAGE<span class="req">*</span></label>
+                        <textarea name="message" class="form-group-textarea"
+                            placeholder="How can we help your business?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit-navy" id="submitBtn">
+                        Submit Request <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Side Column -->
+        <div class="contact-side-column">
+
+            <!-- Headquarters Dark Card -->
+            <div class="hq-card">
+                <h3 class="hq-title">Headquarters</h3>
+
+                <div class="hq-info-list">
+                    <div class="hq-info-item">
+                        <i class="fas fa-location-dot hq-info-icon"></i>
+                        <div>
+                            <div class="hq-info-label">LOCATION</div>
+                            <div class="hq-info-val">
+                                Balaji Nagar, Nellore,<br>Andhra Pradesh - 524002
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hq-info-item">
+                        <i class="fas fa-phone hq-info-icon"></i>
+                        <div>
+                            <div class="hq-info-label">PHONE</div>
+                            <div class="hq-info-val">+91 7670873088</div>
+                        </div>
+                    </div>
+
+                    <div class="hq-info-item">
+                        <i class="fas fa-envelope hq-info-icon"></i>
+                        <div>
+                            <div class="hq-info-label">EMAIL</div>
+                            <div class="hq-info-val">contact@vittaax.com</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hq-actions-row">
+                    <a href="https://wa.me/917670873088" target="_blank" class="btn-whatsapp-green">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </a>
+                    <a href="https://maps.google.com/?q=Balaji+Nagar+Nellore" target="_blank" class="btn-map-square">
+                        <i class="fas fa-map-location-dot"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Happy Clients Card -->
+            <div class="clients-card">
+                <div class="clients-top-row">
+                    <div class="client-avatars-group">
+                        <div class="client-avatar-mini">RS</div>
+                        <div class="client-avatar-mini" style="background:#2563eb">PG</div>
+                        <div class="client-avatar-mini" style="background:#16a34a">AK</div>
+                    </div>
+                    <span class="clients-label-text">Join 100,000+ happy clients</span>
+                </div>
+                <p class="clients-quote-text">
+                    “VITTAX has completely transformed how we handle our corporate compliance. Their response time is
+                    unmatched.”
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══ VISIT OUR OFFICE BANNER ═══ -->
+<section class="office-banner-section">
+    <div class="office-banner-container">
+        <img src="{% static 'images/office_building.png' %}" alt="VITTAX Office Headquarters" class="office-bg-img">
+
+        <div class="office-glass-overlay">
+            <h3>Visit Our Office</h3>
+            <p>Centrally located in Balaji Nagar, our doors are open for in-person strategic sessions and document
+                reviews.
+            </p>
+            <div class="office-hours-badge">
+                <i class="far fa-clock"></i> OPEN MON - SAT: 10AM - 7PM
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function () {
+        const btn = document.getElementById('submitBtn');
+        btn.innerHTML = 'Submitting Request... <i class="fas fa-spinner fa-spin"></i>';
+        btn.disabled = true;
+    });
+</script>
+{% endblock %}

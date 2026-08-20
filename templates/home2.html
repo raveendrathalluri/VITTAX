@@ -1,0 +1,1112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}VITTAX - Personal Tax Filing Simplified for Professionals{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ── GLOBAL LAYOUT HELPERS ── */
+    .section-container {
+        max-width: 1360px;
+        margin: 0 auto;
+        padding: 90px 36px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .section-tagline {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #1e40af;
+        margin-bottom: 12px;
+    }
+
+    .section-heading-main {
+        font-size: clamp(2rem, 3.2vw, 2.75rem);
+        font-weight: 900;
+        color: var(--primary);
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        margin-bottom: 14px;
+    }
+
+    .section-desc-sub {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        max-width: 680px;
+        margin: 0 auto 56px;
+        line-height: 1.6;
+    }
+
+    /* ── HERO SECTION ── */
+    .hero-section {
+        position: relative;
+        background: linear-gradient(180deg, #f4f7fc 0%, #eef3f9 100%);
+        padding: 130px 36px 90px;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        max-width: 1360px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .hero-badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #1e3a8a;
+        background: rgba(30, 58, 138, 0.06);
+        padding: 6px 16px;
+        border-radius: 50px;
+        border: 1px solid rgba(30, 58, 138, 0.12);
+        margin-bottom: 28px;
+    }
+
+    .hero-badge-pill .pill-dot {
+        width: 6px;
+        height: 6px;
+        background: #2563eb;
+        border-radius: 50%;
+    }
+
+    .hero-heading-title {
+        font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+        font-weight: 900;
+        color: #0a2246;
+        line-height: 1.08;
+        letter-spacing: -1.2px;
+        margin-bottom: 24px;
+    }
+
+    .hero-heading-title .serif-italic {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 500;
+        color: #334155;
+        padding-right: 6px;
+    }
+
+    .hero-lead-text {
+        font-size: 1.12rem;
+        color: #475467;
+        line-height: 1.7;
+        max-width: 580px;
+        margin-bottom: 36px;
+    }
+
+    .hero-cta-group {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+        background: #0a2246;
+        color: var(--white);
+        padding: 15px 30px;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 0.86rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: var(--transition);
+        box-shadow: 0 8px 24px rgba(10, 34, 70, 0.22);
+    }
+
+    .btn-hero-primary:hover {
+        background: #163868;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(10, 34, 70, 0.3);
+    }
+
+    .btn-hero-secondary {
+        background: var(--white);
+        color: #0a2246;
+        border: 1.5px solid #cbd5e1;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 0.86rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: var(--transition);
+    }
+
+    .btn-hero-secondary:hover {
+        border-color: #0a2246;
+        background: #f8fafc;
+    }
+
+    .hero-trust-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.86rem;
+        color: #64748b;
+        font-weight: 600;
+    }
+
+    .hero-trust-bar .stars {
+        color: #f59e0b;
+        letter-spacing: 2px;
+    }
+
+    /* Hero Right Preview Card */
+    .hero-preview-wrapper {
+        position: relative;
+    }
+
+    .hero-card-container {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 12px;
+        box-shadow: 0 24px 60px rgba(10, 34, 70, 0.14);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        position: relative;
+    }
+
+    .hero-card-img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+    }
+
+    /* Floating Glass Overlay Card */
+    .floating-glass-card {
+        position: absolute;
+        bottom: -24px;
+        left: -28px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        border-radius: 12px;
+        padding: 16px 20px;
+        box-shadow: 0 16px 40px rgba(10, 34, 70, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        max-width: 320px;
+        z-index: 10;
+    }
+
+    .floating-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: #0a2246;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .floating-content-box .fl-title {
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        color: #0a2246;
+        text-transform: uppercase;
+    }
+
+    .floating-content-box .fl-status {
+        font-size: 0.76rem;
+        font-weight: 700;
+        color: var(--success);
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .floating-content-box .fl-status::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: var(--success);
+        border-radius: 50%;
+    }
+
+    .floating-content-box .fl-desc {
+        font-size: 0.78rem;
+        color: #475467;
+        line-height: 1.35;
+    }
+
+    /* ── METRICS BAR (FULL WIDTH DARK NAVY) ── */
+    .metrics-bar-section {
+        background: #081b38;
+        color: var(--white);
+        padding: 48px 36px;
+    }
+
+    .metrics-grid {
+        max-width: 1360px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        text-align: center;
+    }
+
+    .metric-item {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0 16px;
+    }
+
+    .metric-item:last-child {
+        border-right: none;
+    }
+
+    .metric-number {
+        font-size: clamp(2.2rem, 3.5vw, 3rem);
+        font-weight: 900;
+        color: var(--white);
+        letter-spacing: -0.5px;
+        margin-bottom: 6px;
+    }
+
+    .metric-label {
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: #93c5fd;
+        text-transform: uppercase;
+    }
+
+    /* ── EXPERTISE GRID (6 CARDS) ── */
+    .expertise-section {
+        background: var(--white);
+    }
+
+    .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .expertise-card {
+        background: var(--white);
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 36px 30px;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .expertise-card:hover {
+        border-color: #0a2246;
+        box-shadow: 0 16px 40px rgba(10, 34, 70, 0.08);
+        transform: translateY(-4px);
+    }
+
+    .expertise-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: rgba(10, 34, 70, 0.05);
+        color: #0a2246;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+        transition: var(--transition);
+    }
+
+    .expertise-card:hover .expertise-icon {
+        background: #0a2246;
+        color: var(--white);
+    }
+
+    .expertise-card h3 {
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #0a2246;
+        margin-bottom: 12px;
+    }
+
+    .expertise-card p {
+        font-size: 0.92rem;
+        color: #475467;
+        line-height: 1.65;
+        margin-bottom: 24px;
+        flex-grow: 1;
+    }
+
+    .expertise-link {
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #1d4ed8;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: var(--transition);
+    }
+
+    .expertise-card:hover .expertise-link {
+        color: #0a2246;
+        gap: 10px;
+    }
+
+    /* ── ELIGIBILITY ASSESSMENT ── */
+    .eligibility-section {
+        background: #edf3f8;
+    }
+
+    .eligibility-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        max-width: 1140px;
+        margin: 0 auto 48px;
+    }
+
+    .elig-box {
+        background: var(--white);
+        border-radius: 14px;
+        padding: 40px 36px;
+        box-shadow: 0 8px 24px rgba(10, 34, 70, 0.05);
+        border: 1px solid #e2e8f0;
+    }
+
+    .elig-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.05rem;
+        font-weight: 900;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 28px;
+    }
+
+    .elig-header.qualified {
+        color: var(--success);
+    }
+
+    .elig-header.exclusion {
+        color: var(--danger);
+    }
+
+    .elig-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .elig-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.94rem;
+        color: #334155;
+        line-height: 1.5;
+    }
+
+    .elig-list li i {
+        font-size: 1.05rem;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    .elig-list li i.check-icon {
+        color: var(--success);
+    }
+
+    .elig-list li i.cross-icon {
+        color: var(--danger);
+    }
+
+    .elig-cta-wrap {
+        text-align: center;
+    }
+
+    .btn-navy-assessment {
+        background: #0a2246;
+        color: var(--white);
+        padding: 14px 32px;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 0.85rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: var(--transition);
+    }
+
+    .btn-navy-assessment:hover {
+        background: #163868;
+        transform: translateY(-2px);
+    }
+
+    /* ── THREE-STEP PROTOCOL ── */
+    .protocol-section {
+        background: var(--white);
+    }
+
+    .protocol-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 56px;
+        align-items: center;
+    }
+
+    .protocol-steps-list {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .protocol-step-item {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .step-code-badge {
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: #0a2246;
+        padding-bottom: 4px;
+        border-bottom: 2px solid #0a2246;
+        flex-shrink: 0;
+    }
+
+    .step-content-box h4 {
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #0a2246;
+        margin-bottom: 8px;
+    }
+
+    .step-content-box p {
+        font-size: 0.93rem;
+        color: #475467;
+        line-height: 1.6;
+    }
+
+    .protocol-banner-card {
+        background: #081b38;
+        color: var(--white);
+        border-radius: 16px;
+        padding: 48px 40px;
+        box-shadow: 0 20px 48px rgba(10, 34, 70, 0.16);
+    }
+
+    .protocol-banner-card h3 {
+        font-size: 1.6rem;
+        font-weight: 900;
+        line-height: 1.3;
+        margin-bottom: 16px;
+    }
+
+    .protocol-banner-card p {
+        font-size: 0.98rem;
+        color: #93c5fd;
+        line-height: 1.65;
+        margin-bottom: 32px;
+    }
+
+    .btn-banner-white {
+        background: var(--white);
+        color: #0a2246;
+        padding: 13px 26px;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 0.84rem;
+        letter-spacing: 0.5px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--transition);
+    }
+
+    .btn-banner-white:hover {
+        background: #f1f5f9;
+        transform: translateY(-2px);
+    }
+
+    /* ── CLIENT PERSPECTIVES ── */
+    .testimonials-section {
+        background: #edf3f8;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .testimonial-card {
+        background: var(--white);
+        border-radius: 14px;
+        padding: 36px 30px;
+        box-shadow: 0 8px 24px rgba(10, 34, 70, 0.05);
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 36px rgba(10, 34, 70, 0.1);
+    }
+
+    .stars-row {
+        color: #f59e0b;
+        margin-bottom: 18px;
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+    }
+
+    .testimonial-body-text {
+        font-size: 0.93rem;
+        color: #334155;
+        line-height: 1.7;
+        margin-bottom: 28px;
+        flex-grow: 1;
+    }
+
+    .testimonial-user {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .user-avatar-initials {
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        background: #0a2246;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    .user-meta-name {
+        font-size: 0.92rem;
+        font-weight: 800;
+        color: #0a2246;
+    }
+
+    .user-meta-role {
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    /* ── BOTTOM CTA BANNER (FULL WIDTH) ── */
+    .cta-banner-section {
+        background: #081b38;
+        color: var(--white);
+        padding: 72px 36px;
+        text-align: center;
+    }
+
+    .cta-banner-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .cta-banner-tag {
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #93c5fd;
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    .cta-banner-container h2 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 900;
+        line-height: 1.3;
+        margin-bottom: 32px;
+        color: var(--white);
+    }
+
+    .btn-cta-white-lg {
+        background: var(--white);
+        color: #0a2246;
+        padding: 15px 32px;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 0.86rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: var(--transition);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-cta-white-lg:hover {
+        background: #f8fafc;
+        transform: translateY(-2px);
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 1024px) {
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: 48px;
+            text-align: center;
+        }
+
+        .hero-lead-text {
+            margin: 0 auto 32px;
+        }
+
+        .hero-cta-group {
+            justify-content: center;
+        }
+
+        .hero-trust-bar {
+            justify-content: center;
+        }
+
+        .hero-preview-wrapper {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .floating-glass-card {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+        }
+
+        .expertise-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .eligibility-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .protocol-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .metrics-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .metric-item {
+            border-right: none;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .hero-section {
+            padding-top: 110px;
+        }
+
+        .expertise-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .metrics-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-container {
+            padding: 60px 20px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ═══ HERO SECTION ═══ -->
+<section class="hero-section">
+    <div class="hero-container">
+
+        <div class="hero-left-content">
+            <div class="hero-badge-pill">
+                <span class="pill-dot"></span> STAGE 02 - PERSONAL COMPLIANCE
+            </div>
+
+            <h1 class="hero-heading-title">
+                Personal Tax Filing<br>
+                <span class="serif-italic">Simplified for</span><br>
+                Professionals.
+            </h1>
+
+            <p class="hero-lead-text">
+                Precision-driven tax compliance and advisory for high-income earners, founders, executives, and
+                consultants across India and globally.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="{% url 'register' %}" class="btn-hero-primary">
+                    START FILING NOW <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="{% url 'contact' %}" class="btn-hero-secondary">
+                    TALK TO AN EXPERT <i class="fas fa-plus"></i>
+                </a>
+            </div>
+
+            <div class="hero-trust-bar">
+                <span class="stars">★★★★★</span>
+                <span>4.9/5 Rating from 10,000+ Clients</span>
+            </div>
+        </div>
+
+        <div class="hero-preview-wrapper">
+            <div class="hero-card-container">
+                <img src="{% static 'images/hero_workspace.png' %}" alt="VITTAX Desk Analytics Workspace"
+                    class="hero-card-img">
+
+                <div class="floating-glass-card">
+                    <div class="floating-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="floating-content-box">
+                        <div class="fl-title">TAX ASSISTANT ONLINE</div>
+                        <div class="fl-status">Active Now</div>
+                        <div class="fl-desc">Calculated ₹1.2L in tax savings under Sec 80C & 80D...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══ METRICS COUNTER BAR ═══ -->
+<section class="metrics-bar-section">
+    <div class="metrics-grid">
+        <div class="metric-item">
+            <div class="metric-number">100,000+</div>
+            <div class="metric-label">FILINGS COMPLETED</div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-number">₹450 Cr+</div>
+            <div class="metric-label">TAX SAVED</div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-number">150+</div>
+            <div class="metric-label">CHARTERED ACCOUNTANTS</div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-number">99.8%</div>
+            <div class="metric-label">ACCURACY RATE</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ UNRIVALED EXPERTISE IN PERSONAL TAX ═══ -->
+<section class="expertise-section">
+    <div class="section-container">
+        <div class="text-center">
+            <div class="section-tagline">OUR CORE OFFERINGS</div>
+            <h2 class="section-heading-main">Unrivaled Expertise in Personal Tax</h2>
+            <p class="section-desc-sub">
+                End-to-end tax compliance tailored for professionals and business owners navigating complex income
+                streams.
+            </p>
+        </div>
+
+        <div class="expertise-grid">
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>DEDICATED CA ASSIGNMENT</h3>
+                <p>A dedicated Chartered Accountant manages your file end-to-end, guaranteeing accuracy, compliance, and
+                    custom tax planning.</p>
+                <a href="{% url 'services' %}" class="expertise-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>AI OPTIMIZATION ENGINE</h3>
+                <p>Automated cross-analysis of tax regimes (Old vs New) to maximize deductions under 80C, 80D, and HRA.
+                </p>
+                <a href="{% url 'services' %}" class="expertise-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-file-arrow-up"></i>
+                </div>
+                <h3>ONE-CLICK FORM 16 UPLOAD</h3>
+                <p>Simply drop your Form 16, salary slips, and investment proofs. Our system parses and organizes your
+                    data instantly.</p>
+                <a href="{% url 'services' %}" class="expertise-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <h3>INTEGRATED NOTICE DEFENSE</h3>
+                <p>Full year notice defense support with representation before tax authorities in case of inquiry or
+                    assessment.</p>
+                <a href="{% url 'services' %}" class="expertise-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>EXPRESS FILING DELIVERY</h3>
+                <p>Fast-track guaranteed filing within 24-48 hours with immediate acknowledgement generation.</p>
+                <a href="{% url 'services' %}" class="expertise-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>YEAR-ROUND ADVISORY</h3>
+                <p>Year-round guidance on capital gains, stock options (RSUs/ESOPs), foreign income, and estate
+                    planning.</p>
+                <a href="{% url 'services' %}" class="expertise-link">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ PLAN ELIGIBILITY ASSESSMENT ═══ -->
+<section class="eligibility-section">
+    <div class="section-container">
+        <div class="text-center">
+            <div class="section-tagline">PROFILE EVALUATION</div>
+            <h2 class="section-heading-main">PLAN ELIGIBILITY ASSESSMENT</h2>
+            <p class="section-desc-sub">
+                Check which profile fits your tax filing scope before you begin.
+            </p>
+        </div>
+
+        <div class="eligibility-grid">
+
+            <!-- Qualified Box -->
+            <div class="elig-box">
+                <div class="elig-header qualified">
+                    <i class="fas fa-circle-check"></i> QUALIFIED PROFILES
+                </div>
+                <ul class="elig-list">
+                    <li><i class="fas fa-check check-icon"></i> Salaried, freelance, &amp; multi-income professionals
+                    </li>
+                    <li><i class="fas fa-check check-icon"></i> Capital gains from stocks, mutual funds, crypto &amp;
+                        F&amp;O</li>
+                    <li><i class="fas fa-check check-icon"></i> Directors &amp; high net-worth individuals (HNIs)</li>
+                    <li><i class="fas fa-check check-icon"></i> Income from foreign sources &amp; cross-border taxes
+                    </li>
+                    <li><i class="fas fa-check check-icon"></i> Resident &amp; Non-Resident (NRI) tax compliance</li>
+                </ul>
+            </div>
+
+            <!-- Exclusion Box -->
+            <div class="elig-box">
+                <div class="elig-header exclusion">
+                    <i class="fas fa-circle-xmark"></i> EXCLUSION CRITERIA
+                </div>
+                <ul class="elig-list">
+                    <li><i class="fas fa-xmark cross-icon"></i> Corporate tax planning / enterprise audits (see
+                        corporate services)</li>
+                    <li><i class="fas fa-xmark cross-icon"></i> Disputes under active criminal litigation / prosecution
+                    </li>
+                    <li><i class="fas fa-xmark cross-icon"></i> Unverified offshore transactions or illegal assets</li>
+                    <li><i class="fas fa-xmark cross-icon"></i> Tax fraud defense without valid audit records</li>
+                    <li><i class="fas fa-xmark cross-icon"></i> Filings with revenue exceeding ₹100 Cr (needs Enterprise
+                        division)</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="elig-cta-wrap">
+            <a href="{% url 'contact' %}" class="btn-navy-assessment">
+                REQUEST FULL ASSESSMENT <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ THREE-STEP FILING PROTOCOL ═══ -->
+<section class="protocol-section">
+    <div class="section-container">
+        <div class="text-center">
+            <div class="section-tagline">WORKFLOW PROTOCOL</div>
+            <h2 class="section-heading-main">THREE-STEP FILING PROTOCOL</h2>
+            <p class="section-desc-sub">
+                Our streamlined process ensures error-free filing and maximum tax savings with zero friction.
+            </p>
+        </div>
+
+        <div class="protocol-grid">
+
+            <div class="protocol-steps-list">
+
+                <div class="protocol-step-item">
+                    <div class="step-code-badge">01</div>
+                    <div class="step-content-box">
+                        <h4>UPLOAD &amp; CONNECT</h4>
+                        <p>Upload Form 16 / bank statements into our secure portal. Meet your assigned CA for an initial
+                            consultation.</p>
+                    </div>
+                </div>
+
+                <div class="protocol-step-item">
+                    <div class="step-code-badge">02</div>
+                    <div class="step-content-box">
+                        <h4>REVIEW &amp; OPTIMIZE</h4>
+                        <p>We optimize tax liabilities across Old vs New tax regimes to ensure maximum deductions and
+                            compliance.</p>
+                    </div>
+                </div>
+
+                <div class="protocol-step-item">
+                    <div class="step-code-badge">03</div>
+                    <div class="step-content-box">
+                        <h4>VERIFY &amp; FILE</h4>
+                        <p>Review draft return, approve with one click, and receive instant e-verification
+                            acknowledgement.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="protocol-banner-card">
+                <h3>Advanced Intelligence in Tax Compliance</h3>
+                <p>We leverage modern intelligence and human expertise to deliver the highest standards of individual
+                    tax management.</p>
+                <a href="{% url 'contact' %}" class="btn-banner-white">
+                    Book a Consultation <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CLIENT PERSPECTIVES ═══ -->
+<section class="testimonials-section">
+    <div class="section-container">
+        <div class="text-center">
+            <div class="section-tagline">TESTIMONIALS</div>
+            <h2 class="section-heading-main">Client Perspectives</h2>
+            <p class="section-desc-sub">
+                Trusted by thousands of software engineers, founders, doctors, and senior executives.
+            </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+                <div class="stars-row">★★★★★</div>
+                <p class="testimonial-body-text">
+                    "The desk-assigned CA handled my complex RSU capital gains and multi-state income seamlessly. Saved
+                    me over ₹1.4L in taxes!"
+                </p>
+                <div class="testimonial-user">
+                    <div class="user-avatar-initials">RS</div>
+                    <div>
+                        <div class="user-meta-name">Rahul Sharma</div>
+                        <div class="user-meta-role">Senior Tech Lead at Amazon</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars-row">★★★★★</div>
+                <p class="testimonial-body-text">
+                    "As a founder with multiple income sources and foreign stock options, VITTAX is a lifesaver. Fast,
+                    thorough, and highly responsive."
+                </p>
+                <div class="testimonial-user">
+                    <div class="user-avatar-initials">PG</div>
+                    <div>
+                        <div class="user-meta-name">Priya Gupta</div>
+                        <div class="user-meta-role">Co-Founder at TechScale</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars-row">★★★★★</div>
+                <p class="testimonial-body-text">
+                    "The Notice Defense coverage gave me complete peace of mind. Their team responded to an IT
+                    department notice within 24 hours!"
+                </p>
+                <div class="testimonial-user">
+                    <div class="user-avatar-initials">AK</div>
+                    <div>
+                        <div class="user-meta-name">Anand Kumar</div>
+                        <div class="user-meta-role">VP Finance at Global Capital</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ BOTTOM CTA BANNER ═══ -->
+<section class="cta-banner-section">
+    <div class="cta-banner-container">
+        <span class="cta-banner-tag">Ready for Effortless Tax Filing?</span>
+        <h2>Connect with our expert CAs today for a complimentary assessment of your tax profile and filing
+            requirements.</h2>
+        <a href="{% url 'contact' %}" class="btn-cta-white-lg">
+            SCHEDULE FREE ANALYSIS <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

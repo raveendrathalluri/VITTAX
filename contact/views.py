@@ -36,7 +36,7 @@ def contact_view(request):
                     fail_silently=True,
                 )
             except: pass
-            messages.success(request, 'Your message has been sent successfully! We\'ll contact you within 24 hours.')
+            messages.success(request, 'Your consultation request has been sent successfully! We\'ll contact you within 24 hours.')
             return redirect('contact')
         else:
             messages.error(request, 'Please fill all required fields.')
