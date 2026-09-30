@@ -8,699 +8,10 @@
   {% load static %}
   <link rel="icon" href="{% static 'images/logo.jpg' %}" type="image/jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1a4b8c;
-      --primary-dark: #0f2f5e;
-      --secondary: #2980d9;
-      --accent: #f39c12;
-      --success: #27ae60;
-      --danger: #e74c3c;
-      --text: #1a202c;
-      --text-light: #718096;
-      --bg: #f8fafc;
-      --white: #fff;
-      --shadow: 0 4px 24px rgba(26, 75, 140, .10);
-      --radius: 14px;
-      --transition: .3s cubic-bezier(.4, 0, .2, 1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      overflow-x: hidden
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit
-    }
-
-    /* ── NAVBAR ── */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, .96);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(26, 75, 140, .1);
-      transition: var(--transition);
-    }
-
-    .navbar.scrolled {
-      box-shadow: var(--shadow)
-    }
-
-    .nav-inner {
-      max-width: 1520px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      height: 70px;
-      gap: 28px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      font-size: 1.35rem;
-      color: var(--primary);
-      flex-shrink: 0;
-    }
-
-    .nav-logo img {
-      height: 42px;
-      width: 42px;
-      border-radius: 8px;
-      object-fit: contain
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      flex: 1
-    }
-
-    .nav-link {
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: .9rem;
-      font-weight: 500;
-      color: var(--text);
-      transition: var(--transition);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-      background: rgba(26, 75, 140, .07);
-      color: var(--primary)
-    }
-
-    /* ── DROPDOWN — PLAIN FLAT STYLE ── */
-    .nav-dropdown {
-      position: relative
-    }
-
-    .nav-dropdown>.nav-link i.fa-chevron-down {
-      font-size: .55rem;
-      opacity: .6;
-      transition: transform .2s ease;
-    }
-
-    .nav-dropdown:hover>.nav-link i.fa-chevron-down {
-      transform: rotate(180deg);
-    }
-
-    /* plain white panel — no border-radius, no box shadow drama */
-    .nav-dropdown-menu {
-      position: absolute;
-      top: calc(100% + 4px);
-      left: 0;
-      background: var(--white);
-      border-top: 2px solid var(--primary);
-      border-bottom: 1px solid #e2e8f0;
-      border-left: 1px solid #e2e8f0;
-      border-right: 1px solid #e2e8f0;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-      padding: 16px 20px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(6px);
-      transition: opacity .18s ease, transform .18s ease, visibility .18s;
-      z-index: 100;
-      display: grid;
-      gap: 2px 16px;
-      pointer-events: none;
-      /* default 2 columns */
-      grid-template-columns: repeat(2, minmax(160px, 1fr));
-      min-width: 360px;
-    }
-
-    .nav-dropdown:hover .nav-dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-
-    /* keep panels from going off screen on left-most items */
-    .nav-dropdown:nth-child(1) .nav-dropdown-menu,
-    .nav-dropdown:nth-child(2) .nav-dropdown-menu {
-      left: 0;
-    }
-
-    /* push last items to the right */
-    .nav-dropdown:nth-last-child(1) .nav-dropdown-menu,
-    .nav-dropdown:nth-last-child(2) .nav-dropdown-menu,
-    .nav-dropdown:nth-last-child(3) .nav-dropdown-menu {
-      left: auto;
-      right: 0;
-    }
-
-    /* 3-column variant for large menus */
-    .nav-dropdown-menu.cols-3 {
-      grid-template-columns: repeat(3, minmax(150px, 1fr));
-      min-width: 500px;
-    }
-
-    .nav-dropdown-menu a {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 10px;
-      font-size: .82rem;
-      font-weight: 500;
-      color: #4a5568;
-      transition: color .13s, background .13s;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
-
-    /* small left accent line on hover — clean, flat */
-    .nav-dropdown-menu a::before {
-      content: '';
-      width: 3px;
-      height: 14px;
-      border-radius: 2px;
-      background: var(--primary);
-      flex-shrink: 0;
-      opacity: 0;
-      transition: opacity .13s;
-    }
-
-    .nav-dropdown-menu a:hover {
-      color: var(--primary);
-      background: rgba(26, 75, 140, .05);
-    }
-
-    .nav-dropdown-menu a:hover::before {
-      opacity: 1;
-    }
-
-    /* buttons */
-    .nav-actions {
-      display: flex;
-      gap: 8px;
-      align-items: center
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 9px 22px;
-      border-radius: 9px;
-      font-weight: 600;
-      font-size: .88rem;
-      border: none;
-      cursor: pointer;
-      transition: var(--transition);
-      font-family: inherit;
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--primary);
-      color: var(--primary);
-    }
-
-    .btn-outline:hover {
-      background: var(--primary);
-      color: var(--white)
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-      box-shadow: 0 4px 14px rgba(26, 75, 140, .28);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(26, 75, 140, .38)
-    }
-
-    .btn-danger {
-      background: var(--danger);
-      color: var(--white)
-    }
-
-    .btn-success {
-      background: var(--success);
-      color: var(--white)
-    }
-
-    .btn-accent {
-      background: linear-gradient(135deg, var(--accent), #e67e22);
-      color: var(--white)
-    }
-
-    .btn-sm {
-      padding: 6px 14px;
-      font-size: .8rem
-    }
-
-    .btn-lg {
-      padding: 13px 32px;
-      font-size: 1rem
-    }
-
-    /* hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px
-    }
-
-    .hamburger span {
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: var(--transition)
-    }
-
-    /* mobile menu */
-    .nav-mobile {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--white);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      transform: translateX(100%);
-      transition: var(--transition);
-      z-index: 999;
-      overflow-y: auto;
-    }
-
-    .nav-mobile.open {
-      transform: none
-    }
-
-    /* ── TOAST MESSAGES ── */
-    .toast-container {
-      position: fixed;
-      top: 82px;
-      right: 18px;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      max-width: 370px;
-      pointer-events: none;
-    }
-
-    .toast {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      padding: 13px 18px;
-      border-radius: 12px;
-      background: var(--white);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, .14);
-      border-left: 4px solid;
-      animation: toastIn .4s ease;
-      font-size: .9rem;
-      font-weight: 500;
-      pointer-events: all;
-    }
-
-    .toast.success {
-      border-color: var(--success);
-      color: var(--success)
-    }
-
-    .toast.error {
-      border-color: var(--danger);
-      color: var(--danger)
-    }
-
-    .toast.warning {
-      border-color: var(--accent);
-      color: #c0392b
-    }
-
-    .toast.info {
-      border-color: var(--secondary);
-      color: var(--secondary)
-    }
-
-    .toast-close {
-      margin-left: auto;
-      cursor: pointer;
-      opacity: .55;
-      font-size: 1rem;
-      color: var(--text);
-    }
-
-    .toast-close:hover {
-      opacity: 1
-    }
-
-    @keyframes toastIn {
-      from {
-        opacity: 0;
-        transform: translateX(100%)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
-
-    /* ── FOOTER ── */
-    .footer {
-      background: #0f1923;
-      color: rgba(255, 255, 255, .68);
-      padding: 60px 0 0
-    }
-
-    .footer-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.4fr;
-      gap: 44px;
-      margin-bottom: 44px;
-    }
-
-    .footer-brand .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px
-    }
-
-    .footer-brand .logo img {
-      height: 38px;
-      width: 38px;
-      border-radius: 7px
-    }
-
-    .footer-brand .logo span {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--white)
-    }
-
-    .footer-brand p {
-      font-size: .9rem;
-      line-height: 1.7;
-      max-width: 290px
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 9px;
-      margin-top: 18px
-    }
-
-    .footer-social a {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, .07);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--transition);
-    }
-
-    .footer-social a:hover {
-      background: var(--primary);
-      color: var(--white)
-    }
-
-    .footer-col h4 {
-      color: var(--white);
-      font-weight: 700;
-      margin-bottom: 18px;
-      font-size: .95rem
-    }
-
-    .footer-col a {
-      display: block;
-      margin-bottom: 10px;
-      font-size: .88rem;
-      transition: var(--transition)
-    }
-
-    .footer-col a:hover {
-      color: var(--white);
-      padding-left: 4px
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, .08);
-      padding: 18px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: .84rem;
-    }
-
-    /* ── UTILITIES ── */
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px
-    }
-
-    .section {
-      padding: 80px 0
-    }
-
-    .text-center {
-      text-align: center
-    }
-
-    .section-tag {
-      display: inline-block;
-      background: rgba(26, 75, 140, .08);
-      color: var(--primary);
-      padding: 5px 14px;
-      border-radius: 50px;
-      font-size: .76rem;
-      font-weight: 700;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .badge {
-      padding: 4px 11px;
-      border-radius: 50px;
-      font-size: .76rem;
-      font-weight: 700
-    }
-
-    .badge-success {
-      background: rgba(39, 174, 96, .1);
-      color: var(--success)
-    }
-
-    .badge-danger {
-      background: rgba(231, 76, 60, .1);
-      color: var(--danger)
-    }
-
-    .badge-warning {
-      background: rgba(243, 156, 18, .1);
-      color: #c0392b
-    }
-
-    .badge-info {
-      background: rgba(41, 128, 217, .1);
-      color: var(--secondary)
-    }
-
-    .badge-primary {
-      background: rgba(26, 75, 140, .1);
-      color: var(--primary)
-    }
-
-    /* animate on scroll */
-    [data-animate] {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-
-    [data-animate].visible {
-      opacity: 1;
-      transform: none
-    }
-
-    @media(max-width:900px) {
-
-      .nav-links,
-      .nav-actions {
-        display: none
-      }
-
-      .hamburger {
-        display: flex
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 28px
-      }
-    }
-
-    @media(max-width:600px) {
-      .footer-grid {
-        grid-template-columns: 1fr
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center
-      }
-    }
-
-    /* ── NAVBAR FULL-WIDTH SPREAD FIX ── */
-    .nav-inner {
-      gap: 8px;
-    }
-
-    .nav-logo span {
-      font-size: 1.1rem;
-    }
-
-    .nav-logo img {
-      height: 36px;
-      width: 36px;
-    }
-
-    .nav-links {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0;
-      flex-wrap: nowrap;
-    }
-
-    .nav-dropdown {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .nav-dropdown>.nav-link {
-      font-size: .76rem;
-      padding: 8px 5px;
-      gap: 3px;
-      white-space: nowrap;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .nav-dropdown>.nav-link i.fa-chevron-down {
-      font-size: .48rem;
-      flex-shrink: 0;
-    }
-
-    /* dropdown panels — allow text to wrap inside */
-    .nav-dropdown-menu a {
-      white-space: normal;
-      line-height: 1.45;
-      font-size: .8rem;
-      padding: 6px 10px;
-    }
-
-    /* left-aligned panels for first 3 dropdowns */
-    .nav-dropdown:nth-child(1) .nav-dropdown-menu,
-    .nav-dropdown:nth-child(2) .nav-dropdown-menu,
-    .nav-dropdown:nth-child(3) .nav-dropdown-menu,
-    .nav-dropdown:nth-child(4) .nav-dropdown-menu {
-      left: 0;
-      right: auto;
-    }
-
-    /* right-aligned panels for last 4 dropdowns */
-    .nav-dropdown:nth-last-child(1) .nav-dropdown-menu,
-    .nav-dropdown:nth-last-child(2) .nav-dropdown-menu,
-    .nav-dropdown:nth-last-child(3) .nav-dropdown-menu,
-    .nav-dropdown:nth-last-child(4) .nav-dropdown-menu {
-      left: auto;
-      right: 0;
-    }
-
-    /* action buttons */
-    .nav-actions {
-      flex-shrink: 0;
-      gap: 6px;
-    }
-
-    .nav-actions .btn-sm {
-      padding: 6px 10px;
-      font-size: .78rem;
-      white-space: nowrap;
-    }
-
-    /* at medium screens hide logo text to save space */
-    @media (max-width: 1200px) {
-      .nav-logo span {
-        display: none;
-      }
-
-      .nav-dropdown>.nav-link {
-        font-size: .72rem;
-        padding: 8px 3px;
-      }
-
-      .nav-actions .btn-sm {
-        font-size: .72rem;
-        padding: 5px 8px;
-      }
-    }
-
-    @media (max-width: 900px) {
-
-      .nav-links,
-      .nav-actions {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% block extra_css %}{% endblock %}
 </head>
 
@@ -922,8 +233,8 @@
         <a href="{% url 'login' %}" class="btn btn-outline btn-sm">
           <i class="fas fa-sign-in-alt"></i> Login
         </a>
-        <a href="{% url 'register' %}" class="btn btn-primary btn-sm">
-          Register Free <i class="fas fa-arrow-right"></i>
+        <a href="{% url 'register' %}" class="btn btn-primary btn-sm btn-register-header">
+          Register Free<i class="fas fa-arrow-right"></i>
         </a>
         {% endif %}
       </div>
@@ -946,13 +257,12 @@
       <div class="nav-dropdown">
         <a href="javascript:void(0)" class="nav-link" onclick="toggleMobileSubmenu(event, this)">
           {{ item.label }}
-          <i class="fas fa-chevron-down" style="font-size:.65rem"></i>
+          <i class="fas fa-chevron-down nav-chevron-sm"></i>
         </a>
-        <div class="nav-dropdown-menu"
-          style="position:static;opacity:0;visibility:hidden;transform:none;box-shadow:none;background:transparent;padding:0;min-width:auto;max-height:0;overflow:hidden;display:block;">
+        <div class="nav-dropdown-menu nav-mobile-dropdown-menu">
           {% for child in item.children.all %}
           {% if child.is_active %}
-          <a href="{{ child.url }}" style="padding:10px 14px;display:block">{{ child.label }}</a>
+          <a href="{{ child.url }}" class="nav-mobile-sublink">{{ child.label }}</a>
           {% endif %}
           {% endfor %}
         </div>
@@ -1029,6 +339,13 @@
             {% endfor %}
             {% endif %}
           </div>
+          <div class="footer-notice-box">
+            <div class="footer-notice-title">
+              🏆 Balaji Nagar, Nellore, Andhra Pradesh - 524002</div>
+            <div class="footer-notice-sub">
+              TAX COMPLIANCE — PEACE OF MIND
+            </div>
+          </div>
         </div>
 
         <!-- Dynamic Footer Sections -->
@@ -1056,43 +373,34 @@
         {% else %}
         <!-- Fallback: Hardcoded footer links -->
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>SERVICES</h4>
           <a href="{% url 'services' %}">ITR Filing</a>
           <a href="{% url 'services' %}">GST Registration</a>
-          <a href="{% url 'services' %}">GST Returns</a>
+          <a href="{% url 'services' %}">Private Limited Company</a>
           <a href="{% url 'services' %}">Tax Planning</a>
           <a href="{% url 'services' %}">Accounting</a>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>COMPANY</h4>
           <a href="{% url 'home' %}">Home</a>
           <a href="{% url 'about' %}">About Us</a>
           <a href="{% url 'services' %}">Services</a>
-          <a href="{% url 'pricing' %}">Pricing</a>
           <a href="{% url 'contact' %}">Contact</a>
         </div>
 
         <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="tel:+911234567890">
-            <i class="fas fa-phone"></i> +91 12345 67890
+          <h4>CONTACT</h4>
+          <a href="tel:+917670873088">
+            <i class="fas fa-phone-alt"></i> +91 76708 73088
           </a>
-          <a href="mailto:info@vittax.com">
-            <i class="fas fa-envelope"></i> info@vittax.com
+          <a href="mailto:contact@vittax.com">
+            <i class="fas fa-envelope"></i> contact@vittax.com
           </a>
-          <a href="#">
-            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          <a href="https://wa.me/917670873088" target="_blank" class="btn btn-sm btn-whatsapp">
+            <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp Us
           </a>
-          <div
-            style="margin-top:16px;padding:14px;background:rgba(243,156,18,.1);border-radius:10px;border-left:3px solid var(--accent)">
-            <div style="color:var(--white);font-weight:700;font-size:.82rem">
-              🏆 ETNow Best Brands 2024
-            </div>
-            <div style="font-size:.76rem;margin-top:3px">
-              TAX COMPLIANCE — PEACE OF MIND
-            </div>
-          </div>
+
         </div>
         {% endif %}
 
