@@ -8,7 +8,8 @@
   {% load static %}
   <link rel="icon" href="{% static 'images/logo.jpg' %}" type="image/jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
   <style>
     :root {
@@ -919,11 +920,12 @@
           <i class="fas fa-sign-out-alt"></i> Logout
         </a>
         {% else %}
-        <a href="{% url 'login' %}" class="btn btn-outline btn-sm">
-          <i class="fas fa-sign-in-alt"></i> Login
+        <a href="{% url 'login' %}" class="btn btn-outline btn-sm" style="border-color:#161f36;color:#161f36;">
+          Login
         </a>
-        <a href="{% url 'register' %}" class="btn btn-primary btn-sm">
-          Register Free <i class="fas fa-arrow-right"></i>
+        <a href="{% url 'contact' %}" class="btn btn-sm"
+          style="background:#161f36;color:#ffffff;border-radius:8px;padding:8px 20px;font-weight:700;font-size:.85rem;box-shadow: 0 4px 12px rgba(22, 31, 54, 0.15);">
+          Book a Consultation
         </a>
         {% endif %}
       </div>
@@ -1056,51 +1058,49 @@
         {% else %}
         <!-- Fallback: Hardcoded footer links -->
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>SERVICES</h4>
           <a href="{% url 'services' %}">ITR Filing</a>
           <a href="{% url 'services' %}">GST Registration</a>
-          <a href="{% url 'services' %}">GST Returns</a>
+          <a href="{% url 'services' %}">Private Limited Company</a>
           <a href="{% url 'services' %}">Tax Planning</a>
           <a href="{% url 'services' %}">Accounting</a>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>COMPANY</h4>
           <a href="{% url 'home' %}">Home</a>
           <a href="{% url 'about' %}">About Us</a>
           <a href="{% url 'services' %}">Services</a>
-          <a href="{% url 'pricing' %}">Pricing</a>
           <a href="{% url 'contact' %}">Contact</a>
         </div>
 
         <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="tel:+911234567890">
-            <i class="fas fa-phone"></i> +91 12345 67890
+          <h4>CONTACT</h4>
+          <a href="tel:+919876543210">
+            <i class="fas fa-phone-alt"></i> +91 98765 43210
           </a>
-          <a href="mailto:info@vittax.com">
-            <i class="fas fa-envelope"></i> info@vittax.com
+          <a href="mailto:contact@vittax.com">
+            <i class="fas fa-envelope"></i> contact@vittax.com
           </a>
-          <a href="#">
-            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          <a href="#" style="margin-bottom: 14px;">
+            <i class="fas fa-map-marker-alt"></i> Global Business Tower, Andhra Pradesh, 522503
           </a>
-          <div
-            style="margin-top:16px;padding:14px;background:rgba(243,156,18,.1);border-radius:10px;border-left:3px solid var(--accent)">
-            <div style="color:var(--white);font-weight:700;font-size:.82rem">
-              🏆 ETNow Best Brands 2024
-            </div>
-            <div style="font-size:.76rem;margin-top:3px">
-              TAX COMPLIANCE — PEACE OF MIND
-            </div>
-          </div>
+          <a href="https://wa.me/919876543210" target="_blank" class="btn btn-sm"
+            style="background:#25d366;color:#fff;display:inline-flex;align-items:center;gap:8px;border-radius:8px;padding:8px 16px;font-weight:700;margin-top:6px;">
+            <i class="fab fa-whatsapp" style="font-size:1.1rem"></i> WhatsApp Us
+          </a>
         </div>
         {% endif %}
 
       </div><!-- /footer-grid -->
 
       <div class="footer-bottom">
-        <span>© 2024 VITTAX Accounting &amp; Financial Solutions. All rights reserved.</span>
-        <span>Trusted ITR & GST Consulting Services</span>
+        <span>© 2026 VITTAX. All rights reserved.</span>
+        <div style="display:flex;gap:20px;">
+          <a href="#" style="color:inherit;text-decoration:none;">Privacy Policy</a>
+          <a href="#" style="color:inherit;text-decoration:none;">Terms of Service</a>
+          <a href="#" style="color:inherit;text-decoration:none;">Disclaimer</a>
+        </div>
       </div>
     </div>
   </footer>
