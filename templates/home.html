@@ -3,698 +3,7 @@
 {% block title %}VITTAX - Personal Tax Filing Made Simple{% endblock %}
 
 {% block extra_css %}
-<style>
-    :root {
-        --v-serif: 'Playfair Display', Georgia, serif;
-        --v-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        --v-navy: #161f36;
-        --v-navy-dark: #0b1328;
-        --v-bronze: #8c6239;
-        --v-bronze-hover: #744f2d;
-        --v-green: #16a34a;
-        --v-green-bg: #f0fdf4;
-        --v-red: #dc2626;
-        --v-red-bg: #fef2f2;
-        --v-slate: #0f172a;
-        --v-muted: #64748b;
-        --v-border: #e2e8f0;
-    }
-
-    body {
-        font-family: var(--v-sans);
-        color: var(--v-slate);
-        background-color: #ffffff;
-    }
-
-    /* ═══ HERO SECTION ═══ */
-    .vittax-hero {
-        background: linear-gradient(180deg, #fbfcfe 0%, #f3f6fc 100%);
-        padding: 120px 0 80px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .vittax-hero-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 56px;
-        align-items: center;
-    }
-
-    .hero-tag {
-        font-size: 0.82rem;
-        font-weight: 800;
-        letter-spacing: 1.8px;
-        text-transform: uppercase;
-        color: #64748b;
-        margin-bottom: 18px;
-        display: block;
-    }
-
-    .hero-title {
-        font-family: var(--v-serif);
-        font-weight: 800;
-        font-size: clamp(2.5rem, 4.5vw, 3.8rem);
-        line-height: 1.1;
-        color: var(--v-slate);
-        margin-bottom: 0;
-    }
-
-    .hero-title-italic {
-        font-family: var(--v-serif);
-        font-style: italic;
-        font-weight: 600;
-        color: var(--v-bronze);
-        display: block;
-        margin-top: 4px;
-        margin-bottom: 24px;
-    }
-
-    .hero-description {
-        font-size: 1.05rem;
-        color: #475569;
-        line-height: 1.7;
-        margin-bottom: 36px;
-        max-width: 520px;
-    }
-
-    .hero-actions {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 32px;
-    }
-
-    .btn-navy {
-        background: var(--v-navy);
-        color: #ffffff !important;
-        padding: 14px 28px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 0.95rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.25s ease;
-        box-shadow: 0 8px 24px rgba(22, 31, 54, 0.18);
-        text-decoration: none;
-    }
-
-    .btn-navy:hover {
-        background: #0f1628;
-        transform: translateY(-2px);
-        box-shadow: 0 12px 28px rgba(22, 31, 54, 0.28);
-    }
-
-    .btn-outline-dark {
-        background: #ffffff;
-        color: var(--v-navy) !important;
-        border: 1.5px solid #cbd5e1;
-        padding: 14px 28px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 0.95rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.25s ease;
-        text-decoration: none;
-    }
-
-    .btn-outline-dark:hover {
-        border-color: var(--v-navy);
-        background: #f8fafc;
-        transform: translateY(-2px);
-    }
-
-    .hero-rating {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 0.85rem;
-        font-weight: 800;
-        color: #475569;
-        letter-spacing: 0.5px;
-    }
-
-    .hero-rating .stars {
-        color: #f59e0b;
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-
-    /* Right Visual Workspace */
-    .hero-visual-wrapper {
-        position: relative;
-    }
-
-    .hero-workspace-img {
-        width: 100%;
-        height: auto;
-        border-radius: 18px;
-        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
-        display: block;
-        object-fit: cover;
-    }
-
-    /* Floating Card Overlap */
-    .hero-float-card {
-        position: absolute;
-        bottom: -20px;
-        left: -30px;
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 20px 24px;
-        width: 330px;
-        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
-        border: 1px solid rgba(226, 232, 240, 0.9);
-        z-index: 10;
-        animation: floatAnim 4s ease-in-out infinite;
-    }
-
-    @keyframes floatAnim {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-8px);
-        }
-    }
-
-    .ca-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .ca-avatar-img {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background: #161f36;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
-
-    .ca-meta h5 {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--v-slate);
-        margin: 0;
-    }
-
-    .badge-verified {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        color: #16a34a;
-        background: #f0fdf4;
-        padding: 2px 8px;
-        border-radius: 12px;
-        margin-top: 2px;
-    }
-
-    .ca-chat-box {
-        background: #f1f5f9;
-        color: #1e293b;
-        border-radius: 10px;
-        padding: 10px 14px;
-        font-size: 0.85rem;
-        margin: 12px 0;
-        line-height: 1.45;
-        font-weight: 500;
-    }
-
-    .ca-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 16px;
-    }
-
-    .hero-chip {
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.78rem;
-        font-weight: 600;
-        background: #f8fafc;
-        border: 1px solid #cbd5e1;
-        color: #475569;
-    }
-
-    .hero-chip.active {
-        background: var(--v-navy);
-        color: #ffffff;
-        border-color: var(--v-navy);
-    }
-
-    /* ═══ CATEGORY BAR ═══ */
-    .vittax-bar {
-        background: var(--v-navy-dark);
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .vittax-bar-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .bar-item {
-        text-align: center;
-        padding: 24px 16px;
-        border-right: 1px solid rgba(255, 255, 255, 0.08);
-        transition: background 0.25s ease;
-        cursor: pointer;
-    }
-
-    .bar-item:last-child {
-        border-right: none;
-    }
-
-    .bar-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-    }
-
-    .bar-title {
-        font-size: 0.86rem;
-        font-weight: 800;
-        letter-spacing: 1.2px;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin: 0;
-    }
-
-    /* ═══ FEATURES SECTION ═══ */
-    .vittax-section {
-        padding: 96px 0;
-    }
-
-    .section-heading-main {
-        font-family: var(--v-serif);
-        font-size: clamp(2rem, 3.5vw, 2.7rem);
-        font-weight: 700;
-        color: var(--v-slate);
-        text-align: center;
-        margin-bottom: 12px;
-    }
-
-    .section-sub-main {
-        font-size: 1rem;
-        color: var(--v-muted);
-        text-align: center;
-        max-width: 640px;
-        margin: 0 auto 56px;
-        line-height: 1.6;
-    }
-
-    .features-grid-3x2 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 28px;
-    }
-
-    .feature-box {
-        background: #ffffff;
-        border: 1.5px solid #e2e8f0;
-        border-radius: 14px;
-        padding: 36px 30px;
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .feature-box:hover {
-        border-color: #cbd5e1;
-        transform: translateY(-4px);
-        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-    }
-
-    .feature-icon-square {
-        width: 52px;
-        height: 52px;
-        border-radius: 12px;
-        background: #eff6ff;
-        color: #2563eb;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-        margin-bottom: 24px;
-    }
-
-    .feature-box-title {
-        font-family: var(--v-serif);
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--v-slate);
-        margin-bottom: 12px;
-    }
-
-    .feature-box-desc {
-        font-size: 0.92rem;
-        color: var(--v-muted);
-        line-height: 1.6;
-        margin-bottom: 24px;
-        flex-grow: 1;
-    }
-
-    .feature-box-link {
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: #2563eb;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: gap 0.2s ease;
-    }
-
-    .feature-box-link:hover {
-        gap: 10px;
-    }
-
-    /* ═══ IS THIS PLAN RIGHT FOR YOU ═══ */
-    .plan-comparison-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 28px;
-        max-width: 1080px;
-        margin: 0 auto;
-    }
-
-    .plan-card-for {
-        background: var(--v-green-bg);
-        border: 1.5px solid #bbf7d0;
-        border-radius: 16px;
-        padding: 36px 40px;
-    }
-
-    .plan-card-not {
-        background: var(--v-red-bg);
-        border: 1.5px solid #fecaca;
-        border-radius: 16px;
-        padding: 36px 40px;
-    }
-
-    .plan-card-header {
-        font-family: var(--v-serif);
-        font-size: 1.35rem;
-        font-weight: 700;
-        margin-bottom: 24px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .plan-card-header.green {
-        color: #15803d;
-    }
-
-    .plan-card-header.red {
-        color: #b91c1c;
-    }
-
-    .plan-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .plan-list-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        font-size: 0.93rem;
-        color: #334155;
-        line-height: 1.5;
-    }
-
-    .plan-list-item i {
-        margin-top: 3px;
-        flex-shrink: 0;
-        font-size: 0.95rem;
-    }
-
-    .plan-list-item i.icon-green {
-        color: #16a34a;
-    }
-
-    .plan-list-item i.icon-red {
-        color: #dc2626;
-    }
-
-    .btn-bronze {
-        background: var(--v-bronze);
-        color: #ffffff !important;
-        padding: 15px 36px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 0.98rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        box-shadow: 0 8px 24px rgba(140, 98, 57, 0.25);
-        text-decoration: none;
-        transition: all 0.25s ease;
-    }
-
-    .btn-bronze:hover {
-        background: var(--v-bronze-hover);
-        transform: translateY(-2px);
-        box-shadow: 0 12px 28px rgba(140, 98, 57, 0.35);
-    }
-
-    .btn-bronze-outline {
-        background: transparent;
-        color: #ffffff !important;
-        border: 1.5px solid rgba(255, 255, 255, 0.6);
-        padding: 14px 32px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 0.95rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        transition: all 0.25s ease;
-    }
-
-    .btn-bronze-outline:hover {
-        border-color: #ffffff;
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    /* ═══ 3 STEPS SECTION ═══ */
-    .steps-wrapper-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 56px;
-        align-items: center;
-    }
-
-    .steps-list {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    .step-item {
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-    }
-
-    .step-circle {
-        width: 38px;
-        height: 38px;
-        background: var(--v-navy);
-        color: #ffffff;
-        border-radius: 50%;
-        flex-shrink: 0;
-        font-weight: 800;
-        font-size: 0.95rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .step-content h4 {
-        font-family: var(--v-serif);
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--v-slate);
-        margin-bottom: 6px;
-    }
-
-    .step-content p {
-        font-size: 0.92rem;
-        color: var(--v-muted);
-        line-height: 1.6;
-        margin: 0;
-    }
-
-    .steps-navy-card {
-        background: var(--v-navy-dark);
-        border-radius: 20px;
-        padding: 56px 44px;
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        box-shadow: 0 20px 50px rgba(11, 19, 40, 0.2);
-    }
-
-    .steps-navy-card h3 {
-        font-family: var(--v-serif);
-        font-size: 2.1rem;
-        font-weight: 700;
-        line-height: 1.25;
-        margin-bottom: 16px;
-        color: #ffffff;
-    }
-
-    .steps-navy-card p {
-        font-size: 0.96rem;
-        color: #94a3b8;
-        line-height: 1.65;
-        margin-bottom: 32px;
-    }
-
-    /* ═══ TESTIMONIALS SECTION ═══ */
-    .testimonials-grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 28px;
-    }
-
-    .testimonial-box {
-        background: #ffffff;
-        border: 1.5px solid #e2e8f0;
-        border-radius: 14px;
-        padding: 32px 28px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .testimonial-stars {
-        color: #f59e0b;
-        font-size: 1.1rem;
-        letter-spacing: 2px;
-        margin-bottom: 16px;
-    }
-
-    .testimonial-quote {
-        font-size: 0.94rem;
-        color: #334155;
-        line-height: 1.65;
-        margin-bottom: 24px;
-    }
-
-    .testimonial-author-block {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .author-avatar-badge {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        font-size: 1.05rem;
-    }
-
-    .author-details h5 {
-        font-size: 0.94rem;
-        font-weight: 700;
-        color: var(--v-slate);
-        margin: 0;
-    }
-
-    .author-details span {
-        font-size: 0.8rem;
-        color: var(--v-muted);
-    }
-
-    /* ═══ CTA BANNER ═══ */
-    .cta-banner-navy {
-        background: var(--v-navy-dark);
-        padding: 88px 0;
-        text-align: center;
-    }
-
-    .cta-banner-navy h2 {
-        font-family: var(--v-serif);
-        font-size: clamp(2rem, 3.5vw, 2.8rem);
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 16px;
-    }
-
-    .cta-banner-navy p {
-        font-size: 1.05rem;
-        color: #94a3b8;
-        margin-bottom: 36px;
-        max-width: 640px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 1024px) {
-
-        .vittax-hero-inner,
-        .steps-wrapper-grid,
-        .plan-comparison-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .hero-float-card {
-            position: static;
-            width: 100%;
-            margin-top: 16px;
-        }
-
-        .features-grid-3x2,
-        .testimonials-grid-3 {
-            grid-template-columns: 1fr;
-        }
-
-        .vittax-bar-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 640px) {
-        .vittax-bar-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .vittax-hero {
-            padding-top: 90px;
-        }
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -718,12 +27,12 @@
 
                 <div class="hero-actions">
                     <a href="{% url 'register' %}" class="btn-navy">
-                        <i class="fas fa-briefcase"></i> Start Filing Now <i class="fas fa-arrow-right"
-                            style="margin-left: 4px;"></i>
+                        <i class="fas fa-briefcase"></i> Start Filing Now <i
+                            class="fas fa-arrow-right icon-arrow-right"></i>
                     </a>
                     <a href="{% url 'contact' %}" class="btn-outline-dark">
-                        <i class="fas fa-headset"></i> Talk to an Expert <i class="fas fa-arrow-up-right-from-square"
-                            style="font-size: 0.8em;"></i>
+                        <i class="fas fa-headset"></i> Talk to an Expert <i
+                            class="fas fa-arrow-up-right-from-square icon-external"></i>
                     </a>
                 </div>
 
@@ -752,7 +61,7 @@
                     </div>
                     <div class="ca-chips">
                         <span class="hero-chip">Salary</span>
-                        <span class="hero-chip active">Capital Gains</span>
+                        <span class="hero-chip active">Digital Capital Gains</span>
                         <span class="hero-chip">House Property</span>
                         <span class="hero-chip">Business</span>
                         <span class="hero-chip">NRI</span>
@@ -766,10 +75,10 @@
 </section>
 
 
-<!-- ═══ CATEGORY SELECTOR BAR ═══ -->
+<!-- ═══ CATEGORY SELECTOR BAR (MARQUEE TICKER) ═══ -->
 <div class="vittax-bar">
-    <div class="container">
-        <div class="vittax-bar-grid">
+    <div class="vittax-bar-track">
+        <div class="vittax-bar-items">
             <div class="bar-item">
                 <div class="bar-title">SALARIED INDIVIDUALS</div>
             </div>
@@ -780,6 +89,12 @@
                 <div class="bar-title">NRI / FOREIGN INCOME</div>
             </div>
             <div class="bar-item">
+                <div class="bar-title">File ITR in 15 Minutes</div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-title">365-Day Expert Support</div>
+            </div>
+            <div class="bar-item">
                 <div class="bar-title">OTHER COMPLEX INCOMES</div>
             </div>
         </div>
@@ -788,7 +103,7 @@
 
 
 <!-- ═══ SECTION: EVERYTHING YOU NEED ═══ -->
-<section class="vittax-section" style="background:#ffffff;">
+<section class="vittax-section bg-white">
     <div class="container">
         <h2 class="section-heading-main" data-animate>Everything You Need for Personal Tax Filing</h2>
         <p class="section-sub-main" data-animate>Designed for modern tax payers &amp; business owners who want top
@@ -798,7 +113,7 @@
 
             <!-- Card 1 -->
             <div class="feature-box" data-animate>
-                <div class="feature-icon-square" style="background:#e0e7ff;color:#4338ca;">
+                <div class="feature-icon-square feature-icon-indigo">
                     <i class="fas fa-user-shield"></i>
                 </div>
                 <h3 class="feature-box-title">1-on-1 Expert CA Support</h3>
@@ -810,7 +125,7 @@
 
             <!-- Card 2 -->
             <div class="feature-box" data-animate>
-                <div class="feature-icon-square" style="background:#e0e7ff;color:#4338ca;">
+                <div class="feature-icon-square feature-icon-indigo">
                     <i class="fas fa-microchip"></i>
                 </div>
                 <h3 class="feature-box-title">AI Deduction Optimizer</h3>
@@ -822,7 +137,7 @@
 
             <!-- Card 3 -->
             <div class="feature-box" data-animate>
-                <div class="feature-icon-square" style="background:#e0e7ff;color:#4338ca;">
+                <div class="feature-icon-square feature-icon-indigo">
                     <i class="fas fa-file-invoice"></i>
                 </div>
                 <h3 class="feature-box-title">Auto Form-16 Processing</h3>
@@ -834,7 +149,7 @@
 
             <!-- Card 4 -->
             <div class="feature-box" data-animate>
-                <div class="feature-icon-square" style="background:#e0e7ff;color:#4338ca;">
+                <div class="feature-icon-square feature-icon-indigo">
                     <i class="fas fa-shield-alt"></i>
                 </div>
                 <h3 class="feature-box-title">Free Notice Management</h3>
@@ -846,7 +161,7 @@
 
             <!-- Card 5 -->
             <div class="feature-box" data-animate>
-                <div class="feature-icon-square" style="background:#e0e7ff;color:#4338ca;">
+                <div class="feature-icon-square feature-icon-indigo">
                     <i class="fas fa-clock"></i>
                 </div>
                 <h3 class="feature-box-title">File in Under 9 Minutes</h3>
@@ -858,7 +173,7 @@
 
             <!-- Card 6 -->
             <div class="feature-box" data-animate>
-                <div class="feature-icon-square" style="background:#e0e7ff;color:#4338ca;">
+                <div class="feature-icon-square feature-icon-indigo">
                     <i class="fas fa-headset"></i>
                 </div>
                 <h3 class="feature-box-title">365-Day Query Support</h3>
@@ -874,7 +189,7 @@
 
 
 <!-- ═══ SECTION: IS THIS PLAN RIGHT FOR YOU ═══ -->
-<section class="vittax-section" style="background:#f8fafc;">
+<section class="vittax-section bg-slate-50">
     <div class="container">
         <h2 class="section-heading-main" data-animate>Is This Plan Right for You?</h2>
         <p class="section-sub-main" data-animate>Find out if our Personal Tax Filing plan matches your income and
@@ -950,10 +265,9 @@
 
         </div>
 
-        <div style="text-align:center; margin-top:44px;" data-animate>
+        <div class="plan-consultation-wrapper" data-animate>
             <a href="{% url 'contact' %}" class="btn-bronze">
-                <i class="fas fa-comments"></i> Get Free Consultation <i class="fas fa-lock"
-                    style="font-size:0.85rem"></i>
+                <i class="fas fa-comments"></i> Get Free Consultation <i class="fas fa-lock icon-lock-sm"></i>
             </a>
         </div>
     </div>
@@ -961,15 +275,15 @@
 
 
 <!-- ═══ SECTION: 3 SIMPLE STEPS ═══ -->
-<section class="vittax-section" style="background:#ffffff;">
+<section class="vittax-section bg-white">
     <div class="container">
         <div class="steps-wrapper-grid">
 
             <!-- Left Steps -->
             <div data-animate>
-                <h2 class="section-heading-main" style="text-align:left; margin-bottom:12px;">File Your ITR in 3 Simple
+                <h2 class="section-heading-main heading-left">File Your ITR in 3 Simple
                     Steps</h2>
-                <p class="section-sub-main" style="text-align:left; margin:0 0 44px 0;">Filing taxes with us is as easy
+                <p class="section-sub-main sub-left">Filing taxes with us is as easy
                     as sending a message — the entire process takes under 30 minutes.</p>
 
                 <div class="steps-list">
@@ -1020,7 +334,7 @@
 
 
 <!-- ═══ SECTION: TESTIMONIALS ═══ -->
-<section class="vittax-section" style="background:#f8fafc;">
+<section class="vittax-section bg-slate-50">
     <div class="container">
         <h2 class="section-heading-main" data-animate>What Our Clients Say</h2>
         <p class="section-sub-main" data-animate>11,000+ happy taxpayers trust VITTAX for their tax filing.</p>
@@ -1034,7 +348,7 @@
                         explained every deduction clearly. Best tax filing experience ever!"</p>
                 </div>
                 <div class="testimonial-author-block">
-                    <div class="author-avatar-badge" style="background:#161f36;">R</div>
+                    <div class="author-avatar-badge avatar-navy">R</div>
                     <div class="author-details">
                         <h5>Rahul Sharma</h5>
                         <span>Software Engineer, Bangalore</span>
@@ -1049,7 +363,7 @@
                         everything in under 15 minutes. Highly recommended!"</p>
                 </div>
                 <div class="testimonial-author-block">
-                    <div class="author-avatar-badge" style="background:#8c6239;">P</div>
+                    <div class="author-avatar-badge avatar-bronze">P</div>
                     <div class="author-details">
                         <h5>Priya Patel</h5>
                         <span>Marketing Lead, Mumbai</span>
@@ -1064,7 +378,7 @@
                         completely within 3 days. Outstanding service and support!"</p>
                 </div>
                 <div class="testimonial-author-block">
-                    <div class="author-avatar-badge" style="background:#161f36;">A</div>
+                    <div class="author-avatar-badge avatar-navy">A</div>
                     <div class="author-details">
                         <h5>Ankit Nair</h5>
                         <span>Product Manager, Gurgaon</span>
@@ -1084,16 +398,27 @@
         <p>Talk to our tax experts for free — we'll assess your income sources and recommend the perfect filing plan.
         </p>
         <a href="{% url 'contact' %}" class="btn-bronze">
-            <i class="fas fa-comments"></i> Get Free Consultation <i class="fas fa-lock" style="font-size:0.85rem"></i>
+            <i class="fas fa-comments"></i> Get Free Consultation <i class="fas fa-lock icon-lock-sm"></i>
         </a>
     </div>
 </section>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/917670873088" target="_blank"
-    style="position:fixed;bottom:28px;right:28px;background:#25d366;color:#ffffff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 24px rgba(37,211,102,0.4);z-index:9999;text-decoration:none;transition:transform 0.25s ease;"
-    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+<a href="https://wa.me/917670873088" target="_blank" class="floating-whatsapp-btn">
     <i class="fab fa-whatsapp"></i>
 </a>
 
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const track = document.querySelector('.vittax-bar-track');
+    const items = document.querySelector('.vittax-bar-items');
+    if (track && items) {
+        const clone = items.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+    }
+});
+</script>
 {% endblock %}
