@@ -1,0 +1,554 @@
+/* ═════════════════════════════════════════════════════════════════
+   VITTAX — About Us Page Styles (static/css/about.css)
+   ═════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap');
+
+/* Common Typography & Utility Utilities for About Page */
+.italic-serif-gold {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #c59b27;
+  background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.italic-serif-dark {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* ── 1. HERO SECTION ── */
+.about-hero-section {
+  padding: 130px 0 80px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.about-hero-title {
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.16;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.about-hero-desc {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.about-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #334155;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.hero-pill-badge i {
+  color: #101828;
+  font-size: 0.85rem;
+}
+
+/* Hero Right Image & Quote Card */
+.about-hero-image-wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-hero-img-container {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.about-hero-img-container img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-quote-card {
+  position: absolute;
+  bottom: 24px;
+  left: -20px;
+  max-width: 320px;
+  background: rgba(10, 15, 26, 0.94);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 22px;
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.hero-quote-card .quote-icon {
+  font-size: 1.2rem;
+  color: #d4af37;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.hero-quote-card p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #e2e8f0;
+  font-weight: 400;
+}
+
+
+/* ── 2. STATS BAR (DARK) ── */
+.about-stats-bar {
+  background: #0b1328;
+  color: #ffffff;
+  padding: 50px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 10px 16px;
+}
+
+.stat-number {
+  font-size: clamp(2.4rem, 3.6vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-number .gold-percent {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  color: #d4af37;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+
+/* ── 3. OUR EXPERTISE SECTION ── */
+.about-expertise-section {
+  padding: 90px 0;
+  background: #f8fafc;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.section-header-center h2 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.section-header-center p {
+  font-size: 1.02rem;
+  color: #64748b;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.expertise-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 36px 32px;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+}
+
+.expertise-card.soft-blue-bg {
+  background: #f0f5ff;
+  border-color: #e0ebff;
+}
+
+.card-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+}
+
+.card-icon-badge.gold-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.card-icon-badge.blue-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.expertise-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.expertise-card p {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.expertise-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.expertise-bullets li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.expertise-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: #2563eb;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.card-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #0f172a;
+  transition: color 0.2s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.card-action-link:hover {
+  color: #2563eb;
+  transform: translateX(3px);
+}
+
+
+/* ── 4. UNWAVERING COMMITMENT SECTION (DARK) ── */
+.about-commitment-section {
+  background: #0b1328;
+  color: #ffffff;
+  padding: 100px 0;
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.commitment-title {
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.commitment-subtext {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.pillar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.pillar-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.pillar-content p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+/* Gallery 2x2 Grid */
+.commitment-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.gallery-card {
+  border-radius: 14px;
+  overflow: hidden;
+  height: 200px;
+  background: #1e293b;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ── 5. CTA SECTION ── */
+.about-cta-section {
+  padding: 90px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin: 16px 0;
+}
+
+.cta-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin-bottom: 36px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-dark-pill {
+  background: #090d16;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid #090d16;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-dark-pill:hover {
+  background: #1a2336;
+  border-color: #1a2336;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(9, 13, 22, 0.25);
+}
+
+.btn-outline-pill {
+  background: transparent;
+  color: #0f172a;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-pill:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+
+/* ── RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 992px) {
+
+  .about-hero-grid,
+  .commitment-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-hero-image-wrap {
+    justify-content: center;
+  }
+
+  .hero-quote-card {
+    left: 10px;
+    bottom: 10px;
+    max-width: 280px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-section {
+    padding: 100px 0 60px;
+  }
+
+  .commitment-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-card {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-dark-pill,
+  .btn-outline-pill {
+    width: 100%;
+  }
+}

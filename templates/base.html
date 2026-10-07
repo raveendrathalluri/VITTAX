@@ -28,6 +28,9 @@
 
       <div class="nav-links">
 
+        <a href="{% url 'about' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
+
         <!-- HEAD 1 -->
         <div class="nav-dropdown">
           <a href="#" class="nav-link">Start a Business <i class="fas fa-chevron-down"></i></a>
