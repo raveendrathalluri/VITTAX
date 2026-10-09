@@ -411,14 +411,22 @@
 
 {% block extra_js %}
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.vittax-bar-track');
-    const items = document.querySelector('.vittax-bar-items');
-    if (track && items) {
-        const clone = items.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        track.appendChild(clone);
-    }
-});
+    document.addEventListener('DOMContentLoaded', function () {
+        const track = document.querySelector('.vittax-bar-track');
+        const items = document.querySelector('.vittax-bar-items');
+        if (track && items) {
+            const clone = items.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            track.appendChild(clone);
+        }
+    });
+</script>
+<script>
+    document.querySelectorAll('.hero-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+            document.querySelectorAll('.hero-chip').forEach(item => { item.classList.remove('active'); });
+            chip.classList.add('active');
+        });
+    });
 </script>
 {% endblock %}

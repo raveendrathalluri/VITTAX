@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services List - VITTAX{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/service_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="service-list-page">
+
+  <!-- HERO BANNER -->
+  <section class="sl-hero-banner">
+    <span class="sl-hero-tag">PROFESSIONAL FEE SCHEDULE</span>
+    <h1 class="sl-hero-title">Complete Service Index & Pricing</h1>
+    <p class="sl-hero-subtitle">Transparent, fixed-fee professional services. Browse our extensive directory of compliance, tax, and corporate filing solutions tailored for businesses and individuals.</p>
+  </section>
+
+
+  <!-- MAIN WRAPPER -->
+  <div class="sl-main-wrapper">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sl-sidebar-box">
+      <!-- Search Box -->
+      <div class="sl-search-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="slSearchInput" placeholder="Search services..." autocomplete="off">
+      </div>
+
+      <!-- Categories Heading -->
+      <div class="sl-sidebar-heading">CATEGORIES</div>
+
+      <!-- Category Navigation List -->
+      <nav class="sl-category-nav">
+        <button type="button" class="sl-cat-item active" data-cat="all" onclick="filterCategory('all')">
+          <span>All Services</span>
+          <span class="sl-cat-count-badge">{{ total_services_count }}</span>
+        </button>
+
+        {% for category in categories %}
+        <button type="button" class="sl-cat-item" data-cat="{{ category.slug }}" onclick="filterCategory('{{ category.slug }}')">
+          <span>{{ category.title }}</span>
+          <span class="sl-cat-count-badge">{{ category.sub_services|length }}</span>
+        </button>
+        {% endfor %}
+      </nav>
+
+      <!-- Help Card -->
+      <div class="sl-help-card">
+        <h4>Need Help Choosing?</h4>
+        <p>Talk to our tax experts for free guidance on the best services for your business.</p>
+        <a href="{% url 'contact' %}">Contact Us <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="sl-content-area">
+
+      <!-- TOP BAR STATS -->
+      <div class="sl-top-bar">
+        <div class="sl-showing-text">
+          Showing <span id="slVisibleCount">{{ total_services_count }}</span> Services
+        </div>
+      </div>
+
+      <!-- CATEGORY SECTIONS AND CARDS -->
+      <div id="slGroupContainer">
+        {% for category in categories %}
+        <section class="sl-group-section" id="group-sec-{{ category.slug }}" data-cat-slug="{{ category.slug }}">
+          <div class="sl-group-header">
+            <h2 class="sl-group-title">
+              <i class="{{ category.icon }}"></i> {{ category.title }}
+            </h2>
+            <span class="sl-group-count">{{ category.sub_services|length }} Services</span>
+          </div>
+
+          <div class="sl-grid-2cols">
+            {% for svc in category.sub_services %}
+            <div class="sl-service-card" data-title="{{ svc.title|lower }}" data-desc="{{ svc.desc|lower }}">
+              <div>
+                <div class="sl-card-header">
+                  <span class="sl-cat-badge">{{ category.title }}</span>
+                </div>
+                <h3 class="sl-card-name">{{ svc.title }}</h3>
+                <p class="sl-card-description">{{ svc.desc }}</p>
+              </div>
+
+              <div class="sl-card-action-bar">
+                <a href="{% url svc.url_name %}" class="sl-card-btn">
+                  Explore Service <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        {% endfor %}
+      </div>
+
+      <!-- EMPTY STATE -->
+      <div class="sl-empty-state" id="slEmptyState">
+        <i class="fas fa-search"></i>
+        <h3>No services found</h3>
+        <p>We couldn't find any services matching your search term.</p>
+        <button type="button" class="btn btn-primary" onclick="resetSearch()">Reset Search</button>
+      </div>
+
+      <!-- BOTTOM CTA BANNER -->
+      <div class="sl-bottom-cta">
+        <div class="sl-cta-text">
+          <h3>Need a Customized Compliance Solution?</h3>
+          <p>Get a tailored tax & accounting proposal from our senior Chartered Accountants.</p>
+        </div>
+        <a href="{% url 'contact' %}" class="sl-cta-btn">Book Free Consultation</a>
+      </div>
+
+    </main>
+
+  </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  let currentCatSlug = 'all';
+
+  function filterCategory(catSlug) {
+    currentCatSlug = catSlug;
+
+    // Update active state of sidebar buttons
+    document.querySelectorAll('.sl-cat-item').forEach(btn => {
+      if (btn.getAttribute('data-cat') === catSlug) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    applySearchAndFilter();
+  }
+
+  function applySearchAndFilter() {
+    const query = document.getElementById('slSearchInput').value.toLowerCase().trim();
+    let totalVisible = 0;
+
+    const sections = document.querySelectorAll('.sl-group-section');
+
+    sections.forEach(section => {
+      const sectionSlug = section.getAttribute('data-cat-slug');
+      const isCatMatch = (currentCatSlug === 'all' || currentCatSlug === sectionSlug);
+
+      const cards = section.querySelectorAll('.sl-service-card');
+      let visibleInSec = 0;
+
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const desc = card.getAttribute('data-desc') || '';
+        const isQueryMatch = (query === '' || title.includes(query) || desc.includes(query));
+
+        if (isCatMatch && isQueryMatch) {
+          card.style.display = 'flex';
+          visibleInSec++;
+          totalVisible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (isCatMatch && visibleInSec > 0) {
+        section.style.display = 'flex';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+
+    document.getElementById('slVisibleCount').innerText = totalVisible;
+
+    const emptyState = document.getElementById('slEmptyState');
+    if (totalVisible === 0) {
+      emptyState.style.display = 'block';
+    } else {
+      emptyState.style.display = 'none';
+    }
+  }
+
+  function resetSearch() {
+    document.getElementById('slSearchInput').value = '';
+    filterCategory('all');
+  }
+
+  document.getElementById('slSearchInput').addEventListener('input', applySearchAndFilter);
+</script>
+{% endblock %}
