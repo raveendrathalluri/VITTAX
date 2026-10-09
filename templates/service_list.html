@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Services List - VITTAX{% endblock %}
+{% block title %}Services Index & Pricing - VITTAX{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/service_list.css' %}">
@@ -10,13 +10,12 @@
 {% block content %}
 <div class="service-list-page">
 
-  <!-- HERO BANNER -->
+  <!-- HERO BANNER (MATCHING HOME & ABOUT) -->
   <section class="sl-hero-banner">
     <span class="sl-hero-tag">PROFESSIONAL FEE SCHEDULE</span>
-    <h1 class="sl-hero-title">Complete Service Index & Pricing</h1>
+    <h1 class="sl-hero-title">Complete Service Index <span class="sl-hero-title-italic">&amp; Pricing</span></h1>
     <p class="sl-hero-subtitle">Transparent, fixed-fee professional services. Browse our extensive directory of compliance, tax, and corporate filing solutions tailored for businesses and individuals.</p>
   </section>
-
 
   <!-- MAIN WRAPPER -->
   <div class="sl-main-wrapper">

@@ -16,7 +16,6 @@ urlpatterns = [
     path('pricing/', views.pricing_view, name='pricing'),
     path('service-list/', views.service_list_view, name='service_list'),
 
-
     # ==================================================
     # HEAD 1 - Start a Business
     # ==================================================

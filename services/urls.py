@@ -12,4 +12,3 @@ urlpatterns = [
     path('services/<slug:slug>/apply/',   views.apply_service,  name='apply_service'),
 ]
 
-

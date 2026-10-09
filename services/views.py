@@ -33,8 +33,6 @@ def services_view(request):
 def service_list_redirect(request):
     return redirect('service_list')
 
-
-
 # ── Public: single service detail ─────────────────────────
 def service_detail(request, slug):
     service  = get_object_or_404(Service, slug=slug, is_active=True)
