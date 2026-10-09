@@ -27,6 +27,10 @@
       </a>
 
       <div class="nav-links">
+        <a href="{% url 'service_list' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'service_list' %}active{% endif %}">Services</a>
+        <a href="{% url 'about' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
 
         <!-- HEAD 1 -->
         <div class="nav-dropdown">
@@ -277,6 +281,7 @@
       <a href="{% url 'pricing' %}" class="nav-link">Pricing</a>
       <a href="{% url 'about' %}" class="nav-link">About</a>
       <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+
       {% endif %}
 
       {% if user.is_authenticated %}

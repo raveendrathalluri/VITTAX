@@ -162,7 +162,7 @@
 }
 
 .btn-submit-navy {
-    background: #000000;
+    background: #0b1328;
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -194,7 +194,7 @@
 
 /* Headquarters Card */
 .hq-card {
-    background: linear-gradient(145deg, #111a2e, #09101f);
+    background: linear-gradient(145deg, #0b1328);
     border-radius: 16px;
     padding: 36px 36px 30px;
     color: #ffffff;
@@ -212,7 +212,7 @@
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 80% 20%, rgba(140, 98, 57, 0.15), transparent 60%),
-                repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 21px);
+        repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255, 255, 255, 0.02) 20px, rgba(255, 255, 255, 0.02) 21px);
     pointer-events: none;
 }
 
@@ -361,9 +361,17 @@
     margin-left: 0;
 }
 
-.avatar-1 { background: #1e293b; }
-.avatar-2 { background: #8c6239; }
-.avatar-3 { background: #2563eb; }
+.avatar-1 {
+    background: #1e293b;
+}
+
+.avatar-2 {
+    background: #8c6239;
+}
+
+.avatar-3 {
+    background: #2563eb;
+}
 
 .social-proof-title {
     font-size: 0.86rem;
