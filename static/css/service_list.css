@@ -89,7 +89,28 @@
   box-shadow: 0 4px 20px rgba(11, 19, 40, 0.04);
   position: sticky;
   top: 85px;
+  max-height: calc(100vh - 105px);
+  overflow-y: auto;
 }
+
+.sl-sidebar-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sl-sidebar-box::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.sl-sidebar-box::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.sl-sidebar-box::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
 
 .sl-search-wrap {
   position: relative;
