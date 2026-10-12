@@ -1,62 +1,48 @@
-{# ═══════════════════════════════════════════════════════════════════
-   templates/login.html — VITTAX Enterprise Secure Client Access
-   ═══════════════════════════════════════════════════════════════════ #}
+{# ═══════════════ templates/login.html ═══════════════ #}
 {% extends 'base.html' %}
 {% load static %}
-
 {% block title %}Client Login - VITTAX Secure Financial Command Suite{% endblock %}
-
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
-{% endblock %}
-
+<link rel="stylesheet" href="{% static 'css/login.css' %}">{% endblock %}
 {% block content %}
 <div class="vittax-login-wrapper">
-
   <!-- ═══ ERI SUB-HEADER RIBBON ═══ -->
   <div class="v-eri-ribbon">
     <div class="v-ribbon-container">
       <div class="v-ribbon-left">
         <i class="fas fa-shield-alt"></i>
-        <span>AUTHORIZED E-RETURN INTERMEDIARY (ERI) PORTAL</span>
+        <span class="v-ribbon-title">AUTHORIZED E-RETURN INTERMEDIARY (ERI) PORTAL</span>
         <span class="v-ribbon-sep">•</span>
         <span class="v-ribbon-cert">Govt. of India Certified System</span>
       </div>
-
       <div class="v-ribbon-right">
         <div class="v-status-indicator">
           <span class="v-status-dot"></span>
           <span>Server Status: Encrypted &amp; Operational</span>
         </div>
-        <a href="tel:+917670873088" class="v-helpline-link">
-          CA Helpline Support <i class="fas fa-arrow-right"></i>
-        </a>
+        <a href="tel:+917670873088" class="v-helpline-link">CA Helpline Support <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
-
   <!-- ═══ MAIN HERO & AUTH SECTION ═══ -->
   <section class="v-login-hero">
     <div class="v-hero-container">
-
       <!-- LEFT COLUMN: EDITORIAL BRANDING & TRUST -->
       <div class="v-hero-left">
         <div class="v-access-badge">
           <i class="fas fa-lock"></i>
           <span>VITTAX SECURE CLIENT ACCESS</span>
         </div>
-
         <h1 class="v-hero-headline">
           Institutional<br>
           rigor.<br>
           <span class="gold-italic-text">Frictionless</span> tax<br>
           management.
         </h1>
-
         <p class="v-hero-description">
-          Log in to review statutory filings, audit workpapers, GST reconciliations, and direct communications with your designated Chartered Accountant.
+          Log in to review statutory filings, audit workpapers, GST reconciliations, and direct communications with your
+          designated Chartered Accountant.
         </p>
-
         <!-- CA Partner Testimonial Box -->
         <div class="v-ca-card">
           <div class="v-ca-header">
@@ -67,10 +53,10 @@
             </div>
           </div>
           <p class="v-ca-quote">
-            “Every filing is validated through dual-tiered compliance checks before electronic dispatch to the Central Processing Centre.”
+            “Every filing is validated through dual-tiered compliance checks before electronic dispatch to the Central
+            Processing Centre.”
           </p>
         </div>
-
         <!-- 3 Trust Badges -->
         <div class="v-trust-badges">
           <div class="v-trust-pill">
@@ -90,7 +76,6 @@
           </div>
         </div>
       </div>
-
       <!-- RIGHT COLUMN: SECURE LOGIN CARD -->
       <div class="v-hero-right">
         <div class="v-login-card">
@@ -103,77 +88,39 @@
             <h2>Welcome Back</h2>
             <p>Sign in to access your confidential, VITTAX command suite</p>
           </div>
-
           <!-- White Card Body -->
           <div class="v-card-body">
-
             <!-- Primary Form -->
-            <form method="post" action="{% url 'login' %}" id="vLoginForm">
+            <form method="post">
               {% csrf_token %}
-
-              <!-- Identifier: PAN / Email / Client ID -->
               <div class="v-form-group">
                 <div class="v-label-row">
-                  <label class="v-input-label" for="usernameInput">
-                    PAN, EMAIL, OR CLIENT ID <span class="req">*</span>
-                  </label>
+                  <label class="v-input-label" for="usernameInput">Username<span class="req">*</span></label>
                 </div>
                 <div class="v-input-wrapper">
                   <i class="far fa-id-badge v-input-icon"></i>
-                  <input
-                    type="text"
-                    name="username"
-                    id="usernameInput"
-                    class="v-form-input"
-                    placeholder="e.g. ABCDE1234F or partner@vittax.in"
-                    required
-                    autocomplete="username"
-                  >
+                  <input type="text" name="username" id="usernameInput" class="v-form-input"
+                    placeholder="Enter your username" required autocomplete="username">
                 </div>
               </div>
-
               <!-- Password -->
               <div class="v-form-group">
                 <div class="v-label-row">
-                  <label class="v-input-label" for="passwordInput">
-                    ACCOUNT PASSWORD <span class="req">*</span>
-                  </label>
-                  <a href="javascript:void(0)" class="v-forgot-pass" onclick="openForgotModal()">Forgot password?</a>
+                  <label class="v-input-label" for="passwordInput">ACCOUNT PASSWORD <span class="req">*</span></label>
                 </div>
                 <div class="v-input-wrapper">
                   <i class="fas fa-lock v-input-icon"></i>
-                  <input
-                    type="password"
-                    name="password"
-                    id="passwordInput"
-                    class="v-form-input"
-                    placeholder="Enter your security credential"
-                    required
-                    autocomplete="current-password"
-                  >
+                  <input type="password" name="password" id="passwordInput" class="v-form-input"
+                    placeholder="Enter your security credential" required autocomplete="current-password">
                   <i class="far fa-eye v-pass-toggle" id="togglePasswordIcon" onclick="togglePassVisibility()"></i>
                 </div>
               </div>
-
-              <!-- Checkbox & 2FA Info -->
-              <div class="v-auth-options">
-                <label class="v-checkbox-label">
-                  <input type="checkbox" name="remember_me" checked>
-                  <span>Remember this authenticated workstation</span>
-                </label>
-                <div class="v-2fa-status">
-                  <i class="fas fa-globe"></i>
-                  <span>2FA Prompt Active</span>
-                </div>
-              </div>
-
               <!-- Submit Button -->
               <button type="submit" class="btn-portal-submit">
                 <span>Sign In to Client Portal</span>
                 <i class="fas fa-arrow-right"></i>
               </button>
             </form>
-
             <!-- Card Bottom Registration Link -->
             <div class="v-card-footer">
               New client or business entity?
@@ -181,25 +128,14 @@
                 Register Enterprise Account <i class="fas fa-external-link-alt"></i>
               </a>
             </div>
-
           </div><!-- /v-card-body -->
-
         </div><!-- /v-login-card -->
-
-        <!-- Floating WhatsApp Widget Button -->
-        <a href="https://wa.me/917670873088" target="_blank" rel="noopener" class="v-floating-chat" title="Chat with CA Helpline on WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-
       </div><!-- /v-hero-right -->
-
     </div><!-- /v-hero-container -->
   </section>
-
   <!-- ═══ MIDDLE SECTION: ENTERPRISE COMPLIANCE ASSURANCES ═══ -->
   <section class="v-compliance-section">
     <div class="v-compliance-container">
-
       <div class="v-compliance-header">
         <div class="v-compliance-header-left">
           <span class="v-eyebrow-text">CONFIDENTIALITY PROTOCOL</span>
@@ -207,11 +143,11 @@
         </div>
         <div class="v-compliance-header-right">
           <p class="v-compliance-subtitle">
-            VITTAX safeguards sensitive tax schedules with strict air-gapped repositories and multi-custodian cryptography.
+            VITTAX safeguards sensitive tax schedules with strict air-gapped repositories and multi-custodian
+            cryptography.
           </p>
         </div>
       </div>
-
       <div class="v-compliance-grid">
         <!-- Card 1 -->
         <div class="v-compliance-card">
@@ -231,7 +167,8 @@
           </div>
           <h3 class="v-compliance-card-title">Immutable Audit Logs</h3>
           <p class="v-compliance-card-desc">
-            Every file alteration, statement export, and e-filing authorization is timestamped and recorded for statutory transparency.
+            Every file alteration, statement export, and e-filing authorization is timestamped and recorded for
+            statutory transparency.
           </p>
         </div>
 
@@ -242,47 +179,15 @@
           </div>
           <h3 class="v-compliance-card-title">Priority CA Desk</h3>
           <p class="v-compliance-card-desc">
-            Facing login difficulties or tax scrutiny alerts? Reach your assigned partner at Nellore Headquarters instantaneously.
+            Facing login difficulties or tax scrutiny alerts? Reach your assigned partner at Nellore Headquarters
+            instantaneously.
           </p>
         </div>
       </div>
-
     </div>
   </section>
-
-</div>
-
-<!-- ═══ MODAL: FORGOT PASSWORD ═══ -->
-<div class="v-modal-overlay" id="forgotModal">
-  <div class="v-modal-box">
-    <button class="v-modal-close" onclick="closeForgotModal()">&times;</button>
-    <div style="text-align:center;margin-bottom:20px;">
-      <div style="width:48px;height:48px;background:#f1f5f9;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:#0f172a;font-size:1.2rem;">
-        <i class="fas fa-key"></i>
-      </div>
-      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:6px;color:#0f172a;">Password Recovery</h3>
-      <p style="font-size:0.84rem;color:#64748b;margin:0;">Enter your registered PAN or email address to receive reset instructions.</p>
-    </div>
-    <form onsubmit="handleForgotSubmit(event)">
-      <div class="v-form-group">
-        <label class="v-input-label">PAN OR REGISTERED EMAIL</label>
-        <div class="v-input-wrapper" style="margin-top:6px;">
-          <i class="far fa-envelope v-input-icon"></i>
-          <input type="text" id="forgotInput" class="v-form-input" placeholder="e.g. ABCDE1234F or partner@vittax.in" required>
-        </div>
-      </div>
-      <button type="submit" class="btn-portal-submit" style="margin-top:16px;">
-        <span>Send Reset Link</span>
-        <i class="fas fa-paper-plane"></i>
-      </button>
-    </form>
-    <div id="forgotSuccessMsg" style="display:none;margin-top:16px;padding:12px;background:#ecfdf5;color:#065f46;border-radius:8px;font-size:0.82rem;text-align:center;">
-      <i class="fas fa-check-circle" style="margin-right:4px;"></i> Reset instructions sent to your registered contact channel!
-    </div>
-  </div>
 </div>
 {% endblock content %}
-
 {% block extra_js %}
 <script>
   // Toggle password visibility
@@ -300,38 +205,6 @@
     }
   }
 
-  // Forgot Password Modal
-  function openForgotModal() {
-    document.getElementById('forgotModal').classList.add('active');
-    document.getElementById('forgotSuccessMsg').style.display = 'none';
-  }
 
-  function closeForgotModal() {
-    document.getElementById('forgotModal').classList.remove('active');
-  }
-
-  function handleForgotSubmit(e) {
-    e.preventDefault();
-    const val = document.getElementById('forgotInput').value.trim();
-    if (val) {
-      document.getElementById('forgotSuccessMsg').style.display = 'block';
-      setTimeout(function() {
-        closeForgotModal();
-      }, 2500);
-    }
-  }
-
-  // Close modal on escape key or outside click
-  window.addEventListener('click', function(e) {
-    if (e.target.classList.contains('v-modal-overlay')) {
-      e.target.classList.remove('active');
-    }
-  });
-
-  window.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeForgotModal();
-    }
-  });
 </script>
 {% endblock extra_js %}

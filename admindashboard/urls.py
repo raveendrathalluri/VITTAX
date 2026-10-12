@@ -4,11 +4,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.dashboard_redirect, name='dashboard'),
-    path('dashboard/', views.dashboard_redirect),
+    path('dashboard/', views.dashboard_redirect, name='dashboard'),
     # Customer
-    path('home/', views.customer_dashboard, name='customer_dashboard'),
-    path('dashboard/home/', views.customer_dashboard),
+    path('dashboard/home/', views.customer_dashboard, name='customer_dashboard'),
     # Admin
     path('admin-panel/', views.admin_dashboard, name='admin_dashboard'),
     path('admin-panel/users/', views.admin_users, name='admin_users'),

@@ -66,8 +66,12 @@
 }
 
 .v-ribbon-left i {
-  color: var(--v-slate-500);
+  color: var(--v-gold-light);
   font-size: 0.82rem;
+}
+
+.v-ribbon-left .v-ribbon-title {
+  color: var(--v-gold-light);
 }
 
 .v-ribbon-sep {
@@ -105,13 +109,24 @@
 }
 
 @keyframes pulseGreen {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
-  70% { transform: scale(1); box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(16, 185, 129, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
 
 .v-helpline-link {
-  color: var(--v-slate-700);
+  color: var(--v-gold-light);
   text-decoration: none;
   font-weight: 600;
   display: flex;
@@ -228,7 +243,7 @@
   border-radius: 10px;
   object-fit: cover;
   border: 2px solid #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--v-slate-100);
 }
 
@@ -337,7 +352,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .v-badge-logo span {
@@ -393,19 +408,6 @@
   margin-left: 2px;
 }
 
-.v-forgot-pass {
-  font-size: 0.74rem;
-  font-weight: 500;
-  color: var(--v-slate-500);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.v-forgot-pass:hover {
-  color: var(--v-dark);
-  text-decoration: underline;
-}
-
 .v-input-wrapper {
   position: relative;
   display: flex;
@@ -440,8 +442,8 @@
   box-shadow: 0 0 0 3px rgba(11, 15, 23, 0.07);
 }
 
-.v-form-input:focus + .v-input-icon,
-.v-form-input:focus ~ .v-input-icon {
+.v-form-input:focus+.v-input-icon,
+.v-form-input:focus~.v-input-icon {
   color: var(--v-dark);
 }
 
@@ -700,53 +702,17 @@
   margin: 0;
 }
 
-/* ── 4. MODAL STYLING (FORGOT PASSWORD) ── */
-.v-modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(11, 15, 23, 0.6);
-  backdrop-filter: blur(4px);
-  z-index: 2000;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.v-modal-overlay.active {
-  display: flex;
-  animation: fadeInModal 0.2s ease-out;
-}
-
-.v-modal-box {
-  background: #ffffff;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 440px;
-  padding: 28px 30px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  position: relative;
-}
-
-.v-modal-close {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  background: none;
-  border: none;
-  font-size: 1.15rem;
-  color: var(--v-slate-400);
-  cursor: pointer;
-  padding: 4px;
-}
-
-.v-modal-close:hover {
-  color: var(--v-dark);
-}
 
 @keyframes fadeInModal {
-  from { opacity: 0; transform: scale(0.97); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ── 5. RESPONSIVE ADAPTATIONS ── */
@@ -755,12 +721,15 @@
     grid-template-columns: 1fr;
     gap: 48px;
   }
+
   .v-hero-right {
     justify-content: center;
   }
+
   .v-compliance-grid {
     grid-template-columns: 1fr;
   }
+
   .v-floating-chat {
     right: 8px;
     bottom: -20px;
@@ -771,21 +740,26 @@
   .vittax-login-wrapper {
     padding-top: 60px;
   }
+
   .v-ribbon-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
+
   .v-ribbon-right {
     width: 100%;
     justify-content: space-between;
   }
+
   .v-trust-badges {
     grid-template-columns: 1fr;
   }
+
   .v-card-header {
     padding: 26px 22px 22px;
   }
+
   .v-card-body {
     padding: 26px 20px 28px;
   }
