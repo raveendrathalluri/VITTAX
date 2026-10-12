@@ -299,15 +299,31 @@ def login_view(request):
         return redirect('dashboard')
 
     if request.method == 'POST':
-        username = request.POST.get('username', '').strip()
+        identifier = request.POST.get('username', '').strip()
         password = request.POST.get('password', '').strip()
-        user = authenticate(request, username=username, password=password)
+        remember_me = request.POST.get('remember_me')
+
+        from accounts.models import CustomUser
+        from django.db.models import Q
+
+        user_obj = CustomUser.objects.filter(
+            Q(username__iexact=identifier) |
+            Q(email__iexact=identifier) |
+            Q(pan_number__iexact=identifier)
+        ).first()
+
+        username_to_auth = user_obj.username if user_obj else identifier
+        user = authenticate(request, username=username_to_auth, password=password)
         if user:
             login(request, user)
+            if remember_me:
+                request.session.set_expiry(1209600)  # 2 weeks
+            else:
+                request.session.set_expiry(0)  # Browser close
             messages.success(request, f'Welcome back, {user.first_name or user.username}!')
             return redirect('dashboard')
         else:
-            messages.error(request, 'Invalid username or password.')
+            messages.error(request, 'Invalid credentials. Please verify your PAN, Email, or Client ID and password.')
 
     return render(request, 'login.html', {
         'nav_main': _get_nav_menu('main'),
