@@ -2,334 +2,635 @@
 {% load static %}
 {% block title %}Tax Planning & Tax Advisory - VITTAX{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
+
 {% block content %}
-<div style="padding:100px 0 60px;background:var(--bg);">
-    <div class="container">
+<div class="subservice-page">
 
-        <!-- HEADER -->
-        <div
-            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
-            <div>
-                <span class="section-tag">Income Tax &amp; Compliance</span>
-                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Tax
-                    Planning &amp; Tax Advisory</h1>
-                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Pay Only What You Legally Owe —
-                    Strategic Tax Planning for Individuals and Businesses</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="badge badge-success">✦ Legal Tax Minimisation</span>
-                    <span class="badge badge-primary">✦ Year-Round Planning</span>
-                    <span class="badge badge-info">✦ Business &amp; Personal Tax Integrated</span>
-                </div>
-            </div>
-            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
-            </div>
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
-
-        <!-- BODY GRID -->
-        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
-
-            <!-- LEFT COLUMN -->
-            <div style="display:flex;flex-direction:column;gap:24px;">
-
-                <!-- WHAT IS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Tax Planning?</h2>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Tax
-                        planning is the legal process of arranging your financial affairs in a manner that minimises
-                        your tax liability within the framework of the Income Tax Act. It is fundamentally different
-                        from tax evasion (which is illegal) — tax planning involves proactively utilising every
-                        deduction, exemption, and structural benefit available to you under the law, applied correctly
-                        and at the right time during the financial year.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Effective
-                        tax planning is a year-round activity, not a last-minute exercise in March. It involves choosing
-                        the right tax regime (old vs. new), structuring salary components optimally (HRA, LTA, NPS,
-                        reimbursements), timing capital gains to utilise exemptions, investing in tax-saving instruments
-                        before the deadlines, choosing the right business structure, and using family-based tax planning
-                        opportunities like HUF formation and family salary arrangements.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX's tax planning advisory
-                        is provided by qualified Chartered Accountants who have deep experience in both individual and
-                        corporate tax planning. We prepare a personalised tax planning document for each client at the
-                        start of the financial year — updated based on significant financial events — and ensure every
-                        legal tax-saving opportunity is captured.</p>
-                    <div
-                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
-                        ⚠️ Effective tax planning is a year-round activity, not a last-minute exercise in March.
-                    </div>
-                </div>
-
-                <!-- WHO NEEDS -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs Tax Planning?</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Salaried individuals wanting
-                            optimal salary structure — HRA, NPS, Flexi benefits, reimbursements, etc,..</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Business owners choosing between
-                            old/new regime and business structures</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> HNIs with investment income —
-                            planning capital gains timing and exemption utilisation</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> NRIs structuring their Indian
-                            income to minimise withholding tax</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Companies planning director
-                            remuneration, depreciation, and deduction timing</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Individuals about to sell
-                            property or investments — pre-sale tax planning</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Partnerships and LLPs planning
-                            profit distribution to minimise overall tax</div>
-                    </div>
-                </div>
-
-                <!-- WHAT'S INCLUDED -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">What's Included in a Tax Planning
-                        Engagement?</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Current year tax liability
-                            computation under both old and new regime</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Personalised investment
-                            recommendations — 80C (ELSS, PPF, NPS), 80D (medical insurance), 80G,..</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Salary restructuring advisory —
-                            HRA, LTA, telephone, food, NPS employer contribution</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Capital gains tax minimisation —
-                            loss harvesting, Section 54/54EC/54F [new-sections 82/85/86] exemptions</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Business income structuring —
-                            presumptive vs. actual, home office, vehicle deduction</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> HUF formation advisory and tax
-                            benefit calculation</div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> Year-start &amp; end tax planning
-                            sessions.</div>
-                    </div>
-                </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Individual Tax Planning &amp; ITR</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹4,999<span
-                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/year</span>
-                                </p>
-                                <p style="font-size:.78rem;color:var(--text-light);">For salaried &amp; self-employed
-                                    individuals</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Salaried individuals and small business owners wanting annual tax planning
-                            </p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
-                                    Personalized tax planning document for the financial year</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Old vs. new
-                                    regime comparison and recommendation</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Investment
-                                    schedule — 80C, 80D, 80G, NPS</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Salary
-                                    restructuring advisory (if applicable)</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> 4 tax
-                                    planning consultation calls in a year.</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ITR filing
-                                    for that year.</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹4,999/year</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
-                            <span
-                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Business Tax Planning &amp; ITR</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹7,999<span
-                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/year</span>
-                                </p>
-                                <p style="font-size:.78rem;color:var(--text-light);">For proprietors, firms, and
-                                    companies</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Business owners, companies, and HNIs with complex tax situations</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
-                                    in Individual Tax Planning</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Business
-                                    income structuring and deduction maximisation</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Directors'
-                                    remuneration and dividend planning for companies</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Capital
-                                    expenditure and depreciation timing advisory</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> 12
-                                    consultation calls during the year</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹7,999/year</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is the difference
-                                between old and new tax regime?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Old regime: allows all
-                                deductions (80C, HRA, 80D, etc.) and exemptions. New regime: lower tax rates but no
-                                deductions. For individuals with significant investments and HRA, the old regime is
-                                often better. For those without deductions, the new regime saves more. VITTAX computes
-                                both every year.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can my family members help
-                                reduce my tax?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — through HUF
-                                (Hindu Undivided Family) creation (separate tax entity for Hindu families), hiring
-                                family members as employees/partners with legitimate remuneration, gifting to spouse or
-                                children (subject to clubbing rules), and assigning income-producing assets to family
-                                members. VITTAX advises on all legal family-based tax planning strategies.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Individual Tax Planning &amp; ITR</span><span
-                            style="font-weight:700;">₹4,999/yr</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Business Tax Planning &amp; ITR</span><span
-                            style="font-weight:700;">₹7,999/yr</span></div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Planning Frequency</span><span
-                            style="font-weight:700;">Year-Round</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Regime Analysis</span><span style="font-weight:700;">Old
-                            &amp; New Both</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">ITR Filing</span><span
-                            style="font-weight:700;color:var(--success);">Included</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Govt. Fees</span><span
-                            style="font-weight:700;color:var(--success);">Nil</span></div>
-                </div>
-                <div
-                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
-                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Planning
-                        Areas</p>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Salary Structuring</span><span
-                            style="font-weight:600;">HRA / NPS / LTA</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Capital Gains</span><span style="font-weight:600;">Sec
-                            54/54EC/54F</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">HUF Planning</span><span
-                            style="font-weight:600;">Separate Entity</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
-                            style="color:var(--text-light);">Deductions</span><span style="font-weight:600;">80C / 80D /
-                            80G</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div
-            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
-            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Start Your Tax Planning for This Financial
-                Year</h3>
-            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Book a Tax Planning Session → Our CAs prepare
-                your personalised plan and ensure every legal saving is captured</p>
-            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg"
-                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Book a Tax
-                    Planning Session →</a>
-                <a href="#" class="btn btn-lg"
-                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
-                    Expert</a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt; 
+                <span>INCOME TAX</span> &gt; 
+                <a href="{% url 'service_list' %}">REGISTRATIONS</a> &gt; 
+                <span class="active">TAX PLANNING &AMP; TAX ADVISORY</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Tax Planning &amp; Tax Advisory</h1>
+                    <p class="subservice-hero-subtitle">Pay Only What You Legally Owe — Strategic Tax Planning for Individuals and Businesses</p>
+                    
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ Legal Tax Minimisation</span>
+                        <span class="pill-badge pill-blue">✦ Year-Round Planning</span>
+                        <span class="pill-badge pill-cyan">✦ Business &amp; Personal Tax Integrated</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is Tax Planning?</h2>
+                    <div class="section-body-text">
+                        <p>Tax planning is the legal process of arranging your financial affairs in a manner that minimises your tax liability within the framework of the Income Tax Act. It is fundamentally different from tax evasion (which is illegal) — tax planning involves proactively utilising every deduction, exemption, and structural benefit available to you under the law, applied correctly and at the right time during the financial year.</p>
+                        <p>Effective tax planning is a year-round activity, not a last-minute exercise in March. It involves choosing the right tax regime (old vs. new), structuring salary components optimally (HRA, LTA, NPS, reimbursements), timing capital gains to utilise exemptions, investing in tax-saving instruments before the deadlines, choosing the right business structure, and using family-based tax planning opportunities like HUF formation and family salary arrangements.</p>
+                        <p>VITTAX's tax planning advisory is provided by qualified Chartered Accountants who have deep experience in both individual and corporate tax planning. We prepare a personalised tax planning document for each client at the start of the financial year — updated based on significant financial events — and ensure every legal tax-saving opportunity is captured.</p>
+                    </div>
+                    
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            ⚠️ Effective tax planning is a year-round activity, not a last-minute exercise in March.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Needs Tax Planning?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Who Needs Tax Planning? ✔ Salaried individuals wanting optimal salary structure — HRA, NPS, Flexi benefits, reimbursements, etc,..</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Business owners choosing between old/new regime and business structures</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ HNIs with investment income — planning capital gains timing and exemption utilisation</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ NRIs structuring their Indian income to minimise withholding tax</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Companies planning director remuneration, depreciation, and deduction timing</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Individuals about to sell property or investments — pre-sale tax planning</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Partnerships and LLPs planning profit distribution to minimise overall tax</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">What's Included in a Tax Planning Engagement? ✔ Current year tax liability computation under both old and new regime</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Personalised investment recommendations — 80C (ELSS, PPF, NPS), 80D (medical insurance), 80G,..</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Salary restructuring advisory — HRA, LTA, telephone, food, NPS employer contribution</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Capital gains tax minimisation — loss harvesting, Section 54/54EC/54F [new-sections 82/85/86] exemptions</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Business income structuring — presumptive vs. actual, home office, vehicle deduction</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ HUF formation advisory and tax benefit calculation</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Year-start &amp; end tax planning sessions.</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process & Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Document Collection & Vetting</h4>
+                                    <span class="step-time-pill pill-blue">Day 1</span>
+                                </div>
+                                <p class="step-description">Submit your documents digitally for verification by our CA team.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Statutory Drafting & Filing</h4>
+                                    <span class="step-time-pill pill-blue">Day 2–3</span>
+                                </div>
+                                <p class="step-description">Preparation of forms, declarations, and submission on official government portals.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+                                
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Approval & Certificate Grant</h4>
+                                    <span class="step-time-pill pill-gold">Day 3–5</span>
+                                </div>
+                                <p class="step-description">Department verification and issuance of the registration certificate and acknowledgment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (PAN Card & Aadhaar Card)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Address Proof (Electricity / Utility Bill)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Business Place Proof (Rental Agreement / Tax Receipt)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Photographs of Proprietor / Partners / Directors</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Tax Planning &amp; Tax A Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">Individual Tax P.. ₹4,999</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(1)">Business Tax Pla.. ₹7,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">Individual Tax Planning &amp; ITR</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹4,999 <small style='font-size:0.65em;font-weight:500;'>/year</small></span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">For salaried &amp; self-employed individuals</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Start Service Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91 9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Planning Frequency</span>
+                            <span class="spec-val">Year-Round</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Regime Analysis</span>
+                            <span class="spec-val">Old &amp; New Both</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">ITR Filing</span>
+                            <span class="spec-val">Included</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Govt. Fees</span>
+                            <span class="spec-val">Nil</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">KEY PLANNING AREAS</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Salary Structuring:</strong> HRA / NPS / LTA</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Capital Gains:</strong> Sec 54/54EC/54F</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>HUF Planning:</strong> Separate Entity</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Deductions:</strong> 80C / 80D / 80G</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is handled and reviewed by a dedicated Chartered Accountant. Our clients get real human consultations, custom tax-saving strategies, and guaranteed error-free filings backed by professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX" class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Tax Planning &amp; Tax Advisory Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-2">
+                <div class="pricing-plan-box">
+                    
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">INDIVIDUAL TAX PLANNING &AMP; ITR</h3>
+                    <p class="plan-subtitle">Ideal for: Salaried individuals and small business owners wanting annual tax planning</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹4,999</span>
+                        <span class="plan-period"> /year</span>
+                    </div>
+                    <p class="plan-summary-note">For salaried &amp; self-employed individuals</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Personalized tax planning document for the financial year</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Old vs. new regime comparison and recommendation</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Investment schedule — 80C, 80D, 80G, NPS</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Salary restructuring advisory (if applicable)</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>4 tax planning consultation calls in a year.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>ITR filing for that year.</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹4,999/year &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">BUSINESS TAX PLANNING &AMP; ITR</h3>
+                    <p class="plan-subtitle">Ideal for: Business owners, companies, and HNIs with complex tax situations</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹7,999</span>
+                        <span class="plan-period"> /year</span>
+                    </div>
+                    <p class="plan-summary-note">For proprietors, firms, and companies</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Everything in Individual Tax Planning</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Business income structuring and deduction maximisation</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Directors' remuneration and dividend planning for companies</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Capital expenditure and depreciation timing advisory</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>12 consultation calls during the year</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹7,999/year &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity, credit profile, and tax registrations without interrupting your business operations. Our unified portal keeps all certificates, filings, and notices in one place.</p>
+                    
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Statutory_Registration_Certificate.pdf</span></div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Department_Filing_Challan.pdf</span></div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>CA_Vetting_Confirmation.pdf</span></div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about Tax Planning &amp; Tax Advisory in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>What is the difference between old and new tax regime?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Old regime: allows all deductions (80C, HRA, 80D, etc.) and exemptions. New regime: lower tax rates but no deductions. For individuals with significant investments and HRA, the old regime is often better. For those without deductions, the new regime saves more. VITTAX computes both every year.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can my family members help reduce my tax?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — through HUF (Hindu Undivided Family) creation (separate tax entity for Hindu families), hiring family members as employees/partners with legitimate remuneration, gifting to spouse or children (subject to clubbing rules), and assigning income-producing assets to family members. VITTAX advises on all legal family-based tax planning strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your Tax Planning &amp; Tax Advisory Today</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="tel:+919177657288" class="btn-cta-phone"><i class="fas fa-phone-alt"></i> Call Expert: +91 9177657288</a>
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-card-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            faqItems.forEach(i => i.classList.remove('open'));
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+});
+
+// Dynamic Sidebar Plan Switcher
+const servicePlansData = [{"name": "Individual Tax Planning &amp; ITR", "price": "\u20b94,999", "period": "/year", "sub": "For salaried &amp; self-employed individuals"}, {"name": "Business Tax Planning &amp; ITR", "price": "\u20b97,999", "period": "/year", "sub": "For proprietors, firms, and companies"}];
+
+function switchSidebarPlan(idx) {
+    if (!servicePlansData || !servicePlansData[idx]) return;
+    const p = servicePlansData[idx];
+    
+    // Toggle active state on tabs
+    const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+    tabs.forEach((tab, i) => {
+        if (i === idx) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+    
+    // Update price and plan name in sidebar
+    const nameEl = document.getElementById('sidebarPlanName');
+    const priceEl = document.getElementById('sidebarPrice');
+    const subEl = document.getElementById('sidebarSub');
+    
+    if (nameEl) nameEl.textContent = p.name;
+    if (priceEl) {
+        priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+    }
+    if (subEl && p.sub) {
+        subEl.textContent = p.sub;
+    }
+}
+</script>
 {% endblock %}

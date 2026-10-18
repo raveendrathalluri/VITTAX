@@ -2,415 +2,690 @@
 {% load static %}
 {% block title %}PF / ESI / PT Compliance - VITTAX{% endblock %}
 
-{% block content %}
-<div style="padding:100px 0 60px;background:var(--bg);">
-    <div class="container">
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
 
-        <!-- HEADER -->
-        <div
-            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
-            <div>
-                <span class="section-tag">Accounting &amp; Payroll</span>
-                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">PF /
-                    ESI / PT Compliance</h1>
-                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Labour Law Compliance — Zero
-                    Penalties, Zero Stress</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="badge badge-success">✦ Monthly Challans Filed on Time</span>
-                    <span class="badge badge-primary">✦ Annual Returns Submitted</span>
-                    <span class="badge badge-info">✦ Employee Claims Assisted</span>
+{% block content %}
+<div class="subservice-page">
+
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span class="promo-code">VITTAX500</span> at checkout!</span>
+        </div>
+    </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt; 
+                <span>ACCOUNTING</span> &gt; 
+                <a href="{% url 'service_list' %}">REGISTRATIONS</a> &gt; 
+                <span class="active">PF / ESI / PT COMPLIANCE</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">PF / ESI / PT Compliance</h1>
+                    <p class="subservice-hero-subtitle">Labour Law Compliance — Zero Penalties, Zero Stress</p>
+                    
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ Monthly Challans Filed on Time</span>
+                        <span class="pill-badge pill-blue">✦ Annual Returns Submitted</span>
+                        <span class="pill-badge pill-cyan">✦ Employee Claims Assisted</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to Expert</a>
+                    </div>
                 </div>
-            </div>
-            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
             </div>
         </div>
+    </section>
 
-        <!-- BODY GRID -->
-        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
 
-            <!-- LEFT COLUMN -->
-            <div style="display:flex;flex-direction:column;gap:24px;">
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
 
-                <!-- WHAT IS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is PF/ESI/PT Compliance?</h2>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">PF
-                        (Provident Fund), ESI (Employee State Insurance), and PT (Professional Tax) are mandatory
-                        statutory contributions every employer must comply with. The Employees' Provident Fund &amp;
-                        Miscellaneous Provisions Act, 1952 mandates PF for establishments with 20+ employees; ESI under
-                        the ESI Act, 1948 applies to establishments with 10+ employees where salary is below
-                        ₹21,000/month; PT is a state-level tax levied on salaried employees in most states.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">
-                        Non-compliance attracts hefty penalties, interest, prosecution, and attachment of bank accounts
-                        by enforcement authorities. VITTAX manages the complete compliance calendar — from monthly
-                        challan computation and deposit to annual returns, employee passbook maintenance, and grievance
-                        resolution with EPFO/ESIC portals.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">We also assist with PF/ESI
-                        registrations, transfers, withdrawals, and claims processing for employees — making VITTAX the
-                        one-stop solution for all labour compliance needs.</p>
-                    <div
-                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
-                        ⚠️ Non-compliance attracts hefty penalties, interest, prosecution, and attachment of bank
-                        accounts by enforcement authorities.
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is PF/ESI/PT Compliance?</h2>
+                    <div class="section-body-text">
+                        <p>PF (Provident Fund), ESI (Employee State Insurance), and PT (Professional Tax) are mandatory statutory contributions every employer must comply with. The Employees' Provident Fund &amp; Miscellaneous Provisions Act, 1952 mandates PF for establishments with 20+ employees; ESI under the ESI Act, 1948 applies to establishments with 10+ employees where salary is below ₹21,000/month; PT is a state-level tax levied on salaried employees in most states.</p>
+                        <p>Non-compliance attracts hefty penalties, interest, prosecution, and attachment of bank accounts by enforcement authorities. VITTAX manages the complete compliance calendar — from monthly challan computation and deposit to annual returns, employee passbook maintenance, and grievance resolution with EPFO/ESIC portals.</p>
+                        <p>We also assist with PF/ESI registrations, transfers, withdrawals, and claims processing for employees — making VITTAX the one-stop solution for all labour compliance needs.</p>
+                    </div>
+                    
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            ⚠️ Non-compliance attracts hefty penalties, interest, prosecution, and attachment of bank accounts by enforcement authorities.
+                        </div>
                     </div>
                 </div>
 
-                <!-- WHO NEEDS -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs This?</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Growing
-                                    Businesses:</strong> Businesses with 10+ employees (ESI threshold) or 20+ employees
-                                (PF threshold)</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Notice
-                                    Recipients:</strong> Companies with delayed or missed filings attracting EPFO/ESIC
-                                notices</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Tender
-                                    Applicants:</strong> Businesses needing labour law compliance to qualify for
-                                government tenders</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>All
-                                    Sectors:</strong> Factories, shops &amp; establishments, IT companies, service
-                                firms</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Employee
-                                    Queries:</strong> Companies whose employees are raising PF withdrawal or transfer
-                                queries</span></div>
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Needs This?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Who Needs This? ✔ Growing Businesses: Businesses with 10+ employees (ESI threshold) or 20+ employees (PF threshold)</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Notice Recipients: Companies with delayed or missed filings attracting EPFO/ESIC notices</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Tender Applicants: Businesses needing labour law compliance to qualify for government tenders</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ All Sectors: Factories, shops &amp; establishments, IT companies, service firms</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Employee Queries: Companies whose employees are raising PF withdrawal or transfer queries</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Services Covered 🏦 Provident Fund (PF) • PF registration for new establishments</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Monthly ECR challan computation and filing (UAN-wise)</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Annual PF return (Form 3A, 6A) filing</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• PF withdrawal, transfer (Form 10C, 13, 19) assistance</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• EPFO inspection/notice handling</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">🏥 ESI (Employee State Insurance) • ESI registration, employee enrolment, and IP number generation</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Monthly challan computation and payment</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Half-yearly ESI return filing</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• ESI card assistance, claim support</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">📋 Professional Tax (PT) • PT registration (employer &amp; employee) in applicable states</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Monthly/quarterly PT challan filing</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card span-two">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Annual PT return filing</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- SERVICES COVERED -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Services Covered</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process & Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA experts:</p>
 
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                🏦 Provident Fund (PF)</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> PF registration for new
-                                    establishments</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Monthly ECR challan
-                                    computation and filing (UAN-wise)</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Annual PF return (Form
-                                    3A, 6A) filing</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> PF withdrawal, transfer
-                                    (Form 10C, 13, 19) assistance</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> EPFO inspection/notice
-                                    handling</div>
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Document Collection & Vetting</h4>
+                                    <span class="step-time-pill pill-blue">Day 1</span>
+                                </div>
+                                <p class="step-description">Submit your documents digitally for verification by our CA team.</p>
                             </div>
                         </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                🏥 ESI (Employee State Insurance)</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> ESI registration,
-                                    employee enrolment, and IP number generation</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Monthly challan
-                                    computation and payment</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Half-yearly ESI return
-                                    filing</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> ESI card assistance,
-                                    claim support</div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Statutory Drafting & Filing</h4>
+                                    <span class="step-time-pill pill-blue">Day 2–3</span>
+                                </div>
+                                <p class="step-description">Preparation of forms, declarations, and submission on official government portals.</p>
                             </div>
                         </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+                                
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Approval & Certificate Grant</h4>
+                                    <span class="step-time-pill pill-gold">Day 3–5</span>
+                                </div>
+                                <p class="step-description">Department verification and issuance of the registration certificate and acknowledgment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                📋 Professional Tax (PT)</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> PT registration (employer
-                                    &amp; employee) in applicable states</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Monthly/quarterly PT
-                                    challan filing</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Annual PT return filing
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (PAN Card & Aadhaar Card)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Address Proof (Electricity / Utility Bill)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Business Place Proof (Rental Agreement / Tax Receipt)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Photographs of Proprietor / Partners / Directors</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">PF / ESI / PT Compliance Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">Basic ₹1,499</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(1)">Standard ₹2,999</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(2)">Enterprise ₹7,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">Basic</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹1,499 <small style='font-size:0.65em;font-weight:500;'>/month</small></span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">PF + ESI monthly compliance, up to 25 employees</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Start Service Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91 9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">PF Threshold</span>
+                            <span class="spec-val">20+ Employees</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">ESI Threshold</span>
+                            <span class="spec-val">10+ Employees</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">ESI Salary Limit</span>
+                            <span class="spec-val">Below ₹21,000/mo</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Govt. Fees</span>
+                            <span class="spec-val">Nil</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">PT STATES COVERED</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Maharashtra:</strong> ✔</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Karnataka:</strong> ✔</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Telangana / AP:</strong> ✔</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Tamil Nadu / WB:</strong> ✔</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is handled and reviewed by a dedicated Chartered Accountant. Our clients get real human consultations, custom tax-saving strategies, and guaranteed error-free filings backed by professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX" class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">PF / ESI / PT Compliance Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-3">
+                <div class="pricing-plan-box">
+                    
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">BASIC</h3>
+                    <p class="plan-subtitle">Ideal for: Small businesses, startups</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹1,499</span>
+                        <span class="plan-period"> /month</span>
+                    </div>
+                    <p class="plan-summary-note">PF + ESI monthly compliance, up to 25 employees</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Monthly PF ECR challan</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Monthly ESI challan</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Annual returns</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Up to 25 employees</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹1,499/month &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">STANDARD</h3>
+                    <p class="plan-subtitle">Ideal for: SMEs, mid-sized companies</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹2,999</span>
+                        <span class="plan-period"> /month</span>
+                    </div>
+                    <p class="plan-summary-note">PF + ESI + PT, up to 100 employees</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Everything in Basic</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>PT compliance (all applicable states)</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Employee PF/ESI query handling</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Up to 100 employees</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹2,999/month &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box">
+                    
+                    <div class="plan-tag">TIER 3 / ACCREDITED</div>
+                    <h3 class="plan-title">ENTERPRISE</h3>
+                    <p class="plan-subtitle">Ideal for: Large companies, factories, multi-location businesses</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹7,999</span>
+                        <span class="plan-period"> /month</span>
+                    </div>
+                    <p class="plan-summary-note">Full compliance + claims + inspections</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Everything in Standard</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>PF withdrawal/transfer processing</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>ESI claim assistance</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Notice/inspection handling</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Unlimited employees</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹7,999/month &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity, credit profile, and tax registrations without interrupting your business operations. Our unified portal keeps all certificates, filings, and notices in one place.</p>
+                    
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Statutory_Registration_Certificate.pdf</span></div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Department_Filing_Challan.pdf</span></div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>CA_Vetting_Confirmation.pdf</span></div>
+                                    <span class="mockup-tag">Issued</span>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Basic</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹1,499<span
-                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
-                                </p>
-                                <p style="font-size:.78rem;color:var(--text-light);">PF + ESI monthly compliance, up to
-                                    25 employees</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Small businesses, startups</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Monthly PF
-                                    ECR challan</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Monthly ESI
-                                    challan</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Annual
-                                    returns</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Up to 25
-                                    employees</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹1,499/month</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
-                            <span
-                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Standard</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹2,999<span
-                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
-                                </p>
-                                <p style="font-size:.78rem;color:var(--text-light);">PF + ESI + PT, up to 100 employees
-                                </p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: SMEs, mid-sized companies</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
-                                    in Basic</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> PT
-                                    compliance (all applicable states)</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Employee
-                                    PF/ESI query handling</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Up to 100
-                                    employees</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹2,999/month</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Enterprise</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹7,999<span
-                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
-                                </p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Full compliance + claims +
-                                    inspections</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Large companies, factories, multi-location businesses</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
-                                    in Standard</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> PF
-                                    withdrawal/transfer processing</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ESI claim
-                                    assistance</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
-                                    Notice/inspection handling</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Unlimited
-                                    employees</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹7,999/month</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What if we missed PF filings
-                                for past months?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">We handle catch-up
-                                filings with damage calculation and help you respond to EPFO notices to minimize
-                                penalties.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is PT applicable in all
-                                states?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No. PT is applicable
-                                in states like Maharashtra, Karnataka, West Bengal, Andhra Pradesh, Telangana, Tamil
-                                Nadu, and a few others. We assess your applicability state-wise.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do you help employees with PF
-                                withdrawal?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. We guide
-                                employees through the online withdrawal/transfer process and assist with physical forms
-                                if needed.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Basic (up to 25)</span><span
-                            style="font-weight:700;">₹1,499/mo</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Standard (up to 100)</span><span
-                            style="font-weight:700;">₹2,999/mo</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Enterprise (unlimited)</span><span
-                            style="font-weight:700;">₹7,999/mo</span></div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">PF Threshold</span><span style="font-weight:700;">20+
-                            Employees</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">ESI Threshold</span><span style="font-weight:700;">10+
-                            Employees</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">ESI Salary Limit</span><span
-                            style="font-weight:700;">Below ₹21,000/mo</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Govt. Fees</span><span
-                            style="font-weight:700;color:var(--success);">Nil</span></div>
-                </div>
-                <div
-                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
-                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ PT States
-                        Covered</p>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Maharashtra</span><span style="font-weight:600;">✔</span>
-                    </div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Karnataka</span><span style="font-weight:600;">✔</span>
-                    </div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Telangana / AP</span><span
-                            style="font-weight:600;">✔</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
-                            style="color:var(--text-light);">Tamil Nadu / WB</span><span
-                            style="font-weight:600;">✔</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div
-            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
-            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Stay Labour Law Compliant — VITTAX Manages
-                Your PF, ESI &amp; PT</h3>
-            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Monthly challans, annual returns, employee claims
-                — all handled on time with zero penalties</p>
-            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg"
-                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
-                    →</a>
-                <a href="#" class="btn btn-lg"
-                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
-                    Expert</a>
             </div>
         </div>
+    </section>
 
-    </div>
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about PF / ESI / PT Compliance in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>What if we missed PF filings for past months?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We handle catch-up filings with damage calculation and help you respond to EPFO notices to minimize penalties.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Is PT applicable in all states?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. PT is applicable in states like Maharashtra, Karnataka, West Bengal, Andhra Pradesh, Telangana, Tamil Nadu, and a few others. We assess your applicability state-wise.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Do you help employees with PF withdrawal?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We guide employees through the online withdrawal/transfer process and assist with physical forms if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your PF / ESI / PT Compliance Today</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="tel:+919177657288" class="btn-cta-phone"><i class="fas fa-phone-alt"></i> Call Expert: +91 9177657288</a>
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-card-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            faqItems.forEach(i => i.classList.remove('open'));
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+});
+
+// Dynamic Sidebar Plan Switcher
+const servicePlansData = [{"name": "Basic", "price": "\u20b91,499", "period": "/month", "sub": "PF + ESI monthly compliance, up to 25 employees"}, {"name": "Standard", "price": "\u20b92,999", "period": "/month", "sub": "PF + ESI + PT, up to 100 employees"}, {"name": "Enterprise", "price": "\u20b97,999", "period": "/month", "sub": "Full compliance + claims + inspections"}];
+
+function switchSidebarPlan(idx) {
+    if (!servicePlansData || !servicePlansData[idx]) return;
+    const p = servicePlansData[idx];
+    
+    // Toggle active state on tabs
+    const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+    tabs.forEach((tab, i) => {
+        if (i === idx) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+    
+    // Update price and plan name in sidebar
+    const nameEl = document.getElementById('sidebarPlanName');
+    const priceEl = document.getElementById('sidebarPrice');
+    const subEl = document.getElementById('sidebarSub');
+    
+    if (nameEl) nameEl.textContent = p.name;
+    if (priceEl) {
+        priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+    }
+    if (subEl && p.sub) {
+        subEl.textContent = p.sub;
+    }
+}
+</script>
 {% endblock %}

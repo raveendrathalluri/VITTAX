@@ -2,290 +2,614 @@
 {% load static %}
 {% block title %}Partnership Firm Registration - VITTAX{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
+
 {% block content %}
-<div style="padding:100px 0 60px;background:var(--bg);">
-    <div class="container">
+<div class="subservice-page">
 
-        <!-- HEADER -->
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
-            <div>
-                <span class="section-tag">Other Services</span>
-                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Partnership Firm Registration</h1>
-                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Simple, Flexible, Quick — Classic Partnership, Properly Registered</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="badge badge-success">✦ Easiest to Form</span>
-                    <span class="badge badge-primary">✦ Flexible Profit-Sharing</span>
-                    <span class="badge badge-info">✦ Ideal for Small Businesses</span>
-                </div>
-            </div>
-            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
-            </div>
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
-
-        <!-- BODY GRID -->
-        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
-
-            <!-- LEFT COLUMN -->
-            <div style="display:flex;flex-direction:column;gap:24px;">
-
-                <!-- WHAT IS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is a Partnership Firm?</h2>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">A Partnership Firm is a business structure where two or more individuals jointly own and operate a business with shared profits and responsibilities. It is governed by the Indian Partnership Act, 1932. Unlike a Pvt Ltd or LLP, a partnership firm is not a limited liability entity — partners share unlimited personal liability for the firm's debts. However, it is the simplest and most cost-effective structure for small businesses, trading firms, and family businesses that do not need external investment.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Registration of a partnership firm under the Indian Partnership Act is optional (not mandatory) — but a registered firm can file suits in courts against third parties, while an unregistered firm cannot. Registration is done by filing a Statement (Form 1) with the Registrar of Firms in the respective state. A registered firm also commands better credibility with banks, suppliers, and government agencies.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">VITTAX assists in Partnership Deed drafting, firm registration with Registrar of Firms, PAN application, GST registration, and bank account setup to help you start your partnership business smoothly.</p>
-                    <div style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
-                        ⚠️ Partners share unlimited personal liability for the firm's debts — personal assets of all partners are exposed. Consider an LLP for limited liability protection.
-                    </div>
-                </div>
-
-                <!-- WHO SHOULD -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Who Should Register a Partnership Firm?</h2>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
-                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
-                            <div>
-                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Traders</p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Small traders, retailers, and wholesalers with 2+ co-owners</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
-                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
-                            <div>
-                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Family Businesses</p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Family businesses with multiple family members as co-owners</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
-                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
-                            <div>
-                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Small Professionals</p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Professional practices (accountants, doctors) with multiple practitioners</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:rgba(26,75,140,.04);border-radius:8px;">
-                            <span style="color:var(--success);font-weight:700;font-size:.85rem;flex-shrink:0;">✔</span>
-                            <div>
-                                <p style="font-size:.83rem;font-weight:700;color:var(--text);margin-bottom:2px;">Cost-Conscious Businesses</p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Businesses wanting a simple structure with low setup and compliance costs</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROCESS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Registration Process &amp; Timeline</h2>
-                    <div style="display:flex;flex-direction:column;gap:0;">
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
-                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">1</div>
-                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
-                            </div>
-                            <div style="padding-bottom:20px;flex:1;">
-                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Partnership Deed Drafting</p>
-                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–2 days</span>
-                                </div>
-                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Draft a comprehensive partnership deed covering all key terms on stamp paper of prescribed value.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
-                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">2</div>
-                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
-                            </div>
-                            <div style="padding-bottom:20px;flex:1;">
-                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Notarisation</p>
-                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">Same day</span>
-                                </div>
-                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Partners sign the deed before a Notary Public.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
-                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">3</div>
-                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
-                            </div>
-                            <div style="padding-bottom:20px;flex:1;">
-                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Registration Application</p>
-                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1 day</span>
-                                </div>
-                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">File Form 1 (Statement for Registration) with Registrar of Firms with prescribed fee.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
-                                <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">4</div>
-                                <div style="width:2px;flex:1;background:rgba(26,75,140,.12);margin:4px 0;min-height:28px;"></div>
-                            </div>
-                            <div style="padding-bottom:20px;flex:1;">
-                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">Certificate of Registration</p>
-                                    <span style="font-size:.72rem;background:rgba(26,75,140,.08);color:var(--primary);padding:2px 8px;border-radius:50px;font-weight:600;">1–7 working days (varies by state)</span>
-                                </div>
-                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Registrar issues Certificate of Registration; firm is now officially registered.</p>
-                            </div>
-                        </div>
-                        <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
-                                <div style="width:32px;height:32px;border-radius:50%;background:var(--success);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;">5</div>
-                            </div>
-                            <div style="flex:1;">
-                                <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-                                    <p style="font-size:.85rem;font-weight:700;color:var(--text);">PAN + GSTIN</p>
-                                    <span style="font-size:.72rem;background:rgba(39,174,96,.12);color:var(--success);padding:2px 8px;border-radius:50px;font-weight:600;">5–7 days</span>
-                                </div>
-                                <p style="font-size:.80rem;color:var(--text-light);line-height:1.6;">Apply for firm PAN from Income Tax and GSTIN if turnover crosses threshold.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DOCUMENTS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;">Documents Required</h2>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                        <div>
-                            <p style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">For All Partners</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
-                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> PAN card, Aadhaar card, Mobile number and email ID</li>
-                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Address proof (bank statement or utility bill — not older than 2 months)</li>
-                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Passport-size photographs</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p style="font-size:.83rem;font-weight:700;color:var(--primary);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(26,75,140,.12);">For Firm</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
-                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Partnership Deed on stamp paper (value varies by state)</li>
-                                <li style="font-size:.81rem;display:flex;align-items:flex-start;gap:8px;color:var(--text-light);"><span style="color:var(--primary);font-weight:700;flex-shrink:0;">•</span> Registered office address proof — Rental agreement + utility bill</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing Plans</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-
-                        <!-- BASIC -->
-                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Basic</p>
-                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Partnership Deed + Registration</p>
-                            </div>
-                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Small traders, family businesses, informal partnerships going formal</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Partnership deed drafting</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Notarization advisory</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Form-1 filing</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Certificate of registration</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> PAN application</li>
-                            </ul>
-                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹1,999</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">State fee + stamp duty at actuals (~₹500–4,000)</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <!-- STANDARD -->
-                        <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
-                            <span style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
-                            <div>
-                                <p style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">Standard</p>
-                                <p style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">₹3,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> one-time</span></p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Registration + GSTIN + bank account</p>
-                            </div>
-                            <p style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">Ideal for: Businesses requiring GST registration from Day 1</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything in Basic</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> GSTIN application</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Bank account advisory</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Business commencement letter</li>
-                            </ul>
-                            <div style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">VITTAX Fee: <strong style="color:var(--primary);">₹3,999</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--success);">State fee + stamp duty at actuals</strong></div>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Is partnership firm registration mandatory?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No — but an unregistered firm cannot file a suit in court against third parties or enforce its rights legally. Registration is strongly recommended. It also helps with bank account opening and government tenders.</p>
-                        </div>
-                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How many partners can a partnership firm have?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">A maximum of 50 partners for any business and 20 partners for a banking business. Minimum 2 partners required.</p>
-                        </div>
-                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can a partnership firm be converted to an LLP or Pvt Ltd later?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — a partnership firm can be converted to an LLP under Section 55 of the LLP Act. Conversion to a Pvt Ltd is also possible under the Companies Act. VITTAX handles both conversions.</p>
-                        </div>
-                        <div style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How much capital is required to start a Partnership?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">A Partnership firm can be started with any amount of capital. There is no minimum requirement as such.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Basic Registration</span><span style="font-weight:700;">₹1,999</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Standard (with GST)</span><span style="font-weight:700;">₹3,999</span></div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Min. Partners</span><span style="font-weight:700;">2</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Max. Partners</span><span style="font-weight:700;">50</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Min. Capital</span><span style="font-weight:700;">No Minimum</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span style="color:var(--text-light);">Liability</span><span style="font-weight:700;">Unlimited</span></div>
-                </div>
-                <div style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
-                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Registration Includes</p>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Deed</span><span style="font-weight:600;">Drafted + Notarised</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Filing</span><span style="font-weight:600;">Form-1 with RoF</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">PAN</span><span style="font-weight:600;">Firm PAN Applied</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span style="color:var(--text-light);">Conversion</span><span style="font-weight:600;">LLP / Pvt Ltd Advisory</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
-            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Register Your Partnership Firm — Quick, Affordable, Hassle-Free with VITTAX</h3>
-            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Easiest to form, flexible profit-sharing, ideal for small businesses — classic partnership, properly registered</p>
-            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg" style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today →</a>
-                <a href="#" class="btn btn-lg" style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to Expert</a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt; 
+                <span>START A BUSINESS</span> &gt; 
+                <a href="{% url 'service_list' %}">REGISTRATIONS</a> &gt; 
+                <span class="active">PARTNERSHIP FIRM</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Partnership Firm Registration</h1>
+                    <p class="subservice-hero-subtitle">Simple, Flexible, Quick — Classic Partnership, Properly Registered with drafted deed, RoF submission, and bank readiness in 3–7 days.</p>
+                    
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ Easiest to Form</span>
+                        <span class="pill-badge pill-blue">✦ Flexible Profit-Sharing</span>
+                        <span class="pill-badge pill-cyan">✦ Ideal for Small Businesses</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is a Partnership Firm?</h2>
+                    <div class="section-body-text">
+                        <p>A Partnership Firm is a formal business structure where two or more individuals come together to jointly own, operate, and manage a commercial venture under a mutually agreed profit-sharing ratio. Governed by the Indian Partnership Act, 1932, it represents the most cost-effective and flexible structure for co-founders, traders, and family enterprises that do not require external venture capital.</p>
+                        <p>Registration under the Indian Partnership Act is optional by law, but highly recommended in practice: registered firms hold legal standing to file court suits against defaulting third parties, enjoy enhanced creditworthiness with commercial banks, and qualify smoothly for government tenders. Registration is secured by filing Form 1 (Statement of Registration) with the Registrar of Firms (RoF).</p>
+                        <p>VITTAX provides comprehensive partnership assistance: drafting tailored partnership deeds on appropriate state stamp paper, notarisation advisory, firm PAN application, GSTIN registration, and bank account setup.</p>
+                    </div>
+
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            <strong>Unlimited Personal Liability:</strong> Partners share joint and several unlimited liability for the firm's obligations and business debts. Personal assets of all partners remain accessible to business creditors. If you require liability protection, consider registering as a Limited Liability Partnership (LLP).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER -->
+                <div class="subservice-content-card">
+                    <div class="section-head-split">
+                        <div>
+                            <div class="section-micro-tag">ELIGIBILITY &amp; IDEAL PROFILE</div>
+                            <h2 class="section-serif-title">Who Should Register a Partnership Firm?</h2>
+                        </div>
+                        <span class="section-head-badge">Co-ownership structure</span>
+                    </div>
+
+                    <div class="subservice-eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Traders &amp; Wholesalers</h4>
+                                <p class="eligibility-desc">Retailers, distributors, and trading businesses with 2 or more active partners managing operations.</p>
+                            </div>
+                        </div>
+
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-users"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Family Businesses</h4>
+                                <p class="eligibility-desc">Family enterprises seeking a formal legal agreement with clearly documented profit-sharing and management rights.</p>
+                            </div>
+                        </div>
+
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Professional Practices</h4>
+                                <p class="eligibility-desc">Clinics, consulting firms, architecture studios, and accountancy practices with multiple professionals.</p>
+                            </div>
+                        </div>
+
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-coins"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Cost-Conscious Co-Founders</h4>
+                                <p class="eligibility-desc">Founders seeking a lightweight legal entity with low initial setup costs and minimal recurring MCA compliance burdens.</p>
+                            </div>
+                        </div>
+
+                        <div class="eligibility-card span-two">
+                            <div class="eligibility-icon"><i class="fas fa-handshake"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Joint Ventures &amp; Project-Based Partnerships</h4>
+                                <p class="eligibility-desc">Two or more business owners collaborating on specific commercial contracts or projects requiring combined capital and expertise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. SETUP PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP PROCESS</div>
+                    <h2 class="section-serif-title">Registration Process &amp; Timeline</h2>
+                    <p class="section-subtitle-muted">Step-by-step roadmap for partnership deed execution and official registration.</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Partnership Deed Drafting</h4>
+                                    <span class="step-time-pill pill-blue">Timeline: 1–2 Days</span>
+                                </div>
+                                <p class="step-description">Custom drafting of a comprehensive Partnership Deed specifying profit-sharing ratios, capital contribution, and dispute mechanisms on prescribed stamp paper.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Notarisation &amp; Execution</h4>
+                                    <span class="step-time-pill pill-blue">Timeline: Same Day</span>
+                                </div>
+                                <p class="step-description">Partners execute the deed before a licensed Notary Public, accompanied by two independent witnesses as mandated by state laws.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">3</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Registration Application (Form 1)</h4>
+                                    <span class="step-time-pill pill-blue">Timeline: 1 Day</span>
+                                </div>
+                                <p class="step-description">Submission of Form 1 (Statement of Registration) along with attested deed copy and statutory fees to the Registrar of Firms (RoF).</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">4</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Certificate of Registration</h4>
+                                    <span class="step-time-pill pill-blue">Timeline: 1–7 Working Days</span>
+                                </div>
+                                <p class="step-description">The Registrar reviews the application and issues the official Certificate of Registration, formally entering the firm into the state register.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Firm PAN &amp; GSTIN Issuance</h4>
+                                    <span class="step-time-pill pill-gold">Timeline: 5–7 Days</span>
+                                </div>
+                                <p class="step-description">Application for dedicated firm PAN card from the Income Tax Department and GSTIN registration for opening the firm's commercial current account.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">KYC &amp; COMPLIANCE REQUIREMENTS</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-subtitle-muted">Submit all partner and premises documents digitally in PDF or JPG format.</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">KYC of All Partners</h4>
+                                <p class="doc-desc">Self-attested PAN cards, Aadhaar cards, mobile numbers and email addresses of all designated partners.</p>
+                            </div>
+                        </div>
+
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-contract"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Partnership Deed</h4>
+                                <p class="doc-desc">Notarised Partnership Deed printed on non-judicial stamp paper of prescribed state stamp duty value.</p>
+                            </div>
+                        </div>
+
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-building"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Registered Office Proof</h4>
+                                <p class="doc-desc">Recent utility bill (electricity/water), NOC from property owner, and registered rent/lease agreement.</p>
+                            </div>
+                        </div>
+
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-camera"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Partner Photographs</h4>
+                                <p class="doc-desc">Passport size photographs of each partner for notary filing and bank current account documentation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Partnership Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" id="tabStarter">Basic ₹1,999</button>
+                        <button type="button" class="enquiry-tab" id="tabComplete">Standard ₹3,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label">Total Fee</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹1,999</span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">Includes Deed Drafting + Notary Advisory + Form-1 Filing, zero hidden costs.</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Start Registration Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91 9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Min. Partners</span>
+                            <span class="spec-val">2 Partners</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Max. Partners</span>
+                            <span class="spec-val">50 Partners</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Capital Required</span>
+                            <span class="spec-val">No Minimum Limit</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Liability Type</span>
+                            <span class="spec-val text-danger">Unlimited Joint</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">REGISTRATION INCLUDES</p>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>Custom Deed Drafted &amp; Notarised</span></div>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>Form-1 RoF Application Filed</span></div>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span id="sidebarGstItem">Firm PAN Card Application</span></div>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>LLP / Pvt Ltd Upgrade Roadmap</span></div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL ASSISTANCE:</strong> Doorstep drafting and digital filing across India.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"A comprehensive, customized Partnership Deed is vital. It prevents future disputes regarding capital, profit ratios, partner exits, and intellectual property rights."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is handled and reviewed by a dedicated Chartered Accountant. Our clients get real human consultations, custom tax-saving strategies, and guaranteed error-free filings backed by professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12,000+</span>
+                            <span class="stat-label">Deeds Executed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">RoF Acceptance Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX" class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Senior Corporate Advocate &amp; CA assigned to your firm deed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Partnership Firm Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container">
+                <!-- BASIC PLAN -->
+                <div class="pricing-plan-box">
+                    <div class="plan-tag">BASIC SETUP / INFORMAL PARTNERSHIPS</div>
+                    <h3 class="plan-title">BASIC SETUP</h3>
+                    <p class="plan-subtitle">Ideal for small traders, family businesses, and informal co-founders formalizing operations.</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹1,999</span>
+                        <span class="plan-period">one-time all inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Includes complete Partnership Deed drafting + Notarisation advisory + RoF Form-1 filing assistance.</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Partnership Deed Drafting:</strong> Customized clauses tailored to your industry.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Notarization Advisory:</strong> Stamp paper guidance and execution support.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>RoF Form-1 Filing:</strong> Documentation submission with Registrar of Firms.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Firm PAN Application:</strong> Income Tax Department PAN card filing for the firm.</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>Govt Statutory Fees:</strong> State registration fee and stamp duty at actuals (~₹500–4,000 depending on state).
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <!-- STANDARD PLAN (POPULAR) -->
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">MOST POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">FULL COMMERCIAL READY SUITE</div>
+                    <h3 class="plan-title">STANDARD SETUP</h3>
+                    <p class="plan-subtitle">Recommended for businesses requiring GST registration, bank readiness, and vendor contracts from Day 1.</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹3,999</span>
+                        <span class="plan-period">one-time all inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Includes Deed Drafting + RoF Filing + GSTIN Registration + Bank Current Account documentation.</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Everything in Basic Setup:</strong> Deed, notarisation, RoF filing, and firm PAN.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>GSTIN Registration:</strong> Complete application and ARN tracking until certificate issuance.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Bank Current Account Intro:</strong> Priority onboarding letter for HDFC, ICICI, or SBI.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Business Commencement Kit:</strong> Standard partnership resolution and invoice formats.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>CA Advisory Call:</strong> 1-on-1 tax structuring and Section 40(b) partner salary advisory.</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Professional Fee: ₹3,999</strong> | Statutory Govt Fees: State registration fee at actuals.
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your partnership firm scales in revenues and operations, VITTAX seamlessly assists in converting your traditional partnership into an LLP or Private Limited Company without interrupting daily business. Our unified portal keeps all partner records, certificates, and tax filings securely organized.</p>
+                    
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access executed deeds, RoF registration certificates, firm PAN, and GST records 24/7 via the VITTAX portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Effortless LLP Conversion:</strong>
+                                <p>When ready to eliminate partner liability, transition under Section 55 of the LLP Act while retaining your firm identity and GST history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Partnership Overview</div>
+                                <div class="mockup-nav-item">Executed Deed</div>
+                                <div class="mockup-nav-item">RoF Certificate</div>
+                                <div class="mockup-nav-item">GSTIN Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Firm Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Partnership_Deed_Signed.pdf</span></div>
+                                    <span class="mockup-tag">Notarised</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>RoF_Form_1_Acknowledgment.pdf</span></div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Firm_PAN_Card_Allotment.pdf</span></div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about registering and operating a partnership firm in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>Is partnership firm registration mandatory?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No — registration under the Indian Partnership Act, 1932 is technically optional. However, an unregistered firm cannot file legal suits against third parties in court to enforce contractual rights. Registration is strongly recommended for bank account opening, government tenders, and business credibility.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>How many partners can a partnership firm have?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A partnership firm requires a minimum of 2 partners. Under the Companies Act, the maximum number of partners permitted in a partnership firm is 50 for normal commercial businesses, and 20 for banking enterprises.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can a partnership firm be converted to an LLP or Pvt Ltd later?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. A partnership firm can be converted into a Limited Liability Partnership (LLP) under Section 55 of the LLP Act 2008, or into a Private Limited Company under Part I Chapter XXI of the Companies Act 2013. VITTAX manages both conversion pathways seamlessly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>How much capital is required to start a Partnership?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>There is no minimum statutory capital requirement to register a partnership firm. Partners can contribute any capital amount in cash or kind, as formally agreed upon in the Partnership Deed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR BUSINESS JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Register Your Partnership Firm in 5–7 Days — VITTAX Handles All Registrations</h2>
+                <p class="cta-banner-desc">Easiest to form, flexible profit-sharing, ideal for small businesses — classic partnership, properly registered with dedicated CA backing.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="tel:+919177657288" class="btn-cta-phone"><i class="fas fa-phone-alt"></i> Call Expert: +91 9177657288</a>
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND SIDEBAR TABS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-card-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            faqItems.forEach(i => i.classList.remove('open'));
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+
+    // Sidebar Tabs
+    const tabStarter = document.getElementById('tabStarter');
+    const tabComplete = document.getElementById('tabComplete');
+    const sidebarPrice = document.getElementById('sidebarPrice');
+    const sidebarSub = document.getElementById('sidebarSub');
+    const sidebarGstItem = document.getElementById('sidebarGstItem');
+
+    if (tabStarter && tabComplete) {
+        tabStarter.addEventListener('click', () => {
+            tabStarter.classList.add('active');
+            tabComplete.classList.remove('active');
+            sidebarPrice.textContent = '₹1,999';
+            sidebarSub.textContent = 'Includes Deed Drafting + Notary Advisory + Form-1 Filing, zero hidden costs.';
+            sidebarGstItem.textContent = 'Firm PAN Card Application';
+        });
+
+        tabComplete.addEventListener('click', () => {
+            tabComplete.classList.add('active');
+            tabStarter.classList.remove('active');
+            sidebarPrice.textContent = '₹3,999';
+            sidebarSub.textContent = 'Includes Deed Drafting + RoF Filing + GSTIN Registration + Bank A/C intro.';
+            sidebarGstItem.textContent = 'GSTIN Support: Included & Verified';
+        });
+    }
+});
+</script>
 {% endblock %}

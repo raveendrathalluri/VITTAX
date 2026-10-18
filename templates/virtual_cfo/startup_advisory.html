@@ -2,471 +2,739 @@
 {% load static %}
 {% block title %}Startup Advisory — Finance, Legal & Fundraising - VITTAX{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
+
 {% block content %}
-<div style="padding:100px 0 60px;background:var(--bg);">
-    <div class="container">
+<div class="subservice-page">
 
-        <!-- HEADER -->
-        <div
-            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
-            <div>
-                <span class="section-tag">Virtual CFO &amp; Advisory</span>
-                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
-                    Startup Advisory — Finance, Legal &amp; Fundraising</h1>
-                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">From Idea to Investment —
-                    Navigate Every Financial Milestone</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="badge badge-success">✦ DPIIT &amp; 80-IAC Tax Benefits</span>
-                    <span class="badge badge-primary">✦ ESOP Design &amp; Administration</span>
-                    <span class="badge badge-info">✦ Investor-Ready Financials</span>
-                </div>
-            </div>
-            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
-            </div>
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
-
-        <!-- BODY GRID -->
-        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
-
-            <!-- LEFT COLUMN -->
-            <div style="display:flex;flex-direction:column;gap:24px;">
-
-                <!-- WHAT IS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Startup Advisory?</h2>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">Startups
-                        face a unique set of financial, legal, and compliance challenges that general practitioners are
-                        often not equipped to handle: choosing the right legal structure, ESOP design, term sheet
-                        negotiation, cap table management, DPIIT recognition for Section 80-IAC tax benefits,
-                        SEBI-regulated investment rounds, and cross-border fund flows (FEMA/FDI). A wrong decision at
-                        the seed stage can haunt a company through Series A, B, and beyond.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">VITTAX's
-                        Startup Advisory practice offers founder-friendly, equity-smart financial and legal advisory for
-                        early and growth-stage startups. Our advisors have hands-on experience with angel rounds,
-                        VC-term sheet structures, convertible notes, SAFE agreements, DPIIT registration, and
-                        international holding structures (Singapore/Delaware flip) — providing the kind of strategic
-                        financial guidance that was previously only accessible to well-funded startups with expensive
-                        law firms and Big-4 advisors.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">We partner with founders from
-                        incorporation through to exit — building the financial architecture that investors expect and
-                        that maximises founder value at every stage.</p>
-                    <div
-                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
-                        ⚠️ A wrong decision at the seed stage — on structure, ESOP, or cap table — can haunt a company
-                        through Series A, B, and beyond.
-                    </div>
-                </div>
-
-                <!-- WHO NEEDS -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs Startup Advisory?</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Pre-Revenue
-                                    Startups:</strong> Pre-revenue startups setting up the right legal and tax
-                                structure</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Fundraising
-                                    Startups:</strong> Startups preparing for angel/seed/Series A fundraising</span>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>First-Time
-                                    Founders:</strong> Founders negotiating their first term sheet without financial
-                                advisors</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Cap Table
-                                    Issues:</strong> Startups with existing cap table complications or ESOP
-                                issues</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Flip
-                                    Structuring:</strong> Startups considering a Singapore or Delaware holding
-                                structure</span></div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>DPIIT
-                                    Applicants:</strong> Startups applying for DPIIT recognition or Section 80-IAC tax
-                                exemption</span></div>
-                    </div>
-                </div>
-
-                <!-- ADVISORY SERVICES -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Advisory Services Covered</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                🏢 Structure &amp; Incorporation</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Legal structure
-                                    recommendation — Pvt Ltd vs LLP vs OPC</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Founders' agreement,
-                                    shareholder agreement, intellectual property assignment</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> DPIIT Startup India
-                                    registration</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Section 80-IAC tax
-                                    holiday application (eligible startups)</div>
-                            </div>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                💰 Fundraising</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Financial model and
-                                    investor projections preparation</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Term sheet review —
-                                    valuation, liquidation preference, anti-dilution, information rights</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Convertible note / SAFE
-                                    structuring</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Cap table modelling and
-                                    dilution analysis</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Data room setup for due
-                                    diligence</div>
-                            </div>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                📋 ESOP &amp; Cap Table</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> ESOP pool design — size,
-                                    vesting schedule, exercise price</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> ESOP scheme drafting and
-                                    board resolution</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Cap table maintenance
-                                    (Carta / spreadsheet)</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> ESOP taxation advisory
-                                    for employees</div>
-                            </div>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                🌍 Cross-Border &amp; FEMA</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> India-to-Singapore /
-                                    India-to-Delaware flip advisory</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> FEMA compliance for FDI
-                                    from foreign VC/angels</div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> FC-GPR / FLA / FC-TRS
-                                    filings post-funding</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Startup Launchpad</p>
-                                <p
-                                    style="font-size:1.55rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹19,999<span style="font-size:.78rem;font-weight:500;color:var(--text-light);"> +
-                                        ₹4,999/mo</span></p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Pre-incorporation to first funding
-                                </p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Pre-revenue startups in first year</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Structure
-                                    advisory</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DPIIT
-                                    registration</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Founders'
-                                    agreement review</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> First 12
-                                    months compliance calendar</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ESOP basics
-                                    advisory</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹19,999 one-time + ₹4,999/month
-                                    ongoing</strong> &nbsp;|&nbsp; Govt. Fees: <strong
-                                    style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
-                            <span
-                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Startup Growth</p>
-                                <p
-                                    style="font-size:1.55rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹29,999<span
-                                        style="font-size:.78rem;font-weight:500;color:var(--text-light);">/round +
-                                        ₹9,999/mo</span></p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Seed to Series A advisory</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Startups actively raising or post-seed</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Financial
-                                    model for fundraising</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Term sheet
-                                    review + cap table modelling</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> FEMA/FDI
-                                    compliance post-round</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ESOP scheme
-                                    design</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Data room
-                                    setup</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Ongoing CFO
-                                    advisory (12 hrs/month)</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹29,999 per round +
-                                    ₹9,999/month</strong> &nbsp;|&nbsp; Govt. Fees: <strong
-                                    style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Startup Scale</p>
-                                <p
-                                    style="font-size:1.55rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹39,999<span
-                                        style="font-size:.78rem;font-weight:500;color:var(--text-light);">/month</span>
-                                </p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Series A and beyond — full CFO +
-                                    advisory</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Series A+ startups, VC-backed companies</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Everything
-                                    in Growth</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Board-ready
-                                    investor reporting</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Subsequent
-                                    round prep</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> M&amp;A /
-                                    acquisition support</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Exit
-                                    planning (strategic sale / IPO prep)</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Unlimited
-                                    advisory</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹39,999/month</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What is Section 80-IAC and
-                                how does it help startups?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Section 80-IAC
-                                provides a 100% tax holiday on profits for 3 consecutive years out of the first 10 years
-                                of incorporation for eligible DPIIT-recognized startups. This can save lakhs in income
-                                tax during growth years. We manage the entire application and approval process.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Should my startup flip to
-                                Singapore or Delaware?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Depends on your
-                                investor base, IP location, and long-term plans. Singapore is preferred for Asia-Pacific
-                                investors; Delaware for US VCs. Flipping has tax and FEMA implications that must be
-                                carefully planned. We provide a detailed written advisory before any flip decision.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can you review a term sheet
-                                that we received?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — term sheet
-                                review is a standalone service at ₹9,999. We flag non-standard clauses (aggressive
-                                liquidation preference, full-ratchet anti-dilution, drag-along rights) and explain
-                                implications in plain language.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Do you help with due
-                                diligence that VCs conduct on us?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes. We assist you in
-                                preparing for financial and legal due diligence — cleaning up books, resolving
-                                compliance gaps, preparing a data room, and responding to DD queries from investor
-                                advisors.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Startup Launchpad</span><span
-                            style="font-weight:700;">₹19,999 + ₹4,999/mo</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Startup Growth</span><span
-                            style="font-weight:700;">₹29,999 + ₹9,999/mo</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Startup Scale</span><span
-                            style="font-weight:700;">₹39,999/mo</span></div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">80-IAC Tax Holiday</span><span style="font-weight:700;">3
-                            Years / 10 Years</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Term Sheet Review</span><span
-                            style="font-weight:700;">₹9,999 standalone</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">DPIIT Registration</span><span
-                            style="font-weight:700;color:var(--success);">Included</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Govt. Fees</span><span
-                            style="font-weight:700;color:var(--success);">Nil</strong></span></div>
-                </div>
-                <div
-                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
-                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Advisory
-                        Areas</p>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Structure / DPIIT</span><span style="font-weight:600;">✔
-                            Covered</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">ESOP / Cap Table</span><span style="font-weight:600;">✔
-                            Covered</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Term Sheet / SAFE</span><span style="font-weight:600;">✔
-                            Covered</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
-                            style="color:var(--text-light);">SG / DE Flip</span><span style="font-weight:600;">✔
-                            Covered</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div
-            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
-            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Build a Fundable Business — Partner with
-                VITTAX Startup Advisory</h3>
-            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">From DPIIT registration to term sheet review,
-                ESOP design to Series A — we partner with founders at every stage</p>
-            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg"
-                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
-                    →</a>
-                <a href="#" class="btn btn-lg"
-                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
-                    Expert</a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt; 
+                <span>VIRTUAL CFO</span> &gt; 
+                <a href="{% url 'service_list' %}">REGISTRATIONS</a> &gt; 
+                <span class="active">STARTUP ADVISORY — FINANCE, LEGAL &AMP; FUNDRAISING</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Startup Advisory — Finance, Legal &amp; Fundraising</h1>
+                    <p class="subservice-hero-subtitle">From Idea to Investment — Navigate Every Financial Milestone</p>
+                    
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ DPIIT &amp; 80-IAC Tax Benefits</span>
+                        <span class="pill-badge pill-blue">✦ ESOP Design &amp; Administration</span>
+                        <span class="pill-badge pill-cyan">✦ Investor-Ready Financials</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is Startup Advisory?</h2>
+                    <div class="section-body-text">
+                        <p>Startups face a unique set of financial, legal, and compliance challenges that general practitioners are often not equipped to handle: choosing the right legal structure, ESOP design, term sheet negotiation, cap table management, DPIIT recognition for Section 80-IAC tax benefits, SEBI-regulated investment rounds, and cross-border fund flows (FEMA/FDI). A wrong decision at the seed stage can haunt a company through Series A, B, and beyond.</p>
+                        <p>VITTAX's Startup Advisory practice offers founder-friendly, equity-smart financial and legal advisory for early and growth-stage startups. Our advisors have hands-on experience with angel rounds, VC-term sheet structures, convertible notes, SAFE agreements, DPIIT registration, and international holding structures (Singapore/Delaware flip) — providing the kind of strategic financial guidance that was previously only accessible to well-funded startups with expensive law firms and Big-4 advisors.</p>
+                        <p>We partner with founders from incorporation through to exit — building the financial architecture that investors expect and that maximises founder value at every stage.</p>
+                    </div>
+                    
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            ⚠️ A wrong decision at the seed stage — on structure, ESOP, or cap table — can haunt a company through Series A, B, and beyond.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Needs Startup Advisory?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Who Needs Startup Advisory? ✔ Pre-Revenue Startups: Pre-revenue startups setting up the right legal and tax structure</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Fundraising Startups: Startups preparing for angel/seed/Series A fundraising</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ First-Time Founders: Founders negotiating their first term sheet without financial advisors</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Cap Table Issues: Startups with existing cap table complications or ESOP issues</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Flip Structuring: Startups considering a Singapore or Delaware holding structure</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ DPIIT Applicants: Startups applying for DPIIT recognition or Section 80-IAC tax exemption</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Advisory Services Covered 🏢 Structure &amp; Incorporation • Legal structure recommendation — Pvt Ltd vs LLP vs OPC</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Founders' agreement, shareholder agreement, intellectual property assignment</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• DPIIT Startup India registration</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Section 80-IAC tax holiday application (eligible startups)</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">💰 Fundraising • Financial model and investor projections preparation</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Term sheet review — valuation, liquidation preference, anti-dilution, information rights</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Convertible note / SAFE structuring</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Cap table modelling and dilution analysis</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Data room setup for due diligence</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">📋 ESOP &amp; Cap Table • ESOP pool design — size, vesting schedule, exercise price</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• ESOP scheme drafting and board resolution</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Cap table maintenance (Carta / spreadsheet)</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• ESOP taxation advisory for employees</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">🌍 Cross-Border &amp; FEMA • India-to-Singapore / India-to-Delaware flip advisory</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• FEMA compliance for FDI from foreign VC/angels</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• FC-GPR / FLA / FC-TRS filings post-funding</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process & Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Document Collection & Vetting</h4>
+                                    <span class="step-time-pill pill-blue">Day 1</span>
+                                </div>
+                                <p class="step-description">Submit your documents digitally for verification by our CA team.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Statutory Drafting & Filing</h4>
+                                    <span class="step-time-pill pill-blue">Day 2–3</span>
+                                </div>
+                                <p class="step-description">Preparation of forms, declarations, and submission on official government portals.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+                                
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Approval & Certificate Grant</h4>
+                                    <span class="step-time-pill pill-gold">Day 3–5</span>
+                                </div>
+                                <p class="step-description">Department verification and issuance of the registration certificate and acknowledgment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (PAN Card & Aadhaar Card)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Address Proof (Electricity / Utility Bill)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Business Place Proof (Rental Agreement / Tax Receipt)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Photographs of Proprietor / Partners / Directors</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Startup Advisory — Finan Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">Startup Launchpad ₹19,999</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(1)">Startup Growth ₹29,999</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(2)">Startup Scale ₹39,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">Startup Launchpad</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹19,999 <small style='font-size:0.65em;font-weight:500;'>/mo</small></span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">Pre-incorporation to first funding</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Start Service Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91 9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">80-IAC Tax Holiday</span>
+                            <span class="spec-val">3 Years / 10 Years</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Term Sheet Review</span>
+                            <span class="spec-val">₹9,999 standalone</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">DPIIT Registration</span>
+                            <span class="spec-val">Included</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Govt. Fees</span>
+                            <span class="spec-val">Nil</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">KEY ADVISORY AREAS</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Structure / DPIIT:</strong> ✔ Covered</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>ESOP / Cap Table:</strong> ✔ Covered</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>Term Sheet / SAFE:</strong> ✔ Covered</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i> 
+                            <span><strong>SG / DE Flip:</strong> ✔ Covered</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is handled and reviewed by a dedicated Chartered Accountant. Our clients get real human consultations, custom tax-saving strategies, and guaranteed error-free filings backed by professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX" class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Startup Advisory — Finance, Legal &amp; Fundraising Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-3">
+                <div class="pricing-plan-box">
+                    
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">STARTUP LAUNCHPAD</h3>
+                    <p class="plan-subtitle">Ideal for: Pre-revenue startups in first year</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹19,999</span>
+                        <span class="plan-period"> /mo</span>
+                    </div>
+                    <p class="plan-summary-note">Pre-incorporation to first funding</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Structure advisory</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>DPIIT registration</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Founders' agreement review</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>First 12 months compliance calendar</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>ESOP basics advisory</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹19,999 one-time + ₹4,999/month ongoing &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">STARTUP GROWTH</h3>
+                    <p class="plan-subtitle">Ideal for: Startups actively raising or post-seed</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹29,999</span>
+                        <span class="plan-period"> /mo</span>
+                    </div>
+                    <p class="plan-summary-note">Seed to Series A advisory</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Financial model for fundraising</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Term sheet review + cap table modelling</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>FEMA/FDI compliance post-round</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>ESOP scheme design</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Data room setup</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Ongoing CFO advisory (12 hrs/month)</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹29,999 per round + ₹9,999/month &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box">
+                    
+                    <div class="plan-tag">TIER 3 / ACCREDITED</div>
+                    <h3 class="plan-title">STARTUP SCALE</h3>
+                    <p class="plan-subtitle">Ideal for: Series A+ startups, VC-backed companies</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹39,999</span>
+                        <span class="plan-period"> /month</span>
+                    </div>
+                    <p class="plan-summary-note">Series A and beyond — full CFO + advisory</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Everything in Growth</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Board-ready investor reporting</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Subsequent round prep</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>M&amp;A / acquisition support</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Exit planning (strategic sale / IPO prep)</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Unlimited advisory</div></div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹39,999/month &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity, credit profile, and tax registrations without interrupting your business operations. Our unified portal keeps all certificates, filings, and notices in one place.</p>
+                    
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Statutory_Registration_Certificate.pdf</span></div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Department_Filing_Challan.pdf</span></div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>CA_Vetting_Confirmation.pdf</span></div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about Startup Advisory — Finance, Legal &amp; Fundraising in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>What is Section 80-IAC and how does it help startups?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Section 80-IAC provides a 100% tax holiday on profits for 3 consecutive years out of the first 10 years of incorporation for eligible DPIIT-recognized startups. This can save lakhs in income tax during growth years. We manage the entire application and approval process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Should my startup flip to Singapore or Delaware?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depends on your investor base, IP location, and long-term plans. Singapore is preferred for Asia-Pacific investors; Delaware for US VCs. Flipping has tax and FEMA implications that must be carefully planned. We provide a detailed written advisory before any flip decision.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can you review a term sheet that we received?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — term sheet review is a standalone service at ₹9,999. We flag non-standard clauses (aggressive liquidation preference, full-ratchet anti-dilution, drag-along rights) and explain implications in plain language.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Do you help with due diligence that VCs conduct on us?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We assist you in preparing for financial and legal due diligence — cleaning up books, resolving compliance gaps, preparing a data room, and responding to DD queries from investor advisors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your Startup Advisory — Finance, Legal &amp; Fundraising Today</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="tel:+919177657288" class="btn-cta-phone"><i class="fas fa-phone-alt"></i> Call Expert: +91 9177657288</a>
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-card-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            faqItems.forEach(i => i.classList.remove('open'));
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+});
+
+// Dynamic Sidebar Plan Switcher
+const servicePlansData = [{"name": "Startup Launchpad", "price": "\u20b919,999", "period": "/mo", "sub": "Pre-incorporation to first funding"}, {"name": "Startup Growth", "price": "\u20b929,999", "period": "/mo", "sub": "Seed to Series A advisory"}, {"name": "Startup Scale", "price": "\u20b939,999", "period": "/month", "sub": "Series A and beyond \u2014 full CFO + advisory"}];
+
+function switchSidebarPlan(idx) {
+    if (!servicePlansData || !servicePlansData[idx]) return;
+    const p = servicePlansData[idx];
+    
+    // Toggle active state on tabs
+    const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+    tabs.forEach((tab, i) => {
+        if (i === idx) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+    
+    // Update price and plan name in sidebar
+    const nameEl = document.getElementById('sidebarPlanName');
+    const priceEl = document.getElementById('sidebarPrice');
+    const subEl = document.getElementById('sidebarSub');
+    
+    if (nameEl) nameEl.textContent = p.name;
+    if (priceEl) {
+        priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+    }
+    if (subEl && p.sub) {
+        subEl.textContent = p.sub;
+    }
+}
+</script>
 {% endblock %}
