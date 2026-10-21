@@ -1,40 +1,38 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Sole Proprietorship Setup - VITTAX{% endblock %}
-
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/subservice.css' %}">
 {% endblock %}
-
 {% block content %}
 <div class="subservice-page">
-
     <!-- SPECIAL OFFER PROMO BAR -->
     <div class="subservice-promo-bar">
         <div class="subservice-container promo-bar-inner">
-            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span class="promo-code">VITTAX500</span> at checkout!</span>
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
     </div>
-
     <!-- HERO HEADER SECTION -->
     <section class="subservice-hero-section">
         <div class="subservice-container">
             <!-- Breadcrumbs -->
             <nav class="subservice-breadcrumb">
-                <a href="{% url 'home' %}">HOME</a> &gt; 
-                <span>START A BUSINESS</span> &gt; 
-                <a href="{% url 'service_list' %}">REGISTRATIONS</a> &gt; 
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span>START A BUSINESS</span> &gt;
                 <span class="active">SOLE PROPRIETORSHIP</span>
             </nav>
-
             <div class="subservice-hero-grid">
                 <div class="subservice-hero-left">
                     <div class="subservice-gov-tag">
                         <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
                     </div>
                     <h1 class="subservice-hero-title">Sole Proprietorship Setup</h1>
-                    <p class="subservice-hero-subtitle">Quickest Way to Start — Establish Your Business Identity Today with zero incorporation costs, full owner control and start in 3–5 days.</p>
-                    
+                    <p class="subservice-hero-subtitle">Quickest Way to Start — Establish Your Business Identity Today
+                        with zero incorporation costs, full owner control and start in 3–5 days.</p>
+
                     <div class="subservice-pill-badges">
                         <span class="pill-badge pill-purple">✦ Zero Incorporation Cost</span>
                         <span class="pill-badge pill-blue">✦ Single-Owner Full Control</span>
@@ -43,13 +41,13 @@
 
                     <div class="subservice-hero-actions">
                         <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
-                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to Expert</a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- MAIN TWO-COLUMN CONTENT GRID -->
     <div class="subservice-container">
         <div class="subservice-main-grid">
@@ -62,15 +60,30 @@
                     <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
                     <h2 class="section-serif-title">What is a Sole Proprietorship?</h2>
                     <div class="section-body-text">
-                        <p>A Sole Proprietorship is the simplest and most common form of business in India — a business owned and operated by a single individual with no legal distinction between the owner and the business entity. There is no separate registration law for proprietorships; instead, a proprietor establishes identity through a combination of official registrations: GSTIN, Udyam (MSME) registration, Shop &amp; Establishment licence, and a current bank account in the business name.</p>
-                        <p>The major advantage of a proprietorship is simplicity — minimal legal paperwork, low cost, and complete individual control. The primary disadvantage is unlimited personal liability — the owner's personal assets are fully exposed to business debts and legal claims. There is no continuity beyond the owner's life, and commercial banks often limit credit to proprietorships compared to corporate entities or LLPs.</p>
-                        <p>A proprietorship is ideal for small traders, freelancers, home-based businesses, local service providers, and any individual starting a small commercial venture who wants to begin quickly and test the market before formalizing into a company or LLP.</p>
+                        <p>A Sole Proprietorship is the simplest and most common form of business in India — a business
+                            owned and operated by a single individual with no legal distinction between the owner and
+                            the business entity. There is no separate registration law for proprietorships; instead, a
+                            proprietor establishes identity through a combination of official registrations: GSTIN,
+                            Udyam (MSME) registration, Shop &amp; Establishment licence, and a current bank account in
+                            the business name.</p>
+                        <p>The major advantage of a proprietorship is simplicity — minimal legal paperwork, low cost,
+                            and complete individual control. The primary disadvantage is unlimited personal liability —
+                            the owner's personal assets are fully exposed to business debts and legal claims. There is
+                            no continuity beyond the owner's life, and commercial banks often limit credit to
+                            proprietorships compared to corporate entities or LLPs.</p>
+                        <p>A proprietorship is ideal for small traders, freelancers, home-based businesses, local
+                            service providers, and any individual starting a small commercial venture who wants to begin
+                            quickly and test the market before formalizing into a company or LLP.</p>
                     </div>
 
                     <div class="subservice-warning-box">
                         <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
                         <div class="warning-content">
-                            <strong>Unlimited Personal Liability:</strong> A sole proprietorship offers no corporate separation between business liabilities and personal assets. As a result, personal assets (e.g. personal savings, real estate) remain fully exposed to business debts, legal proceedings and operational claims. If you are operating a high-risk venture, consider upgrading to a Private Limited Company or LLP to secure limited liability protection.
+                            <strong>Unlimited Personal Liability:</strong> A sole proprietorship offers no corporate
+                            separation between business liabilities and personal assets. As a result, personal assets
+                            (e.g. personal savings, real estate) remain fully exposed to business debts, legal
+                            proceedings and operational claims. If you are operating a high-risk venture, consider
+                            upgrading to a Private Limited Company or LLP to secure limited liability protection.
                         </div>
                     </div>
                 </div>
@@ -90,7 +103,8 @@
                             <div class="eligibility-icon"><i class="fas fa-laptop-code"></i></div>
                             <div class="eligibility-text">
                                 <h4 class="eligibility-title">Freelancers &amp; Consultants</h4>
-                                <p class="eligibility-desc">Freelance developers, copywriters, digital marketing specialists and designers wanting a legitimate business account for clients.</p>
+                                <p class="eligibility-desc">Freelance developers, copywriters, digital marketing
+                                    specialists and designers wanting a legitimate business account for clients.</p>
                             </div>
                         </div>
 
@@ -98,7 +112,8 @@
                             <div class="eligibility-icon"><i class="fas fa-store"></i></div>
                             <div class="eligibility-text">
                                 <h4 class="eligibility-title">Small Retailers &amp; Traders</h4>
-                                <p class="eligibility-desc">Local neighbourhood stores, boutiques, traders, and suppliers wishing to obtain GST and access distributor credit.</p>
+                                <p class="eligibility-desc">Local neighbourhood stores, boutiques, traders, and
+                                    suppliers wishing to obtain GST and access distributor credit.</p>
                             </div>
                         </div>
 
@@ -106,7 +121,8 @@
                             <div class="eligibility-icon"><i class="fas fa-home"></i></div>
                             <div class="eligibility-text">
                                 <h4 class="eligibility-title">Home-Based Businesses</h4>
-                                <p class="eligibility-desc">Home-based bakers, crafters, artisan product makers, boutique services below mandatory GST registration thresholds.</p>
+                                <p class="eligibility-desc">Home-based bakers, crafters, artisan product makers,
+                                    boutique services below mandatory GST registration thresholds.</p>
                             </div>
                         </div>
 
@@ -114,7 +130,8 @@
                             <div class="eligibility-icon"><i class="fas fa-rocket"></i></div>
                             <div class="eligibility-text">
                                 <h4 class="eligibility-title">First-Time Entrepreneurs</h4>
-                                <p class="eligibility-desc">Founders testing a business thesis before incurring high ongoing compliances of a corporate structure.</p>
+                                <p class="eligibility-desc">Founders testing a business thesis before incurring high
+                                    ongoing compliances of a corporate structure.</p>
                             </div>
                         </div>
 
@@ -122,7 +139,9 @@
                             <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
                             <div class="eligibility-text">
                                 <h4 class="eligibility-title">MSME-Eligible Micro Units</h4>
-                                <p class="eligibility-desc">Micro businesses seeking low-interest loans under MUDRA, Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) or government subsidies.</p>
+                                <p class="eligibility-desc">Micro businesses seeking low-interest loans under MUDRA,
+                                    Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) or government
+                                    subsidies.</p>
                             </div>
                         </div>
                     </div>
@@ -132,7 +151,8 @@
                 <div class="subservice-content-card">
                     <div class="section-micro-tag">STEP-BY-STEP PROCESS</div>
                     <h2 class="section-serif-title">Setup Process &amp; Timeline</h2>
-                    <p class="section-subtitle-muted">Standard step-by-step roadmap for a complete sole proprietorship business launch.</p>
+                    <p class="section-subtitle-muted">Standard step-by-step roadmap for a complete sole proprietorship
+                        business launch.</p>
 
                     <div class="process-timeline-list">
                         <div class="process-step-item">
@@ -145,7 +165,9 @@
                                     <h4 class="step-name">MSME / Udyam Registration</h4>
                                     <span class="step-time-pill pill-blue">Timeline: 1 Day</span>
                                 </div>
-                                <p class="step-description">Registration on the official portal of MSME (Udyam portal). Instant, digital application with no fees; establishing legal status under the MSMED Act.</p>
+                                <p class="step-description">Registration on the official portal of MSME (Udyam portal).
+                                    Instant, digital application with no fees; establishing legal status under the MSMED
+                                    Act.</p>
                             </div>
                         </div>
 
@@ -159,7 +181,9 @@
                                     <h4 class="step-name">Shop &amp; Establishment Registration</h4>
                                     <span class="step-time-pill pill-blue">Timeline: 1–3 Days</span>
                                 </div>
-                                <p class="step-description">Filing with the state labour department under the relevant Shops and Establishments Act. Vital for commercial legitimacy and bank account opening.</p>
+                                <p class="step-description">Filing with the state labour department under the relevant
+                                    Shops and Establishments Act. Vital for commercial legitimacy and bank account
+                                    opening.</p>
                             </div>
                         </div>
 
@@ -173,7 +197,9 @@
                                     <h4 class="step-name">GST Registration (if Applicable)</h4>
                                     <span class="step-time-pill pill-blue">Timeline: 1–3 Working Days</span>
                                 </div>
-                                <p class="step-description">Mandatory for any business exceeding statutory thresholds (₹20L services, ₹40L goods), or for businesses conducting inter-state supply, online sales, or export.</p>
+                                <p class="step-description">Mandatory for any business exceeding statutory thresholds
+                                    (₹20L services, ₹40L goods), or for businesses conducting inter-state supply, online
+                                    sales, or export.</p>
                             </div>
                         </div>
 
@@ -187,7 +213,9 @@
                                     <h4 class="step-name">Current Bank Account Assistance</h4>
                                     <span class="step-time-pill pill-blue">Timeline: 3–7 Days</span>
                                 </div>
-                                <p class="step-description">Assistance with selecting and presenting the appropriate documentation to partner banks for expedited opening of a current account in the business firm's name.</p>
+                                <p class="step-description">Assistance with selecting and presenting the appropriate
+                                    documentation to partner banks for expedited opening of a current account in the
+                                    business firm's name.</p>
                             </div>
                         </div>
 
@@ -200,7 +228,9 @@
                                     <h4 class="step-name">PAN &amp; Tax Identification Alignment</h4>
                                     <span class="step-time-pill pill-gold">Already Available</span>
                                 </div>
-                                <p class="step-description">Proprietorship does NOT require a separate corporate PAN. The firm operates under the founder's existing individual PAN, reporting income via personal ITR-3 or ITR-4 Presumptive scheme.</p>
+                                <p class="step-description">Proprietorship does NOT require a separate corporate PAN.
+                                    The firm operates under the founder's existing individual PAN, reporting income via
+                                    personal ITR-3 or ITR-4 Presumptive scheme.</p>
                             </div>
                         </div>
                     </div>
@@ -210,14 +240,16 @@
                 <div class="subservice-content-card">
                     <div class="section-micro-tag">KYC &amp; COMPLIANCE REQUIREMENTS</div>
                     <h2 class="section-serif-title">Documents Required</h2>
-                    <p class="section-subtitle-muted">Submit all files digitally in PDF or JPG format — no physical dispatch needed.</p>
+                    <p class="section-subtitle-muted">Submit all files digitally in PDF or JPG format — no physical
+                        dispatch needed.</p>
 
                     <div class="doc-req-grid">
                         <div class="doc-req-card">
                             <div class="doc-icon"><i class="fas fa-id-card"></i></div>
                             <div class="doc-text">
                                 <h4 class="doc-title">Identity Proof (KYC)</h4>
-                                <p class="doc-desc">Self-attested PAN card &amp; Aadhaar card of the proprietor. Must match with current official database.</p>
+                                <p class="doc-desc">Self-attested PAN card &amp; Aadhaar card of the proprietor. Must
+                                    match with current official database.</p>
                             </div>
                         </div>
 
@@ -225,7 +257,8 @@
                             <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
                             <div class="doc-text">
                                 <h4 class="doc-title">Registered Office Proof</h4>
-                                <p class="doc-desc">Utility bill (electricity, water, gas) not older than 2 months along with NOC from property owner.</p>
+                                <p class="doc-desc">Utility bill (electricity, water, gas) not older than 2 months along
+                                    with NOC from property owner.</p>
                             </div>
                         </div>
 
@@ -233,7 +266,8 @@
                             <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="doc-text">
                                 <h4 class="doc-title">Business Address Proof</h4>
-                                <p class="doc-desc">Valid rental agreement or lease deed in the proprietor's name. In case of owned premises, property tax receipt.</p>
+                                <p class="doc-desc">Valid rental agreement or lease deed in the proprietor's name. In
+                                    case of owned premises, property tax receipt.</p>
                             </div>
                         </div>
 
@@ -241,7 +275,8 @@
                             <div class="doc-icon"><i class="fas fa-portrait"></i></div>
                             <div class="doc-text">
                                 <h4 class="doc-title">Photographic Identification</h4>
-                                <p class="doc-desc">Recent passport size photograph of the sole proprietor with clear white or light background.</p>
+                                <p class="doc-desc">Recent passport size photograph of the sole proprietor with clear
+                                    white or light background.</p>
                             </div>
                         </div>
                     </div>
@@ -270,13 +305,15 @@
                             <span class="enquiry-price-label">Total Fee</span>
                             <span class="enquiry-price-val" id="sidebarPrice">₹1,499</span>
                         </div>
-                        <p class="enquiry-price-sub" id="sidebarSub">Includes Udyam Registration + Shop &amp; Establishment Licence advisory, zero hidden costs.</p>
+                        <p class="enquiry-price-sub" id="sidebarSub">Includes Udyam Registration + Shop &amp;
+                            Establishment Licence advisory, zero hidden costs.</p>
                     </div>
 
-                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Start Setup Now →</a>
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
 
                     <div class="sidebar-contact-call">
-                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91 9177657288</strong></a>
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
                     </div>
 
                     <div class="sidebar-specs-list">
@@ -300,10 +337,14 @@
 
                     <div class="sidebar-checklist-box">
                         <p class="checklist-header">PACKAGE INCLUDES</p>
-                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>MSME / Udyam Certificate issued</span></div>
-                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>S&amp;E Licence Bank Account Advisory</span></div>
-                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span id="sidebarGstItem">GSTIN Support (in Complete Setup)</span></div>
-                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>Tax Saving Deduction Assessment</span></div>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>MSME / Udyam
+                                Certificate issued</span></div>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>S&amp;E
+                                Licence Bank Account Advisory</span></div>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span
+                                id="sidebarGstItem">GSTIN Support (in Complete Setup)</span></div>
+                        <div class="checklist-item"><i class="fas fa-check-circle text-success"></i> <span>Tax Saving
+                                Deduction Assessment</span></div>
                     </div>
 
                     <div class="sidebar-tip-box">
@@ -315,7 +356,9 @@
                 <!-- CA Advisory Promo Card -->
                 <div class="sidebar-quote-card">
                     <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="quote-text">"Proprietorship is great to start quick. However, once turnover exceeds ₹40 Lakhs or liability increases, we recommend upgrading to an LLP or Private Limited to shield personal assets."</p>
+                    <p class="quote-text">"Proprietorship is great to start quick. However, once turnover exceeds ₹40
+                        Lakhs or liability increases, we recommend upgrading to an LLP or Private Limited to shield
+                        personal assets."</p>
                     <div class="quote-author">
                         <div class="author-badge"><i class="fas fa-user-tie"></i></div>
                         <div class="author-info">
@@ -337,7 +380,10 @@
                 <div class="showcase-content">
                     <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
                     <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
-                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is handled and reviewed by a dedicated Chartered Accountant. Our clients get real human consultations, custom tax-saving strategies, and guaranteed error-free filings backed by professional liability indemnity.</p>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
                     <div class="showcase-stats">
                         <div class="stat-item">
                             <span class="stat-number">15,000+</span>
@@ -351,7 +397,8 @@
                 </div>
                 <div class="showcase-visual">
                     <div class="showcase-img-wrap">
-                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX" class="showcase-img">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
                         <div class="showcase-img-badge">
                             <i class="fas fa-certificate text-gold"></i>
                             <span>Dedicated Senior CA assigned to your filing from Day 1</span>
@@ -368,7 +415,8 @@
             <div class="pricing-section-head">
                 <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
                 <h2 class="section-serif-title center">Proprietorship Setup Pricing Plans</h2>
-                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
             </div>
 
             <div class="pricing-cards-container">
@@ -376,23 +424,38 @@
                 <div class="pricing-plan-box">
                     <div class="plan-tag">BASIC SETUP / MICRO VENTURES</div>
                     <h3 class="plan-title">STARTER SETUP</h3>
-                    <p class="plan-subtitle">Best for freelancers, solo professionals, home businesses, and small traders starting out.</p>
+                    <p class="plan-subtitle">Best for freelancers, solo professionals, home businesses, and small
+                        traders starting out.</p>
 
                     <div class="plan-price-row">
                         <span class="plan-price">₹1,499</span>
                         <span class="plan-period">one-time all inclusive</span>
                     </div>
-                    <p class="plan-summary-note">Includes Udyam Registration + Shop &amp; Establishment license advisory + free current bank account consultation.</p>
+                    <p class="plan-summary-note">Includes Udyam Registration + Shop &amp; Establishment license advisory
+                        + free current bank account consultation.</p>
 
                     <div class="plan-features-list">
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Official MSME Registration:</strong> Udyam certificate and lifetime MSME benefits.</div></div>
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Shop &amp; Establishment Filing:</strong> Municipal labour registration for full current bank eligibility.</div></div>
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Current Account Assistance:</strong> Zero balance current a/c referral with partner banks.</div></div>
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Post-Filing Guidance:</strong> Presumptive taxation scheme (Sec 44AD/44ADA) orientation.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Official MSME Registration:</strong> Udyam certificate and lifetime MSME
+                                benefits.</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Shop &amp; Establishment Filing:</strong> Municipal labour registration for
+                                full current bank eligibility.</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Current Account Assistance:</strong> Zero balance current a/c referral with
+                                partner banks.</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Post-Filing Guidance:</strong> Presumptive taxation scheme (Sec 44AD/44ADA)
+                                orientation.</div>
+                        </div>
                     </div>
 
                     <div class="plan-govt-fee-box">
-                        <strong>Govt Statutory Stamp Duty:</strong> At actuals (~₹100–500 depending on state, payable directly to state treasury).
+                        <strong>Govt Statutory Stamp Duty:</strong> At actuals (~₹100–500 depending on state, payable
+                        directly to state treasury).
                     </div>
 
                     <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
@@ -403,24 +466,42 @@
                     <div class="plan-popular-ribbon">MOST POPULAR CHOICE // RECOMMENDED</div>
                     <div class="plan-tag">FULL ACCREDITATION &amp; COMPLIANCE</div>
                     <h3 class="plan-title">COMPLETE SETUP</h3>
-                    <p class="plan-subtitle">Recommended for businesses needing GST, inter-state trade, or e-commerce presence.</p>
+                    <p class="plan-subtitle">Recommended for businesses needing GST, inter-state trade, or e-commerce
+                        presence.</p>
 
                     <div class="plan-price-row">
                         <span class="plan-price">₹3,499</span>
                         <span class="plan-period">one-time all inclusive</span>
                     </div>
-                    <p class="plan-summary-note">Includes MSME + Shop &amp; Establishment + GST Registration + full year compliance calendar.</p>
+                    <p class="plan-summary-note">Includes MSME + Shop &amp; Establishment + GST Registration + full year
+                        compliance calendar.</p>
 
                     <div class="plan-features-list">
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Everything in Starter Setup:</strong> Full Udyam certificate + Shop &amp; Establishment registration.</div></div>
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>GSTIN Registration:</strong> Full application, document vetting, and TRN tracking till GSTIN grant.</div></div>
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Bank Account Referral &amp; Support:</strong> Priority current account opening with HDFC, ICICI, or SBI.</div></div>
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Invoicing and Documentation:</strong> Standard GST invoice template and vendor agreements bundle.</div></div>
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div><strong>Dedicated Chartered Accountant:</strong> 1-on-1 tax planning call and ITR filing guidance.</div></div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Everything in Starter Setup:</strong> Full Udyam certificate + Shop &amp;
+                                Establishment registration.</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>GSTIN Registration:</strong> Full application, document vetting, and TRN
+                                tracking till GSTIN grant.</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Bank Account Referral &amp; Support:</strong> Priority current account opening
+                                with HDFC, ICICI, or SBI.</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Invoicing and Documentation:</strong> Standard GST invoice template and vendor
+                                agreements bundle.</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div><strong>Dedicated Chartered Accountant:</strong> 1-on-1 tax planning call and ITR
+                                filing guidance.</div>
+                        </div>
                     </div>
 
                     <div class="plan-govt-fee-box gold-tint">
-                        <strong>VITTAX Professional Fee: ₹3,499</strong> | Statutory Govt Fees: State registration fee at actuals.
+                        <strong>VITTAX Professional Fee: ₹3,499</strong> | Statutory Govt Fees: State registration fee
+                        at actuals.
                     </div>
 
                     <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
@@ -436,21 +517,26 @@
                 <div class="expansion-content">
                     <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
                     <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
-                    <p class="expansion-desc">As your enterprise grows from a small sole proprietorship to a private limited company, VITTAX seamlessly transfers your legal identity, credit profile, and tax registrations without interrupting your business operations. Our unified portal keeps all certificates, GST returns, and notices in one place.</p>
-                    
+                    <p class="expansion-desc">As your enterprise grows from a small sole proprietorship to a private
+                        limited company, VITTAX seamlessly transfers your legal identity, credit profile, and tax
+                        registrations without interrupting your business operations. Our unified portal keeps all
+                        certificates, GST returns, and notices in one place.</p>
+
                     <div class="expansion-points">
                         <div class="expansion-point">
                             <i class="fas fa-check-circle text-gold"></i>
                             <div>
                                 <strong>Centralized Cloud Vault:</strong>
-                                <p>Access your registrations, tax returns, and bank documents anytime from our client portal.</p>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
                             </div>
                         </div>
                         <div class="expansion-point">
                             <i class="fas fa-check-circle text-gold"></i>
                             <div>
                                 <strong>Smooth Corporate Conversion:</strong>
-                                <p>When your turnover crosses ₹40 Lakhs, easily upgrade to an LLP or Private Limited Company without losing your brand equity.</p>
+                                <p>When your turnover crosses ₹40 Lakhs, easily upgrade to an LLP or Private Limited
+                                    Company without losing your brand equity.</p>
                             </div>
                         </div>
                     </div>
@@ -472,15 +558,21 @@
                             <div class="mockup-main">
                                 <div class="mockup-status-badge">● Registration Active &amp; Verified</div>
                                 <div class="mockup-doc-row">
-                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Udyam_MSME_Certificate_2026.pdf</span></div>
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Udyam_MSME_Certificate_2026.pdf</span>
+                                    </div>
                                     <span class="mockup-tag">Verified</span>
                                 </div>
                                 <div class="mockup-doc-row">
-                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Shop_Establishment_Reg.pdf</span></div>
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Shop_Establishment_Reg.pdf</span>
+                                    </div>
                                     <span class="mockup-tag">Verified</span>
                                 </div>
                                 <div class="mockup-doc-row">
-                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Current_Bank_Intro_Letter.pdf</span></div>
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Current_Bank_Intro_Letter.pdf</span>
+                                    </div>
                                     <span class="mockup-tag">Issued</span>
                                 </div>
                             </div>
@@ -497,7 +589,8 @@
             <div class="faq-section-head">
                 <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
                 <h2 class="section-serif-title center">Frequently Asked Questions</h2>
-                <p class="section-subtitle-muted center">Everything you need to know about starting and operating a sole proprietorship in India.</p>
+                <p class="section-subtitle-muted center">Everything you need to know about starting and operating a sole
+                    proprietorship in India.</p>
             </div>
 
             <div class="faq-accordion-list">
@@ -507,7 +600,10 @@
                         <i class="fas fa-chevron-down faq-toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>No single document constitutes "proprietorship registration." In Indian law, a sole proprietorship is legally indistinguishable from its owner. Commercial banks and government departments establish business identity through a combination of registrations: GSTIN + Udyam (MSME) Certificate + Shop &amp; Establishment License + Current Bank Account.</p>
+                        <p>No single document constitutes "proprietorship registration." In Indian law, a sole
+                            proprietorship is legally indistinguishable from its owner. Commercial banks and government
+                            departments establish business identity through a combination of registrations: GSTIN +
+                            Udyam (MSME) Certificate + Shop &amp; Establishment License + Current Bank Account.</p>
                     </div>
                 </div>
 
@@ -517,7 +613,10 @@
                         <i class="fas fa-chevron-down faq-toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Proprietorship income is treated as the owner's personal income and taxed according to personal income tax slab rates. You file using either ITR-3 (business income) or ITR-4 (presumptive scheme under Section 44AD/44ADA for small turnover). You do not pay flat corporate tax rates.</p>
+                        <p>Proprietorship income is treated as the owner's personal income and taxed according to
+                            personal income tax slab rates. You file using either ITR-3 (business income) or ITR-4
+                            (presumptive scheme under Section 44AD/44ADA for small turnover). You do not pay flat
+                            corporate tax rates.</p>
                     </div>
                 </div>
 
@@ -527,7 +626,10 @@
                         <i class="fas fa-chevron-down faq-toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>You should upgrade when: (1) your annual turnover approaches ₹40–50 Lakhs, (2) you wish to raise debt or bank funding exceeding ₹25 Lakhs, (3) you want to onboard equity partners or investors, or (4) your business enters a high-liability industry where protecting personal assets becomes crucial.</p>
+                        <p>You should upgrade when: (1) your annual turnover approaches ₹40–50 Lakhs, (2) you wish to
+                            raise debt or bank funding exceeding ₹25 Lakhs, (3) you want to onboard equity partners or
+                            investors, or (4) your business enters a high-liability industry where protecting personal
+                            assets becomes crucial.</p>
                     </div>
                 </div>
             </div>
@@ -539,12 +641,14 @@
         <div class="subservice-container">
             <div class="cta-inner-card">
                 <div class="cta-micro-tag">START YOUR BUSINESS JOURNEY TODAY</div>
-                <h2 class="cta-banner-title">Set Up Your Proprietorship in 3 Days — VITTAX Handles All Registrations</h2>
-                <p class="cta-banner-desc">Zero incorporation cost, single-owner full control, start in 3–5 days — establish your business identity today with dedicated CA backing.</p>
+                <h2 class="cta-banner-title">Set Up Your Proprietorship in 3 Days — VITTAX Handles All Registrations
+                </h2>
+                <p class="cta-banner-desc">Zero incorporation cost, single-owner full control, start in 3–5 days —
+                    establish your business identity today with dedicated CA backing.</p>
 
                 <div class="cta-btn-group">
                     <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
-                    <a href="tel:+919177657288" class="btn-cta-phone"><i class="fas fa-phone-alt"></i> Call Expert: +91 9177657288</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
                 </div>
 
                 <div class="cta-trust-badges">
@@ -562,44 +666,44 @@
 
 <!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND SIDEBAR TABS -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-card-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => i.classList.remove('open'));
-            if (!isOpen) {
-                item.classList.add('open');
-            }
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
         });
+
+        // Sidebar Tabs
+        const tabStarter = document.getElementById('tabStarter');
+        const tabComplete = document.getElementById('tabComplete');
+        const sidebarPrice = document.getElementById('sidebarPrice');
+        const sidebarSub = document.getElementById('sidebarSub');
+        const sidebarGstItem = document.getElementById('sidebarGstItem');
+
+        if (tabStarter && tabComplete) {
+            tabStarter.addEventListener('click', () => {
+                tabStarter.classList.add('active');
+                tabComplete.classList.remove('active');
+                sidebarPrice.textContent = '₹1,499';
+                sidebarSub.textContent = 'Includes Udyam Registration + Shop & Establishment Licence advisory, zero hidden costs.';
+                sidebarGstItem.textContent = 'GSTIN Support (in Complete Setup)';
+            });
+
+            tabComplete.addEventListener('click', () => {
+                tabComplete.classList.add('active');
+                tabStarter.classList.remove('active');
+                sidebarPrice.textContent = '₹3,499';
+                sidebarSub.textContent = 'Includes Udyam Registration + Shop & Establishment + GST Registration with CA support.';
+                sidebarGstItem.textContent = 'GSTIN Support: Included & Verified';
+            });
+        }
     });
-
-    // Sidebar Tabs
-    const tabStarter = document.getElementById('tabStarter');
-    const tabComplete = document.getElementById('tabComplete');
-    const sidebarPrice = document.getElementById('sidebarPrice');
-    const sidebarSub = document.getElementById('sidebarSub');
-    const sidebarGstItem = document.getElementById('sidebarGstItem');
-
-    if (tabStarter && tabComplete) {
-        tabStarter.addEventListener('click', () => {
-            tabStarter.classList.add('active');
-            tabComplete.classList.remove('active');
-            sidebarPrice.textContent = '₹1,499';
-            sidebarSub.textContent = 'Includes Udyam Registration + Shop & Establishment Licence advisory, zero hidden costs.';
-            sidebarGstItem.textContent = 'GSTIN Support (in Complete Setup)';
-        });
-
-        tabComplete.addEventListener('click', () => {
-            tabComplete.classList.add('active');
-            tabStarter.classList.remove('active');
-            sidebarPrice.textContent = '₹3,499';
-            sidebarSub.textContent = 'Includes Udyam Registration + Shop & Establishment + GST Registration with CA support.';
-            sidebarGstItem.textContent = 'GSTIN Support: Included & Verified';
-        });
-    }
-});
 </script>
 {% endblock %}

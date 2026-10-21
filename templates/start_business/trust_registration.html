@@ -3,7 +3,7 @@
 {% block title %}Trust Registration - VITTAX{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}?v=2">
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,9 @@
     <!-- SPECIAL OFFER PROMO BAR -->
     <div class="subservice-promo-bar">
         <div class="subservice-container promo-bar-inner">
-            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span class="promo-code">VITTAX500</span> at checkout!</span>
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
     </div>
 
@@ -21,9 +23,9 @@
         <div class="subservice-container">
             <!-- Breadcrumbs -->
             <nav class="subservice-breadcrumb">
-                <a href="{% url 'home' %}">HOME</a> &gt; 
-                <span>START BUSINESS</span> &gt; 
-                <a href="{% url 'service_list' %}">REGISTRATIONS</a> &gt; 
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span>START BUSINESS</span> &gt;
                 <span class="active">TRUST REGISTRATION</span>
             </nav>
 
@@ -32,18 +34,20 @@
                     <div class="subservice-gov-tag">
                         <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
                     </div>
-                    <h1 class="subservice-hero-title">Trust Registration</h1>
-                    <p class="subservice-hero-subtitle">Register Your Charitable Trust Legally — Compliant, Credible, Tax-Exempt</p>
-                    
+                    <h1 class="subservice-hero-title">Trust Registration (Public Charitable & Private Trust)</h1>
+                    <p class="subservice-hero-subtitle">Register Your Charitable Trust Legally — Compliant, Credible,
+                        Tax-Exempt</p>
+
                     <div class="subservice-pill-badges">
-                        <span class="pill-badge pill-purple">✦ 100% Online Process</span>
-                        <span class="pill-badge pill-blue">✦ Dedicated CA Support</span>
-                        <span class="pill-badge pill-cyan">✦ Fast Turnaround</span>
+                        <span class="pill-badge pill-purple">✦ 12A & 80G Tax Exemptions</span>
+                        <span class="pill-badge pill-blue">✦ FCRA & CSR Funding Ready</span>
+                        <span class="pill-badge pill-cyan">✦ Charitable Purpose Protected</span>
                     </div>
 
                     <div class="subservice-hero-actions">
                         <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
-                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to Expert</a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
                     </div>
                 </div>
             </div>
@@ -60,76 +64,127 @@
                 <!-- 1. WHAT IS -->
                 <div class="subservice-content-card">
                     <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
-                    <h2 class="section-serif-title">What is a Trust??</h2>
+                    <h2 class="section-serif-title">What is a Trust?</h2>
                     <div class="section-body-text">
-                        <p>A Trust is a legal arrangement in which one party (the Settlor or Author) transfers property or assets to another party (the Trustee) to hold and manage for the benefit of identified beneficiaries or for a charitable purpose. In India, trusts are primarily governed by the Indian Trusts Act, 1882 (for private trusts) and various state-level Public Trusts.</p>
-                        <p>There are two broad categories: (a) Private Trusts — created for the benefit of specific, identified beneficiaries; and (b) Public Charitable Trusts — created for the benefit of the general public or an identifiable section thereof for education, poverty relief, medical relief, religion, knowledge, or general public utility.</p>
-                        <p>A Trust requires a minimum of two trustees, a Trust Deed, and registration with the Sub-Registrar and/or Charity Commissioner where applicable. After obtaining 12A and 80G registration, eligible trusts receive tax exemptions and donors receive deduction benefits.</p>
+                        <p>A Trust is a legal arrangement in which one party (the Settlor or Author) transfers property
+                            or assets to another party (the Trustee) to hold and manage for the benefit of identified
+                            beneficiaries or for a charitable purpose. In India, trusts are primarily governed by the
+                            Indian Trusts Act, 1882 (for private trusts) and various state-level Public Trusts.</p>
+                        <p>There are two broad categories: (a) <strong> Private Trusts </strong> — created for the
+                            benefit of specific,
+                            identified beneficiaries; and (b) <strong> Public Charitable Trusts</strong> — created for
+                            the benefit of the
+                            general public or an identifiable section thereof for education, poverty relief, medical
+                            relief, religion, knowledge, or general public utility.</p>
+                        <p>A Trust requires a minimum of two trustees, a Trust Deed, and registration with the
+                            Sub-Registrar and/or Charity Commissioner where applicable. After obtaining 12A and 80G
+                            registration, eligible trusts receive tax exemptions and donors receive deduction benefits.
+                        </p>
                     </div>
-                    
+                    <div class="subservice-success-box">
+                        <div class="success-icon"><i class="fas fa-check"></i></div>
+                        <div class="success-content">
+                            <strong>Key advantage:</strong>A Trust is the simplest and most affordable non-profit
+                            structure to form — ideal for small to mid-size charitable bodies, family estate planning,
+                            and educational or religious institutions.
+                        </div>
+                    </div>
                 </div>
 
-                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <!-- TYPES OF TRUSTS WE REGISTER -->
                 <div class="subservice-content-card">
-                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
-                    <h2 class="section-serif-title">Who Should Register a Trust??</h2>
-                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from this service:</p>
+                    <h2 class="section-serif-title">Types of Trusts We Register</h2>
+                    <div class="trust-types-grid">
+                        <!-- Public Charitable Trust -->
+                        <div class="trust-type-card">
+                            <h4 class="trust-type-title">Public Charitable Trust</h4>
+                            <ul class="trust-type-list">
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Educational trusts</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Medical trusts</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Religious trusts</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Social welfare trusts</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Environmental trusts</li>
+                            </ul>
+                        </div>
 
-                    <div class="eligibility-grid">
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">NGO Founders</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
+                        <!-- Private Trust -->
+                        <div class="trust-type-card">
+                            <h4 class="trust-type-title">Private Trust</h4>
+                            <ul class="trust-type-list">
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Family trusts</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Discretionary trusts</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Specific / determinate trusts</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> HUF trusts</li>
+                            </ul>
+                        </div>
+
+                        <!-- Other Structures -->
+                        <div class="trust-type-card">
+                            <h4 class="trust-type-title">Other Structures</h4>
+                            <ul class="trust-type-list">
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Waqf charitable trust</li>
+                                <li class="trust-type-item"><span class="trust-type-bullet">•</span> Waqf advisory &amp; liaison</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER A TRUST -->
+                <div class="subservice-content-card">
+                    <h2 class="section-serif-title">Who Should Register a Trust?</h2>
+
+                    <div class="trust-profiles-grid">
+                        <!-- Card 1 -->
+                        <div class="trust-profile-card">
+                            <span class="trust-profile-check">✓</span>
+                            <div class="trust-profile-content">
+                                <h4 class="trust-profile-title">NGO Founders</h4>
+                                <p class="trust-profile-desc">Individuals or groups starting a charitable foundation or welfare organisation on a modest budget.</p>
                             </div>
                         </div>
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">Families for Succession</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
+
+                        <!-- Card 2 -->
+                        <div class="trust-profile-card">
+                            <span class="trust-profile-check">✓</span>
+                            <div class="trust-profile-content">
+                                <h4 class="trust-profile-title">Families for Succession</h4>
+                                <p class="trust-profile-desc">Families looking to transfer wealth across generations in a structured, dispute-free manner via private trusts.</p>
                             </div>
                         </div>
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">Educational Institutions</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
+
+                        <!-- Card 3 -->
+                        <div class="trust-profile-card">
+                            <span class="trust-profile-check">✓</span>
+                            <div class="trust-profile-content">
+                                <h4 class="trust-profile-title">Educational Institutions</h4>
+                                <p class="trust-profile-desc">Schools, colleges, and coaching centres operating on a non-profit basis require a trust or society to hold assets and receive donations.</p>
                             </div>
                         </div>
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">Healthcare Non-Profits</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
+
+                        <!-- Card 4 -->
+                        <div class="trust-profile-card">
+                            <span class="trust-profile-check">✓</span>
+                            <div class="trust-profile-content">
+                                <h4 class="trust-profile-title">Healthcare Non-Profits</h4>
+                                <p class="trust-profile-desc">Hospitals, clinics, and dispensaries operating for public benefit, seeking 12A/80G status and CSR funding eligibility.</p>
                             </div>
                         </div>
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">Religious Bodies</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
+
+                        <!-- Card 5 -->
+                        <div class="trust-profile-card">
+                            <span class="trust-profile-check">✓</span>
+                            <div class="trust-profile-content">
+                                <h4 class="trust-profile-title">Religious Bodies</h4>
+                                <p class="trust-profile-desc">Temples, mosques, churches, gurudwaras, and other religious institutions requiring a legal entity to hold property and manage donations.</p>
                             </div>
                         </div>
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">Corporate CSR Arms</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
-                            </div>
-                        </div>
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">FCRA Applicants</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
-                            </div>
-                        </div>
-                        <div class="eligibility-card">
-                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
-                            <div class="eligibility-text">
-                                <h4 class="eligibility-title">Property-Holding Trusts</h4>
-                                <p class="eligibility-desc">Qualifies for registration under current government guidelines.</p>
+
+                        <!-- Card 6 -->
+                        <div class="trust-profile-card">
+                            <span class="trust-profile-check">✓</span>
+                            <div class="trust-profile-content">
+                                <h4 class="trust-profile-title">Corporate CSR Arms &amp; FCRA Applicants</h4>
+                                <p class="trust-profile-desc">Corporate foundations and organisations seeking FCRA registration to receive foreign contributions from international donors.</p>
                             </div>
                         </div>
                     </div>
@@ -137,48 +192,109 @@
 
                 <!-- 3. PROCESS & TIMELINE -->
                 <div class="subservice-content-card">
-                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
-                    <h2 class="section-serif-title">Process & Timeline</h2>
-                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA experts:</p>
+                    <h2 class="section-serif-title">Process &amp; Timeline</h2>
 
                     <div class="process-timeline-list">
+                        <!-- Step 1 -->
                         <div class="process-step-item">
                             <div class="step-num-col">
-                                <div class="step-circle ">1</div>
+                                <div class="step-circle">1</div>
                                 <div class="step-connector"></div>
                             </div>
                             <div class="step-details">
                                 <div class="step-heading-row">
-                                    <h4 class="step-name">Document Collection & Vetting</h4>
-                                    <span class="step-time-pill pill-blue">Day 1</span>
+                                    <h4 class="step-name">Consultation &amp; Structure Advisory</h4>
+                                    <span class="step-time-pill pill-blue">1–2 Days</span>
                                 </div>
-                                <p class="step-description">Submit your documents digitally for verification by our CA team.</p>
+                                <p class="step-description">Determine whether a Public Charitable Trust, Private Trust,
+                                    or alternative structure (Section 8, Society) best suits the objectives — and
+                                    identify the correct state-level registration authority.</p>
                             </div>
                         </div>
+
+                        <!-- Step 2 -->
                         <div class="process-step-item">
                             <div class="step-num-col">
-                                <div class="step-circle ">2</div>
+                                <div class="step-circle">2</div>
                                 <div class="step-connector"></div>
                             </div>
                             <div class="step-details">
                                 <div class="step-heading-row">
-                                    <h4 class="step-name">Statutory Drafting & Filing</h4>
-                                    <span class="step-time-pill pill-blue">Day 2–3</span>
+                                    <h4 class="step-name">Trust Deed Drafting</h4>
+                                    <span class="step-time-pill pill-blue">3–5 Days</span>
                                 </div>
-                                <p class="step-description">Preparation of forms, declarations, and submission on official government portals.</p>
+                                <p class="step-description">Draft a comprehensive Trust Deed reflecting the trust's
+                                    name, objects, settlor, trustees, beneficiaries, corpus, powers of trustees,
+                                    succession of trustees, and dissolution clause — tailored for 12A/80G eligibility.
+                                </p>
                             </div>
                         </div>
+
+                        <!-- Step 3 -->
                         <div class="process-step-item">
                             <div class="step-num-col">
-                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
-                                
+                                <div class="step-circle">3</div>
+                                <div class="step-connector"></div>
                             </div>
                             <div class="step-details">
                                 <div class="step-heading-row">
-                                    <h4 class="step-name">Approval & Certificate Grant</h4>
-                                    <span class="step-time-pill pill-gold">Day 3–5</span>
+                                    <h4 class="step-name">Stamp Paper, Execution &amp; Sub-Registrar Registration</h4>
+                                    <span class="step-time-pill pill-blue">3–7 Days</span>
                                 </div>
-                                <p class="step-description">Department verification and issuance of the registration certificate and acknowledgment.</p>
+                                <p class="step-description">Print the Trust Deed on appropriate stamp paper (value
+                                    varies by state and corpus), execute with all trustees and the settlor present, and
+                                    register at the local Sub-Registrar's office.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">4</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Charity Commissioner Registration (if applicable)</h4>
+                                    <span class="step-time-pill pill-blue">30–90 Days</span>
+                                </div>
+                                <p class="step-description">States such as Maharashtra, Gujarat, Rajasthan, and
+                                    Karnataka require additional registration with the Charity Commissioner or
+                                    equivalent authority for public trusts. This is mandatory in those states to operate
+                                    legally as a public trust.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">5</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">PAN &amp; Bank Account</h4>
+                                    <span class="step-time-pill pill-blue">5–7 Days</span>
+                                </div>
+                                <p class="step-description">Apply for PAN in the Trust's name using the registered Trust
+                                    Deed. Open a dedicated current account in the Trust's name — mandatory before
+                                    applying for 12A/80G registration.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle">6</div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">12A &amp; 80G Registration</h4>
+                                    <span class="step-time-pill pill-green">30–90 Days Post-Registration</span>
+                                </div>
+                                <p class="step-description">Apply for Section 12A (income tax exemption for the trust)
+                                    and 80G (tax deduction eligibility for donors) registration with the Income Tax
+                                    Department. Both are required to become fully donor-ready and tax-exempt.</p>
                             </div>
                         </div>
                     </div>
@@ -186,12 +302,57 @@
 
                 <!-- 4. DOCUMENTS REQUIRED -->
                 <div class="subservice-content-card">
-                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
                     <h2 class="section-serif-title">Documents Required</h2>
-                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification and portal upload:</p>
 
-                    <div class="doc-req-grid">
-<p>Standard KYC and address proofs required.</p>
+                    <div class="trust-docs-grid">
+                        <!-- Left: Settlor & Trustees -->
+                        <div>
+                            <h4 class="trust-doc-col-title">Settlor &amp; Trustees</h4>
+                            <div class="trust-doc-list">
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>PAN card and Aadhaar / Passport / Voter ID of settlor and all trustees</span>
+                                </div>
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>Address proof of settlor and each trustee (bank statement or utility
+                                        bill)</span>
+                                </div>
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>Passport-size photograph of settlor and each trustee</span>
+                                </div>
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>Trustee consent letters and trust corpus / property details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Trust Office & 12A / 80G -->
+                        <div>
+                            <h4 class="trust-doc-col-title">Trust Office &amp; 12A / 80G</h4>
+                            <div class="trust-doc-list">
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>Registered office address proof — rent agreement + NOC or ownership
+                                        document</span>
+                                </div>
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>Latest utility bill (electricity / water) — not older than 2 months</span>
+                                </div>
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>Registered Trust Deed + PAN + bank account details (for 12A / 80G
+                                        application)</span>
+                                </div>
+                                <div class="trust-doc-item">
+                                    <span class="trust-doc-bullet">•</span>
+                                    <span>Activity report and audited statements (if trust already in existence)</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -209,7 +370,10 @@
                     </div>
 
                     <div class="enquiry-toggle-tabs">
-                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">PRIVATE TRUST ₹6,999</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(1)">PUBLIC CHARITABL.. ₹12,999</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(2)">COMPLETE NGO TRU.. ₹24,999</button>
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">PRIVATE TRUST
+                            ₹6,999</button><button type="button" class="enquiry-tab"
+                            onclick="switchSidebarPlan(1)">PUBLIC CHARITABL.. ₹12,999</button><button type="button"
+                            class="enquiry-tab" onclick="switchSidebarPlan(2)">COMPLETE NGO TRU.. ₹24,999</button>
                     </div>
 
                     <div class="enquiry-price-box">
@@ -217,13 +381,15 @@
                             <span class="enquiry-price-label" id="sidebarPlanName">PRIVATE TRUST</span>
                             <span class="enquiry-price-val" id="sidebarPrice">₹6,999</span>
                         </div>
-                        <p class="enquiry-price-sub" id="sidebarSub">Ideal for: Families for estate planning, HUF succession, private wealth trusts</p>
+                        <p class="enquiry-price-sub" id="sidebarSub">Ideal for: Families for estate planning, HUF
+                            succession, private wealth trusts</p>
                     </div>
 
-                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Start Service Now →</a>
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
 
                     <div class="sidebar-contact-call">
-                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91 9177657288</strong></a>
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
                     </div>
 
                     <div class="sidebar-specs-list">
@@ -248,19 +414,19 @@
                     <div class="sidebar-checklist-box">
                         <p class="checklist-header">SERVICE INCLUDES</p>
                         <div class="checklist-item">
-                            <i class="fas fa-check-circle text-success"></i> 
+                            <i class="fas fa-check-circle text-success"></i>
                             <span>Official Certificate Issued</span>
                         </div>
                         <div class="checklist-item">
-                            <i class="fas fa-check-circle text-success"></i> 
+                            <i class="fas fa-check-circle text-success"></i>
                             <span>Full Statutory Drafting & Vetting</span>
                         </div>
                         <div class="checklist-item">
-                            <i class="fas fa-check-circle text-success"></i> 
+                            <i class="fas fa-check-circle text-success"></i>
                             <span>Dedicated CA Support</span>
                         </div>
                         <div class="checklist-item">
-                            <i class="fas fa-check-circle text-success"></i> 
+                            <i class="fas fa-check-circle text-success"></i>
                             <span>Post-Filing Compliance Roadmap</span>
                         </div>
                     </div>
@@ -274,7 +440,8 @@
                 <!-- CA Advisory Promo Card -->
                 <div class="sidebar-quote-card">
                     <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business from hefty penalties while building long-term institutional credibility."</p>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
                     <div class="quote-author">
                         <div class="author-badge"><i class="fas fa-user-tie"></i></div>
                         <div class="author-info">
@@ -296,7 +463,10 @@
                 <div class="showcase-content">
                     <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
                     <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
-                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is handled and reviewed by a dedicated Chartered Accountant. Our clients get real human consultations, custom tax-saving strategies, and guaranteed error-free filings backed by professional liability indemnity.</p>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
                     <div class="showcase-stats">
                         <div class="stat-item">
                             <span class="stat-number">15,000+</span>
@@ -310,7 +480,8 @@
                 </div>
                 <div class="showcase-visual">
                     <div class="showcase-img-wrap">
-                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX" class="showcase-img">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
                         <div class="showcase-img-badge">
                             <i class="fas fa-certificate text-gold"></i>
                             <span>Dedicated Senior CA assigned to your filing from Day 1</span>
@@ -327,77 +498,159 @@
             <div class="pricing-section-head">
                 <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
                 <h2 class="section-serif-title center">Trust Registration Pricing Plans</h2>
-                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
             </div>
 
             <div class="pricing-cards-container plans-3">
-                <div class="pricing-plan-box">
-                    
-                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
-                    <h3 class="plan-title">PRIVATE TRUST</h3>
-                    <p class="plan-subtitle">Ideal for:</p>
-
+                <!-- Card 1: PRIVATE TRUST -->
+                <div class="pricing-plan-box plan-box-pad">
+                    <div class="plan-category-blue">PRIVATE TRUST</div>
                     <div class="plan-price-row">
-                        <span class="plan-price">₹6,999</span>
-                        <span class="plan-period"> all-inclusive</span>
+                        <span class="plan-price-large">₹6,999</span>
+                        <span class="plan-period-muted">one-time</span>
                     </div>
-                    <p class="plan-summary-note">Ideal for: Families for estate planning, HUF succession, private wealth trusts</p>
+                    <div class="plan-subtitle-muted">Family / Estate / Succession Trust</div>
 
-                    <div class="plan-features-list">
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Standard statutory filing &amp; CA consultation</div></div>
-                    </div>
-
-                    <div class="plan-govt-fee-box">
-                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹6,999 | Govt. Fees at actuals
+                    <div class="plan-ideal-box">
+                        Ideal for: Families for estate planning, HUF succession, private wealth trusts
                     </div>
 
-                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                    <div class="plan-features-col">
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Trust Deed Drafting (Private Trust Format)</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Notarisation Advisory</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Sub-Registrar Registration</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>PAN Application</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Bank Account Advisory</span>
+                        </div>
+                    </div>
+
+                    <div class="plan-fee-footer">
+                        <div>VITTAX Fee: <strong class="text-navy-bold">₹6,999</strong> | Govt. Fees:</div>
+                        <div class="plan-fee-actuals">Stamp duty + Reg. at actuals</div>
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-outline">Get Started →</a>
                 </div>
 
-                <div class="pricing-plan-box popular-plan">
-                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
-                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
-                    <h3 class="plan-title">PUBLIC CHARITABLE TRUST</h3>
-                    <p class="plan-subtitle">Ideal for:</p>
-
+                <!-- Card 2: PUBLIC CHARITABLE TRUST -->
+                <div class="pricing-plan-box plan-box-pad">
+                    <div class="plan-category-blue">PUBLIC CHARITABLE TRUST</div>
                     <div class="plan-price-row">
-                        <span class="plan-price">₹12,999</span>
-                        <span class="plan-period"> all-inclusive</span>
+                        <span class="plan-price-large">₹12,999</span>
+                        <span class="plan-period-muted">one-time</span>
                     </div>
-                    <p class="plan-summary-note">Ideal for: NGO founders, educational institutions, medical trusts</p>
+                    <div class="plan-subtitle-muted">NGO / Educational / Medical Trust</div>
 
-                    <div class="plan-features-list">
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Standard statutory filing &amp; CA consultation</div></div>
-                    </div>
-
-                    <div class="plan-govt-fee-box gold-tint">
-                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹12,999 | Govt. Fees at actuals
+                    <div class="plan-ideal-box">
+                        Ideal for: NGO founders, educational institutions, medical trusts
                     </div>
 
-                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                    <div class="plan-features-col">
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Trust Deed Drafting</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Sub-Registrar Registration</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>PAN + Bank Account Advisory</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Compliance Calendar</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>12A / 80G Advisory</span>
+                        </div>
+                    </div>
+
+                    <div class="plan-fee-footer">
+                        <div>VITTAX Fee: <strong class="text-navy-bold">₹12,999</strong> | Govt. Fees:</div>
+                        <div class="plan-fee-actuals">Stamp duty + Reg. at actuals</div>
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-outline">Get Started →</a>
                 </div>
 
-                <div class="pricing-plan-box">
-                    
-                    <div class="plan-tag">TIER 3 / ACCREDITED</div>
-                    <h3 class="plan-title">COMPLETE NGO TRUST PACKAGE</h3>
-                    <p class="plan-subtitle">Ideal for:</p>
+                <!-- Card 3: COMPLETE NGO TRUST PACKAGE -->
+                <div class="pricing-plan-box plan-box-pad popular-blue">
+                    <div class="plan-ribbon-blue">POPULAR</div>
 
+                    <div class="plan-category-blue">COMPLETE NGO TRUST PACKAGE</div>
                     <div class="plan-price-row">
-                        <span class="plan-price">₹24,999</span>
-                        <span class="plan-period"> all-inclusive</span>
+                        <span class="plan-price-large">₹24,999</span>
+                        <span class="plan-period-muted">one-time</span>
                     </div>
-                    <p class="plan-summary-note">Ideal for: Complete donor-ready NGO setup</p>
+                    <div class="plan-subtitle-muted">Registration + 12A + 80G + Compliance</div>
 
-                    <div class="plan-features-list">
-                        <div class="plan-feature"><i class="fas fa-check text-gold"></i> <div>Standard statutory filing &amp; CA consultation</div></div>
-                    </div>
-
-                    <div class="plan-govt-fee-box">
-                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹24,999 | Govt. Fees at actuals
+                    <div class="plan-ideal-box">
+                        Ideal for: Complete donor-ready NGO setup
                     </div>
 
-                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                    <div class="plan-features-col">
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Trust Deed Drafting</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Sub-Registrar Registration</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Charity Commissioner Registration</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>PAN + Bank Account</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>12A Registration (IT Exemption)</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>80G Registration (Donor Deduction)</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>Udyam / DPIIT Advisory</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>FCRA Eligibility Advisory</span>
+                        </div>
+                        <div class="plan-feature-row">
+                            <span class="plan-check-green">✓</span>
+                            <span>1-Year Compliance Calendar</span>
+                        </div>
+                    </div>
+
+                    <div class="plan-fee-footer">
+                        <div>VITTAX Fee: <strong class="text-navy-bold">₹24,999</strong> | Govt. Fees:</div>
+                        <div class="plan-fee-actuals">Stamp duty + IT filing fees at actuals</div>
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-blue">Get Started →</a>
                 </div>
             </div>
         </div>
@@ -410,21 +663,25 @@
                 <div class="expansion-content">
                     <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
                     <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
-                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity, credit profile, and tax registrations without interrupting your business operations. Our unified portal keeps all certificates, filings, and notices in one place.</p>
-                    
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
                     <div class="expansion-points">
                         <div class="expansion-point">
                             <i class="fas fa-check-circle text-gold"></i>
                             <div>
                                 <strong>Centralized Cloud Vault:</strong>
-                                <p>Access your registrations, tax returns, and bank documents anytime from our client portal.</p>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
                             </div>
                         </div>
                         <div class="expansion-point">
                             <i class="fas fa-check-circle text-gold"></i>
                             <div>
                                 <strong>Smooth Corporate Conversion:</strong>
-                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST records.</p>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
                             </div>
                         </div>
                     </div>
@@ -446,15 +703,21 @@
                             <div class="mockup-main">
                                 <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
                                 <div class="mockup-doc-row">
-                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Statutory_Registration_Certificate.pdf</span></div>
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
                                     <span class="mockup-tag">Verified</span>
                                 </div>
                                 <div class="mockup-doc-row">
-                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>Department_Filing_Challan.pdf</span></div>
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
                                     <span class="mockup-tag">Filed</span>
                                 </div>
                                 <div class="mockup-doc-row">
-                                    <div><i class="fas fa-file-pdf text-danger"></i> <span>CA_Vetting_Confirmation.pdf</span></div>
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
                                     <span class="mockup-tag">Issued</span>
                                 </div>
                             </div>
@@ -471,37 +734,52 @@
             <div class="faq-section-head">
                 <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
                 <h2 class="section-serif-title center">Frequently Asked Questions</h2>
-                <p class="section-subtitle-muted center">Everything you need to know about Trust Registration in India.</p>
+                <p class="section-subtitle-muted center">Everything you need to know about Trust Registration in India.
+                </p>
             </div>
 
             <div class="faq-accordion-list">
                 <div class="faq-card-item open">
                     <div class="faq-question">
-                        <span>Is Trust Registration mandatory in India?</span>
+                        <span>What is the difference between a Trust, a Society, and a Section 8 Company?</span>
                         <i class="fas fa-chevron-down faq-toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Mandatory requirements depend on statutory thresholds, business turnover, and operational activities under Indian laws.</p>
+                        <p>All three are valid non-profit structures but with different governance models and
+                            registration authorities. A Trust is the simplest to form (just a registered deed), governed
+                            by state Trust Acts — ideal for small NGOs and family estates. A Society is governed by the
+                            Societies Registration Act and is preferred for member-based organisations. A Section 8
+                            Company is governed by MCA under the Companies Act, offers the highest transparency and
+                            credibility, and is preferred for large NGOs seeking CSR and institutional funding.</p>
                     </div>
                 </div>
 
                 <div class="faq-card-item">
                     <div class="faq-question">
-                        <span>How long does Trust Registration process take?</span>
+                        <span>Is Charity Commissioner registration always required?</span>
                         <i class="fas fa-chevron-down faq-toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Typically processed within 3 to 7 business days following submission of complete verified documents.</p>
+                        <p>It depends on the state. Maharashtra, Gujarat, Rajasthan, Karnataka, and some other states
+                            require registration with the Charity Commissioner (or equivalent authority) in addition to
+                            Sub-Registrar registration for public charitable trusts. In states like Delhi, Uttar
+                            Pradesh, and Tamil Nadu, Sub-Registrar registration alone is generally sufficient. VITTAX
+                            advises on the correct authority for your state.</p>
                     </div>
                 </div>
 
                 <div class="faq-card-item">
                     <div class="faq-question">
-                        <span>Can I apply completely online?</span>
+                        <span>What is 80G registration and how does it help?</span>
                         <i class="fas fa-chevron-down faq-toggle-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, the entire filing and advisory process with VITTAX is 100% digital with no physical office visits required.</p>
+                        <p>80G registration allows donors to claim tax deductions on contributions made to your trust,
+                            making it easier to raise funds from individuals and corporates. This registration is
+                            optional
+                            but highly recommended for all public charitable trusts seeking donations. The deduction
+                            ranges from 50% to 100% depending on the nature of the activity. VITTAX can assist with the
+                            complete 80G application and ensure compliance with all requirements.</p>
                     </div>
                 </div>
             </div>
@@ -514,11 +792,13 @@
             <div class="cta-inner-card">
                 <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
                 <h2 class="cta-banner-title">Set Up Your Trust Registration with VITTAX</h2>
-                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX with dedicated CA backing.</p>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX with
+                    dedicated CA backing.</p>
 
                 <div class="cta-btn-group">
                     <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
-                    <a href="tel:+919177657288" class="btn-cta-phone"><i class="fas fa-phone-alt"></i> Call Expert: +91 9177657288</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+
                 </div>
 
                 <div class="cta-trust-badges">
@@ -536,50 +816,50 @@
 
 <!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-card-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => i.classList.remove('open'));
-            if (!isOpen) {
-                item.classList.add('open');
-            }
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
         });
     });
-});
 
-// Dynamic Sidebar Plan Switcher
-const servicePlansData = [{"name": "PRIVATE TRUST", "price": "\u20b96,999", "period": "", "sub": "Ideal for: Families for estate planning, HUF succession, private wealth trusts"}, {"name": "PUBLIC CHARITABLE TRUST", "price": "\u20b912,999", "period": "", "sub": "Ideal for: NGO founders, educational institutions, medical trusts"}, {"name": "COMPLETE NGO TRUST PACKAGE", "price": "\u20b924,999", "period": "", "sub": "Ideal for: Complete donor-ready NGO setup"}];
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "PRIVATE TRUST", "price": "\u20b96,999", "period": "", "sub": "Ideal for: Families for estate planning, HUF succession, private wealth trusts" }, { "name": "PUBLIC CHARITABLE TRUST", "price": "\u20b912,999", "period": "", "sub": "Ideal for: NGO founders, educational institutions, medical trusts" }, { "name": "COMPLETE NGO TRUST PACKAGE", "price": "\u20b924,999", "period": "", "sub": "Ideal for: Complete donor-ready NGO setup" }];
 
-function switchSidebarPlan(idx) {
-    if (!servicePlansData || !servicePlansData[idx]) return;
-    const p = servicePlansData[idx];
-    
-    // Toggle active state on tabs
-    const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
-    tabs.forEach((tab, i) => {
-        if (i === idx) {
-            tab.classList.add('active');
-        } else {
-            tab.classList.remove('active');
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small class='period-small'>" + p.period + "</small>" : "");
         }
-    });
-    
-    // Update price and plan name in sidebar
-    const nameEl = document.getElementById('sidebarPlanName');
-    const priceEl = document.getElementById('sidebarPrice');
-    const subEl = document.getElementById('sidebarSub');
-    
-    if (nameEl) nameEl.textContent = p.name;
-    if (priceEl) {
-        priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
     }
-    if (subEl && p.sub) {
-        subEl.textContent = p.sub;
-    }
-}
 </script>
 {% endblock %}

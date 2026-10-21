@@ -28,25 +28,11 @@
 
       <div class="nav-links">
         <a href="{% url 'service_list' %}"
-          class="nav-link {% if request.resolver_match.url_name == 'service_list' %}active{% endif %}">Services</a>
+          class="nav-link {% if request.resolver_match.url_name == 'service_list' %}active{% endif %}">Blogs</a>
+        <a href="{% url 'services' %}"
+          class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a>
         <a href="{% url 'about' %}"
           class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
-
-        <!-- HEAD 1 -->
-        <div class="nav-dropdown">
-          <a href="#" class="nav-link">Start a Business <i class="fas fa-chevron-down"></i></a>
-          <div class="nav-dropdown-menu">
-            <a href="{% url 'proprietorship' %}">Sole Proprietorship Setup</a>
-            <a href="{% url 'partnership_firm' %}">Partnership Firm Registration</a>
-            <a href="{% url 'llp' %}">Limited Liability Partnership (LLP) Registration</a>
-            <a href="{% url 'opc' %}">One Person Company (OPC) Registration</a>
-            <a href="{% url 'private_limited_company' %}">Private Limited Company Registration</a>
-            <a href="{% url 'section8_company' %}">Section 8 Company (NGO / Non-Profit)</a>
-            <a href="{% url 'producer_company' %}">Producer Company Registration</a>
-            <a href="{% url 'nidhi_company' %}">Nidhi Company Registration</a>
-            <a href="{% url 'trust_registration' %}">Trust Registration</a>
-          </div>
-        </div>
 
         <!-- HEAD 2 -->
         <div class="nav-dropdown">
