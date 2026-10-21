@@ -2,446 +2,610 @@
 {% load static %}
 {% block title %}Company Amendments — Name, Address, Capital, Directors & MOA/AOA - VITTAX{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
+
 {% block content %}
-<div style="padding:100px 0 60px;background:var(--bg);">
-    <div class="container">
+<div class="subservice-page">
 
-        <!-- HEADER -->
-        <div
-            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
-            <div>
-                <span class="section-tag">MCA &amp; Corporate Compliance</span>
-                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
-                    Company Amendments — Name, Address, Capital, Directors &amp; MOA/AOA</h1>
-                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Business Evolves — Update Your
-                    Company Records with the ROC the Right Way</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="badge badge-success">✦ All Amendment Types Handled</span>
-                    <span class="badge badge-primary">✦ Within Statutory Timelines</span>
-                    <span class="badge badge-info">✦ Board Resolutions Included</span>
-                </div>
-            </div>
-            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
-            </div>
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
-
-        <!-- BODY GRID -->
-        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
-
-            <!-- LEFT COLUMN -->
-            <div style="display:flex;flex-direction:column;gap:24px;">
-
-                <!-- WHAT IS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What are Company Amendments?</h2>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">As your
-                        company grows, changes are inevitable — a new director joins, a director resigns, you want to
-                        increase authorised share capital, shift your registered office, rename the company, or revise
-                        the objects clause in the MOA/AOA. Each of these changes requires a specific MCA e-form to be
-                        filed with the ROC — and must be done within prescribed timelines to remain compliant. Failing
-                        to report a change — especially director appointments or registered address shifts — can have
-                        legal implications including invalid filings and personal liability for directors.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">Common company amendments and
-                        their forms: Director appointment — DIR-12 (within 30 days). Director resignation — DIR-12
-                        (within 30 days). Change of registered office within state — INC-22. Change of registered office
-                        to another state — INC-23. Change of company name — INC-24. Increase in authorised capital —
-                        SH-7. MOA/AOA amendment — MGT-14. Each amendment typically requires board and/or shareholder
-                        resolutions, ROC approval (for some), and DSC of an authorised director.</p>
-                    <div
-                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
-                        ⚠️ Failing to report a change — especially director appointments or registered address shifts —
-                        can have legal implications including invalid filings and personal liability for directors.
-                    </div>
-                </div>
-
-                <!-- AMENDMENTS TABLE -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Amendments We Handle</p>
-                    <div
-                        style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;">
-                        <div style="overflow-x:auto;">
-                            <table style="width:100%;border-collapse:collapse;font-size:.82rem;min-width:600px;">
-                                <thead>
-                                    <tr
-                                        style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);">
-                                        <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">
-                                            Form No.</th>
-                                        <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">
-                                            Purpose</th>
-                                        <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">
-                                            Due Date</th>
-                                        <th style="padding:11px 14px;text-align:left;font-weight:600;font-size:.78rem;">
-                                            Penalty</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            DIR-12</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Appointment/ Designation Change of Directors</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            DIR 11</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Resignation of Director</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            DPT-3</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Return
-                                            of Deposits</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">30 June</td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            INC-22 / 23</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Change
-                                            in registered office (within city/ within state / to another state)</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            INC-24</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Company
-                                            Name change</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            MGT-14</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Board/Shareholders resolutions and Amendment of MOA/AOA</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            SH-7</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Alteration of Share Capital</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            PAS-3</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Allotment of Nee Shares</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            1000/day (max 25 lacs)</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            CHG-1</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Creation/modification of charge</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            Additional + Condonation</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            CHG-4</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Satisfaction of charge</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            MSME-1</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">MSME
-                                            outstanding dues</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Half-yearly
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            MR-1</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">
-                                            Appointment of KMP/MD</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 60 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                    <tr style="border-bottom:1px solid rgba(26,75,140,.07);">
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            MR-2</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Approval
-                                            of remuneration</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">As required
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            Additional fees</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding:10px 14px;font-weight:700;color:var(--primary);white-space:nowrap;">
-                                            CRA-2</td>
-                                        <td style="padding:10px 14px;font-size:.82rem;color:var(--text-light);">Cost
-                                            auditor appointment</td>
-                                        <td style="padding:10px 14px;font-size:.78rem;color:var(--text);">Within 30 days
-                                        </td>
-                                        <td
-                                            style="padding:10px 14px;font-size:.78rem;color:var(--danger);font-weight:500;">
-                                            100/day</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Standard Amendment</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹1,999–₹4,999<span
-                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
-                                        amendment</span></p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Single change — Director / Address
-                                    / Capital</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Companies making a single structural or administrative change</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Board
-                                    and/or shareholder resolution drafting</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Relevant
-                                    e-form preparation and MCA filing</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DSC-linked
-                                    submission</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MCA
-                                    approval tracking and acknowledgement</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999–₹4,999 per amendment (based on
-                                    type)</strong> &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--text);">Nil to
-                                    Govt. (except for capital increase — stamp duty and ROC fee apply)</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
-                            <span
-                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Complex Amendment</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹4,999–₹12,999</p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Name change, MOA/AOA alteration, or
-                                    state office shift</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Companies undergoing name change, object clause change, or inter-state office
-                                shift</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> RUN
-                                    (Reserve Unique Name) application for name change</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MOA/AOA
-                                    amendment drafting and notarisation</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Special
-                                    resolution and EGM notice drafting</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MGT-14
-                                    filing and INC-24 / INC-23 filing</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> ROC hearing
-                                    coordination (if required)</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹4,999–₹12,999</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--text);">Stamp duty (state-specific) + ROC filing
-                                    fee (based on authorised capital)</strong></div>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How quickly must a director
-                                appointment or resignation be filed?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">DIR-12 must be filed
-                                within 30 days of the board resolution appointing or accepting the resignation of a
-                                director. Delay attracts a penalty of ₹100 per day per director per form, with a minimum
-                                of ₹1,000.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can I change my company name
-                                to anything I want?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">The proposed name must
-                                be available (not already registered), must not be similar or identical to an existing
-                                trademark or company name, and must comply with the Companies (Incorporation) Rules.
-                                VITTAX checks name availability on the MCA portal and advises on compliant name options.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Standard Amendment</span><span
-                            style="font-weight:700;">₹1,999–₹4,999</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Complex Amendment</span><span
-                            style="font-weight:700;">₹4,999–₹12,999</span></div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Most Deadlines</span><span style="font-weight:700;">30
-                            Days</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Standard Late Fee</span><span
-                            style="font-weight:700;color:var(--danger);">₹100/day</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">PAS-3 Max Penalty</span><span
-                            style="font-weight:700;color:var(--danger);">₹25 Lakhs</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Resolutions</span><span
-                            style="font-weight:700;color:var(--success);">Included</span></div>
-                </div>
-                <div
-                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
-                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Common
-                        Amendments</p>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Director Change</span><span
-                            style="font-weight:600;">DIR-12</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Name Change</span><span
-                            style="font-weight:600;">INC-24</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Capital Increase</span><span
-                            style="font-weight:600;">SH-7</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
-                            style="color:var(--text-light);">MOA/AOA Change</span><span
-                            style="font-weight:600;">MGT-14</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div
-            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
-            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Update Your Company Records Correctly</h3>
-            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Talk to Our MCA Team → We handle all amendments
-                within statutory timelines with complete documentation</p>
-            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg"
-                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Talk to Our MCA
-                    Team →</a>
-                <a href="#" class="btn btn-lg"
-                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">View
-                    Plans</a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <span>MCA</span> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span class="active">COMPANY AMENDMENTS — NAME, ADDRESS, CAPITAL, DIRECTORS &AMP; MOA/AOA</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Company Amendments — Name, Address, Capital, Directors &amp;
+                        MOA/AOA</h1>
+                    <p class="subservice-hero-subtitle">Business Evolves — Update Your Company Records with the ROC the
+                        Right Way</p>
+
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ All Amendment Types Handled</span>
+                        <span class="pill-badge pill-blue">✦ Within Statutory Timelines</span>
+                        <span class="pill-badge pill-cyan">✦ Board Resolutions Included</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is Company Amendments — Name, Address, Capital, Directors &amp;
+                        MOA/AOA?</h2>
+                    <div class="section-body-text">
+                        <p>Business Evolves — Update Your Company Records with the ROC the Right Way</p>
+                    </div>
+
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Should Choose Company Amendments — Name, Address, Capital,
+                        Directors &amp; MOA/AOA?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from
+                        this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Entrepreneurs & Businesses</h4>
+                                <p class="eligibility-desc">Individuals and companies looking to establish legal status
+                                    and compliance.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Growing Enterprises</h4>
+                                <p class="eligibility-desc">Businesses scaling operations and requiring structured
+                                    statutory recognition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process & Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA
+                        experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Document Collection & Vetting</h4>
+                                    <span class="step-time-pill pill-blue">Day 1</span>
+                                </div>
+                                <p class="step-description">Submit your documents digitally for verification by our CA
+                                    team.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Statutory Drafting & Filing</h4>
+                                    <span class="step-time-pill pill-blue">Day 2–3</span>
+                                </div>
+                                <p class="step-description">Preparation of forms, declarations, and submission on
+                                    official government portals.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Approval & Certificate Grant</h4>
+                                    <span class="step-time-pill pill-gold">Day 3–5</span>
+                                </div>
+                                <p class="step-description">Department verification and issuance of the registration
+                                    certificate and acknowledgment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification
+                        and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (PAN Card & Aadhaar Card)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Address Proof (Electricity / Utility Bill)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Business Place Proof (Rental Agreement / Tax Receipt)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Photographs of Proprietor / Partners / Directors</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Company Amendments — Nam Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">Standard
+                            Amendment ₹1,999</button><button type="button" class="enquiry-tab"
+                            onclick="switchSidebarPlan(1)">Complex Amendment ₹4,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">Standard Amendment</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹1,999</span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">Single change — Director / Address / Capital</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Most Deadlines</span>
+                            <span class="spec-val">30 Days</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Standard Late Fee</span>
+                            <span class="spec-val">₹100/day</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">PAS-3 Max Penalty</span>
+                            <span class="spec-val">₹25 Lakhs</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Resolutions</span>
+                            <span class="spec-val">Included</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">COMMON AMENDMENTS</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>Director Change:</strong> DIR-12</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>Name Change:</strong> INC-24</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>Capital Increase:</strong> SH-7</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>MOA/AOA Change:</strong> MGT-14</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Company Amendments — Name, Address, Capital, Directors &amp;
+                    MOA/AOA Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-2">
+                <div class="pricing-plan-box">
+
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">STANDARD AMENDMENT</h3>
+                    <p class="plan-subtitle">Ideal for: Companies making a single structural or administrative change
+                    </p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹1,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Single change — Director / Address / Capital</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Board and/or shareholder resolution drafting</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Relevant e-form preparation and MCA filing</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>DSC-linked submission</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>MCA approval tracking and acknowledgement</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹1,999–₹4,999 per amendment (based
+                        on type) &nbsp;|&nbsp; Govt. Fees: Nil to Govt. (except for capital increase — stamp duty and
+                        ROC fee apply)
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">COMPLEX AMENDMENT</h3>
+                    <p class="plan-subtitle">Ideal for: Companies undergoing name change, object clause change, or
+                        inter-state office shift</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹4,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Name change, MOA/AOA alteration, or state office shift</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>RUN (Reserve Unique Name) application for name change</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>MOA/AOA amendment drafting and notarisation</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Special resolution and EGM notice drafting</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>MGT-14 filing and INC-24 / INC-23 filing</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>ROC hearing coordination (if required)</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹4,999–₹12,999 &nbsp;|&nbsp; Govt.
+                        Fees: Stamp duty (state-specific) + ROC filing fee (based on authorised capital)
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about Company Amendments — Name,
+                    Address, Capital, Directors &amp; MOA/AOA in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>How quickly must a director appointment or resignation be filed?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>DIR-12 must be filed within 30 days of the board resolution appointing or accepting the
+                            resignation of a director. Delay attracts a penalty of ₹100 per day per director per form,
+                            with a minimum of ₹1,000.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can I change my company name to anything I want?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The proposed name must be available (not already registered), must not be similar or
+                            identical to an existing trademark or company name, and must comply with the Companies
+                            (Incorporation) Rules. VITTAX checks name availability on the MCA portal and advises on
+                            compliant name options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Update Your Company Records Correctly</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    });
+
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "Standard Amendment", "price": "\u20b91,999", "period": "", "sub": "Single change \u2014 Director / Address / Capital" }, { "name": "Complex Amendment", "price": "\u20b94,999", "period": "", "sub": "Name change, MOA/AOA alteration, or state office shift" }];
+
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        }
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
+    }
+</script>
 {% endblock %}

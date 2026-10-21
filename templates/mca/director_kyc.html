@@ -2,347 +2,664 @@
 {% load static %}
 {% block title %}Director's KYC, DIN & DSC - VITTAX{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
+
 {% block content %}
-<div style="padding:100px 0 60px;background:var(--bg);">
-    <div class="container">
+<div class="subservice-page">
 
-        <!-- HEADER -->
-        <div
-            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
-            <div>
-                <span class="section-tag">MCA &amp; Corporate Compliance</span>
-                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">
-                    Director's KYC, DIN &amp; DSC</h1>
-                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Keep Every Director Active and
-                    Compliant — Annual DIR-3 KYC and Fresh DIN/DSC Support</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="badge badge-success">✦ DIN KYC by 30th Sept</span>
-                    <span class="badge badge-primary">✦ Deactivation Avoided</span>
-                    <span class="badge badge-info">✦ Fresh DIN &amp; DSC in 1 Day</span>
-                </div>
-            </div>
-            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
-            </div>
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
-
-        <!-- BODY GRID -->
-        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
-
-            <!-- LEFT COLUMN -->
-            <div style="display:flex;flex-direction:column;gap:24px;">
-
-                <!-- WHAT IS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is Director KYC?</h2>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">DIR-3 KYC
-                        (Director Identification Number Know Your Customer) is an annual filing that every person who
-                        holds a DIN (Director Identification Number) or DPIN (Designated Partner Identification Number)
-                        must complete by 30th September each year. The DIR-3 KYC verifies the director's personal
-                        details — name, address, email, and mobile number — and ensures the DIN/DPIN remains active. If
-                        a director fails to file DIR-3 KYC by the deadline, the DIN/DPIN is automatically deactivated by
-                        the MCA. A deactivated DIN means the director cannot sign, file, or approve any MCA documents —
-                        effectively freezing all company filings until the DIN is reactivated by paying a ₹5,000
-                        reactivation fee and filing the KYC form.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">DIN/DPIN is a unique 8-digit
-                        number allotted by the MCA to every individual who wishes to become a director of a company or
-                        designated partner of an LLP. It is a one-time registration that lasts for life — but requires
-                        annual KYC to stay active. DSC (Digital Signature Certificate) is the electronic equivalent of a
-                        physical signature — mandatory for company/LLP incorporation, ROC filings, GST, income tax
-                        audits, and e-tenders. Without a valid DSC, no director can digitally sign company documents.
-                    </p>
-                    <div
-                        style="background:rgba(231,76,60,.07);border-left:3px solid var(--danger);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#c0392b;margin-top:14px;">
-                        ⚠️ If DIR-3 KYC is not filed by 30th September, the DIN is automatically deactivated.
-                        Reactivation requires ₹5,000 government fee.
-                    </div>
-                </div>
-
-                <!-- PROCESS & TIMELINE -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Process &amp; Timeline</p>
-                    <div style="display:flex;flex-direction:column;gap:8px;">
-
-                        <div
-                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
-                            <div
-                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                                1</div>
-                            <div>
-                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DIR-3 KYC Web Filing
-                                    &nbsp;<span style="font-size:.75rem;font-weight:500;color:var(--text-light);">[Same
-                                        Day]</span></p>
-                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Director logs in
-                                    to MCA portal and completes the OTP-verified KYC form using Aadhaar-linked mobile
-                                    and email. VITTAX guides the director through the process and provides CA signature
-                                    of filing.</p>
-                            </div>
-                        </div>
-
-                        <div
-                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
-                            <div
-                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                                2</div>
-                            <div>
-                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DIN Application (Fresh)
-                                    &nbsp;<span style="font-size:.75rem;font-weight:500;color:var(--text-light);">[1–2
-                                        Days]</span></p>
-                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">For new directors:
-                                    Form DIR-3 or SPICe+ incorporation process includes DIN allotment. Takes 1–2 working
-                                    days after form submission.</p>
-                            </div>
-                        </div>
-
-                        <div
-                            style="display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px;">
-                            <div
-                                style="min-width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);border-radius:50%;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                                3</div>
-                            <div>
-                                <p style="font-size:.88rem;font-weight:600;margin-bottom:3px;">DSC Application
-                                    &nbsp;<span style="font-size:.75rem;font-weight:500;color:var(--text-light);">[Same
-                                        Day]</span></p>
-                                <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">We collect PAN,
-                                    Aadhaar, and photo. eKYC verification via video call. Class 3 DSC issued on USB
-                                    token within same day.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Director KYC (DIR-3)</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹499<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> per
-                                        director</span></p>
-                                <p style="font-size:.78rem;color:var(--text-light);">Annual filing for active DINs</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: All directors and designated partners with existing DINs — annual requirement
-                            </p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DIR-3 KYC
-                                    web filing preparation</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> OTP
-                                    verification support</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> MCA KYC
-                                    acknowledgement</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹499 per director</strong>
-                                &nbsp;|&nbsp; Govt. Fees: <strong style="color:var(--text);">Nil (if DIN was deactivated
-                                    — reactivation fee to Govt is ₹5000.)</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid transparent;">
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Fresh DIN Allotment</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹999</p>
-                                <p style="font-size:.78rem;color:var(--text-light);">For new directors being appointed
-                                </p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: New directors being appointed to existing companies or LLPs</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DIR-3 form
-                                    preparation and filing</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document
-                                    verification</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DIN
-                                    allotment and activation</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Director
-                                    appointment resolution drafting</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹999</strong> &nbsp;|&nbsp; Govt.
-                                Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
-                            <span
-                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">POPULAR</span>
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Class 3 DSC — 2 Year</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹1,999<span style="font-size:.85rem;font-weight:500;color:var(--text-light);"> incl.
-                                        token</span></p>
-                                <p style="font-size:.78rem;color:var(--text-light);">For directors, signatories, and
-                                    professionals</p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Directors, CAs, company secretaries, and authorised signatories</p>
-                            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;flex:1;">
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Document
-                                    collection and eKYC verification</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> USB token
-                                    setup</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> DSC
-                                    issuance and installation</li>
-                                <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                        style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
-                                    Multiple-use activation (MCA, IT, GST, EPFO, etc.)</li>
-                            </ul>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹1,999 (inclusive token and
-                                    certificate)</strong> &nbsp;|&nbsp; Govt. Fees: <strong
-                                    style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Frequently Asked Questions</p>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What happens if I don't file
-                                Director KYC (DIR-3) by 30th September?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Your DIN is
-                                deactivated the next day (1st October). You cannot sign any MCA documents, filings, or
-                                resolutions until the DIN is reactivated. Reactivation requires paying ₹5,000 government
-                                fee and filing the KYC form.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can one person hold multiple
-                                DINs?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">No. One individual can
-                                hold only one DIN. If you have been allotted multiple DINs by mistake, the extra DINs
-                                must be surrendered by filing DIR-5.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">How long is a DSC valid?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">DSCs are valid for 1,
-                                2, or 3 years from the date of issuance. VITTAX recommends the 2-year DSC for cost
-                                efficiency. Renewal is required before expiry.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Director KYC (DIR-3)</span><span
-                            style="font-weight:700;">₹499/director</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Fresh DIN Allotment</span><span
-                            style="font-weight:700;">₹999</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Class 3 DSC (2 Year)</span><span
-                            style="font-weight:700;">₹1,999</span></div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">KYC Deadline</span><span style="font-weight:700;">30th
-                            September</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Reactivation Fee</span><span
-                            style="font-weight:700;color:var(--danger);">₹5,000</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">DIN Delivery</span><span style="font-weight:700;">1–2
-                            Days</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">DSC Delivery</span><span style="font-weight:700;">Same
-                            Day</span></div>
-                </div>
-                <div
-                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
-                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key Facts</p>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">DIN</span><span style="font-weight:600;">8-digit
-                            number</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">KYC Form</span><span style="font-weight:600;">DIR-3 KYC
-                            Web</span></div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">DSC Type</span><span style="font-weight:600;">Class
-                            3</span></div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
-                            style="color:var(--text-light);">DSC Validity</span><span style="font-weight:600;">2
-                            Years</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div
-            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
-            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">File Director KYC Before 30th September
-            </h3>
-            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Protect Your DIN Today → We guide every step —
-                KYC filing, fresh DIN allotment, and same-day DSC issuance</p>
-            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg"
-                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Protect Your DIN
-                    Today →</a>
-                <a href="#" class="btn btn-lg"
-                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
-                    Expert</a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <span>MCA</span> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span class="active">DIRECTOR'S KYC, DIN &AMP; DSC</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Director's KYC, DIN &amp; DSC</h1>
+                    <p class="subservice-hero-subtitle">Keep Every Director Active and Compliant — Annual DIR-3 KYC and
+                        Fresh DIN/DSC Support</p>
+
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ DIN KYC by 30th Sept</span>
+                        <span class="pill-badge pill-blue">✦ Deactivation Avoided</span>
+                        <span class="pill-badge pill-cyan">✦ Fresh DIN &amp; DSC in 1 Day</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is Director KYC?</h2>
+                    <div class="section-body-text">
+                        <p>DIR-3 KYC (Director Identification Number Know Your Customer) is an annual filing that every
+                            person who holds a DIN (Director Identification Number) or DPIN (Designated Partner
+                            Identification Number) must complete by 30th September each year. The DIR-3 KYC verifies the
+                            director's personal details — name, address, email, and mobile number — and ensures the
+                            DIN/DPIN remains active. If a director fails to file DIR-3 KYC by the deadline, the DIN/DPIN
+                            is automatically deactivated by the MCA. A deactivated DIN means the director cannot sign,
+                            file, or approve any MCA documents — effectively freezing all company filings until the DIN
+                            is reactivated by paying a ₹5,000 reactivation fee and filing the KYC form.</p>
+                        <p>DIN/DPIN is a unique 8-digit number allotted by the MCA to every individual who wishes to
+                            become a director of a company or designated partner of an LLP. It is a one-time
+                            registration that lasts for life — but requires annual KYC to stay active. DSC (Digital
+                            Signature Certificate) is the electronic equivalent of a physical signature — mandatory for
+                            company/LLP incorporation, ROC filings, GST, income tax audits, and e-tenders. Without a
+                            valid DSC, no director can digitally sign company documents.</p>
+                    </div>
+
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            ⚠️ If DIR-3 KYC is not filed by 30th September, the DIN is automatically deactivated.
+                            Reactivation requires ₹5,000 government fee.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Should Choose Director's KYC, DIN &amp; DSC?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from
+                        this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Entrepreneurs & Businesses</h4>
+                                <p class="eligibility-desc">Individuals and companies looking to establish legal status
+                                    and compliance.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Growing Enterprises</h4>
+                                <p class="eligibility-desc">Businesses scaling operations and requiring structured
+                                    statutory recognition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process &amp; Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA
+                        experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Process &amp; Timeline</h4>
+                                    <span class="step-time-pill pill-blue">Step 1</span>
+                                </div>
+                                <p class="step-description">Director logs in to MCA portal and completes the
+                                    OTP-verified KYC form using Aadhaar-linked mobile and email. VITTAX guides the
+                                    director through the process and provides CA signature of filing.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">DIN Application (Fresh) &nbsp; [1–2 Days]</h4>
+                                    <span class="step-time-pill pill-blue">Step 2</span>
+                                </div>
+                                <p class="step-description">For new directors: Form DIR-3 or SPICe+ incorporation
+                                    process includes DIN allotment. Takes 1–2 working days after form submission.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">DSC Application &nbsp; [Same Day]</h4>
+                                    <span class="step-time-pill pill-gold">Step 3</span>
+                                </div>
+                                <p class="step-description">We collect PAN, Aadhaar, and photo. eKYC verification via
+                                    video call. Class 3 DSC issued on USB token within same day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification
+                        and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (PAN Card & Aadhaar Card)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Address Proof (Electricity / Utility Bill)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Business Place Proof (Rental Agreement / Tax Receipt)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Photographs of Proprietor / Partners / Directors</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Director's KYC, DIN &amp Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">Director KYC
+                            (DI.. ₹499</button><button type="button" class="enquiry-tab"
+                            onclick="switchSidebarPlan(1)">Fresh DIN Allotm.. ₹999</button><button type="button"
+                            class="enquiry-tab" onclick="switchSidebarPlan(2)">Class 3 DSC ₹1,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">Director KYC (DIR-3)</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹499</span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">Annual filing for active DINs</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">KYC Deadline</span>
+                            <span class="spec-val">30th September</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Reactivation Fee</span>
+                            <span class="spec-val">₹5,000</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">DIN Delivery</span>
+                            <span class="spec-val">1–2 Days</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">DSC Delivery</span>
+                            <span class="spec-val">Same Day</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">KEY FACTS</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>DIN:</strong> 8-digit number</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>KYC Form:</strong> DIR-3 KYC Web</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>DSC Type:</strong> Class 3</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>DSC Validity:</strong> 2 Years</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Director's KYC, DIN &amp; DSC Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-3">
+                <div class="pricing-plan-box">
+
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">DIRECTOR KYC (DIR-3)</h3>
+                    <p class="plan-subtitle">Ideal for: All directors and designated partners with existing DINs —
+                        annual requirement</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹499</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Annual filing for active DINs</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>DIR-3 KYC web filing preparation</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>OTP verification support</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>MCA KYC acknowledgement</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹499 per director &nbsp;|&nbsp;
+                        Govt. Fees: Nil (if DIN was deactivated — reactivation fee to Govt is ₹5000.)
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">FRESH DIN ALLOTMENT</h3>
+                    <p class="plan-subtitle">Ideal for: New directors being appointed to existing companies or LLPs</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">For new directors being appointed</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>DIR-3 form preparation and filing</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Document verification</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>DIN allotment and activation</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Director appointment resolution drafting</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹999 &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 3 / ACCREDITED</div>
+                    <h3 class="plan-title">CLASS 3 DSC</h3>
+                    <p class="plan-subtitle">Ideal for: Directors, CAs, company secretaries, and authorised signatories
+                    </p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹1,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">For directors, signatories, and professionals</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Document collection and eKYC verification</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>USB token setup</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>DSC issuance and installation</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Multiple-use activation (MCA, IT, GST, EPFO, etc.)</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹1,999 (inclusive token and
+                        certificate) &nbsp;|&nbsp; Govt. Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about Director's KYC, DIN &amp; DSC
+                    in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>What happens if I don't file Director KYC (DIR-3) by 30th September?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your DIN is deactivated the next day (1st October). You cannot sign any MCA documents,
+                            filings, or resolutions until the DIN is reactivated. Reactivation requires paying ₹5,000
+                            government fee and filing the KYC form.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can one person hold multiple DINs?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. One individual can hold only one DIN. If you have been allotted multiple DINs by mistake,
+                            the extra DINs must be surrendered by filing DIR-5.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>How long is a DSC valid?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>DSCs are valid for 1, 2, or 3 years from the date of issuance. VITTAX recommends the 2-year
+                            DSC for cost efficiency. Renewal is required before expiry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your Director's KYC, DIN &amp; DSC Today</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    });
+
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "Director KYC (DIR-3)", "price": "\u20b9499", "period": "", "sub": "Annual filing for active DINs" }, { "name": "Fresh DIN Allotment", "price": "\u20b9999", "period": "", "sub": "For new directors being appointed" }, { "name": "Class 3 DSC", "price": "\u20b91,999", "period": "", "sub": "For directors, signatories, and professionals" }];
+
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        }
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
+    }
+</script>
 {% endblock %}

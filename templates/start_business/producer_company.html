@@ -1,215 +1,636 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Producer Company Registration - VITTAX{% endblock %}
+
 {% block extra_css %}
-<style>
-    .hero {
-        padding: 145px 0 95px;
-        background: radial-gradient(circle at top right, rgba(34, 197, 94, .14), transparent 28%), linear-gradient(135deg, #effdf5, #f8fffb);
-        text-align: center;
-        position: relative;
-        overflow: hidden
-    }
-
-    .hero:after {
-        content: '';
-        position: absolute;
-        left: -5%;
-        right: -5%;
-        bottom: -42px;
-        height: 90px;
-        background: #fff;
-        border-radius: 50% 50% 0 0/100% 100% 0 0
-    }
-
-    .hero h1 {
-        font-size: clamp(2.4rem, 4vw, 3.8rem);
-        font-weight: 900;
-        margin-bottom: 14px
-    }
-
-    .hero p {
-        max-width: 760px;
-        margin: 0 auto;
-        color: var(--text-light);
-        font-size: 1.08rem;
-        line-height: 1.85
-    }
-
-    .section {
-        padding: 90px 0
-    }
-
-    .section h2 {
-        font-size: 2rem;
-        font-weight: 900;
-        margin-bottom: 18px
-    }
-
-    .section p {
-        line-height: 1.9;
-        color: var(--text-light)
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 24px
-    }
-
-    .card {
-        background: #fff;
-        border-radius: 24px;
-        padding: 30px;
-        box-shadow: 0 16px 36px rgba(15, 23, 42, .08);
-        border: 1px solid rgba(34, 197, 94, .12)
-    }
-
-    .price {
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: #16a34a;
-        margin: 10px 0 14px
-    }
-
-    .faq details {
-        background: #fff;
-        border-radius: 18px;
-        padding: 18px 20px;
-        margin-bottom: 16px;
-        box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
-    }
-
-    .cta {
-        background: linear-gradient(135deg, #16a34a, #15803d);
-        color: #fff;
-        border-radius: 30px;
-        padding: 58px 38px;
-        text-align: center
-    }
-
-    .cta h2 {
-        color: #fff
-    }
-
-    .cta p {
-        color: rgba(255, 255, 255, .92)
-    }
-
-    @media(max-width:768px) {
-        .hero {
-            padding: 120px 0 72px
-        }
-
-        .section {
-            padding: 64px 0
-        }
-
-        .grid {
-            grid-template-columns: 1fr
-        }
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}?v=2">
 {% endblock %}
+
 {% block content %}
-<section class='hero'>
-    <div class='container'><span class='section-tag'>START A BUSINESS</span>
-        <h1>Producer Company Registration</h1>
-        <p>Empower Farmers & Artisans — The FPO / Producer Company Structure</p><a href='#pricing'
-            class='btn btn-primary' style='margin-top:24px'>Get Started</a>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>What is a Producer Company?</h2>
-        <p>A Producer Company is a special category of company under the Companies Act, 2013 designed specifically for
-            primary producers — farmers, fishermen, artisans, weavers, and other persons engaged in any activity
-            connected with primary production (agriculture, horticulture, animal husbandry, forestry, fisheries, etc.).
-        </p>
-        <p>A Producer Company (also called Farmer Producer Organisation or FPO) allows individual producers to pool
-            resources, access institutional credit (NABARD, SFAC), procure inputs collectively at lower costs, and
-            market their produce collectively for better realisation. Minimum 10 individual producers or 2 producer
-            institutions are required to form a Producer Company.</p>
-        <p>The Government of India actively promotes FPOs/Producer Companies through subsidies, equity grants (up to ₹18
-            lakh per FPO from NABARD), credit guarantees (CGTMSE extended), and tax exemptions under the Income Tax Act
-            (100% deduction on profits for FPOs with turnover up to ₹100 crore).</p>
-    </div>
-</section>
-<section class='section' style='background:linear-gradient(180deg,#f2fff7,#ecfff4)'>
-    <div class='container'>
-        <h2>Why Choose a Producer Company?</h2>
-        <div class='grid'>
-            <div class='card'>
-                <h3>✦ Income Tax Exemption</h3>
-            </div>
-            <div class='card'>
-                <h3>✦ NABARD Grant Eligible</h3>
-            </div>
-            <div class='card'>
-                <h3>✦ Collective Bargaining Power</h3>
-            </div>
+<div class="subservice-page">
+
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
     </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>Who Should Register a Producer Company?</h2>
-        <div class='grid'>
-            <div class='card'>✔ Farmers’ Groups: Groups of 10+ farmers wanting to form an FPO for collective agriculture
-            </div>
-            <div class='card'>✔ Other Producers: Fishermen, weavers, artisans, and other primary producers</div>
-            <div class='card'>✔ NGOs & State Departments: NGOs and state agriculture departments promoting farmer
-                collectives</div>
-            <div class='card'>✔ Agri-tech Companies: Agri-tech companies structuring farmer-ownership models</div>
-        </div>
-    </div>
-</section>
-<section class='section' id='pricing' style='background:linear-gradient(180deg,#f2fff7,#ecfff4)'>
-    <div class='container'>
-        <h2>Pricing Plans</h2>
-        <div class='grid'>
-            <div class='card'>
-                <h3>FPO REGISTRATION — Complete Producer Company registration</h3>
-                <div class='price'>₹14,999</div>
-                <p><strong>Ideal for:</strong> Farmer groups, NGO-promoted FPOs</p>
-                <p>✓ SPICe+ filing<br>✓ MOA + AOA (Producer Company format)<br>✓ COI + PAN<br>✓ NABARD registration
-                    advisory<br>✓ Income Tax Exemption advisory</p>
-                <p><strong>VITTAX Fee:</strong> ₹14,999 | <strong>Govt. Fees:</strong> MCA fees at actuals</p>
-            </div>
-            <div class='card'>
-                <h3>FPO COMPLETE PACKAGE — Registration + Compliance + Grant Advisory</h3>
-                <div class='price'>₹29,999</div>
-                <p><strong>Ideal for:</strong> Large farmer collectives seeking institutional funding</p>
-                <p>✓ Everything in Registration<br>✓ SFAC / NABARD equity grant application<br>✓ FPO compliance
-                    calendar<br>✓ CGTMSE credit advisory</p>
-                <p><strong>VITTAX Fee:</strong> ₹29,999 | <strong>Govt. Fees:</strong> MCA fees + Govt application fees
-                    at actuals</p>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span>START BUSINESS</span> &gt;
+                <span class="active">PRODUCER COMPANY REGISTRATION</span>
+            </nav>
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Producer Company Registration</h1>
+                    <p class="subservice-hero-subtitle">Empower Farmers & Artisans — The FPO / Producer Company
+                        Structure</p>
+
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ 100% Online Process</span>
+                        <span class="pill-badge pill-blue">✦ Dedicated CA Support</span>
+                        <span class="pill-badge pill-cyan">✦ Fast Turnaround</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class='section'>
-    <div class='container faq'>
-        <h2>Frequently Asked Questions</h2>
-        <details>
-            <summary>Q: What is the income tax benefit for a Producer Company?</summary>
-            <p>A: Under Section 80PA (inserted by Finance Act, 2018), a producer company engaged in agricultural
-                activities with turnover up to ₹100 crore is eligible for 100% deduction of profits — effectively zero
-                income tax. This is a major advantage over other corporate structures.</p>
-        </details>
-        <details>
-            <summary>Q: How many members are required for a Producer Company?</summary>
-            <p>A: Minimum 10 individual producer members (farmers, fishermen, etc.) or 2 producer institutions (other
-                Producer Companies or cooperative societies). Maximum members — no statutory ceiling.</p>
-        </details>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <div class='cta'>
-            <h2>► Form Your Farmer Producer Organisation (FPO)</h2>
-            <p>VITTAX Specialises in Producer Companies</p><a href='#' class='btn btn-light'>Talk to Expert</a>
+    </section>
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is a Producer Company?</h2>
+                    <div class="section-body-text">
+                        <p>A Producer Company is a special category of company under the Companies Act, 2013 designed
+                            specifically for primary producers — farmers, fishermen, artisans, weavers, and other
+                            persons engaged in any activity connected with primary production (agriculture,
+                            horticulture, animal husbandry, forestry, fisheries, etc.).</p>
+                        <p>A Producer Company (also called Farmer Producer Organisation or FPO) allows individual
+                            producers to pool resources, access institutional credit (NABARD, SFAC), procure inputs
+                            collectively at lower costs, and market their produce collectively for better realisation.
+                            Minimum 10 individual producers or 2 producer institutions are required to form a Producer
+                            Company.</p>
+                        <p>The Government of India actively promotes FPOs/Producer Companies through subsidies, equity
+                            grants (up to ₹18 lakh per FPO from NABARD), credit guarantees (CGTMSE extended), and tax
+                            exemptions under the Income Tax Act (100% deduction on profits for FPOs with turnover up to
+                            ₹100 crore).</p>
+                    </div>
+                    <div class="subservice-success-box">
+                        <div class="success-icon"><i class="fas fa-check"></i></div>
+                        <div class="success-content">
+                            <strong>Key advantage:</strong> 100% profit deduction under Section 80PA for agricultural
+                            Producer Companies with turnover up to ₹100 crore — effectively zero income tax.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Should Register a Producer Company?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from
+                        this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Farmers’ Groups</h4>
+                                <p class="eligibility-desc">Groups of 10+ farmers wanting to form an FPO for collective
+                                    agriculture</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Other Producers</h4>
+                                <p class="eligibility-desc">Fishermen, weavers, artisans, and other primary producers
+                                </p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">NGOs & State Departments</h4>
+                                <p class="eligibility-desc">NGOs and state agriculture departments promoting farmer
+                                    collectives</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Agri-tech Companies</h4>
+                                <p class="eligibility-desc">Agri-tech companies structuring farmer-ownership models</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process & Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA
+                        experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Name Reservation & DSC Preparation</h4>
+                                    <span class="step-time-pill pill-blue">2-5 Days</span>
+                                </div>
+                                <p class="step-description">Reserve a unique company name via RUN (Reserve Unique Name)
+                                    on MCA portal. Obtain Digital Signature Certificates (DSCs) for all proposed
+                                    directors.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">MOA / AOA Drafting (Producer Company Format)</h4>
+                                    <span class="step-time-pill pill-blue">1 - 3 Days</span>
+                                </div>
+                                <p class="step-description">Draft MOA and AOA in the Producer Company format as
+                                    prescribed under Companies Act, 2013 — covering primary produce activities, member
+                                    obligations, patronage bonus, and profit distribution rules.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">3</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Incorporation via SPICe+</h4>
+                                    <span class="step-time-pill pill-blue">5 - 7 Days</span>
+                                </div>
+                                <p class="step-description">File SPICe+ (Simplified Proforma for Incorporating Company
+                                    Electronically Plus) with MCA. Obtain Certificate of Incorporation (COI), CIN, PAN,
+                                    and TAN.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">NABARD / SFAC Registration & Grant Advisory</h4>
+                                    <span class="step-time-pill pill-gold">Post-Incorporation</span>
+                                </div>
+                                <p class="step-description">Register with NABARD / SFAC for equity grant eligibility and
+                                    credit guarantee access. Advisory on Income Tax exemption under Section 80PA and
+                                    CGTMSE credit facility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification
+                        and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (PAN Card & Aadhaar Card)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Address Proof (Electricity / Utility Bill)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Business Place Proof (Rental Agreement / Tax Receipt)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Photographs of Proprietor / Partners / Directors</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Producer Company Registr Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">FPO REGISTRATION
+                            ₹14,999</button><button type="button" class="enquiry-tab" onclick="switchSidebarPlan(1)">FPO
+                            COMPLETE PAC.. ₹29,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">FPO REGISTRATION</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹14,999</span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">Ideal for: Farmer groups, NGO-promoted FPOs</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Turnaround Time</span>
+                            <span class="spec-val">10–20 Days</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Min. Members</span>
+                            <span class="spec-val">10 Producers</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Annual Filings</span>
+                            <span class="spec-val">AOC-4 + MGT-7 + ITR</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Tax Exemption</span>
+                            <span class="spec-val">100% (Sec 80PA)</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">SERVICE INCLUDES</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Official Certificate Issued</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Full Statutory Drafting & Vetting</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Dedicated CA Support</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Post-Filing Compliance Roadmap</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
-</section>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Producer Company Registration Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-2">
+                <div class="pricing-plan-box">
+
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">FPO REGISTRATION</h3>
+                    <p class="plan-subtitle">Ideal for:</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹14,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Ideal for: Farmer groups, NGO-promoted FPOs</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Standard statutory filing &amp; CA consultation</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹14,999 |
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">FPO COMPLETE PACKAGE</h3>
+                    <p class="plan-subtitle">Ideal for:</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹29,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Ideal for: Large farmer collectives seeking institutional funding</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Standard statutory filing &amp; CA consultation</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹29,999 |
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about Producer Company Registration
+                    in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>Is Producer Company Registration mandatory in India?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Mandatory requirements depend on statutory thresholds, business turnover, and operational
+                            activities under Indian laws.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>How long does Producer Company Registration process take?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Typically processed within 3 to 7 business days following submission of complete verified
+                            documents.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can I apply completely online?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, the entire filing and advisory process with VITTAX is 100% digital with no physical
+                            office visits required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your Producer Company Registration with VITTAX</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX with
+                    dedicated CA backing.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    });
+
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "FPO REGISTRATION", "price": "\u20b914,999", "period": "", "sub": "Ideal for: Farmer groups, NGO-promoted FPOs" }, { "name": "FPO COMPLETE PACKAGE", "price": "\u20b929,999", "period": "", "sub": "Ideal for: Large farmer collectives seeking institutional funding" }];
+
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        }
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
+    }
+</script>
 {% endblock %}

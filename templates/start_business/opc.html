@@ -2,253 +2,675 @@
 {% load static %}
 {% block title %}One Person Company (OPC) Registration - VITTAX{% endblock %}
 {% block extra_css %}
-<style>
-    .hero {
-        padding: 145px 0 95px;
-        background: radial-gradient(circle at top right, rgba(37, 99, 235, .14), transparent 28%), linear-gradient(135deg, #eef4ff, #f8fbff);
-        text-align: center;
-        position: relative;
-        overflow: hidden
-    }
-
-    .hero:after {
-        content: '';
-        position: absolute;
-        left: -5%;
-        right: -5%;
-        bottom: -42px;
-        height: 90px;
-        background: #fff;
-        border-radius: 50% 50% 0 0/100% 100% 0 0
-    }
-
-    .hero h1 {
-        font-size: clamp(2.4rem, 4vw, 3.8rem);
-        font-weight: 900;
-        margin-bottom: 14px
-    }
-
-    .hero p {
-        max-width: 760px;
-        margin: 0 auto;
-        color: var(--text-light);
-        font-size: 1.08rem;
-        line-height: 1.85
-    }
-
-    .section {
-        padding: 90px 0
-    }
-
-    .section h2 {
-        font-size: 2rem;
-        font-weight: 900;
-        margin-bottom: 18px
-    }
-
-    .section p {
-        line-height: 1.9;
-        color: var(--text-light)
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 24px
-    }
-
-    .card {
-        background: #fff;
-        border-radius: 24px;
-        padding: 30px;
-        box-shadow: 0 16px 36px rgba(15, 23, 42, .08);
-        border: 1px solid rgba(26, 75, 140, .08)
-    }
-
-    .price {
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: var(--primary);
-        margin: 10px 0 14px
-    }
-
-    .faq details {
-        background: #fff;
-        border-radius: 18px;
-        padding: 18px 20px;
-        margin-bottom: 16px;
-        box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
-    }
-
-    .cta {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: #fff;
-        border-radius: 30px;
-        padding: 58px 38px;
-        text-align: center
-    }
-
-    .cta h2 {
-        color: #fff
-    }
-
-    .cta p {
-        color: rgba(255, 255, 255, .92)
-    }
-
-    @media(max-width:768px) {
-        .hero {
-            padding: 120px 0 72px
-        }
-
-        .section {
-            padding: 64px 0
-        }
-
-        .grid {
-            grid-template-columns: 1fr
-        }
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
 {% endblock %}
 {% block content %}
-<section class='hero'>
-    <div class='container'><span class='section-tag'>START A BUSINESS</span>
-        <h1>One Person Company (OPC) Registration</h1>
-        <p>All the Benefits of a Pvt Ltd — For Solo Entrepreneurs</p><a href='#pricing' class='btn btn-primary'
-            style='margin-top:24px'>Get Started</a>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>What is a One Person Company?</h2>
-        <p>A One Person Company (OPC) is a hybrid business structure introduced by the Companies Act, 2013, allowing a
-            single individual to form a company with limited liability — combining the simplicity of a proprietorship
-            with the legal protection and credibility of a company.</p>
-        <p>Unlike a proprietorship, an OPC is a separate legal entity, its debts are not the owner’s personal debts, and
-            it can own property, enter contracts, and sue or be sued in its own name.</p>
-        <p>An OPC requires one director and a nominee director. VITTAX assist with DSC, DIN, name approval, SPICe+
-            incorporation filing, MOA/AOA drafting, PAN, TAN, and post-registration compliance guidance.</p>
-        <p>An OPC must convert to a Private/Public Limited Company if paid-up share capital exceeds ₹50 Lakhs OR average
-            annual turnover exceeds ₹2 Crores.</p>
-    </div>
-</section>
-<section class='section' style='background:linear-gradient(180deg,#f8fbff,#f4f8ff)'>
-    <div class='container'>
-        <h2>Why Choose OPC?</h2>
-        <div class='grid'>
-            <div class='card'>
-                <h3>✦ Single-Person Company</h3>
-            </div>
-            <div class='card'>
-                <h3>✦ Limited Liability</h3>
-            </div>
-            <div class='card'>
-                <h3>✦ No Co-Founder Needed</h3>
-            </div>
+<div class="subservice-page">
+
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
     </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>Who Should Register an OPC?</h2>
-        <div class='grid'>
-            <div class='card'>✔ Solo Professionals: consultants and freelancers wanting a corporate identity</div>
-            <div class='card'>✔ Independent Practitioners: CAs, doctors, architects, engineers</div>
-            <div class='card'>✔ Solo E-commerce Sellers</div>
-            <div class='card'>✔ NRI Entrepreneurs wanting India business</div>
-            <div class='card'>✔ Proprietorship Upgrade businesses</div>
-        </div>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>Incorporation Process & Timeline</h2>
-        <div class='grid'>
-            <div class='card'><strong>Step 1:</strong> Name Reservation<br><small>1–2 days</small></div>
-            <div class='card'><strong>Step 2:</strong> DSC & Nominee Consent<br><small>1 day</small></div>
-            <div class='card'><strong>Step 3:</strong> Document Preparation<br><small>1–2 days</small></div>
-            <div class='card'><strong>Step 4:</strong> SPICe+ Filing<br><small>1 day</small></div>
-            <div class='card'><strong>Step 5:</strong> Certificate of Incorporation<br><small>3–7 working days</small>
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span>START BUSINESS</span> &gt;
+                <span class="active">ONE PERSON COMPANY (OPC) REGISTRATION</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">One Person Company (OPC) Registration</h1>
+                    <p class="subservice-hero-subtitle">All the Benefits of a Pvt Ltd — For Solo Entrepreneurs</p>
+
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ 100% Online Process</span>
+                        <span class="pill-badge pill-blue">✦ Dedicated CA Support</span>
+                        <span class="pill-badge pill-cyan">✦ Fast Turnaround</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>Documents Required</h2>
-        <div class='grid'>
-            <div class='card'>
-                <h3>For Sole Director/Member</h3>
-                <p>• PAN card, Aadhaar card, Mobile number and mail ID<br>• Address proof<br>• Photograph</p>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is a One Person Company??</h2>
+                    <div class="section-body-text">
+                        <p>A One Person Company (OPC) is a hybrid business structure introduced by the Companies Act,
+                            2013, allowing a single individual to form a company with limited liability — combining the
+                            simplicity of a proprietorship with the legal protection and credibility of a company.</p>
+                        <p>Unlike a proprietorship, an OPC is a separate legal entity, its debts are not the owner’s
+                            personal debts, and it can own property, enter contracts, and sue or be sued in its own
+                            name.</p>
+                        <p>An OPC requires one director and a nominee director. VITTAX assist with DSC, DIN, name
+                            approval, SPICe+ incorporation filing, MOA/AOA drafting, PAN, TAN, and post-registration
+                            compliance guidance.</p>
+                    </div>
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            An OPC must convert to a Private/Public Limited Company if paid-up share capital exceeds ₹50
+                            Lakhs OR average annual turnover exceeds ₹2 Crores.</div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Should Register an OPC??</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from
+                        this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Solo Professionals</h4>
+                                <p class="eligibility-desc">consultants and freelancers wanting a corporate identity</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Independent Practitioners</h4>
+                                <p class="eligibility-desc">CAs, doctors, architects, engineers</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Solo E-commerce Sellers</h4>
+                                <p class="eligibility-desc">Qualifies for registration under current government
+                                    guidelines.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">NRI Entrepreneurs wanting India business</h4>
+                                <p class="eligibility-desc">Qualifies for registration under current government
+                                    guidelines.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card span-two">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Proprietorship Upgrade businesses</h4>
+                                <p class="eligibility-desc">Qualifies for registration under current government
+                                    guidelines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process & Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA
+                        experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Name Reservation</h4>
+                                    <span class="step-time-pill pill-blue">1–2 days</span>
+                                </div>
+                                <p class="step-description">Name Reservation processed and filed with the statutory
+                                    authorities.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">DSC & Nominee Consent</h4>
+                                    <span class="step-time-pill pill-blue">1 day</span>
+                                </div>
+                                <p class="step-description">DSC & Nominee Consent processed and filed with the statutory
+                                    authorities.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">3</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Document Preparation</h4>
+                                    <span class="step-time-pill pill-blue">1–2 days</span>
+                                </div>
+                                <p class="step-description">Document Preparation processed and filed with the statutory
+                                    authorities.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">4</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">SPICe+ Filing</h4>
+                                    <span class="step-time-pill pill-blue">1 day</span>
+                                </div>
+                                <p class="step-description">SPICe+ Filing processed and filed with the statutory
+                                    authorities.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Certificate of Incorporation</h4>
+                                    <span class="step-time-pill pill-gold">3–7 working days</span>
+                                </div>
+                                <p class="step-description">Certificate of Incorporation processed and filed with the
+                                    statutory authorities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification
+                        and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Director &amp; Nominee PAN Card</h4>
+                                <p class="doc-desc">Self-attested PAN card of both the sole director/member and the nominee. Mandatory for Indian nationals.</p>
+                            </div>
+                        </div>
+
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-address-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (Aadhaar / Passport / Voter ID)</h4>
+                                <p class="doc-desc">Government photo ID of the director and nominee. Passport is mandatory in case of NRI / foreign national directors.</p>
+                            </div>
+                        </div>
+
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Director &amp; Nominee Address Proof</h4>
+                                <p class="doc-desc">Latest bank statement, electricity bill, or mobile bill (not older than 2 months) with matching address for both.</p>
+                            </div>
+                        </div>
+
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-building"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Registered Office Proof &amp; NOC</h4>
+                                <p class="doc-desc">Latest utility bill (electricity/gas &lt; 2 months), rental agreement, and signed NOC from the registered property owner.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class='card'>
-                <h3>For Nominee Director</h3>
-                <p>• PAN card and proof documents<br>• Written consent (INC-3)</p>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">One Person Company (OPC) Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">BASIC OPC
+                            ₹4,999</button><button type="button" class="enquiry-tab"
+                            onclick="switchSidebarPlan(1)">STANDARD OPC ₹6,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">BASIC OPC</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹4,999</span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">Ideal for: First-time solo entrepreneurs,
+                            professionals</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
+                    </div>
+
+                    <div style="margin-bottom: 14px;">
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--sub-navy-dark, #0c1322); margin-bottom: 12px;">At a Glance</h4>
+                        <div class="sidebar-specs-list">
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Incorporation Time</span>
+                                <span class="spec-val">7–10 Days</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Min. Directors</span>
+                                <span class="spec-val">1 + Nominee</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Annual Filings</span>
+                                <span class="spec-val">AOC-4 + MGT-7A</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Liability</span>
+                                <span class="spec-val" style="color: #16a34a; font-weight: 700;">Limited</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box" style="background: #f0f4f9; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; margin-bottom: 14px;">
+                        <p style="font-size: 0.85rem; font-weight: 700; color: #1a4b8c; margin: 0 0 10px; display: flex; align-items: center; gap: 6px;">
+                            <span style="color: #f59e0b;">⚡</span>
+                            <span>Incorporation Includes</span>
+                        </p>
+                        <div class="sidebar-specs-list" style="margin-bottom: 0;">
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">DSC</span>
+                                <span class="spec-val">1 Director</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Name Reservation</span>
+                                <span class="spec-val">SPICe+</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">GST</span>
+                                <span class="spec-val">Standard Plan</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Audit</span>
+                                <span class="spec-val">Mandatory (all)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class='card'>
-                <h3>Registered Office</h3>
-                <p>• Ownership proof / NOC + rental agreement<br>• Utility bill</p>
-            </div>
+
         </div>
     </div>
-</section>
-<section class='section' id='pricing' style='background:linear-gradient(180deg,#f8fbff,#f4f8ff)'>
-    <div class='container'>
-        <h2>Pricing Plans</h2>
-        <div class='grid'>
-            <div class='card'>
-                <h3>BASIC OPC — Incorporation with COI, PAN, TAN</h3>
-                <div class='price'>₹4,999</div>
-                <p><strong>Ideal for:</strong> First-time solo entrepreneurs, professionals</p>
-                <p>✓ Name reservation<br>✓ DSC (sole director)<br>✓ MOA + AOA (OPC format)<br>✓ INC-3 nominee
-                    consent<br>✓ SPICe+ filing<br>✓ COI + PAN + TAN</p>
-                <p><strong>VITTAX Fee:</strong> ₹4,999 | Govt. Fees: MCA fees + DSC certificate fee (~₹1,500–3,000)</p>
-            </div>
-            <div class='card'>
-                <h3>STANDARD OPC — Incorporation + GSTIN + bank letter</h3>
-                <div class='price'>₹6,999</div>
-                <p><strong>Ideal for:</strong> Solo consultants, NRI entrepreneurs</p>
-                <p>✓ Everything in Basic<br>✓ GSTIN application<br>✓ Bank account advisory<br>✓ Post-incorporation
-                    call<br>✓ Compliance calendar</p>
-                <p><strong>VITTAX Fee:</strong> ₹6,999 | Govt. Fees: MCA fees + DSC certificate fee</p>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class='section'>
-    <div class='container faq'>
-        <h2>Frequently Asked Questions</h2>
-        <details>
-            <summary>Q: What is the role of the nominee in an OPC?</summary>
-            <p>A: The nominee becomes member only if sole member dies or becomes incapacitated.</p>
-        </details>
-        <details>
-            <summary>Q: Can an OPC have employees?</summary>
-            <p>A: Yes — any number of employees. Restriction is only on members/shareholders.</p>
-        </details>
-        <details>
-            <summary>Q: When must an OPC convert to a Pvt Ltd?</summary>
-            <p>A: When paid-up capital exceeds ₹50 lakh or turnover exceeds ₹2 crore as applicable.</p>
-        </details>
-        <details>
-            <summary>Q: Can a person be member of more than one OPC?</summary>
-            <p>A: No — only one OPC at a time.</p>
-        </details>
-        <details>
-            <summary>Q: Is audit mandatory for OPC?</summary>
-            <p>A: Yes. Proper books and statutory audit every year.</p>
-        </details>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <div class='cta'>
-            <h2>► Register Your OPC and Get Full Legal Protection</h2>
-            <p>VITTAX Makes It Simple</p>
-            <<a href="{% url 'contact' %}" class="btn btn-light">Talk to
-                Expert</a>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">One Person Company (OPC) Registration Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-2">
+                <div class="pricing-plan-box">
+
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">BASIC OPC</h3>
+                    <p class="plan-subtitle">Ideal for:</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹4,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Ideal for: First-time solo entrepreneurs, professionals</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Standard statutory filing &amp; CA consultation</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹4,999 | Govt. Fees: MCA fees + DSC
+                        certificate fee (~₹1,500–3,000)
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">STANDARD OPC</h3>
+                    <p class="plan-subtitle">Ideal for:</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹6,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Ideal for: Solo consultants, NRI entrepreneurs</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Standard statutory filing &amp; CA consultation</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹6,999 | Govt. Fees: MCA fees + DSC
+                        certificate fee
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about One Person Company (OPC)
+                    Registration in India.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>What is the role of the nominee in an OPC?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The nominee becomes a member only if the sole member dies or becomes incapacitated. The nominee has no rights or obligations while the sole member is alive and active — they are essentially a backup owner named at the time of registration.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can an OPC have employees?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — an OPC can have any number of employees. The restriction of "one person" applies only to members/shareholders, not employees. The company can hire staff, consultants, and contractors like any other registered company.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>When must an OPC convert to a Pvt Ltd?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>An OPC must mandatorily convert when its paid-up share capital exceeds ₹50 lakhs or its average annual turnover for the last 3 consecutive financial years exceeds ₹2 crores. VITTAX can assist with the conversion process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can a person be a member of more than one OPC?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No — a person can be a member (shareholder) of only one OPC at a time. However, the same person can be a nominee in multiple OPCs simultaneously. Violating this rule can result in penalties from the Registrar of Companies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Is audit mandatory for an OPC?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. An OPC must maintain proper books of accounts and get them audited by a Chartered Accountant every year, regardless of turnover — unlike an LLP which has an audit threshold of ₹40 lakhs. Annual filings include AOC-4 (Financial Statements) and MGT-7A (Annual Return).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your One Person Company (OPC) Registration with VITTAX</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX with
+                    dedicated CA backing.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    });
+
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "BASIC OPC", "price": "\u20b94,999", "period": "", "sub": "Ideal for: First-time solo entrepreneurs, professionals" }, { "name": "STANDARD OPC", "price": "\u20b96,999", "period": "", "sub": "Ideal for: Solo consultants, NRI entrepreneurs" }];
+
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        }
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
+    }
+</script>
 {% endblock %}

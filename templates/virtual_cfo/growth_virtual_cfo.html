@@ -2,362 +2,722 @@
 {% load static %}
 {% block title %}Growth Virtual CFO - VITTAX{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
+
 {% block content %}
-<div style="padding:100px 0 60px;background:var(--bg);">
-    <div class="container">
+<div class="subservice-page">
 
-        <!-- HEADER -->
-        <div
-            style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px;">
-            <div>
-                <span class="section-tag">Virtual CFO &amp; Advisory</span>
-                <h1 style="font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2;">Growth
-                    Virtual CFO</h1>
-                <p style="font-size:.9rem;color:var(--text-light);margin-bottom:14px;">Scale Smarter — Financial
-                    Strategy for Growing Businesses</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="badge badge-success">✦ Board &amp; Investor Reporting</span>
-                    <span class="badge badge-primary">✦ Working Capital Optimised</span>
-                    <span class="badge badge-info">✦ Lender Relationship Managed</span>
-                </div>
-            </div>
-            <div style="display:flex;gap:10px;flex-shrink:0;padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
-            </div>
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
-
-        <!-- BODY GRID -->
-        <div style="display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start;">
-
-            <!-- LEFT COLUMN -->
-            <div style="display:flex;flex-direction:column;gap:24px;">
-
-                <!-- WHAT IS -->
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;">
-                    <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:12px;">What is a Growth Virtual CFO?</h2>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">The Growth
-                        Virtual CFO is designed for businesses in the ₹10–100 crore revenue range that are scaling
-                        aggressively — entering new markets, adding product lines, hiring rapidly, or preparing for
-                        institutional funding. At this stage, a business needs not just compliance oversight but active
-                        financial strategy: profitability improvement, working capital optimisation, vendor and customer
-                        financing strategies, cost control, and board/investor reporting.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;margin-bottom:10px;">VITTAX's
-                        Growth CFO engages deeply with your management team — attending monthly board meetings,
-                        reviewing all major financial decisions, preparing investor-grade MIS, managing relationships
-                        with lenders and auditors, and building financial models to support strategic decisions. This
-                        tier includes a senior CA with CFO-level experience assigned to your account.</p>
-                    <p style="font-size:.88rem;color:var(--text-light);line-height:1.75;">The Growth CFO also builds and
-                        mentors your internal finance team — upskilling your Finance Manager, Controller, or Accounts
-                        team to work at a higher level, creating processes and controls that scale with the business.
-                    </p>
-                    <div
-                        style="background:rgba(243,156,18,.08);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:.83rem;color:#7d4e00;margin-top:14px;">
-                        ⚠️ At ₹10–100 Cr revenue, compliance alone is not enough — active financial strategy is what
-                        separates businesses that scale profitably from those that grow broke.
-                    </div>
-                </div>
-
-                <!-- WHO NEEDS -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Who Needs a Growth Virtual CFO?</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Pre-Funding
-                                    Businesses:</strong> Businesses with ₹10–100 Cr revenue preparing for PE/VC
-                                funding</span>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Rapid Growth
-                                    Companies:</strong> Companies scaling headcount, geographies, or product lines
-                                rapidly</span>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Leveraged
-                                    Companies:</strong> Businesses with bank debt that need tight financial discipline
-                                for covenant compliance</span>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Capability
-                                    Gaps:</strong> Promoters who feel they've outgrown their current finance team's
-                                capability</span>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:.84rem;font-weight:500;display:flex;align-items:flex-start;gap:8px;">
-                            <span style="color:var(--success);flex-shrink:0;">✔</span> <span><strong>Exit-Planning
-                                    Companies:</strong> Companies preparing for IPO, acquisition, or strategic
-                                sale</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- WHAT'S INCLUDED -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">What's Included</p>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                📈 Strategic Finance</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Annual budget preparation
-                                    and quarterly reforecasting
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Financial modelling for
-                                    new initiatives, pricing changes, or acquisitions
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Profitability analysis by
-                                    product/division/customer/geography
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Working capital cycle
-                                    optimisation — debtors, creditors, inventory
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                📊 Reporting &amp; Relationships</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Board-ready monthly MIS
-                                    and management accounts
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Investor/PE reporting
-                                    package (if applicable)
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Bank/lender relationship
-                                    support — covenant tracking, credit enhancements
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Statutory audit and tax
-                                    audit coordination
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;">
-                            <p
-                                style="font-size:.8rem;font-weight:700;color:var(--primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;">
-                                👥 People &amp; Process</p>
-                            <div style="display:flex;flex-direction:column;gap:7px;">
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Internal finance team
-                                    mentoring and process design
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> ERP/accounting software
-                                    upgrade advisory
-                                </div>
-                                <div
-                                    style="font-size:.82rem;color:var(--text-light);display:flex;align-items:flex-start;gap:6px;">
-                                    <span style="color:var(--success);flex-shrink:0;">•</span> Internal controls and
-                                    financial risk framework
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">Pricing</p>
-                    <div style="display:grid;grid-template-columns:1fr;gap:16px;">
-
-                        <div
-                            style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px;border:2px solid var(--primary);position:relative;">
-                            <span
-                                style="position:absolute;top:-11px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;">MONTHLY
-                                RETAINER</span>
-                            <div>
-                                <p
-                                    style="font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;">
-                                    Growth Virtual CFO</p>
-                                <p
-                                    style="font-size:1.75rem;font-weight:800;color:var(--primary);line-height:1;margin:6px 0 2px;">
-                                    ₹39,999<span
-                                        style="font-size:.85rem;font-weight:500;color:var(--text-light);">/month</span>
-                                </p>
-                                <p style="font-size:.78rem;color:var(--text-light);">For businesses ₹10–100 Cr revenue
-                                </p>
-                            </div>
-                            <p
-                                style="font-size:.78rem;color:var(--text-light);background:rgba(26,75,140,.05);border-radius:7px;padding:8px 10px;">
-                                Ideal for: Businesses ₹10–100 Cr revenue, PE-backed companies, IPO-prep</p>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
-                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> All
-                                        Basic CFO services +</li>
-                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Budget
-                                        &amp; reforecasting</li>
-                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Board
-                                        MIS + investor reporting</li>
-                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
-                                        Financial modelling</li>
-                                </ul>
-                                <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
-                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Lender
-                                        relationship support</li>
-                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span>
-                                        Unlimited advisory hours</li>
-                                    <li style="font-size:.82rem;display:flex;align-items:flex-start;gap:8px;"><span
-                                            style="color:var(--success);font-weight:700;flex-shrink:0;">✓</span> Monthly
-                                        board/management call</li>
-                                </ul>
-                            </div>
-                            <div
-                                style="border-top:1px solid rgba(26,75,140,.08);padding-top:12px;font-size:.78rem;color:var(--text-light);">
-                                VITTAX Fee: <strong style="color:var(--primary);">₹39,999/month</strong> &nbsp;|&nbsp;
-                                Govt. Fees: <strong style="color:var(--success);">Nil</strong></div>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem;font-weight:700;margin-bottom:14px;">FAQs</p>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Will my Growth CFO attend our
-                                board meetings?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — monthly
-                                board/management meetings are included. The CFO presents the financial review, MIS, and
-                                strategic recommendations.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">Can you help us prepare for a
-                                fundraising round?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">Yes — fundraising
-                                preparation including financial data room setup, investor-ready financial model,
-                                historical financial analysis, and cap table structuring is part of the Growth CFO
-                                engagement.</p>
-                        </div>
-                        <div
-                            style="background:var(--white);border-radius:10px;box-shadow:var(--shadow);padding:16px 18px;">
-                            <p style="font-size:.88rem;font-weight:600;margin-bottom:5px;">What if we already have a
-                                Finance Manager?</p>
-                            <p style="font-size:.82rem;color:var(--text-light);line-height:1.65;">The Virtual CFO works
-                                with and mentors your Finance Manager — taking strategic decisions while your FM handles
-                                day-to-day execution. This combination is very effective.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:16px;">
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">Quick Enquiry</h3>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Growth Virtual CFO</span><span
-                            style="font-weight:700;">₹39,999/mo</span></div>
-                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;">
-                    <h3 style="font-size:.9rem;font-weight:700;margin-bottom:16px;">At a Glance</h3>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Target Revenue</span><span
-                            style="font-weight:700;">₹10–100 Crore</span>
-                    </div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Advisory Hours</span><span
-                            style="font-weight:700;">Unlimited</span>
-                    </div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(26,75,140,.07);font-size:.85rem;">
-                        <span style="color:var(--text-light);">Board Meeting</span><span
-                            style="font-weight:700;">Monthly</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;padding:9px 0;font-size:.85rem;"><span
-                            style="color:var(--text-light);">Govt. Fees</span><span
-                            style="font-weight:700;color:var(--success);">Nil</span></div>
-                </div>
-                <div
-                    style="background:rgba(26,75,140,.05);border-radius:var(--radius);padding:16px 18px;border-left:3px solid var(--primary);">
-                    <p style="font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:8px;">⚡ Key
-                        Deliverables</p>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Board MIS</span><span
-                            style="font-weight:600;">Monthly</span>
-                    </div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Financial Model</span><span
-                            style="font-weight:600;">Included</span>
-                    </div>
-                    <div
-                        style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(26,75,140,.08);font-size:.78rem;">
-                        <span style="color:var(--text-light);">Budget + Reforecast</span><span
-                            style="font-weight:600;">Annual + Quarterly</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:.78rem;"><span
-                            style="color:var(--text-light);">Team Mentoring</span><span
-                            style="font-weight:600;">Included</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div
-            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:var(--radius);padding:48px 32px;text-align:center;color:var(--white);margin-top:36px;">
-            <h3 style="font-size:1.45rem;font-weight:800;margin-bottom:10px;">Ready to Scale? VITTAX Growth CFO Drives
-                Financial Excellence</h3>
-            <p style="font-size:.9rem;opacity:.82;margin-bottom:24px;">Board MIS, investor reporting, financial
-                modelling, lender management — senior CFO expertise for your growth stage</p>
-            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg"
-                    style="background:var(--white);color:var(--primary);font-weight:700;border:none;">Get Started Today
-                    →</a>
-                <a href="#" class="btn btn-lg"
-                    style="background:transparent;border:2px solid rgba(255,255,255,.55);color:var(--white);">Talk to
-                    Expert</a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <span>VIRTUAL CFO</span> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span class="active">GROWTH VIRTUAL CFO</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Growth Virtual CFO</h1>
+                    <p class="subservice-hero-subtitle">Scale Smarter — Financial Strategy for Growing Businesses</p>
+
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ Board &amp; Investor Reporting</span>
+                        <span class="pill-badge pill-blue">✦ Working Capital Optimised</span>
+                        <span class="pill-badge pill-cyan">✦ Lender Relationship Managed</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is a Growth Virtual CFO?</h2>
+                    <div class="section-body-text">
+                        <p>The Growth Virtual CFO is designed for businesses in the ₹10–100 crore revenue range that are
+                            scaling aggressively — entering new markets, adding product lines, hiring rapidly, or
+                            preparing for institutional funding. At this stage, a business needs not just compliance
+                            oversight but active financial strategy: profitability improvement, working capital
+                            optimisation, vendor and customer financing strategies, cost control, and board/investor
+                            reporting.</p>
+                        <p>VITTAX's Growth CFO engages deeply with your management team — attending monthly board
+                            meetings, reviewing all major financial decisions, preparing investor-grade MIS, managing
+                            relationships with lenders and auditors, and building financial models to support strategic
+                            decisions. This tier includes a senior CA with CFO-level experience assigned to your
+                            account.</p>
+                        <p>The Growth CFO also builds and mentors your internal finance team — upskilling your Finance
+                            Manager, Controller, or Accounts team to work at a higher level, creating processes and
+                            controls that scale with the business.</p>
+                    </div>
+
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            ⚠️ At ₹10–100 Cr revenue, compliance alone is not enough — active financial strategy is what
+                            separates businesses that scale profitably from those that grow broke.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Needs a Growth Virtual CFO?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from
+                        this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Who Needs a Growth Virtual CFO? ✔ Pre-Funding Businesses:
+                                    Businesses with ₹10–100 Cr revenue preparing for PE/VC funding</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Rapid Growth Companies: Companies scaling headcount,
+                                    geographies, or product lines rapidly</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Leveraged Companies: Businesses with bank debt that need
+                                    tight financial discipline for covenant compliance</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Capability Gaps: Promoters who feel they've outgrown
+                                    their current finance team's capability</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Exit-Planning Companies: Companies preparing for IPO,
+                                    acquisition, or strategic sale</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">What's Included 📈 Strategic Finance • Annual budget
+                                    preparation and quarterly reforecasting</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Financial modelling for new initiatives, pricing
+                                    changes, or acquisitions</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Profitability analysis by
+                                    product/division/customer/geography</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Working capital cycle optimisation — debtors, creditors,
+                                    inventory</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">📊 Reporting &amp; Relationships • Board-ready monthly MIS
+                                    and management accounts</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Investor/PE reporting package (if applicable)</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Bank/lender relationship support — covenant tracking,
+                                    credit enhancements</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Statutory audit and tax audit coordination</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">👥 People &amp; Process • Internal finance team mentoring
+                                    and process design</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• ERP/accounting software upgrade advisory</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">• Internal controls and financial risk framework</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Process & Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA
+                        experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Document Collection & Vetting</h4>
+                                    <span class="step-time-pill pill-blue">Day 1</span>
+                                </div>
+                                <p class="step-description">Submit your documents digitally for verification by our CA
+                                    team.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Statutory Drafting & Filing</h4>
+                                    <span class="step-time-pill pill-blue">Day 2–3</span>
+                                </div>
+                                <p class="step-description">Preparation of forms, declarations, and submission on
+                                    official government portals.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Approval & Certificate Grant</h4>
+                                    <span class="step-time-pill pill-gold">Day 3–5</span>
+                                </div>
+                                <p class="step-description">Department verification and issuance of the registration
+                                    certificate and acknowledgment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification
+                        and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Identity Proof (PAN Card & Aadhaar Card)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Address Proof (Electricity / Utility Bill)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Business Place Proof (Rental Agreement / Tax Receipt)</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Photographs of Proprietor / Partners / Directors</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Growth Virtual CFO Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">Growth Virtual CFO</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹39,999 <small
+                                    style='font-size:0.65em;font-weight:500;'>/month</small></span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">For businesses ₹10–100 Cr revenue</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Target Revenue</span>
+                            <span class="spec-val">₹10–100 Crore</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Advisory Hours</span>
+                            <span class="spec-val">Unlimited</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Board Meeting</span>
+                            <span class="spec-val">Monthly</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Govt. Fees</span>
+                            <span class="spec-val">Nil</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">KEY DELIVERABLES</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>Board MIS:</strong> Monthly</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>Financial Model:</strong> Included</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>Budget + Reforecast:</strong> Annual + Quarterly</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span><strong>Team Mentoring:</strong> Included</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Growth Virtual CFO Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-1">
+                <div class="pricing-plan-box">
+
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">GROWTH VIRTUAL CFO</h3>
+                    <p class="plan-subtitle">Ideal for: Businesses ₹10–100 Cr revenue, PE-backed companies, IPO-prep</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹39,999</span>
+                        <span class="plan-period"> /month</span>
+                    </div>
+                    <p class="plan-summary-note">For businesses ₹10–100 Cr revenue</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>All Basic CFO services +</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Budget &amp; reforecasting</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Board MIS + investor reporting</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Financial modelling</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Lender relationship support</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Unlimited advisory hours</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Monthly board/management call</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> VITTAX Fee: ₹39,999/month &nbsp;|&nbsp; Govt.
+                        Fees: Nil
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about Growth Virtual CFO in India.
+                </p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>Will my Growth CFO attend our board meetings?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — monthly board/management meetings are included. The CFO presents the financial review,
+                            MIS, and strategic recommendations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can you help us prepare for a fundraising round?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — fundraising preparation including financial data room setup, investor-ready financial
+                            model, historical financial analysis, and cap table structuring is part of the Growth CFO
+                            engagement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>What if we already have a Finance Manager?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Virtual CFO works with and mentors your Finance Manager — taking strategic decisions
+                            while your FM handles day-to-day execution. This combination is very effective.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your Growth Virtual CFO Today</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    });
+
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "Growth Virtual CFO", "price": "\u20b939,999", "period": "/month", "sub": "For businesses \u20b910\u2013100 Cr revenue" }];
+
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        }
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
+    }
+</script>
 {% endblock %}

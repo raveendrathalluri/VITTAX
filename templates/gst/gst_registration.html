@@ -2,336 +2,702 @@
 {% load static %}
 {% block title %}GST Registration - VITTAX{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}">
+{% endblock %}
+
 {% block content %}
+<div class="subservice-page">
 
-<div style="padding: 100px 0 60px; background: var(--bg);">
-    <div class="container">
-
-        <!-- HEADER -->
-        <div
-            style="display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:36px;">
-            <div>
-                <span class="section-tag">Tax &amp; Compliance</span>
-                <h1 style="font-size:1.9rem; font-weight:800; color:var(--text); margin-bottom:8px; line-height:1.2;">
-                    GST Registration</h1>
-                <p style="font-size:.9rem; color:var(--text-light); margin-bottom:14px;">Your First Step to Legal
-                    Business in India — Get GST Registered in 1–5 Days</p>
-                <div style="display:flex; flex-wrap:wrap; gap:8px;">
-                    <span class="badge badge-primary">⚡ Setup in 1–5 Days</span>
-                    <span class="badge badge-info">📄 GSTIN Issued</span>
-                    <span class="badge badge-success">⭐ Expert Support</span>
-                </div>
-            </div>
-            <div style="display:flex; gap:10px; flex-shrink:0; padding-top:6px;">
-                <a href="#pricing" class="btn btn-primary">View Plans →</a>
-                <a href="#" class="btn btn-outline">Talk to Expert</a>
-            </div>
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
-
-        <!-- BODY GRID -->
-        <div style="display:grid; grid-template-columns:1fr 300px; gap:28px; align-items:start;">
-
-            <!-- LEFT COLUMN -->
-            <div style="display:flex; flex-direction:column; gap:24px;">
-
-                <!-- WHAT IS GST -->
-                <div
-                    style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px;">
-                    <h2 style="font-size:1.05rem; font-weight:700; margin-bottom:12px;">What is GST Registration?</h2>
-                    <p style="font-size:.88rem; color:var(--text-light); line-height:1.7; margin-bottom:10px;">Goods and
-                        Services Tax (GST) is India's unified indirect tax that replaced VAT, Service Tax, Excise Duty,
-                        and other levies. GST Registration allows businesses to legally collect GST, claim Input Tax
-                        Credit (ITC), and file GST returns.</p>
-                    <p style="font-size:.88rem; color:var(--text-light); line-height:1.7;">GST Registration is mandatory
-                        for businesses exceeding ₹40 lakhs (goods) or ₹20 lakhs (services). Businesses below ₹1.5 crore
-                        can opt for the Composition Scheme. Small taxpayers up to ₹5 crore can file under QRMP scheme.
-                    </p>
-                    <div
-                        style="background:rgba(243,156,18,.08); border-left:3px solid var(--accent); border-radius:8px; padding:11px 14px; font-size:.83rem; color:#7d4e00; margin-top:14px;">
-                        ⚠️ Operating without GST when required attracts penalties up to 100% of the tax amount.
-                    </div>
-                </div>
-
-                <!-- WHY CHOOSE -->
-                <div>
-                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Why Choose GST Registration?</p>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> Legal Business Compliance
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> Input Tax Credit Benefits
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> Nationwide Business Expansion
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> Government Recognition
-                        </div>
-                    </div>
-                </div>
-
-                <!-- WHO SHOULD REGISTER -->
-                <div>
-                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Who Should Register?</p>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> Businesses above threshold
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> E-commerce sellers
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> Importers &amp; Exporters
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            <span style="color:var(--success);">✔</span> Interstate suppliers
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DOCUMENTS -->
-                <div>
-                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Documents Required</p>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            📋 PAN Card &amp; Aadhaar</div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            🏠 Address Proof</div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            🏦 Bank Details</div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 14px; font-size:.84rem; font-weight:500; display:flex; align-items:center; gap:8px;">
-                            📁 Business Proof</div>
-                    </div>
-                </div>
-
-                <!-- PROCESS -->
-                <div>
-                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Setup Process &amp; Timeline</p>
-                    <div style="display:flex; flex-direction:column; gap:8px;">
-                        {% for step in steps %}
-                        <div
-                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
-                            <div
-                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                {{ forloop.counter }}</div>
-                            <div>
-                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">{{ step.title }}</p>
-                                <p style="font-size:.78rem; color:var(--text-light);">{{ step.desc }}</p>
-                            </div>
-                        </div>
-                        {% empty %}
-                        <div
-                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
-                            <div
-                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                1</div>
-                            <div>
-                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">Document Collection</p>
-                                <p style="font-size:.78rem; color:var(--text-light);">Day 1 — Gather all required
-                                    documents</p>
-                            </div>
-                        </div>
-                        <div
-                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
-                            <div
-                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                2</div>
-                            <div>
-                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">GST Portal Registration
-                                </p>
-                                <p style="font-size:.78rem; color:var(--text-light);">Day 1 — Create account &amp; set
-                                    up profile</p>
-                            </div>
-                        </div>
-                        <div
-                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
-                            <div
-                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                3</div>
-                            <div>
-                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">Application Filing</p>
-                                <p style="font-size:.78rem; color:var(--text-light);">Day 1 — Submit your GST
-                                    registration application</p>
-                            </div>
-                        </div>
-                        <div
-                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
-                            <div
-                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                4</div>
-                            <div>
-                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">Officer Verification
-                                </p>
-                                <p style="font-size:.78rem; color:var(--text-light);">Day 1–4 — Government review and
-                                    validation</p>
-                            </div>
-                        </div>
-                        <div
-                            style="display:flex; align-items:flex-start; gap:12px; background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:12px 16px;">
-                            <div
-                                style="min-width:28px; height:28px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); border-radius:50%; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                                5</div>
-                            <div>
-                                <p style="font-size:.88rem; font-weight:600; margin-bottom:2px;">GSTIN Issuance</p>
-                                <p style="font-size:.78rem; color:var(--text-light);">Day 2–5 — Receive your GST
-                                    Identification Number</p>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <!-- PRICING -->
-                <div id="pricing">
-                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Pricing Plans</p>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-                        <div
-                            style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px; display:flex; flex-direction:column; gap:14px; border:2px solid transparent;">
-                            <p
-                                style="font-size:.72rem; font-weight:700; color:var(--text-light); text-transform:uppercase; letter-spacing:.05em;">
-                                Starter</p>
-                            <p style="font-size:2rem; font-weight:800; color:var(--primary); line-height:1;">₹1,499</p>
-                            <p style="font-size:.8rem; color:var(--text-light);">GST Registration only</p>
-                            <ul style="list-style:none; display:flex; flex-direction:column; gap:7px;">
-                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
-                                        style="color:var(--success); font-weight:700;">✓</span> Application Filing</li>
-                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
-                                        style="color:var(--success); font-weight:700;">✓</span> ARN Tracking</li>
-                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
-                                        style="color:var(--success); font-weight:700;">✓</span> GSTIN Delivery</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline" style="justify-content:center;">Get Started →</a>
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px; display:flex; flex-direction:column; gap:14px; border:2px solid var(--primary); position:relative;">
-                            <span
-                                style="position:absolute; top:-11px; right:16px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--white); font-size:.68rem; font-weight:700; padding:3px 10px; border-radius:50px;">POPULAR</span>
-                            <p
-                                style="font-size:.72rem; font-weight:700; color:var(--text-light); text-transform:uppercase; letter-spacing:.05em;">
-                                Complete</p>
-                            <p style="font-size:2rem; font-weight:800; color:var(--primary); line-height:1;">₹3,499</p>
-                            <p style="font-size:.8rem; color:var(--text-light);">GST + Compliance</p>
-                            <ul style="list-style:none; display:flex; flex-direction:column; gap:7px;">
-                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
-                                        style="color:var(--success); font-weight:700;">✓</span> GST Registration</li>
-                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
-                                        style="color:var(--success); font-weight:700;">✓</span> Returns Filing</li>
-                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
-                                        style="color:var(--success); font-weight:700;">✓</span> Advisory Support</li>
-                                <li style="font-size:.82rem; display:flex; align-items:center; gap:8px;"><span
-                                        style="color:var(--success); font-weight:700;">✓</span> Dedicated Manager</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary" style="justify-content:center;">Get Started →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ -->
-                <div>
-                    <p style="font-size:1rem; font-weight:700; margin-bottom:14px;">Frequently Asked Questions</p>
-                    <div style="display:flex; flex-direction:column; gap:10px;">
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:14px 18px;">
-                            <p style="font-size:.88rem; font-weight:600; margin-bottom:5px;">Is GST mandatory for my
-                                business?</p>
-                            <p style="font-size:.82rem; color:var(--text-light); line-height:1.6;">Depends on turnover —
-                                mandatory above ₹40L (goods) or ₹20L (services). Voluntary registration is also possible
-                                below the threshold.</p>
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:14px 18px;">
-                            <p style="font-size:.88rem; font-weight:600; margin-bottom:5px;">How long does GST
-                                registration take?</p>
-                            <p style="font-size:.82rem; color:var(--text-light); line-height:1.6;">Typically 1–5
-                                business days after all documents are submitted and verified by the government officer.
-                            </p>
-                        </div>
-                        <div
-                            style="background:var(--white); border-radius:10px; box-shadow:var(--shadow); padding:14px 18px;">
-                            <p style="font-size:.88rem; font-weight:600; margin-bottom:5px;">Can I use my home address
-                                for GST?</p>
-                            <p style="font-size:.82rem; color:var(--text-light); line-height:1.6;">Yes, home address is
-                                accepted as a principal place of business for sole proprietors and small businesses.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- SIDEBAR -->
-            <div style="position:sticky; top:90px; display:flex; flex-direction:column; gap:16px;">
-                <div
-                    style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px;">
-                    <h3 style="font-size:.9rem; font-weight:700; margin-bottom:16px;">Quick Enquiry</h3>
-                    <div
-                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
-                        <span style="color:var(--text-light);">Starter Setup</span><span
-                            style="font-weight:700;">₹1,499</span>
-                    </div>
-                    <div style="display:flex; justify-content:space-between; padding:9px 0; font-size:.85rem;"><span
-                            style="color:var(--text-light);">Complete Setup</span><span
-                            style="font-weight:700;">₹3,499</span></div>
-                    <div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
-                        <a href="#pricing" class="btn btn-primary" style="justify-content:center;">Get Started</a>
-                        <a href="#" class="btn btn-outline" style="justify-content:center;">Talk to Expert</a>
-                    </div>
-                </div>
-                <div
-                    style="background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px;">
-                    <h3 style="font-size:.9rem; font-weight:700; margin-bottom:16px;">At a Glance</h3>
-                    <div
-                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
-                        <span style="color:var(--text-light);">Setup Time</span><span style="font-weight:700;">1–5
-                            Days</span>
-                    </div>
-                    <div
-                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
-                        <span style="color:var(--text-light);">Documentation</span><span
-                            style="font-weight:700;">Easy</span>
-                    </div>
-                    <div
-                        style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(26,75,140,.07); font-size:.85rem;">
-                        <span style="color:var(--text-light);">Compliance</span><span
-                            style="font-weight:700;">Mandatory</span>
-                    </div>
-                    <div style="display:flex; justify-content:space-between; padding:9px 0; font-size:.85rem;"><span
-                            style="color:var(--text-light);">Liability</span><span
-                            style="font-weight:700;">Applicable</span></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div
-            style="background:linear-gradient(135deg,var(--primary-dark),var(--primary)); border-radius:var(--radius); padding:48px 32px; text-align:center; color:var(--white); margin-top:36px;">
-            <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:10px;">Set Up Your GST Registration in 3–5 Days
-            </h3>
-            <p style="font-size:.9rem; opacity:.82; margin-bottom:24px;">We handle everything from filing to GSTIN
-                issuance — hassle free</p>
-            <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-                <a href="#pricing" class="btn btn-lg"
-                    style="background:var(--white); color:var(--primary); font-weight:700;">View Pricing →</a>
-                <a href="#" class="btn btn-lg"
-                    style="background:transparent; border:2px solid rgba(255,255,255,.55); color:var(--white);">Talk to
-                    Expert</a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt;
+                <span>GST</span> &gt;
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span class="active">GST REGISTRATION</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">GST Registration</h1>
+                    <p class="subservice-hero-subtitle">Your First Step to Legal Business in India — Get GST Registered
+                        in 1–5 Days</p>
+
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ ⚡ Setup in 1–5 Days</span>
+                        <span class="pill-badge pill-blue">✦ 📄 GSTIN Issued</span>
+                        <span class="pill-badge pill-cyan">✦ ⭐ Expert Support</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is GST Registration?</h2>
+                    <div class="section-body-text">
+                        <p>Goods and Services Tax (GST) is India's unified indirect tax that replaced VAT, Service Tax,
+                            Excise Duty, and other levies. GST Registration allows businesses to legally collect GST,
+                            claim Input Tax Credit (ITC), and file GST returns.</p>
+                        <p>GST Registration is mandatory for businesses exceeding ₹40 lakhs (goods) or ₹20 lakhs
+                            (services). Businesses below ₹1.5 crore can opt for the Composition Scheme. Small taxpayers
+                            up to ₹5 crore can file under QRMP scheme.</p>
+                    </div>
+
+                    <div class="subservice-warning-box">
+                        <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="warning-content">
+                            ⚠️ Operating without GST when required attracts penalties up to 100% of the tax amount.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Why Choose GST Registration?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from
+                        this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Why Choose GST Registration? ✔ Legal Business Compliance
+                                </h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Input Tax Credit Benefits</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Nationwide Business Expansion</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Government Recognition</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Who Should Register? ✔ Businesses above threshold</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-industry"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ E-commerce sellers</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Importers &amp; Exporters</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">✔ Interstate suppliers</h4>
+                                <p class="eligibility-desc">Statutory eligibility and operational compliance for active
+                                    businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Setup Process &amp; Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA
+                        experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Setup Process &amp; Timeline</h4>
+                                    <span class="step-time-pill pill-blue">Step 1</span>
+                                </div>
+                                <p class="step-description">{{ step.desc }}</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Document Collection</h4>
+                                    <span class="step-time-pill pill-blue">Step 2</span>
+                                </div>
+                                <p class="step-description">Day 1 — Gather all required documents</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">3</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">GST Portal Registration</h4>
+                                    <span class="step-time-pill pill-blue">Step 3</span>
+                                </div>
+                                <p class="step-description">Day 1 — Create account &amp; set up profile</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">4</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Application Filing</h4>
+                                    <span class="step-time-pill pill-blue">Step 4</span>
+                                </div>
+                                <p class="step-description">Day 1 — Submit your GST registration application</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle ">5</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Officer Verification</h4>
+                                    <span class="step-time-pill pill-blue">Step 5</span>
+                                </div>
+                                <p class="step-description">Day 1–4 — Government review and validation</p>
+                            </div>
+                        </div>
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle"><i class="fas fa-check"></i></div>
+
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">GSTIN Issuance</h4>
+                                    <span class="step-time-pill pill-gold">Step 6</span>
+                                </div>
+                                <p class="step-description">Day 2–5 — Receive your GST Identification Number</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification
+                        and portal upload:</p>
+
+                    <div class="doc-req-grid">
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">Documents Required 📋 PAN Card &amp; Aadhaar</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-file-invoice"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">🏠 Address Proof</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">🏦 Bank Details</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                        <div class="doc-req-card">
+                            <div class="doc-icon"><i class="fas fa-portrait"></i></div>
+                            <div class="doc-text">
+                                <h4 class="doc-title">📁 Business Proof</h4>
+                                <p class="doc-desc">Official copy required in PDF or JPG format for digital
+                                    verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">GST Registration Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">Starter
+                            ₹1,499</button><button type="button" class="enquiry-tab"
+                            onclick="switchSidebarPlan(1)">Complete ₹3,499</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">Starter</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹1,499</span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">All inclusive filing, drafting, document vetting,
+                            zero hidden charges.</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
+                    </div>
+
+                    <div class="sidebar-specs-list">
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Setup Time</span>
+                            <span class="spec-val">1–5 Days</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Documentation</span>
+                            <span class="spec-val">Easy</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Compliance</span>
+                            <span class="spec-val">Mandatory</span>
+                        </div>
+                        <div class="sidebar-spec-row">
+                            <span class="spec-label">Liability</span>
+                            <span class="spec-val">Applicable</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box">
+                        <p class="checklist-header">SERVICE INCLUDES</p>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Official Certificate Issued</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Full Statutory Drafting & Vetting</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Dedicated CA Support</span>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Post-Filing Compliance Roadmap</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">GST Registration Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-2">
+                <div class="pricing-plan-box">
+
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">STARTER</h3>
+                    <p class="plan-subtitle">Full compliance solution tailored by VITTAX.</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹1,499</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Official filing + verification + expert guidance.</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Application Filing</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>ARN Tracking</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>GSTIN Delivery</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> Statutory Govt Fees: State registration fee at
+                        actuals.
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">COMPLETE</h3>
+                    <p class="plan-subtitle">Full compliance solution tailored by VITTAX.</p>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹3,499</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Official filing + verification + expert guidance.</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>GST Registration</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Returns Filing</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Advisory Support</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Dedicated Manager</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> Statutory Govt Fees: State registration fee at
+                        actuals.
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about GST Registration in India.
+                </p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>Is GST mandatory for my business?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depends on turnover — mandatory above ₹40L (goods) or ₹20L (services). Voluntary registration
+                            is also possible below the threshold.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>How long does GST registration take?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Typically 1–5 business days after all documents are submitted and verified by the government
+                            officer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can I use my home address for GST?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, home address is accepted as a principal place of business for sole proprietors and small
+                            businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your GST Registration Today</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
 
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    });
+
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "Starter", "price": "\u20b91,499", "period": "", "sub": "All inclusive filing, drafting, document vetting, zero hidden charges." }, { "name": "Complete", "price": "\u20b93,499", "period": "", "sub": "All inclusive filing, drafting, document vetting, zero hidden charges." }];
+
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        }
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
+    }
+</script>
 {% endblock %}

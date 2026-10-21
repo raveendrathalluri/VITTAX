@@ -1,242 +1,805 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Section 8 Company Registration - VITTAX{% endblock %}
+
 {% block extra_css %}
-<style>
-    .hero {
-        padding: 145px 0 95px;
-        background: radial-gradient(circle at top right, rgba(37, 99, 235, .14), transparent 28%), linear-gradient(135deg, #eef4ff, #f8fbff);
-        text-align: center;
-        position: relative;
-        overflow: hidden
-    }
-
-    .hero:after {
-        content: '';
-        position: absolute;
-        left: -5%;
-        right: -5%;
-        bottom: -42px;
-        height: 90px;
-        background: #fff;
-        border-radius: 50% 50% 0 0/100% 100% 0 0
-    }
-
-    .hero h1 {
-        font-size: clamp(2.4rem, 4vw, 3.8rem);
-        font-weight: 900;
-        margin-bottom: 14px
-    }
-
-    .hero p {
-        max-width: 760px;
-        margin: 0 auto;
-        color: var(--text-light);
-        font-size: 1.08rem;
-        line-height: 1.85
-    }
-
-    .section {
-        padding: 90px 0
-    }
-
-    .section h2 {
-        font-size: 2rem;
-        font-weight: 900;
-        margin-bottom: 18px
-    }
-
-    .section p {
-        line-height: 1.9;
-        color: var(--text-light)
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 24px
-    }
-
-    .card {
-        background: #fff;
-        border-radius: 24px;
-        padding: 30px;
-        box-shadow: 0 16px 36px rgba(15, 23, 42, .08);
-        border: 1px solid rgba(26, 75, 140, .08)
-    }
-
-    .price {
-        font-size: 2.5rem;
-        font-weight: 900;
-        color: var(--primary);
-        margin: 10px 0 14px
-    }
-
-    .faq details {
-        background: #fff;
-        border-radius: 18px;
-        padding: 18px 20px;
-        margin-bottom: 16px;
-        box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
-    }
-
-    .cta {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: #fff;
-        border-radius: 30px;
-        padding: 58px 38px;
-        text-align: center
-    }
-
-    .cta h2 {
-        color: #fff
-    }
-
-    .cta p {
-        color: rgba(255, 255, 255, .92)
-    }
-
-    @media(max-width:768px) {
-        .hero {
-            padding: 120px 0 72px
-        }
-
-        .section {
-            padding: 64px 0
-        }
-
-        .grid {
-            grid-template-columns: 1fr
-        }
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/subservice.css' %}?v=2">
 {% endblock %}
+
 {% block content %}
-<section class='hero'>
-    <div class='container'><span class='section-tag'>START A BUSINESS</span>
-        <h1>Section 8 Company (NGO / Non-Profit)</h1>
-        <p>Structure Your Social Mission Legally — India’s Premier NGO Format</p><a href='#pricing'
-            class='btn btn-primary' style='margin-top:24px'>Get Started</a>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>What is a Section 8 Company?</h2>
-        <p>A Section 8 Company is a non-profit organisation incorporated under Section 8 of the Companies Act, 2013 — a
-            company that has charitable, educational, religious, scientific, social welfare, sports promotion, or
-            environmental protection as its primary objective, and whose profits (if any) are applied only toward
-            promoting these objectives rather than distributed as dividends to members.</p>
-        <p>Section 8 companies enjoy a special licence from the Central Government and are exempt from several
-            provisions of the Companies Act (such as using "Limited" or "Private Limited" in their name — they can
-            simply use their name with appropriate suffix). They enjoy income tax exemption under Section 11/12 of the
-            Income Tax Act (after registration under Section 12A and 80G), making them eligible to receive
-            tax-deductible donations.</p>
-        <p>Section 8 is the preferred structure for NGOs, foundations, and non-profit entities over a Trust or Society,
-            because it offers greater transparency, better corporate governance, and more credibility with Indian and
-            foreign donors, FCRA authorities, and CSR funders.</p>
-    </div>
-</section>
-<section class='section' style='background:linear-gradient(180deg,#f8fbff,#f4f8ff)'>
-    <div class='container'>
-        <h2>Why Choose Section 8 Company?</h2>
-        <div class='grid'>
-            <div class='card'>
-                <h3>✦ 80G Tax Exemption for Donors</h3>
-            </div>
-            <div class='card'>
-                <h3>✦ Section 12A Tax Exempt</h3>
-            </div>
-            <div class='card'>
-                <h3>✦ CSR Funding Eligible</h3>
-            </div>
+<div class="subservice-page">
+
+    <!-- SPECIAL OFFER PROMO BAR -->
+    <div class="subservice-promo-bar">
+        <div class="subservice-container promo-bar-inner">
+            <span><i class="fas fa-bolt text-gold"></i> <strong>SPECIAL OFFER:</strong> Flat ₹500 Cashback on Business
+                Filing &amp; Advisory Registrations for MSME Categories. Apply Code: <span
+                    class="promo-code">VITTAX500</span> at checkout!</span>
         </div>
     </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>Who Should Register a Section 8 Company?</h2>
-        <div class='grid'>
-            <div class='card'>✔ NGO Founders: Individuals or groups starting a charitable foundation, educational trust,
-                or welfare organisation</div>
-            <div class='card'>✔ Trust/Society Conversion: Existing Trusts/Societies wanting to convert to a more
-                credible corporate structure</div>
-            <div class='card'>✔ Corporate CSR: Corporate houses setting up a CSR arm as an independent non-profit entity
-            </div>
-            <div class='card'>✔ FCRA Applicants: Organisations seeking FCRA registration to receive foreign
-                contributions</div>
-        </div>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <h2>Registration Process & Timeline</h2>
-        <div class='grid'>
-            <div class='card'><strong>Step 1:</strong> Name & Licence Application<br><small>10–25 days</small>
-                <p>Apply for Central Government licence under Section 8 via Form INC-12 — requires detailed MoA/AoA with
-                    charitable objectives.</p>
-            </div>
-            <div class='card'><strong>Step 2:</strong> MOA / AOA Drafting<br><small>1–3 days</small>
-                <p>Draft MOA and AOA reflecting charitable objects, non-profit clause, and dissolution clause.</p>
-            </div>
-            <div class='card'><strong>Step 3:</strong> Incorporation<br><small>5–7 days after licence</small>
-                <p>File SPICe+ after licence approval; obtain COI.</p>
-            </div>
-            <div class='card'><strong>Step 4:</strong> 12A & 80G Registration<br><small>30–90 days
-                    post-incorporation</small>
-                <p>Apply for Section 12A and 80G registration with Income Tax Department.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class='section' id='pricing' style='background:linear-gradient(180deg,#f8fbff,#f4f8ff)'>
-    <div class='container'>
-        <h2>Pricing Plans</h2>
-        <div class='grid'>
-            <div class='card'>
-                <h3>SECTION 8 INCORPORATION — COI + PAN + basic setup</h3>
-                <div class='price'>₹14,999</div>
-                <p><strong>Ideal for:</strong> New NGO founders, charitable organisations</p>
-                <p>✓ Section 8 licence application<br>✓ MOA + AOA drafting<br>✓ SPICe+ filing<br>✓ COI + PAN<br>✓ 2 DSCs
-                </p>
-                <p><strong>VITTAX Fee:</strong> ₹14,999 | <strong>Govt. Fees:</strong> MCA fees + stamp duty at actuals
-                    (~₹2,000)</p>
-            </div>
-            <div class='card'>
-                <h3>COMPLETE NGO PACKAGE — Incorporation + 12A + 80G + Compliance</h3>
-                <div class='price'>₹24,999</div>
-                <p><strong>Ideal for:</strong> Organisations wanting full tax exemption setup</p>
-                <p>✓ Everything in Incorporation<br>✓ 12A registration (IT exemption)<br>✓ 80G registration (donor
-                    deduction)<br>✓ Udyam + FCRA advisory<br>✓ Compliance calendar</p>
-                <p><strong>VITTAX Fee:</strong> ₹24,999 | <strong>Govt. Fees:</strong> MCA fees + IT filing fees at
-                    actuals</p>
+
+    <!-- HERO HEADER SECTION -->
+    <section class="subservice-hero-section">
+        <div class="subservice-container">
+            <!-- Breadcrumbs -->
+            <nav class="subservice-breadcrumb">
+                <a href="{% url 'home' %}">HOME</a> &gt;
+
+                <a href="{% url 'service_list' %}">Services</a> &gt;
+                <span>START BUSINESS</span> &gt;
+                <span class="active">SECTION 8 COMPANY (NGO / NON-PROFIT)</span>
+            </nav>
+
+            <div class="subservice-hero-grid">
+                <div class="subservice-hero-left">
+                    <div class="subservice-gov-tag">
+                        <i class="fas fa-shield-alt"></i> OFFICIAL GOVERNMENT RECOGNISED PROCESS
+                    </div>
+                    <h1 class="subservice-hero-title">Section 8 Company (NGO / Non-Profit)</h1>
+                    <p class="subservice-hero-subtitle">Structure Your Social Mission Legally — India’s Premier NGO
+                        Format</p>
+
+                    <div class="subservice-pill-badges">
+                        <span class="pill-badge pill-purple">✦ 100% Online Process</span>
+                        <span class="pill-badge pill-blue">✦ Dedicated CA Support</span>
+                        <span class="pill-badge pill-cyan">✦ Fast Turnaround</span>
+                    </div>
+
+                    <div class="subservice-hero-actions">
+                        <a href="#pricing" class="btn-hero-dark">View Plans <i class="fas fa-arrow-down"></i></a>
+                        <a href="{% url 'contact' %}" class="btn-hero-outline"><i class="fas fa-phone-alt"></i> Talk to
+                            Expert</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class='section'>
-    <div class='container faq'>
-        <h2>Frequently Asked Questions</h2>
-        <details>
-            <summary>Q: What is the difference between a Section 8 Company, a Trust, and a Society?</summary>
-            <p>A: Section 8 Company: governed by MCA, highest transparency, best for large NGOs/foundations seeking
-                CSR/FCRA/institutional funds. Trust: simplest to form, governed by state Trusts Act, ideal for small
-                private charities. Society: governed by Societies Registration Act (state-wise), preferred for
-                member-based organisations like sports clubs or welfare associations.</p>
-        </details>
-        <details>
-            <summary>Q: Can a Section 8 Company pay salaries to its founders?</summary>
-            <p>A: Yes — founders and employees can be paid market-rate salaries. The restriction is on distributing
-                profits as dividends. Reasonable compensation for services rendered is permitted and is a legitimate
-                expense of the organisation.</p>
-        </details>
-    </div>
-</section>
-<section class='section'>
-    <div class='container'>
-        <div class='cta'>
-            <h2>► Register Your NGO as a Section 8 Company</h2>
-            <p>VITTAX Guides You Every Step</p><a href='#' class='btn btn-light'>Talk to Expert</a>
+    </section>
+
+    <!-- MAIN TWO-COLUMN CONTENT GRID -->
+    <div class="subservice-container">
+        <div class="subservice-main-grid">
+
+            <!-- LEFT COLUMN: CONTENT -->
+            <div class="subservice-content-col">
+
+                <!-- 1. WHAT IS -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">INTRODUCTION &amp; OVERVIEW</div>
+                    <h2 class="section-serif-title">What is a Section 8 Company?</h2>
+                    <div class="section-body-text">
+                        <p>A Section 8 Company is a non-profit organisation incorporated under Section 8 of the
+                            Companies Act, 2013 — a company that has charitable, educational, religious, scientific,
+                            social welfare, sports promotion, or environmental protection as its primary objective, and
+                            whose profits (if any) are applied only toward promoting these objectives rather than
+                            distributed as dividends to members.</p>
+                        <p>Section 8 companies enjoy a special licence from the Central Government and are exempt from
+                            several provisions of the Companies Act (such as using "Limited" or "Private Limited" in
+                            their name — they can simply use their name with appropriate suffix). They enjoy income tax
+                            exemption under Section 11/12 of the Income Tax Act (after registration under Section 12A
+                            and 80G), making them eligible to receive tax-deductible donations.</p>
+                        <p>Section 8 is the preferred structure for NGOs, foundations, and non-profit entities over a
+                            Trust or Society, because it offers greater transparency, better corporate governance, and
+                            more credibility with Indian and foreign donors, FCRA authorities, and CSR funders.</p>
+                    </div>
+                    <div class="subservice-success-box">
+                        <div class="success-icon"><i class="fas fa-check"></i></div>
+                        <div class="success-content">
+                            <strong>Key advantage:</strong> Profits cannot be distributed as dividends — all surplus
+                            must be reinvested toward the company's charitable objectives.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. WHO SHOULD REGISTER / WHY CHOOSE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">ELIGIBILITY &amp; BENEFICIARIES</div>
+                    <h2 class="section-serif-title">Who Should Register a Section 8 Company?</h2>
+                    <p class="section-desc-lead">Key commercial, professional, and statutory profiles that benefit from
+                        this service:</p>
+
+                    <div class="eligibility-grid">
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">NGO Founders</h4>
+                                <p class="eligibility-desc">Individuals or groups starting a charitable foundation,
+                                    educational trust, or welfare organisation</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-store"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Trust/Society Conversion</h4>
+                                <p class="eligibility-desc">Existing Trusts/Societies wanting to convert to a more
+                                    credible corporate structure</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-building"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Corporate CSR</h4>
+                                <p class="eligibility-desc">Corporate houses setting up a CSR arm as an independent
+                                    non-profit entity</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">FCRA Applicants</h4>
+                                <p class="eligibility-desc">Organisations seeking FCRA registration to receive foreign
+                                    contributions</p>
+                            </div>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="eligibility-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="eligibility-text">
+                                <h4 class="eligibility-title">Educational & Research Institutions</h4>
+                                <p class="eligibility-desc">Schools, colleges, research bodies, and skill-development
+                                    organisations operating on a non-profit basis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PROCESS & TIMELINE -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">STEP-BY-STEP WORKFLOW</div>
+                    <h2 class="section-serif-title">Incorporation Process &amp; Timeline</h2>
+                    <p class="section-desc-lead">Our streamlined, cloud-backed execution roadmap managed by dedicated CA
+                        experts:</p>
+
+                    <div class="process-timeline-list">
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">1</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Name Reservation via RUN / SPICe+</h4>
+                                    <span class="step-time-pill pill-blue">1-2 Days</span>
+                                </div>
+                                <p class="step-description">Proposed non-profit name checked for availability and
+                                    reserved on MCA portal with suffix words like Foundation, Forum, Association,
+                                    Council, etc.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">2</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">DSC &amp; DIN Procurement</h4>
+                                    <span class="step-time-pill pill-blue">1 Day</span>
+                                </div>
+                                <p class="step-description">Class-3 Digital Signature Certificates and Director
+                                    Identification Numbers (DIN) obtained for all founding directors.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">3</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Section 8 License Filing (Form INC-12)</h4>
+                                    <span class="step-time-pill pill-blue">5-7 Days</span>
+                                </div>
+                                <p class="step-description">Central Government license application submitted to ROC/CRC
+                                    with 3-year projected income/expenditure and proposed charitable work plan.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">4</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">MOA &amp; AOA Drafting</h4>
+                                    <span class="step-time-pill pill-blue">2-3 Days</span>
+                                </div>
+                                <p class="step-description">Drafting of specialized Memorandum and Articles of
+                                    Association including dividend prohibition, non-profit covenants, and asset transfer
+                                    rules.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle">5</div>
+                                <div class="step-connector"></div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">SPICe+ Part B Incorporation Filing</h4>
+                                    <span class="step-time-pill pill-blue">1-2 Days</span>
+                                </div>
+                                <p class="step-description">Integrated electronic filing submitted on the MCA portal
+                                    along with INC-14 (CA certification), INC-15 (declarations), and statutory forms.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="process-step-item">
+                            <div class="step-num-col">
+                                <div class="step-circle check-circle">6</div>
+                            </div>
+                            <div class="step-details">
+                                <div class="step-heading-row">
+                                    <h4 class="step-name">Certificate of Incorporation + 12A/80G Advisory</h4>
+                                    <span class="step-time-pill pill-green">Within 30 Days</span>
+                                </div>
+                                <p class="step-description">MCA issues Certificate of Incorporation with CIN, PAN, and
+                                    TAN. Full CA advisory provided for Section 12A, 80G, and NGO Darpan registration.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DOCUMENTS REQUIRED -->
+                <div class="subservice-content-card">
+                    <div class="section-micro-tag">CHECKLIST &amp; VERIFICATION</div>
+                    <h2 class="section-serif-title">Documents Required</h2>
+                    <p class="section-desc-lead">Ensure you have soft copies ready for hassle-free online verification
+                        and portal upload:</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px;">
+                        <div>
+                            <h3
+                                style="font-size: 0.95rem; font-weight: 700; color: var(--sub-navy-dark, #0c1322); margin-bottom: 12px;">
+                                Directors / Members</h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        PAN card, Aadhaar card, mobile number and email ID of all founding directors</p>
+                                </div>
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        Address proof (bank statement or utility bill — not older than 2 months)</p>
+                                </div>
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        Passport-size photograph of each director</p>
+                                </div>
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        Passport copy required for foreign nationals / NRI directors</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3
+                                style="font-size: 0.95rem; font-weight: 700; color: var(--sub-navy-dark, #0c1322); margin-bottom: 12px;">
+                                Registered Office &amp; Objects</h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        Ownership document or NOC from property owner + rental agreement</p>
+                                </div>
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        Latest utility bill (electricity/water) — not older than 2 months</p>
+                                </div>
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        3-year projected financial statement of income and expenditure</p>
+                                </div>
+                                <div class="doc-req-card"
+                                    style="padding: 12px 14px; gap: 10px; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--sub-blue-primary, #1a4b8c); font-size: 1.1rem; line-height: 1;">•</span>
+                                    <p class="doc-desc"
+                                        style="font-size: 0.81rem; color: var(--sub-slate-700, #334155); margin: 0; line-height: 1.5;">
+                                        Description of charitable activities, objectives, and proposed work plan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <div class="subservice-sidebar-stack">
+
+                <!-- Sticky Quick Enquiry Card -->
+                <div class="sidebar-enquiry-card">
+                    <div class="enquiry-card-tag">QUICK ENQUIRY</div>
+                    <div class="enquiry-card-header">
+                        <h3 class="enquiry-title">Section 8 Company Plans</h3>
+                        <span class="enquiry-badge">Instant Start</span>
+                    </div>
+
+                    <div class="enquiry-toggle-tabs">
+                        <button type="button" class="enquiry-tab active" onclick="switchSidebarPlan(0)">SECTION 8
+                            INCORP.. ₹14,999</button><button type="button" class="enquiry-tab"
+                            onclick="switchSidebarPlan(1)">COMPLETE NGO PAC.. ₹24,999</button>
+                    </div>
+
+                    <div class="enquiry-price-box">
+                        <div class="enquiry-price-row">
+                            <span class="enquiry-price-label" id="sidebarPlanName">SECTION 8 INCORPORATION</span>
+                            <span class="enquiry-price-val" id="sidebarPrice">₹14,999</span>
+                        </div>
+                        <p class="enquiry-price-sub" id="sidebarSub">Ideal for: New NGO founders, charitable
+                            organisations</p>
+                    </div>
+
+                    <a href="#pricing" class="btn-sidebar-dark" id="sidebarActionBtn">Get Start Now →</a>
+
+                    <div class="sidebar-contact-call">
+                        <a href="tel:+919177657288"><i class="fas fa-phone-alt"></i> Call Expert: <strong>+91
+                                9177657288</strong></a>
+                    </div>
+
+                    <div style="margin-bottom: 14px;">
+                        <h4
+                            style="font-size: 0.95rem; font-weight: 700; color: var(--sub-navy-dark, #0c1322); margin-bottom: 12px;">
+                            At a Glance</h4>
+                        <div class="sidebar-specs-list">
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Incorporation Time</span>
+                                <span class="spec-val">20-35 Days</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Min. Directors</span>
+                                <span class="spec-val">2</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Annual Filings</span>
+                                <span class="spec-val">AOC-4 + MGT-7 + ITR-7</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Liability</span>
+                                <span class="spec-val" style="color: #16a34a; font-weight: 700;">Limited</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-checklist-box"
+                        style="background: #f0f4f9; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; margin-bottom: 14px;">
+                        <p
+                            style="font-size: 0.85rem; font-weight: 700; color: #1a4b8c; margin: 0 0 10px; display: flex; align-items: center; gap: 6px;">
+                            <span style="color: #f59e0b;">⚡</span>
+                            <span>Incorporation Includes</span>
+                        </p>
+                        <div class="sidebar-specs-list" style="margin-bottom: 0;">
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">DSC</span>
+                                <span class="spec-val">2 Directors</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Name Approval</span>
+                                <span class="spec-val">SPICe+ Part A</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">License</span>
+                                <span class="spec-val">Section 8 License (INC-12)</span>
+                            </div>
+                            <div class="sidebar-spec-row">
+                                <span class="spec-label">Audit</span>
+                                <span class="spec-val">Mandatory</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-tip-box">
+                        <i class="fas fa-lightbulb text-gold"></i>
+                        <span><strong>100% DIGITAL FILING:</strong> No physical visit to any department required.</span>
+                    </div>
+                </div>
+
+                <!-- CA Advisory Promo Card -->
+                <div class="sidebar-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Accurate documentation and timely statutory compliance protect your business
+                        from hefty penalties while building long-term institutional credibility."</p>
+                    <div class="quote-author">
+                        <div class="author-badge"><i class="fas fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <strong>VITTAX Legal Team</strong>
+                            <span>Principal Corporate Counsel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
-</section>
+
+    <!-- 5. REAL CA CONSULTATION SHOWCASE SECTION -->
+    <section class="subservice-showcase-section">
+        <div class="subservice-container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-micro-tag">PROFESSIONAL EXPERTISE</div>
+                    <h2 class="showcase-title">Real CA Consultations, Not Automated Chatbots</h2>
+                    <p class="showcase-desc">Unlike automated tech aggregator platforms, every VITTAX client file is
+                        handled and reviewed by a dedicated Chartered Accountant. Our clients get real human
+                        consultations, custom tax-saving strategies, and guaranteed error-free filings backed by
+                        professional liability indemnity.</p>
+                    <div class="showcase-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Registered Entities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₹1.5+ Cr</span>
+                            <span class="stat-label">Tax Savings Achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-img-wrap">
+                        <img src="{% static 'images/about_hero_meeting.jpg' %}" alt="Real CA Consultation at VITTAX"
+                            class="showcase-img">
+                        <div class="showcase-img-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Dedicated Senior CA assigned to your filing from Day 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRICING SECTION -->
+    <section id="pricing" class="subservice-pricing-wrap">
+        <div class="subservice-container">
+            <div class="pricing-section-head">
+                <div class="section-micro-tag">TRANSPARENT, FIXED-FEE PRICING</div>
+                <h2 class="section-serif-title center">Section 8 Company (NGO / Non-Profit) Pricing Plans</h2>
+                <p class="section-subtitle-muted center">Guaranteed, transparent pricing with no hidden charges. All
+                    government statutory charges, state stamp duties, and CA fees are clearly disclosed.</p>
+            </div>
+
+            <div class="pricing-cards-container plans-2">
+                <div class="pricing-plan-box">
+
+                    <div class="plan-tag">TIER 1 / ACCREDITED</div>
+                    <h3 class="plan-title">SECTION 8 INCORPORATION</h3>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹14,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Ideal for: New NGO founders, charitable organisations</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Class-3 DSC (2 Directors) &amp; DIN Allotment</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Name Reservation via RUN / SPICe+ Part A</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Section 8 Central Govt License (Form INC-12)</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Custom MOA &amp; AOA with Non-Profit Covenants</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>SPICe+ Part B Electronic ROC Filing</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Certificate of Incorporation, PAN, TAN &amp; Bank A/c</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> Professional Fee: ₹14,999 | MCA filing fees
+                        &amp; state stamp duties included
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-dark">Get Started →</a>
+                </div>
+
+                <div class="pricing-plan-box popular-plan">
+                    <div class="plan-popular-ribbon">POPULAR CHOICE // RECOMMENDED</div>
+                    <div class="plan-tag">TIER 2 / ACCREDITED</div>
+                    <h3 class="plan-title">COMPLETE NGO PACKAGE</h3>
+
+                    <div class="plan-price-row">
+                        <span class="plan-price">₹24,999</span>
+                        <span class="plan-period"> all-inclusive</span>
+                    </div>
+                    <p class="plan-summary-note">Ideal for: Organisations wanting full tax exemption &amp; CSR setup</p>
+
+                    <div class="plan-features-list">
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Everything in Section 8 Incorporation Plan</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>3-Year Projected Financials &amp; Work Plan Preparation</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Section 12A Income Tax Exemption Application</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>Section 80G Tax Deduction Registration for Donors</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>NGO Darpan (NITI Aayog) Portal Registration</div>
+                        </div>
+                        <div class="plan-feature"><i class="fas fa-check text-gold"></i>
+                            <div>CSR-1 Registration Advisory for Corporate Grants</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-govt-fee-box gold-tint">
+                        <strong>VITTAX Fee &amp; Govt Charges:</strong> Professional Fee: ₹24,999 | Full tax exemption
+                        setup &amp; dedicated CA advisory
+                    </div>
+
+                    <a href="{% url 'contact' %}" class="btn-plan-gold">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SEAMLESS DOCUMENTATION & PORTAL EXPANSION -->
+    <section class="subservice-expansion-section">
+        <div class="subservice-container">
+            <div class="expansion-grid">
+                <div class="expansion-content">
+                    <div class="section-micro-tag">ENTERPRISE-GRADE INFRASTRUCTURE</div>
+                    <h2 class="expansion-title">Seamless Documentation from Start to Expansion</h2>
+                    <p class="expansion-desc">As your enterprise grows, VITTAX seamlessly manages your legal identity,
+                        credit profile, and tax registrations without interrupting your business operations. Our unified
+                        portal keeps all certificates, filings, and notices in one place.</p>
+
+                    <div class="expansion-points">
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Centralized Cloud Vault:</strong>
+                                <p>Access your registrations, tax returns, and bank documents anytime from our client
+                                    portal.</p>
+                            </div>
+                        </div>
+                        <div class="expansion-point">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <div>
+                                <strong>Smooth Corporate Conversion:</strong>
+                                <p>Easily scale and upgrade your legal structure without losing your brand equity or GST
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expansion-visual">
+                    <div class="portal-mockup-card">
+                        <div class="mockup-header">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">vittax.com/client-portal/documents/</div>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-sidebar">
+                                <div class="mockup-nav-item active">Service Overview</div>
+                                <div class="mockup-nav-item">Official Certificate</div>
+                                <div class="mockup-nav-item">Compliance Log</div>
+                                <div class="mockup-nav-item">Tax Profile</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="mockup-status-badge">● Filing Active &amp; Verified</div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Statutory_Registration_Certificate.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Verified</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>Department_Filing_Challan.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Filed</span>
+                                </div>
+                                <div class="mockup-doc-row">
+                                    <div><i class="fas fa-file-pdf text-danger"></i>
+                                        <span>CA_Vetting_Confirmation.pdf</span>
+                                    </div>
+                                    <span class="mockup-tag">Issued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="subservice-faq-wrap">
+        <div class="subservice-container">
+            <div class="faq-section-head">
+                <div class="section-micro-tag">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-serif-title center">Frequently Asked Questions</h2>
+                <p class="section-subtitle-muted center">Everything you need to know about Section 8 Company (NGO /
+                    Non-Profit) in India.</p>
+            </div>
+            <div class="faq-accordion-list">
+                <div class="faq-card-item open">
+                    <div class="faq-question">
+                        <span>What is the difference between a Section 8 Company, a Trust, and a Society?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Section 8 Company is governed by the Ministry of Corporate Affairs (MCA), offers the highest
+                            transparency and corporate credibility, and is ideal for NGOs seeking CSR funding, FCRA, or
+                            institutional grants. Trust is formed under the state Trusts Act and is best suited for
+                            small private/family charities. Society is governed under the Societies Registration Act and
+                            is typically chosen for member-run welfare associations and clubs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can a Section 8 Company distribute profits or dividends to its members?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. Under Section 8 of the Companies Act, 2013, payment of dividends or distribution of
+                            profits to shareholders or members is strictly prohibited. All profits, surplus income, and
+                            donations must be reinvested solely into advancing the company's stated charitable and
+                            non-profit objectives.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Can a Section 8 Company pay salaries to its founders or directors?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Founding members and directors can receive reasonable remuneration and reimbursement of
+                            expenses for legitimate executive or professional services rendered, provided it is
+                            justified, approved by the Board of Directors, and clearly disclosed in the audited
+                            accounts.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>How do Section 12A and 80G tax exemptions benefit an NGO?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Section 12A exempts the entire surplus income of the Section 8 company from corporate income
+                            tax under the Income Tax Act. Section 80G allows donors to claim a 50% tax deduction on
+                            donations made to the company. VITTAX assists in securing both registrations along with NITI
+                            Aayog NGO Darpan enrollment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card-item">
+                    <div class="faq-question">
+                        <span>Is annual audit mandatory for a Section 8 Company?</span>
+                        <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. All Section 8 companies must get their books of account audited annually by an
+                            independent practicing Chartered Accountant, regardless of turnover. The company must also
+                            file annual statutory returns (Form AOC-4, Form MGT-7) with the ROC/MCA and file Income Tax
+                            Return (ITR-7).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. BOTTOM FULL-WIDTH CTA BANNER -->
+    <section class="subservice-cta-fullwidth">
+        <div class="subservice-container">
+            <div class="cta-inner-card">
+                <div class="cta-micro-tag">START YOUR COMPLIANCE JOURNEY TODAY</div>
+                <h2 class="cta-banner-title">Set Up Your Section 8 Company (NGO / Non-Profit) with VITTAX</h2>
+                <p class="cta-banner-desc">Fast, reliable, and 100% compliant filings handled end-to-end by VITTAX with
+                    dedicated CA backing.</p>
+
+                <div class="cta-btn-group">
+                    <a href="#pricing" class="btn-cta-gold">Get Started Now →</a>
+                    <a href="{% url 'contact' %}" class="btn-cta-phone"> Contact Expert</a>
+
+                </div>
+
+                <div class="cta-trust-badges">
+                    <span><i class="fas fa-shield-alt text-gold"></i> 100% Compliant Govt Process</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-bolt text-gold"></i> Fast Turnaround Guaranteed</span>
+                    <span class="divider">•</span>
+                    <span><i class="fas fa-star text-gold"></i> India's Top Rated CA Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- INTERACTIVE SCRIPTS FOR FAQ ACCORDION AND DYNAMIC SIDEBAR TABS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-card-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                faqItems.forEach(i => i.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    });
+
+    // Dynamic Sidebar Plan Switcher
+    const servicePlansData = [{ "name": "SECTION 8 INCORPORATION", "price": "\u20b914,999", "period": "", "sub": "Ideal for: New NGO founders, charitable organisations" }, { "name": "COMPLETE NGO PACKAGE", "price": "\u20b924,999", "period": "", "sub": "Ideal for: Organisations wanting full tax exemption setup" }];
+
+    function switchSidebarPlan(idx) {
+        if (!servicePlansData || !servicePlansData[idx]) return;
+        const p = servicePlansData[idx];
+
+        // Toggle active state on tabs
+        const tabs = document.querySelectorAll('.enquiry-toggle-tabs .enquiry-tab');
+        tabs.forEach((tab, i) => {
+            if (i === idx) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update price and plan name in sidebar
+        const nameEl = document.getElementById('sidebarPlanName');
+        const priceEl = document.getElementById('sidebarPrice');
+        const subEl = document.getElementById('sidebarSub');
+
+        if (nameEl) nameEl.textContent = p.name;
+        if (priceEl) {
+            priceEl.innerHTML = p.price + (p.period ? " <small style='font-size:0.65em;font-weight:500;'>" + p.period + "</small>" : "");
+        }
+        if (subEl && p.sub) {
+            subEl.textContent = p.sub;
+        }
+    }
+</script>
 {% endblock %}
