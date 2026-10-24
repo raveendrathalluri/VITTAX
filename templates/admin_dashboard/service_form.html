@@ -1,12 +1,11 @@
-
 {# ════════ templates/admin_dashboard/service_form.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
 {% block page_title %}{{ action }} Service{% endblock %}
 {% block content %}
-<div style="max-width:700px">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+<div class="admin-form-container">
+  <div class="form-header-bar">
     <a href="{% url 'admin_services' %}" class="btn btn-outline btn-sm"><i class="fas fa-arrow-left"></i> Back</a>
-    <h2 style="font-size:1.2rem;font-weight:700">{{ action }} Service</h2>
+    <h2 class="form-title">{{ action }} Service</h2>
   </div>
   <div class="form-card">
     <form method="post">
@@ -44,15 +43,15 @@
         <div class="form-group">
           <label class="form-label">Price (₹) *</label>
           <input name="price" type="number" min="0" step="0.01" class="form-control" value="{{ service.price|default:'0' }}" required>
-          <small style="color:#718096">Use 0 for free services</small>
+          <small class="form-hint">Use 0 for free services</small>
         </div>
         <div class="form-group">
           <label class="form-label">FontAwesome Icon</label>
           <input name="icon" type="text" class="form-control" value="{{ service.icon|default:'fas fa-file-alt' }}" placeholder="fas fa-file-alt">
-          <small style="color:#718096">e.g. fas fa-file-invoice</small>
+          <small class="form-hint">e.g. fas fa-file-invoice</small>
         </div>
       </div>
-      <div style="display:flex;gap:24px;margin-bottom:24px">
+      <div class="form-check-inline-group">
         <label class="form-check">
           <input type="checkbox" name="is_featured" {% if service.is_featured %}checked{% endif %}>
           Mark as Featured
@@ -62,7 +61,7 @@
           Active (visible on site)
         </label>
       </div>
-      <div style="display:flex;gap:12px">
+      <div class="form-actions">
         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> {{ action }} Service</button>
         <a href="{% url 'admin_services' %}" class="btn btn-outline">Cancel</a>
       </div>
