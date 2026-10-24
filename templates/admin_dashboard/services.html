@@ -3,7 +3,7 @@
 {% block page_title %}Services{% endblock %}
 
 {% block content %}
-<div class="page-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+<div class="page-header">
     <div class="page-title">Services ({{ services.count }})</div>
     <a href="{% url 'admin_service_add' %}" class="btn btn-primary">
         <i class="fas fa-plus"></i> Add Service
@@ -28,7 +28,7 @@
             {% for svc in services %}
             <tr>
                 <td>
-                    <i class="{{ svc.icon }}" style="font-size:1.3rem;color:var(--primary)"></i>
+                    <i class="{{ svc.icon }} table-service-icon"></i>
                 </td>
 
                 <td><strong>{{ svc.name }}</strong></td>
@@ -54,18 +54,18 @@
                 </td>
 
                 <td class="action-btns">
-                    <a href="{% url 'admin_service_edit' svc.pk %}" class="btn btn-primary btn-sm">
+                    <a href="{% url 'admin_service_edit' svc.pk %}" class="btn btn-primary btn-sm" title="Edit">
                         <i class="fas fa-edit"></i>
                     </a>
 
-                    <a href="{% url 'admin_service_delete' svc.pk %}" class="btn btn-danger btn-sm">
+                    <a href="{% url 'admin_service_delete' svc.pk %}" class="btn btn-danger btn-sm" title="Delete">
                         <i class="fas fa-trash"></i>
                     </a>
                 </td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="7" style="text-align:center;padding:30px;color:var(--text-light)">
+                <td colspan="7" class="table-empty">
                     No services found
                 </td>
             </tr>
