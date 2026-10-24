@@ -1,43 +1,61 @@
 {# ════════ templates/admin_dashboard/nav_menu.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
 
-{% block page_title %}Navigation Menu{% endblock %}
-{% block page_subtitle %}Manage website navigation structure{% endblock %}
+{% block title %}Navigation Menu - VITTAX Admin{% endblock %}
+{% block page_title %}Website Navigation{% endblock %}
+{% block page_subtitle %}Manage website navigation structure, dropdown menus, and footer hyperlinks{% endblock %}
 
 {% block content %}
 <div class="page-header">
     <div>
-        <div class="page-title">Navigation Menu ({{ menu_items.count }})</div>
+        <div class="page-title">
+            <i class="fas fa-bars-staggered text-primary"></i>
+            <span>Navigation Architecture</span>
+            <span class="count-pill">{{ menu_items.count }} Active</span>
+        </div>
+        <p class="page-subtitle">Configure header menus, dropdown parent-child hierarchies, and footer links.</p>
     </div>
-    <a href="{% url 'admin_nav_add' %}" class="btn btn-primary">
-        <i class="fas fa-plus"></i> Add Menu Item
-    </a>
+    <div class="action-btns">
+        <a href="{% url 'admin_nav_add' %}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> <span>Add Menu Item</span>
+        </a>
+    </div>
 </div>
 
 <!-- Menu Type Tabs -->
 <div class="nav-tabs-wrapper">
     <a href="?type=main" class="nav-tab {% if is_main %}active{% endif %}">
-        <i class="fas fa-bars"></i> Main Menu
+        <i class="fas fa-compass"></i> <span>Main Navbar Menu</span>
     </a>
     <a href="?type=footer" class="nav-tab {% if is_footer %}active{% endif %}">
-        <i class="fas fa-link"></i> Footer Links
+        <i class="fas fa-shoe-prints"></i> <span>Footer Links</span>
     </a>
     <a href="?type=utility" class="nav-tab {% if is_utility %}active{% endif %}">
-        <i class="fab fa-twitter"></i> Social Media Links
+        <i class="fas fa-share-nodes"></i> <span>Social & Utility Links</span>
     </a>
 </div>
 
 {% if menu_items %}
 <div class="data-card">
+    <div class="data-card-header">
+        <div class="data-card-title-wrap">
+            <span class="data-card-title">
+                {% if is_main %}Main Navigation Bar
+                {% elif is_footer %}Footer Navigation Directory
+                {% else %}Social & Utility Links{% endif %}
+            </span>
+            <span class="count-pill">{{ menu_items.count }} items</span>
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
-                <th class="th-w40">Label</th>
-                <th class="th-w25">URL / Type</th>
-                <th class="th-w15">Parent</th>
-                <th class="th-w10">Order</th>
+                <th class="th-w40">Label & Icon</th>
+                <th class="th-w25">Target Route / URL</th>
+                <th class="th-w15">Hierarchy Parent</th>
+                <th class="th-w10 text-center">Display Order</th>
                 <th class="th-w10">Status</th>
-                <th class="th-w20 text-center">Actions</th>
+                <th class="th-w20 text-right">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -46,49 +64,59 @@
                 <td>
                     <div class="table-item-label">
                         {% if item.icon %}
-                        <i class="{{ item.icon }} item-icon-primary"></i>
+                        <div class="table-service-icon table-service-icon-sm">
+                            <i class="{{ item.icon }}"></i>
+                        </div>
                         {% else %}
-                        <i class="fas fa-link item-icon-muted"></i>
+                        <div class="table-service-icon table-service-icon-sm icon-muted">
+                            <i class="fas fa-link"></i>
+                        </div>
                         {% endif %}
-                        <strong>{{ item.label }}</strong>
-                        {% if item.parent %}
-                        <span class="badge badge-info badge-child">Child</span>
-                        {% endif %}
+                        <div>
+                            <strong>{{ item.label }}</strong>
+                            {% if item.parent %}
+                            <span class="badge badge-info badge-child ml-1">Submenu</span>
+                            {% endif %}
+                        </div>
                     </div>
                 </td>
                 <td>
                     <span class="td-muted">
                         {% if item.url %}
-                        {{ item.url|truncatechars:30 }}
+                        <code>{{ item.url|truncatechars:32 }}</code>
                         {% else %}
-                        <em>{{ item.get_menu_type_display }}</em>
+                        <em class="text-muted">{{ item.get_menu_type_display }}</em>
                         {% endif %}
                     </span>
                 </td>
                 <td>
                     {% if item.parent %}
-                    <span class="td-muted">{{ item.parent.label }}</span>
+                    <span class="td-muted font-semibold">
+                        <i class="fas fa-turn-up parent-turn-icon"></i>
+                        {{ item.parent.label }}
+                    </span>
                     {% else %}
-                    <span class="text-empty-dash">—</span>
+                    <span class="text-empty-dash">— Top Level —</span>
                     {% endif %}
                 </td>
-                <td>
+                <td class="text-center">
                     <span class="order-pill">
-                        {{ item.order }}
+                        #{{ item.order }}
                     </span>
                 </td>
                 <td>
                     <span class="badge {% if item.is_active %}badge-success{% else %}badge-danger{% endif %}">
-                        {% if item.is_active %}Active{% else %}Inactive{% endif %}
+                        <span class="badge-dot"></span>
+                        {% if item.is_active %}Active{% else %}Hidden{% endif %}
                     </span>
                 </td>
-                <td class="td-center">
-                    <div class="action-btns action-btns-center">
-                        <a href="{% url 'admin_nav_edit' item.pk %}" class="btn btn-primary btn-sm" title="Edit">
-                            <i class="fas fa-edit"></i>
+                <td class="text-right">
+                    <div class="action-btns action-btns-right">
+                        <a href="{% url 'admin_nav_edit' item.pk %}" class="btn btn-primary btn-sm" title="Edit Menu Item">
+                            <i class="fas fa-pen-to-square"></i> <span>Edit</span>
                         </a>
-                        <a href="{% url 'admin_nav_delete' item.pk %}" class="btn btn-danger btn-sm" title="Delete">
-                            <i class="fas fa-trash"></i>
+                        <a href="{% url 'admin_nav_delete' item.pk %}" class="btn btn-danger btn-sm" title="Delete Item">
+                            <i class="fas fa-trash-can"></i>
                         </a>
                     </div>
                 </td>
@@ -98,11 +126,11 @@
     </table>
 </div>
 
-<!-- Drag & Drop Info -->
+<!-- Order Tip Banner -->
 <div class="info-banner">
     <p class="info-banner-text">
-        <i class="fas fa-info-circle info-banner-icon"></i>
-        <strong>Tip:</strong> Use the <strong>Order</strong> field to rearrange menu items. Lower numbers appear first.
+        <i class="fas fa-lightbulb info-banner-icon"></i>
+        <strong>Order Priority:</strong> Menu items sort by ascending <strong>Order Number</strong> (0 displays first, then 1, 2, 3...).
     </p>
 </div>
 
@@ -110,46 +138,39 @@
 <div class="data-card">
     <div class="empty-state-card">
         <div class="empty-state-icon">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars-staggered"></i>
         </div>
-        <h3 class="empty-state-title">No Menu Items</h3>
-        <p class="empty-state-desc">Start building your navigation by adding menu items.</p>
+        <h3 class="empty-state-title">No Menu Items Configured</h3>
+        <p class="empty-state-desc">Start building your navigation structure by adding links to pages and categories.</p>
         <a href="{% url 'admin_nav_add' %}" class="btn btn-primary">
-            <i class="fas fa-plus"></i> Add First Menu Item
+            <i class="fas fa-plus"></i> <span>Add First Menu Item</span>
         </a>
     </div>
 </div>
 {% endif %}
 
-<!-- Quick Reference -->
+<!-- Quick Reference Cards -->
 <div class="quick-ref-grid">
-    <div class="stat-card blue quick-ref-card">
-        <div class="stat-icon quick-ref-icon">
-            <i class="fas fa-link"></i>
+    <div class="quick-ref-card">
+        <div class="quick-ref-icon">
+            <i class="fas fa-compass"></i>
         </div>
-        <div class="stat-label quick-ref-label">
-            <strong class="quick-ref-title">Main Menu</strong>
-            <span class="quick-ref-sub">Primary website navigation</span>
-        </div>
+        <strong class="quick-ref-title">Primary Navbar</strong>
+        <p class="quick-ref-sub">Displayed in the fixed top header across desktop and mobile screens.</p>
     </div>
-    <div class="stat-card blue quick-ref-card">
-        <div class="stat-icon quick-ref-icon">
-            <i class="fas fa-sitemap"></i>
+    <div class="quick-ref-card">
+        <div class="quick-ref-icon quick-ref-icon-gold">
+            <i class="fas fa-shoe-prints"></i>
         </div>
-        <div class="stat-label quick-ref-label">
-            <strong class="quick-ref-title">Footer Links</strong>
-            <span class="quick-ref-sub">Bottom footer navigation</span>
-        </div>
+        <strong class="quick-ref-title">Footer Navigation</strong>
+        <p class="quick-ref-sub">Multi-column directory links displayed at the base of every website page.</p>
     </div>
-    <div class="stat-card blue quick-ref-card">
-        <div class="stat-icon quick-ref-icon">
-            <i class="fas fa-cog"></i>
+    <div class="quick-ref-card">
+        <div class="quick-ref-icon quick-ref-icon-success">
+            <i class="fas fa-share-nodes"></i>
         </div>
-        <div class="stat-label quick-ref-label">
-            <strong class="quick-ref-title">Utility Links</strong>
-            <span class="quick-ref-sub">Secondary navigation items</span>
-        </div>
+        <strong class="quick-ref-title">Social & Channels</strong>
+        <p class="quick-ref-sub">Connect with WhatsApp, LinkedIn, Twitter, and client support hotlines.</p>
     </div>
 </div>
-
 {% endblock %}

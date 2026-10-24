@@ -1,351 +1,235 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Services - VITTAX{% endblock %}
+{% block title %}Services - VITTAX Accounting &amp; Financial Solutions{% endblock %}
 
 {% block extra_css %}
-<style>
-    .services-hero {
-        padding: 120px 0 64px;
-        background: linear-gradient(135deg, #e8f0fe, #f0f7ff);
-        text-align: center;
-    }
-
-    .services-hero h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 900;
-        margin-bottom: 12px;
-    }
-
-    /* Filter tabs */
-    .filter-bar {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 40px;
-    }
-
-    .filter-tab {
-        padding: 8px 22px;
-        border-radius: 50px;
-        border: 1.5px solid #e2e8f0;
-        background: #fff;
-        font-size: .87rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: var(--transition);
-        color: var(--text-light);
-        font-family: inherit;
-    }
-
-    .filter-tab.active,
-    .filter-tab:hover {
-        background: var(--primary);
-        color: #fff;
-        border-color: var(--primary);
-    }
-
-    /* Services grid */
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .service-card {
-        background: #fff;
-        border-radius: var(--radius);
-        padding: 28px;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
-        border: 1.5px solid transparent;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .service-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 48px rgba(26, 75, 140, .14);
-        border-color: rgba(26, 75, 140, .15);
-    }
-
-    .svc-popular {
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        background: var(--accent);
-        color: #fff;
-        font-size: .7rem;
-        font-weight: 700;
-        padding: 3px 10px;
-        border-radius: 50px;
-    }
-
-    .svc-icon {
-        width: 54px;
-        height: 54px;
-        border-radius: 14px;
-        background: rgba(26, 75, 140, .08);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.35rem;
-        color: var(--primary);
-        margin-bottom: 18px;
-        transition: var(--transition);
-    }
-
-    .service-card:hover .svc-icon {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: #fff;
-    }
-
-    .svc-cat {
-        font-size: .72rem;
-        font-weight: 700;
-        color: var(--secondary);
-        text-transform: uppercase;
-        letter-spacing: .5px;
-        margin-bottom: 7px;
-    }
-
-    .svc-name {
-        font-size: 1.05rem;
-        font-weight: 700;
-        margin-bottom: 10px
-    }
-
-    .svc-desc {
-        font-size: .88rem;
-        color: var(--text-light);
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-
-    .svc-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 16px;
-        border-top: 1px solid #f0f4f8;
-    }
-
-    .svc-price {
-        font-size: 1.2rem;
-        font-weight: 900;
-        color: var(--primary);
-    }
-
-    .svc-price.free {
-        color: var(--success)
-    }
-
-    .svc-actions {
-        display: flex;
-        gap: 8px
-    }
-
-    /* Empty state */
-    .empty-state {
-        grid-column: span 3;
-        text-align: center;
-        padding: 64px 24px;
-        color: var(--text-light);
-    }
-
-    .empty-state i {
-        font-size: 3.5rem;
-        opacity: .25;
-        display: block;
-        margin-bottom: 18px;
-    }
-
-    /* CTA banner */
-    .cta-banner {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        border-radius: 20px;
-        padding: 48px;
-        text-align: center;
-        margin-top: 56px;
-    }
-
-    .cta-banner h2 {
-        color: #fff;
-        font-size: 1.8rem;
-        font-weight: 900;
-        margin-bottom: 10px
-    }
-
-    .cta-banner p {
-        color: rgba(255, 255, 255, .82);
-        margin-bottom: 24px;
-        font-size: .98rem
-    }
-
-    @media(max-width:900px) {
-        .services-grid {
-            grid-template-columns: 1fr 1fr
-        }
-    }
-
-    @media(max-width:600px) {
-        .services-grid {
-            grid-template-columns: 1fr
-        }
-
-        .empty-state {
-            grid-column: span 1
-        }
-    }
-</style>
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
 {% endblock %}
 
 {% block content %}
+<div class="services-page-wrap">
 
-<!-- HERO -->
-<section class="services-hero">
-    <div class="container">
-        <span class="section-tag">OUR SERVICES</span>
-        <h1>Comprehensive <span style="color:var(--primary)">Financial Services</span></h1>
-        <p style="color:var(--text-light);font-size:1rem;max-width:540px;margin:0 auto;line-height:1.7">
-            Everything you need for your financial compliance —
-            tax filing, GST, accounting, and more — all under one roof.
-        </p>
-    </div>
-</section>
+  <!-- ═══ DARK HERO BANNER (MATCHING REDESIGNED WEBSITE) ═══ -->
+  <section class="services-hero-banner">
+    <div class="services-hero-container" data-animate>
+      <span class="services-hero-tag">PROFESSIONAL SERVICES DIRECTORY</span>
+      <h1 class="services-hero-title">
+        Comprehensive Financial <span class="services-hero-title-italic">Services &amp; Solutions</span>
+      </h1>
+      <p class="services-hero-subtitle">
+        Transparent, fixed-fee professional solutions. Browse our extensive directory of compliance, tax, corporate filing, accounting, and advisory services tailored for businesses and individuals.
+      </p>
 
-<!-- SERVICES LIST -->
-<section class="section" style="background:var(--bg)">
-    <div class="container">
-
-        <!-- Filter Tabs -->
-        <div class="filter-bar">
-            <button class="filter-tab active" onclick="filterCards('all', this)">
-                All Services
-            </button>
-            <button class="filter-tab" onclick="filterCards('Start_a_Business', this)">
-                <i class="fas fa-file-invoice"></i> Start a Business
-            </button>
-            <button class="filter-tab" onclick="filterCards('Registrations', this)">
-                <i class="fas fa-receipt"></i> Registrations
-            </button>
-            <button class="filter-tab" onclick="filterCards('GST_Indirect_Tax', this)">
-                <i class="fas fa-book"></i> GST & Indirect Tax
-            </button>
-            <button class="filter-tab" onclick="filterCards('income_tax', this)">
-                <i class="fas fa-chart-line"></i> Income Tax
-            </button>
-            <button class="filter-tab" onclick="filterCards('mca_corporate', this)">
-                <i class="fas fa-chart-line"></i> MCA & Corporate
-            </button>
-            <button class="filter-tab" onclick="filterCards('accounting_payroll', this)">
-                <i class="fas fa-chart-line"></i> Accounting & Payroll
-            </button>
-            <button class="filter-tab" onclick="filterCards('nri_international_services', this)">
-                <i class="fas fa-chart-line"></i> NRI & International Services
-            </button>
-            <button class="filter-tab" onclick="filterCards('virtual_cfo_advisory', this)">
-                <i class="fas fa-chart-line"></i> Virtual CFO & Advisory
-            </button>
-            <button class="filter-tab" onclick="filterCards('other', this)">
-                <i class="fas fa-chart-line"></i> Others
-            </button>
+      <!-- Integrated Search Box in Hero -->
+      <div class="services-search-container">
+        <div class="services-search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="serviceSearchInput" placeholder="Search services (e.g. GST Registration, ITR Filing, Bookkeeping...)" autocomplete="off" oninput="filterServices()">
+          <span class="services-count-pill" id="servicesCountBadge">{{ services|length }} Services</span>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Cards Grid -->
-        <div class="services-grid" id="servicesGrid">
+  <!-- ═══ MAIN SERVICES SECTION ═══ -->
+  <section class="services-main-section">
+    <div class="services-main-container">
 
-            {% if services %}
-            {% for svc in services %}
-            <div class="service-card" data-cat="{{ svc.category }}" data-animate>
+      <!-- Category Filter Tabs -->
+      <div class="filter-bar">
+        <button type="button" class="filter-tab active" onclick="filterCards('all', this)">
+          <i class="fas fa-th-large"></i> All Services
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('start_a_business', this)">
+          <i class="fas fa-briefcase"></i> Start a Business
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('registrations', this)">
+          <i class="fas fa-file-signature"></i> Registrations
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('gst_indirect_tax', this)">
+          <i class="fas fa-receipt"></i> GST &amp; Indirect Tax
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('income_tax', this)">
+          <i class="fas fa-calculator"></i> Income Tax
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('mca_corporate', this)">
+          <i class="fas fa-landmark"></i> MCA &amp; Corporate
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('accounting_payroll', this)">
+          <i class="fas fa-money-check-dollar"></i> Accounting &amp; Payroll
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('nri_international_services', this)">
+          <i class="fas fa-globe"></i> NRI &amp; International
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('virtual_cfo_advisory', this)">
+          <i class="fas fa-chart-line"></i> Virtual CFO
+        </button>
+        <button type="button" class="filter-tab" onclick="filterCards('other', this)">
+          <i class="fas fa-ellipsis"></i> Others
+        </button>
+      </div>
 
-                {% if svc.is_featured %}
-                <div class="svc-popular">⭐ Popular</div>
+      <!-- Services Cards Grid -->
+      <div class="services-grid" id="servicesGrid">
+        {% if services %}
+        {% for svc in services %}
+        <div class="service-card" data-cat="{{ svc.category }}" data-name="{{ svc.name|lower }}" data-desc="{{ svc.short_description|lower }}" data-animate>
+          <div>
+            <div class="service-card-top">
+              <span class="svc-cat-badge">{{ svc.get_category_display }}</span>
+              {% if svc.is_featured %}
+              <span class="svc-featured-badge"><i class="fas fa-star"></i> Featured</span>
+              {% endif %}
+            </div>
+
+            <div class="svc-icon-wrapper">
+              <i class="{{ svc.icon|default:'fas fa-file-invoice' }}"></i>
+            </div>
+
+            <h3 class="svc-name">{{ svc.name }}</h3>
+            <p class="svc-desc">{{ svc.short_description }}</p>
+          </div>
+
+          <div class="svc-footer">
+            <div class="svc-price-block">
+              <span class="price-prefix">Fee Schedule</span>
+              <div class="svc-price {% if svc.price == 0 %}free{% endif %}">
+                {% if svc.price == 0 %}
+                FREE
+                {% else %}
+                &#8377;{{ svc.price }}
                 {% endif %}
-
-                <div class="svc-icon">
-                    <i class="{{ svc.icon }}"></i>
-                </div>
-
-                <div class="svc-cat">{{ svc.get_category_display }}</div>
-                <div class="svc-name">{{ svc.name }}</div>
-                <div class="svc-desc">{{ svc.short_description }}</div>
-
-                <div class="svc-footer">
-                    <div class="svc-price {% if svc.price == 0 %}free{% endif %}">
-                        {% if svc.price == 0 %}
-                        FREE
-                        {% else %}
-                        &#8377;{{ svc.price }}
-                        {% endif %}
-                    </div>
-                    <div class="svc-actions">
-                        <a href="{% url 'service_detail' svc.slug %}" class="btn btn-outline btn-sm">
-                            Details
-                        </a>
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'apply_service' svc.slug %}" class="btn btn-primary btn-sm">
-                            <i class="fas fa-rocket"></i> Apply
-                        </a>
-                        {% else %}
-                        <a href="{% url 'register' %}" class="btn btn-primary btn-sm">
-                            <i class="fas fa-rocket"></i> Get Started
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-
+              </div>
             </div>
-            {% endfor %}
-            {% else %}
-            <div class="empty-state">
-                <i class="fas fa-box-open"></i>
-                <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:8px">
-                    No services available yet
-                </h3>
-                <p>Please check back soon or contact us for more information.</p>
-                <a href="{% url 'contact' %}" class="btn btn-primary" style="margin-top:20px">
-                    <i class="fas fa-comments"></i> Contact Us
-                </a>
+            <div class="svc-actions">
+              <a href="{% url 'service_detail' svc.slug %}" class="btn btn-outline btn-sm">
+                Details
+              </a>
+              {% if user.is_authenticated %}
+              <a href="{% url 'apply_service' svc.slug %}" class="btn btn-primary btn-sm">
+                Apply <i class="fas fa-arrow-right"></i>
+              </a>
+              {% else %}
+              <a href="{% url 'register' %}" class="btn btn-primary btn-sm">
+                Get Started <i class="fas fa-arrow-right"></i>
+              </a>
+              {% endif %}
             </div>
-            {% endif %}
-
-        </div><!-- /services-grid -->
-
-        <!-- CTA Banner -->
-        <div class="cta-banner" data-animate>
-            <h2>Not Sure Which Service You Need?</h2>
-            <p>
-                Talk to our experts for free — we'll assess your needs
-                and recommend the right plan for you.
-            </p>
-            <a href="{% url 'contact' %}" class="btn btn-accent btn-lg">
-                <i class="fas fa-comments"></i> Get Free Consultation
-            </a>
+          </div>
         </div>
+        {% endfor %}
+        {% else %}
+        <div class="empty-state">
+          <i class="fas fa-search"></i>
+          <h3>No services available yet</h3>
+          <p>Please check back soon or contact our advisory team for personalized guidance.</p>
+          <a href="{% url 'contact' %}" class="btn btn-gold btn-lg">
+            <i class="fas fa-comments"></i> Contact Advisory Team
+          </a>
+        </div>
+        {% endif %}
+      </div><!-- /servicesGrid -->
+
+      <!-- Empty State for Live Filter Result -->
+      <div class="empty-state" id="dynamicEmptyState">
+        <i class="fas fa-search"></i>
+        <h3>No matching services found</h3>
+        <p>We couldn't find any services matching your search or category filter.</p>
+        <button type="button" class="btn btn-primary btn-sm" onclick="resetAllFilters()">
+          <i class="fas fa-rotate-left"></i> Reset All Filters
+        </button>
+      </div>
+
+      <!-- Bottom CTA Banner (Matching Redesigned Website sl-bottom-cta) -->
+      <div class="services-bottom-cta" data-animate>
+        <div class="services-cta-text">
+          <span class="services-cta-tag">CUSTOM COMPLIANCE &amp; ADVISORY</span>
+          <h3>Need a Customized Compliance Solution?</h3>
+          <p>Get a tailored tax &amp; accounting proposal from our senior Chartered Accountants.</p>
+        </div>
+        <a href="{% url 'contact' %}" class="services-cta-btn">
+          Book Free Consultation <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
 
     </div>
-</section>
+  </section>
 
+</div>
 {% endblock %}
 
 {% block extra_js %}
 <script>
-    function filterCards(cat, clickedBtn) {
-        /* update active tab */
-        document.querySelectorAll('.filter-tab').forEach(function (b) {
-            b.classList.remove('active');
-        });
-        clickedBtn.classList.add('active');
+  let currentCategory = 'all';
 
-        /* show / hide cards */
-        document.querySelectorAll('.service-card').forEach(function (card) {
-            if (cat === 'all' || card.dataset.cat === cat) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
+  function matchCategory(cardCat, targetCat) {
+    if (targetCat === 'all') return true;
+    const c1 = (cardCat || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const c2 = (targetCat || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (c1 === c2) return true;
+    if (c1.includes(c2) || c2.includes(c1)) return true;
+
+    const aliases = {
+      'startabusiness': ['businessregistrations', 'startabusiness', 'startbusiness'],
+      'registrations': ['registrations', 'businessregistrations'],
+      'gstindirecttax': ['gst', 'gstindirecttax'],
+      'incometax': ['tax', 'incometax'],
+      'mcacorporate': ['mca', 'mcacorporate'],
+      'accountingpayroll': ['accounting', 'accountingpayroll'],
+      'nriinternationalservices': ['nri', 'nriinternationalservices'],
+      'virtualcfoadvisory': ['virtualcfo', 'virtualcfoadvisory']
+    };
+    if (aliases[c2] && aliases[c2].includes(c1)) return true;
+    return false;
+  }
+
+  function filterCards(cat, clickedBtn) {
+    currentCategory = cat;
+    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    if (clickedBtn) clickedBtn.classList.add('active');
+    applyFilters();
+  }
+
+  function filterServices() {
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const searchInput = document.getElementById('serviceSearchInput');
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    const cards = document.querySelectorAll('.service-card');
+    const dynamicEmpty = document.getElementById('dynamicEmptyState');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const catMatch = matchCategory(card.dataset.cat, currentCategory);
+      const nameText = card.dataset.name || card.querySelector('.svc-name')?.innerText.toLowerCase() || '';
+      const descText = card.dataset.desc || card.querySelector('.svc-desc')?.innerText.toLowerCase() || '';
+      const searchMatch = !query || nameText.includes(query) || descText.includes(query);
+
+      if (catMatch && searchMatch) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const countBadge = document.getElementById('servicesCountBadge');
+    if (countBadge) {
+      countBadge.innerText = `${visibleCount} Services`;
     }
+
+    if (dynamicEmpty) {
+      dynamicEmpty.style.display = (visibleCount === 0 && cards.length > 0) ? 'block' : 'none';
+    }
+  }
+
+  function resetAllFilters() {
+    const searchInput = document.getElementById('serviceSearchInput');
+    if (searchInput) searchInput.value = '';
+    const firstTab = document.querySelector('.filter-tab');
+    if (firstTab) filterCards('all', firstTab);
+  }
 </script>
 {% endblock %}

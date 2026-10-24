@@ -1,39 +1,99 @@
 {# ════════ admin_dashboard/applications.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
+{% block title %}Service Applications - VITTAX Admin{% endblock %}
 {% block page_title %}Service Applications{% endblock %}
+{% block page_subtitle %}Review incoming client applications, track document processing, and manage order statuses{% endblock %}
+
 {% block content %}
+<div class="page-header">
+    <div>
+        <div class="page-title">
+            <i class="fas fa-file-invoice text-primary"></i>
+            <span>Service Applications</span>
+            <span class="count-pill">{{ applications.count }} Submissions</span>
+        </div>
+        <p class="page-subtitle">All service requests submitted by registered customers across tax, MCA, CFO, and advisory categories.</p>
+    </div>
+    <div class="action-btns">
+        <a href="{% url 'admin_dashboard' %}" class="btn btn-outline">
+            <i class="fas fa-arrow-left"></i> <span>Dashboard</span>
+        </a>
+    </div>
+</div>
+
 <div class="data-card">
     <div class="data-card-header">
-        <span class="data-card-title">Service Applications ({{ applications.count|default:recent_apps.count }})</span>
+        <div class="data-card-title-wrap">
+            <span class="data-card-title">All Application Records</span>
+            <span class="count-pill">{{ applications.count }} Total</span>
+        </div>
     </div>
     <table>
         <thead>
             <tr>
-                <th>#</th>
-                <th>User</th>
-                <th>Service</th>
-                <th>Applied</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th class="th-w60">#</th>
+                <th>Client / Applicant</th>
+                <th>Requested Service</th>
+                <th>Submission Date</th>
+                <th>Processing Status</th>
+                <th class="text-right">Action</th>
             </tr>
         </thead>
         <tbody>
-            {% for app in applications|default:recent_apps %}
+            {% for app in applications %}
             <tr>
-                <td>{{ forloop.counter }}</td>
-                <td><strong>{{ app.user.username }}</strong></td>
-                <td>{{ app.service.name }}</td>
-                <td class="td-date">{{ app.applied_at|date:"M d, Y" }}</td>
+                <td class="td-counter">{{ forloop.counter }}</td>
                 <td>
-                    <span class="badge {% if app.status == 'completed' %}badge-success{% elif app.status == 'rejected' %}badge-danger{% elif app.status == 'in_progress' %}badge-info{% else %}badge-warning{% endif %}">
-                        {{ app.get_status_display }}
-                    </span>
+                    <div class="user-cell">
+                        <div class="user-avatar-sm">{{ app.user.username|first|upper }}</div>
+                        <div class="user-details">
+                            <strong>{{ app.user.get_full_name|default:app.user.username }}</strong>
+                            <span class="user-handle">@{{ app.user.username }}</span>
+                        </div>
+                    </div>
                 </td>
-                <td><a href="{% url 'admin_app_status' app.pk %}" class="btn btn-primary btn-sm">Update</a></td>
+                <td>
+                    <div class="table-item-label">
+                        <div class="table-service-icon">
+                            <i class="{{ app.service.icon|default:'fas fa-file-invoice' }}"></i>
+                        </div>
+                        <div>
+                            <strong>{{ app.service.name }}</strong>
+                            {% if app.service.category %}
+                            <div class="service-cat-hint">
+                                {{ app.service.get_category_display }}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </td>
+                <td class="td-date">
+                    <i class="far fa-calendar-alt"></i> {{ app.applied_at|date:"M d, Y" }}
+                </td>
+                <td>
+                    {% if app.status == 'completed' %}
+                    <span class="badge badge-success"><span class="badge-dot"></span> Completed</span>
+                    {% elif app.status == 'rejected' %}
+                    <span class="badge badge-danger"><span class="badge-dot"></span> Rejected</span>
+                    {% elif app.status == 'in_progress' %}
+                    <span class="badge badge-info"><span class="badge-dot"></span> In Progress</span>
+                    {% else %}
+                    <span class="badge badge-warning"><span class="badge-dot"></span> {{ app.get_status_display }}</span>
+                    {% endif %}
+                </td>
+                <td class="text-right">
+                    <a href="{% url 'admin_app_status' app.pk %}" class="btn btn-primary btn-sm" title="Update Application Status">
+                        <i class="fas fa-pen-to-square"></i> <span>Update Status</span>
+                    </a>
+                </td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="6" class="table-empty">No applications found</td>
+                <td colspan="6" class="table-empty">
+                    <i class="fas fa-folder-open empty-icon"></i>
+                    <strong>No service applications found</strong>
+                    <p class="empty-desc">Client applications will appear here as orders are submitted.</p>
+                </td>
             </tr>
             {% endfor %}
         </tbody>

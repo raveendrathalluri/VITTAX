@@ -1,26 +1,44 @@
+{# ════════ admin_dashboard/services.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
 
-{% block page_title %}Services{% endblock %}
+{% block title %}Service Catalog - VITTAX Admin{% endblock %}
+{% block page_title %}Service Offerings{% endblock %}
+{% block page_subtitle %}Manage financial, statutory, tax, corporate, and advisory service catalog items{% endblock %}
 
 {% block content %}
 <div class="page-header">
-    <div class="page-title">Services ({{ services.count }})</div>
-    <a href="{% url 'admin_service_add' %}" class="btn btn-primary">
-        <i class="fas fa-plus"></i> Add Service
-    </a>
+    <div>
+        <div class="page-title">
+            <i class="fas fa-th-list text-primary"></i>
+            <span>Service Catalog</span>
+            <span class="count-pill">{{ services.count }} Available</span>
+        </div>
+        <p class="page-subtitle">Configure pricing, category tags, icons, and visibility on the public VITTAX website.</p>
+    </div>
+    <div class="action-btns">
+        <a href="{% url 'admin_service_add' %}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> <span>Add New Service</span>
+        </a>
+    </div>
 </div>
 
 <div class="data-card">
+    <div class="data-card-header">
+        <div class="data-card-title-wrap">
+            <span class="data-card-title">All Catalog Services</span>
+            <span class="count-pill">{{ services.count }} Total</span>
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
-                <th>Icon</th>
-                <th>Name</th>
+                <th class="th-w50">Icon</th>
+                <th>Service Name & Description</th>
                 <th>Category</th>
-                <th>Price</th>
+                <th>Pricing</th>
                 <th>Featured</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Display Status</th>
+                <th class="text-right">Actions</th>
             </tr>
         </thead>
 
@@ -28,45 +46,72 @@
             {% for svc in services %}
             <tr>
                 <td>
-                    <i class="{{ svc.icon }} table-service-icon"></i>
+                    <div class="table-service-icon">
+                        <i class="{{ svc.icon|default:'fas fa-file-invoice' }}"></i>
+                    </div>
                 </td>
 
-                <td><strong>{{ svc.name }}</strong></td>
-                <td>{{ svc.get_category_display }}</td>
-                <td>₹{{ svc.price }}</td>
+                <td>
+                    <div class="table-title">
+                        {{ svc.name }}
+                    </div>
+                    {% if svc.short_description %}
+                    <div class="table-desc">
+                        {{ svc.short_description|truncatechars:65 }}
+                    </div>
+                    {% endif %}
+                </td>
+
+                <td>
+                    <span class="badge badge-info">
+                        {{ svc.get_category_display }}
+                    </span>
+                </td>
+
+                <td>
+                    <span class="price-tag">
+                        ₹{{ svc.price }}
+                    </span>
+                </td>
 
                 <td>
                     {% if svc.is_featured %}
-                    <span class="badge badge-warning">Yes</span>
+                    <span class="badge badge-warning">
+                        <i class="fas fa-star star-icon"></i> Featured
+                    </span>
                     {% else %}
-                    -
+                    <span class="empty-dash">—</span>
                     {% endif %}
                 </td>
 
                 <td>
                     <span class="badge {% if svc.is_active %}badge-success{% else %}badge-danger{% endif %}">
-                        {% if svc.is_active %}
-                        Active
-                        {% else %}
-                        Inactive
-                        {% endif %}
+                        <span class="badge-dot"></span>
+                        {% if svc.is_active %}Active{% else %}Inactive{% endif %}
                     </span>
                 </td>
 
-                <td class="action-btns">
-                    <a href="{% url 'admin_service_edit' svc.pk %}" class="btn btn-primary btn-sm" title="Edit">
-                        <i class="fas fa-edit"></i>
-                    </a>
+                <td class="text-right">
+                    <div class="action-btns action-btns-right">
+                        <a href="{% url 'admin_service_edit' svc.pk %}" class="btn btn-primary btn-sm" title="Edit Service">
+                            <i class="fas fa-pen-to-square"></i> <span>Edit</span>
+                        </a>
 
-                    <a href="{% url 'admin_service_delete' svc.pk %}" class="btn btn-danger btn-sm" title="Delete">
-                        <i class="fas fa-trash"></i>
-                    </a>
+                        <a href="{% url 'admin_service_delete' svc.pk %}" class="btn btn-danger btn-sm" title="Delete Service">
+                            <i class="fas fa-trash-can"></i>
+                        </a>
+                    </div>
                 </td>
             </tr>
             {% empty %}
             <tr>
                 <td colspan="7" class="table-empty">
-                    No services found
+                    <i class="fas fa-folder-open empty-icon"></i>
+                    <strong>No services listed in catalog</strong>
+                    <p class="empty-desc">Get started by adding your first service package.</p>
+                    <a href="{% url 'admin_service_add' %}" class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus"></i> Add Service
+                    </a>
                 </td>
             </tr>
             {% endfor %}

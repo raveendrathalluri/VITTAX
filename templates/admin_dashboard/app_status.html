@@ -1,0 +1,92 @@
+{# ════════ admin_dashboard/app_status.html ════════ #}
+{% extends 'admin_dashboard/base.html' %}
+
+{% block title %}Update Application #{{ application.id }} - VITTAX Admin{% endblock %}
+{% block page_title %}Update Application Status{% endblock %}
+{% block page_subtitle %}Review order specifics and adjust processing workflow status{% endblock %}
+
+{% block content %}
+<div class="admin-form-container">
+    <div class="form-header-bar">
+        <a href="{% url 'admin_applications' %}" class="btn btn-outline btn-sm">
+            <i class="fas fa-arrow-left"></i> <span>Back to Applications</span>
+        </a>
+        <h2 class="form-title">Application Status Manager</h2>
+    </div>
+
+    <!-- Application Overview Card -->
+    <div class="app-detail-card">
+        <div class="app-detail-header">
+            <div class="app-order-id">
+                Application Order #{{ application.id }}
+            </div>
+            <div>
+                {% if application.status == 'completed' %}
+                <span class="badge badge-success"><span class="badge-dot"></span> Completed</span>
+                {% elif application.status == 'rejected' %}
+                <span class="badge badge-danger"><span class="badge-dot"></span> Rejected</span>
+                {% elif application.status == 'in_progress' %}
+                <span class="badge badge-info"><span class="badge-dot"></span> In Progress</span>
+                {% else %}
+                <span class="badge badge-warning"><span class="badge-dot"></span> {{ application.get_status_display }}</span>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="app-detail-grid">
+            <div class="app-detail-item">
+                <div class="app-detail-label">Client / Applicant</div>
+                <div class="app-detail-value">{{ application.user.get_full_name|default:application.user.username }}</div>
+                <div class="app-detail-sub">{{ application.user.email }}</div>
+            </div>
+
+            <div class="app-detail-item">
+                <div class="app-detail-label">Requested Service</div>
+                <div class="app-detail-value">{{ application.service.name }}</div>
+                <div class="app-detail-sub text-gold font-semibold">₹{{ application.service.price }}</div>
+            </div>
+
+            <div class="app-detail-item">
+                <div class="app-detail-label">Applied Date</div>
+                <div class="app-detail-value">{{ application.applied_at|date:"M d, Y" }}</div>
+                <div class="app-detail-sub">{{ application.applied_at|date:"H:i A" }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Change Form -->
+    <div class="form-card">
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label class="form-label">Update Processing Status *</label>
+                <select name="status" class="form-control font-semibold" required>
+                    <option value="pending" {% if application.status == 'pending' %}selected{% endif %}>
+                        ⏳ Pending Review (Received, awaiting review)
+                    </option>
+                    <option value="in_progress" {% if application.status == 'in_progress' %}selected{% endif %}>
+                        🔄 In Progress (Assigned, documents under processing)
+                    </option>
+                    <option value="completed" {% if application.status == 'completed' %}selected{% endif %}>
+                        ✅ Completed (Filing complete, deliverables sent)
+                    </option>
+                    <option value="rejected" {% if application.status == 'rejected' %}selected{% endif %}>
+                        ❌ Rejected (Incomplete documents or declined)
+                    </option>
+                </select>
+                <small class="form-hint">Selecting a status will update the customer's dashboard and tracking status.</small>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-check-circle"></i> <span>Save New Status</span>
+                </button>
+                <a href="{% url 'admin_applications' %}" class="btn btn-outline">
+                    <span>Cancel</span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

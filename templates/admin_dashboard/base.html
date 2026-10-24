@@ -1,16 +1,14 @@
 {# ════════ admin_dashboard/base.html ════════ #}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Admin Panel - VITTAX{% endblock %}</title>
     {% load static %}
+    <link rel="icon" href="{% static 'images/logo.jpg' %}" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
@@ -20,66 +18,100 @@
     <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-logo">
-            <img src="{% static 'images/logo.jpg' %}" alt="VITTAX">
-            <div class="sidebar-logo-text">VITTAX <small>Admin Panel</small></div>
+            <img src="{% static 'images/logo.jpg' %}" alt="VITTAX Logo">
+            <div>
+                <div class="sidebar-logo-text">
+                    VITTAX <span class="badge-brand">Admin</span>
+                </div>
+                <small>Financial Solutions</small>
+            </div>
         </div>
+
         <nav class="sidebar-nav">
             <div class="nav-section">Main</div>
             <a href="{% url 'admin_dashboard' %}"
                 class="nav-item {% if request.resolver_match.url_name == 'admin_dashboard' %}active{% endif %}">
-                <i class="fas fa-tachometer-alt"></i> Dashboard
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
             </a>
 
             <div class="nav-section">Management</div>
             <a href="{% url 'admin_users' %}"
                 class="nav-item {% if 'admin_user' in request.resolver_match.url_name %}active{% endif %}">
-                <i class="fas fa-users"></i> Users
+                <i class="fas fa-users"></i>
+                <span>User Accounts</span>
             </a>
             <a href="{% url 'admin_contacts' %}"
                 class="nav-item {% if 'admin_contact' in request.resolver_match.url_name %}active{% endif %}">
-                <i class="fas fa-envelope"></i> Contact Messages
+                <i class="fas fa-envelope"></i>
+                <span>Inquiries & Messages</span>
                 {% if unread_count %}<span class="nav-badge">{{ unread_count }}</span>{% endif %}
             </a>
             <a href="{% url 'admin_applications' %}"
                 class="nav-item {% if 'admin_app' in request.resolver_match.url_name %}active{% endif %}">
-                <i class="fas fa-file-alt"></i> Applications
+                <i class="fas fa-file-invoice"></i>
+                <span>Applications</span>
             </a>
 
-            <div class="nav-section">Content</div>
+            <div class="nav-section">Services & Content</div>
             <a href="{% url 'admin_services' %}"
                 class="nav-item {% if 'admin_service' in request.resolver_match.url_name %}active{% endif %}">
-                <i class="fas fa-th-list"></i> Services
+                <i class="fas fa-th-list"></i>
+                <span>Manage Services</span>
             </a>
             <a href="{% url 'admin_nav_menu' %}"
                 class="nav-item {% if 'admin_nav' in request.resolver_match.url_name %}active{% endif %}">
-                <i class="fas fa-bars"></i> Navigation Menu
+                <i class="fas fa-bars-staggered"></i>
+                <span>Navigation Menu</span>
             </a>
 
-            <div class="nav-section">Account</div>
-            <a href="{% url 'home' %}" class="nav-item"><i class="fas fa-globe"></i> View Website</a>
-            <a href="{% url 'logout' %}" class="nav-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <div class="nav-section">Quick Access</div>
+            <a href="{% url 'home' %}" target="_blank" class="nav-item">
+                <i class="fas fa-globe"></i>
+                <span>Live Website</span>
+            </a>
+            <a href="{% url 'logout' %}" class="nav-item">
+                <i class="fas fa-arrow-right-from-bracket"></i>
+                <span>Log Out</span>
+            </a>
         </nav>
+
         <div class="sidebar-footer">
             <div class="admin-info">
-                <div class="admin-avatar">{{ request.user.username|first|upper }}</div>
-                <div>
+                <div class="admin-avatar">
+                    {{ request.user.username|first|upper }}
+                    <span class="avatar-online-dot" title="Online"></span>
+                </div>
+                <div class="admin-meta">
                     <div class="admin-name">{{ request.user.get_full_name|default:request.user.username }}</div>
-                    <div class="admin-role">Administrator</div>
+                    <div class="admin-role"><i class="fas fa-shield-halved"></i> Administrator</div>
                 </div>
             </div>
         </div>
     </aside>
 
-    <!-- MAIN -->
+    <!-- MAIN WRAPPER -->
     <div class="main-wrapper">
         <header class="admin-header">
             <div class="header-left">
-                <h1>{% block page_title %}Dashboard{% endblock %}</h1>
-                <p>{% block page_subtitle %}VITTAX Admin Panel{% endblock %}</p>
+                <button type="button" class="header-toggle-btn" id="sidebarToggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-titles">
+                    <h1>{% block page_title %}Dashboard{% endblock %}</h1>
+                    <p>{% block page_subtitle %}VITTAX Management Portal{% endblock %}</p>
+                </div>
             </div>
+
             <div class="header-right">
-                <button class="header-btn" aria-label="Notifications"><i class="fas fa-bell"></i><span class="header-notif"></span></button>
-                <button class="header-btn" aria-label="Settings"><i class="fas fa-cog"></i></button>
+                <div class="header-live-badge">
+                    <span class="pulse-dot"></span>
+                    <span>System Online</span>
+                </div>
+                <a href="{% url 'home' %}" target="_blank" class="header-site-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Site</span>
+                </a>
                 <div class="header-user">
                     <div class="header-user-av">{{ request.user.username|first|upper }}</div>
                     <span class="header-user-name">{{ request.user.username }}</span>
@@ -87,7 +119,7 @@
             </div>
         </header>
 
-        <!-- TOASTS -->
+        <!-- TOAST ALERTS -->
         <div class="toast-container">
             {% for msg in messages %}
             <div class="toast {{ msg.tags }}">
@@ -105,15 +137,40 @@
         </main>
 
         <footer class="admin-footer">
-            © 2024 VITTAX Accounting & Financial Solutions | Admin Panel
+            <div>
+                © 2024 <span class="footer-brand">VITTAX</span> Accounting & Financial Solutions. All rights reserved.
+            </div>
+            <div class="footer-version">
+                Admin Suite v2.4 • Redesigned Enterprise Edition
+            </div>
         </footer>
     </div>
 
     <script>
-        // Auto dismiss toasts
+        // Auto-dismiss toasts with staggered fade out
         document.querySelectorAll('.toast').forEach((t, i) => {
-            setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 400) }, 4000 + i * 500)
-        })
+            setTimeout(() => {
+                t.style.opacity = '0';
+                t.style.transform = 'translateX(100%)';
+                t.style.transition = 'all 0.35s ease';
+                setTimeout(() => t.remove(), 350);
+            }, 4000 + i * 500);
+        });
+
+        // Responsive sidebar drawer toggle
+        const toggleBtn = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        if (toggleBtn && sidebar) {
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+            // Close sidebar on background click for mobile
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        }
     </script>
     {% block extra_js %}{% endblock %}
 </body>

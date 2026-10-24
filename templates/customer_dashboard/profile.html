@@ -1,23 +1,11 @@
 {% extends "customer_dashboard/base.html" %}
 {% load static %}
-{% block title %}My Profile{% endblock %}
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/admin.css' %}">
-{% endblock %}
+{% block title %}My Profile - VITTAX{% endblock %}
+{% block page_title %}My Profile{% endblock %}
 
 {% block content %}
 <div class="profile-wrapper">
-    <div class="profile-page-title">My Profile</div>
-
-    {% if messages %}
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-        <span>{{ message }}</span>
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    </div>
-    {% endfor %}
-    {% endif %}
+    <div class="profile-page-title">Account Settings &amp; Profile</div>
 
     <!-- Messages -->
     <div id="messages-container"></div>
@@ -27,19 +15,18 @@
         <!-- Left: Avatar Card -->
         <div class="avatar-card">
             <div class="avatar-wrapper">
-                {% if user.profile.avatar %}
-                <img src="{{ user.profile.avatar.url }}" alt="Avatar">
+                {% if user.profile_pic %}
+                <img src="{{ user.profile_pic.url }}" alt="Avatar" class="avatar-img">
                 {% else %}
                 <div class="avatar-circle">
-                    {{ user.first_name|first|upper }}{{ user.last_name|first|upper }}
+                    {{ user.first_name|first|upper|default:user.username|first|upper }}{{ user.last_name|first|upper }}
                 </div>
-                <div class="avatar-upload-overlay" title="Upload new photo">📷</div>
                 {% endif %}
             </div>
 
             <div class="user-name">{{ user.get_full_name|default:user.username }}</div>
             <div class="user-email">{{ user.email|default:user.username }}</div>
-            <div class="badge-active">● Active</div>
+            <div class="badge-active"><i class="fas fa-circle-check"></i> Active Client</div>
 
             <hr class="divider">
 
@@ -56,12 +43,12 @@
 
             <!-- Form Toggle Buttons -->
             <div class="form-toggle-section">
-                <button class="form-toggle-btn active" onclick="showForm('profile')">
-                    <span class="form-toggle-icon">✏️</span>
+                <button type="button" class="form-toggle-btn active" onclick="showForm('profile')">
+                    <i class="fas fa-user-pen"></i>
                     Edit Profile
                 </button>
-                <button class="form-toggle-btn" onclick="showForm('password')">
-                    <span class="form-toggle-icon">🔒</span>
+                <button type="button" class="form-toggle-btn" onclick="showForm('password')">
+                    <i class="fas fa-lock"></i>
                     Change Password
                 </button>
             </div>
@@ -69,39 +56,68 @@
             <!-- Edit Profile Form -->
             <div class="profile-form-card visible" id="profile-form">
                 <div class="profile-card-header">
-                    <div class="header-icon">✏️</div>
-                    <h6>Edit Profile</h6>
+                    <div class="header-icon"><i class="fas fa-user-pen"></i></div>
+                    <h6>Personal &amp; Taxation Details</h6>
                 </div>
 
                 <div class="profile-card-body">
-                    <form id="profileForm" method="post" enctype="multipart/form-data">
+                    <form id="profileForm" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
                         {% csrf_token %}
+                        <input type="hidden" name="form_type" value="profile">
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label class="form-label">First Name</label>
+                                <label class="form-label">First Name *</label>
                                 <input type="text" name="first_name" class="form-control" value="{{ user.first_name }}" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Last Name</label>
+                                <label class="form-label">Last Name *</label>
                                 <input type="text" name="last_name" class="form-control" value="{{ user.last_name }}" required>
                             </div>
                         </div>
 
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" name="email" class="form-control" value="{{ user.email }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="text" name="phone" class="form-control" value="{{ user.phone|default:'' }}" placeholder="+91 9876543210">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">City</label>
+                                <input type="text" name="city" class="form-control" value="{{ user.city|default:'' }}" placeholder="e.g. Hyderabad">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">PAN Number</label>
+                                <input type="text" name="pan_number" class="form-control" value="{{ user.pan_number|default:'' }}" placeholder="ABCDE1234F" maxlength="10">
+                            </div>
+                        </div>
+
                         <div class="form-group mb-3">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-control" value="{{ user.email }}" required>
+                            <label class="form-label">GST Number</label>
+                            <input type="text" name="gst_number" class="form-control" value="{{ user.gst_number|default:'' }}" placeholder="22AAAAA0000A1Z5" maxlength="15">
                         </div>
 
                         <div class="form-group mb-4">
                             <label class="form-label">Profile Picture</label>
-                            <input type="file" name="avatar" class="form-control file-input" accept="image/*">
+                            <input type="file" name="profile_pic" class="form-control file-input" accept="image/*">
+                            {% if user.profile_pic %}
+                            <div style="margin-top:6px;font-size:0.8rem;color:var(--slate-500);">
+                                Current photo: <a href="{{ user.profile_pic.url }}" target="_blank" style="color:var(--primary);font-weight:600;text-decoration:underline;">View current image</a>
+                            </div>
+                            {% endif %}
                         </div>
 
                         <div class="tooltip-wrapper">
                             <button type="submit" class="btn-save">
-                                💾 Save Changes
+                                <i class="fas fa-floppy-disk"></i> Save Changes
                             </button>
-                            <span class="tooltip-text">Save your profile updates</span>
+                            <span class="tooltip-text">Save your profile updates to your account</span>
                         </div>
                     </form>
                 </div>
@@ -110,31 +126,34 @@
             <!-- Change Password Form -->
             <div class="profile-form-card hidden" id="password-form">
                 <div class="profile-card-header">
-                    <div class="header-icon">🔒</div>
-                    <h6>Change Password</h6>
+                    <div class="header-icon"><i class="fas fa-lock"></i></div>
+                    <h6>Security &amp; Password</h6>
                 </div>
 
                 <div class="profile-card-body">
-                    <form id="passwordForm">
+                    <form id="passwordForm" method="post" action="{% url 'profile' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="form_type" value="change_password">
+
                         <div class="form-group mb-3">
-                            <label class="form-label">Current Password</label>
-                            <input type="password" name="current_password" class="form-control" required>
+                            <label class="form-label">Current Password *</label>
+                            <input type="password" name="current_password" class="form-control" required placeholder="Enter your current password">
                         </div>
 
                         <div class="form-group mb-3">
-                            <label class="form-label">New Password</label>
-                            <input type="password" name="new_password1" class="form-control" required>
+                            <label class="form-label">New Password *</label>
+                            <input type="password" name="new_password1" class="form-control" required placeholder="Enter new password (min. 8 characters)">
                             <div class="pw-hint">Minimum 8 characters with letters and numbers.</div>
                         </div>
 
                         <div class="form-group mb-4">
-                            <label class="form-label">Confirm New Password</label>
-                            <input type="password" name="new_password2" class="form-control" required>
+                            <label class="form-label">Confirm New Password *</label>
+                            <input type="password" name="new_password2" class="form-control" required placeholder="Re-enter your new password">
                         </div>
 
                         <div class="tooltip-wrapper">
                             <button type="submit" class="btn-password">
-                                🔑 Update Password
+                                <i class="fas fa-key"></i> Update Password
                             </button>
                             <span class="tooltip-text">Change your password securely</span>
                         </div>
@@ -170,38 +189,31 @@
         }
     }
 
-    function showMessage(message, type = 'success') {
+    function showClientError(message) {
         const container = document.getElementById('messages-container');
         const alert = document.createElement('div');
-        alert.className = `alert alert-${type}`;
-        alert.innerHTML = `<span>${message}</span><button type="button" class="toast-close" onclick="this.parentElement.remove()">×</button>`;
-        container.appendChild(alert);
-
-        setTimeout(() => alert.remove(), 4000);
+        alert.className = 'alert alert-danger';
+        alert.innerHTML = `<span><i class="fas fa-circle-exclamation"></i> ${message}</span><button type="button" class="toast-close" onclick="this.parentElement.remove()">×</button>`;
+        container.prepend(alert);
+        setTimeout(() => alert.remove(), 5000);
     }
 
-    document.getElementById('profileForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        showMessage('✓ Profile updated successfully!', 'success');
-    });
-
+    // Password client-side validation before submission
     document.getElementById('passwordForm').addEventListener('submit', (e) => {
-        e.preventDefault();
         const newPass = e.target.new_password1.value;
         const confirmPass = e.target.new_password2.value;
 
         if (newPass !== confirmPass) {
-            showMessage('✗ Passwords do not match!', 'error');
-            return;
+            e.preventDefault();
+            showClientError('Passwords do not match. Please re-enter your new password.');
+            return false;
         }
 
         if (newPass.length < 8) {
-            showMessage('✗ Password must be at least 8 characters!', 'error');
-            return;
+            e.preventDefault();
+            showClientError('Password must be at least 8 characters long.');
+            return false;
         }
-
-        showMessage('✓ Password changed successfully!', 'success');
-        e.target.reset();
     });
 </script>
 {% endblock %}
