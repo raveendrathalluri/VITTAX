@@ -1,37 +1,98 @@
 {# ════════ admin_dashboard/contacts.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
-{% block page_title %}Contact Messages{% endblock %}
+{% block title %}Client Inquiries - VITTAX Admin{% endblock %}
+{% block page_title %}Inquiries & Messages{% endblock %}
+{% block page_subtitle %}Review incoming contact messages, client consulting requests, and feedback{% endblock %}
+
 {% block content %}
+<div class="page-header">
+    <div>
+        <div class="page-title">
+            <i class="fas fa-envelope-open-text text-primary"></i>
+            <span>Client Inquiries</span>
+            <span class="count-pill">{{ contacts.count }} total</span>
+        </div>
+        <p class="page-subtitle">Submissions from the VITTAX public website contact page and advisory request forms.</p>
+    </div>
+    <div class="action-btns">
+        <a href="{% url 'admin_dashboard' %}" class="btn btn-outline">
+            <i class="fas fa-arrow-left"></i> <span>Dashboard</span>
+        </a>
+    </div>
+</div>
+
 <div class="data-card">
-    <div class="data-card-header"><span class="data-card-title">All Messages ({{ contacts.count }})</span></div>
+    <div class="data-card-header">
+        <div class="data-card-title-wrap">
+            <span class="data-card-title">All Received Inquiries</span>
+            <span class="count-pill">{{ contacts.count }} Total</span>
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Subject</th>
-                <th>Date</th>
-                <th>Actions</th>
+                <th class="th-w60">#</th>
+                <th>Sender</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Message Subject</th>
+                <th>Date Received</th>
+                <th class="text-right">Action</th>
             </tr>
         </thead>
         <tbody>
             {% for c in contacts %}
             <tr>
-                <td>{{ forloop.counter }}</td>
-                <td><strong>{{ c.name }}</strong></td>
-                <td>{{ c.email }}</td>
-                <td>{{ c.phone|default:'-' }}</td>
-                <td>{{ c.subject }}</td>
-                <td class="td-date">{{ c.created_at|date:"M d, Y H:i" }}</td>
+                <td class="td-counter">{{ forloop.counter }}</td>
                 <td>
-                    <a href="{% url 'admin_contact_delete' c.pk %}" class="btn btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
+                    <div class="user-cell">
+                        <div class="user-avatar-sm avatar-gold-gradient">
+                            {{ c.name|first|upper }}
+                        </div>
+                        <div class="user-details">
+                            <strong>{{ c.name }}</strong>
+                        </div>
+                    </div>
+                </td>
+                <td class="td-muted">
+                    <i class="far fa-envelope table-icon-muted"></i>
+                    {{ c.email }}
+                </td>
+                <td class="td-muted">
+                    {% if c.phone %}
+                    <i class="fas fa-phone-alt table-icon-muted-sm"></i>
+                    {{ c.phone }}
+                    {% else %}
+                    <span class="empty-dash">—</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <div class="subject-title">
+                        <i class="far fa-comment-dots table-icon-primary"></i>
+                        {{ c.subject }}
+                    </div>
+                    {% if c.message %}
+                    <div class="subject-preview">
+                        {{ c.message|truncatechars:80 }}
+                    </div>
+                    {% endif %}
+                </td>
+                <td class="td-date">
+                    <i class="far fa-clock"></i> {{ c.created_at|date:"M d, Y H:i" }}
+                </td>
+                <td class="text-right">
+                    <a href="{% url 'admin_contact_delete' c.pk %}" class="btn btn-danger btn-sm" title="Delete Inquiry">
+                        <i class="fas fa-trash-can"></i> <span>Delete</span>
+                    </a>
                 </td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="7" class="table-empty">No messages</td>
+                <td colspan="7" class="table-empty">
+                    <i class="far fa-envelope-open empty-icon"></i>
+                    <strong>No inquiries or messages</strong>
+                    <p class="empty-desc">Inquiries submitted via the contact form will be displayed here.</p>
+                </td>
             </tr>
             {% endfor %}
         </tbody>

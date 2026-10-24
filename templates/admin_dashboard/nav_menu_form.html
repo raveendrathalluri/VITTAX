@@ -1,16 +1,17 @@
 {# ════════ templates/admin_dashboard/nav_menu_form.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
 
+{% block title %}{{ action }} Menu Item - VITTAX Admin{% endblock %}
 {% block page_title %}{{ action }} Menu Item{% endblock %}
-{% block page_subtitle %}Manage navigation menu{% endblock %}
+{% block page_subtitle %}Configure navigation menu routes, parent-child relations, and display sequence{% endblock %}
 
 {% block content %}
 <div class="admin-form-container">
     <div class="form-header-bar">
         <a href="{% url 'admin_nav_menu' %}" class="btn btn-outline btn-sm">
-            <i class="fas fa-arrow-left"></i> Back
+            <i class="fas fa-arrow-left"></i> <span>Back to Navigation Menu</span>
         </a>
-        <h2 class="form-title">{{ action }} Menu Item</h2>
+        <h2 class="form-title">{{ action }} Navigation Item</h2>
     </div>
 
     <div class="form-card">
@@ -20,8 +21,9 @@
             <!-- Label -->
             <div class="form-group">
                 <label class="form-label">Menu Item Label *</label>
-                <input type="text" name="label" class="form-control" value="{{ form.label.value|default:'' }}"
-                    placeholder="e.g. Home, Services, About" required>
+                <input type="text" name="label" class="form-control" 
+                       value="{{ form.label.value|default:'' }}"
+                       placeholder="e.g. Services, About Us, NRI Taxation" required>
                 {% if form.label.errors %}
                 <small class="form-error">{{ form.label.errors.0 }}</small>
                 {% endif %}
@@ -29,7 +31,7 @@
 
             <!-- Menu Type -->
             <div class="form-group">
-                <label class="form-label">Menu Type *</label>
+                <label class="form-label">Menu Section / Placement *</label>
                 {{ form.menu_type }}
                 {% if form.menu_type.errors %}
                 <small class="form-error">{{ form.menu_type.errors.0 }}</small>
@@ -38,10 +40,11 @@
 
             <!-- URL -->
             <div class="form-group">
-                <label class="form-label">URL or Route Name</label>
-                <input type="text" name="url" class="form-control" value="{{ form.url.value|default:'' }}"
-                    placeholder="e.g. / or /services/ or home">
-                <small class="form-hint">Use absolute path (/) or Django route name</small>
+                <label class="form-label">Target Route or URL Path</label>
+                <input type="text" name="url" class="form-control" 
+                       value="{{ form.url.value|default:'' }}"
+                       placeholder="e.g. /services/ or home or /contact/">
+                <small class="form-hint">Use an absolute path (<code>/services/</code>) or named Django route.</small>
                 {% if form.url.errors %}
                 <small class="form-error">{{ form.url.errors.0 }}</small>
                 {% endif %}
@@ -49,11 +52,11 @@
 
             <!-- Icon -->
             <div class="form-group">
-                <label class="form-label">FontAwesome Icon (Optional)</label>
-                <input type="text" name="icon" class="form-control" value="{{ form.icon.value|default:'' }}"
-                    placeholder="e.g. fas fa-home">
-                <small class="form-hint">FontAwesome icon class from <a href="https://fontawesome.com"
-                        target="_blank" class="text-primary-link">fontawesome.com</a></small>
+                <label class="form-label">FontAwesome Icon Class (Optional)</label>
+                <input type="text" name="icon" class="form-control" 
+                       value="{{ form.icon.value|default:'' }}"
+                       placeholder="e.g. fas fa-calculator, fas fa-briefcase">
+                <small class="form-hint">Icon identifier from <a href="https://fontawesome.com" target="_blank" class="text-primary-link">fontawesome.com</a></small>
                 {% if form.icon.errors %}
                 <small class="form-error">{{ form.icon.errors.0 }}</small>
                 {% endif %}
@@ -61,9 +64,9 @@
 
             <!-- Parent Menu -->
             <div class="form-group">
-                <label class="form-label">Parent Menu Item (Optional)</label>
+                <label class="form-label">Hierarchy Parent (For Nested Submenus)</label>
                 {{ form.parent }}
-                <small class="form-hint">Create submenu by selecting a parent item</small>
+                <small class="form-hint">Leave blank for a top-level link, or select a parent to place inside a dropdown.</small>
                 {% if form.parent.errors %}
                 <small class="form-error">{{ form.parent.errors.0 }}</small>
                 {% endif %}
@@ -72,17 +75,17 @@
             <!-- Order & Target -->
             <div class="form-row">
                 <div class="form-group">
-                    <label class="form-label">Display Order</label>
+                    <label class="form-label">Sort Order Priority</label>
                     <input type="number" name="order" class="form-control" min="0"
-                        value="{{ form.order.value|default:0 }}">
-                    <small class="form-hint">Lower numbers appear first (0, 1, 2...)</small>
+                           value="{{ form.order.value|default:0 }}">
+                    <small class="form-hint">Lower sequence numbers appear first (0, 1, 2...).</small>
                     {% if form.order.errors %}
                     <small class="form-error">{{ form.order.errors.0 }}</small>
                     {% endif %}
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Open In</label>
+                    <label class="form-label">Target Window</label>
                     {{ form.target }}
                     {% if form.target.errors %}
                     <small class="form-error">{{ form.target.errors.0 }}</small>
@@ -92,16 +95,19 @@
 
             <!-- Active Status -->
             <div class="form-group">
-                <label class="form-check">
-                    <input type="checkbox" name="is_active" {% if form.is_active.value or is_add %}checked{% endif %}>
-                    <strong>Active</strong> - Show this item on the website
-                </label>
+                <label class="form-label">Publication Status</label>
+                <div class="form-check-inline-group">
+                    <label class="form-check">
+                        <input type="checkbox" name="is_active" {% if form.is_active.value or is_add %}checked{% endif %}>
+                        <span><strong class="text-slate-800">Active Link</strong> (Visible on the live website)</span>
+                    </label>
+                </div>
                 {% if form.is_active.errors %}
                 <small class="form-error">{{ form.is_active.errors.0 }}</small>
                 {% endif %}
             </div>
 
-            <!-- Form Errors -->
+            <!-- Form Validation Errors -->
             {% if form.non_field_errors %}
             <div class="form-alert-error">
                 {% for error in form.non_field_errors %}
@@ -110,41 +116,48 @@
             </div>
             {% endif %}
 
-            <!-- Submit -->
+            <!-- Actions -->
             <div class="form-actions">
                 <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-save"></i> {{ action }} Menu Item
+                    <i class="fas fa-save"></i> <span>{{ action }} Menu Item</span>
                 </button>
-                <a href="{% url 'admin_nav_menu' %}" class="btn btn-outline">Cancel</a>
+                <a href="{% url 'admin_nav_menu' %}" class="btn btn-outline">
+                    <span>Cancel</span>
+                </a>
             </div>
         </form>
     </div>
 </div>
 
 <script>
-    // Update parent options when menu type changes
-    document.getElementById('menu_type').addEventListener('change', function () {
-        const menuType = this.value;
-        const parentSelect = document.getElementById('parent_select');
+    // Dynamically update parent options when menu type changes
+    const menuTypeElem = document.getElementById('menu_type');
+    const parentSelect = document.getElementById('parent_select');
 
-        if (!menuType) {
-            parentSelect.innerHTML = '<option value="">-- None (Top Level) --</option>';
-            return;
-        }
+    if (menuTypeElem && parentSelect) {
+        menuTypeElem.addEventListener('change', function () {
+            const menuType = this.value;
 
-        // Fetch parent menu items for selected type
-        fetch(`/admin-panel/nav-menu/get-parents/?type=${menuType}`)
-            .then(response => response.json())
-            .then(data => {
+            if (!menuType) {
                 parentSelect.innerHTML = '<option value="">-- None (Top Level) --</option>';
-                data.parents.forEach(parent => {
-                    const option = document.createElement('option');
-                    option.value = parent.id;
-                    option.textContent = parent.label;
-                    parentSelect.appendChild(option);
-                });
-            })
-            .catch(error => console.error('Error:', error));
-    });
+                return;
+            }
+
+            fetch(`{% url 'admin_nav_get_parents' %}?type=${menuType}`)
+                .then(response => response.json())
+                .then(data => {
+                    parentSelect.innerHTML = '<option value="">-- None (Top Level) --</option>';
+                    if (data.parents && data.parents.length > 0) {
+                        data.parents.forEach(parent => {
+                            const option = document.createElement('option');
+                            option.value = parent.id;
+                            option.textContent = parent.label;
+                            parentSelect.appendChild(option);
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching parent items:', error));
+        });
+    }
 </script>
 {% endblock %}

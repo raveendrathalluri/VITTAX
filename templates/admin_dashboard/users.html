@@ -1,52 +1,106 @@
 {# ════════ admin_dashboard/users.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
-{% block page_title %}Users{% endblock %}
-{% block page_subtitle %}Manage registered customers{% endblock %}
+{% block title %}Client Accounts - VITTAX Admin{% endblock %}
+{% block page_title %}Client Accounts{% endblock %}
+{% block page_subtitle %}Manage registered customer credentials, contact details, and account access{% endblock %}
+
 {% block content %}
 <div class="page-header">
     <div>
-        <div class="page-title">All Users ({{ users.count }})</div>
+        <div class="page-title">
+            <i class="fas fa-users text-primary"></i>
+            <span>Client Directory</span>
+            <span class="count-pill">{{ users.count }} registered</span>
+        </div>
+        <p class="page-subtitle">View, edit profiles, or deactivate customer accounts across the VITTAX platform.</p>
+    </div>
+    <div class="action-btns">
+        <a href="{% url 'admin_dashboard' %}" class="btn btn-outline">
+            <i class="fas fa-arrow-left"></i> <span>Dashboard</span>
+        </a>
     </div>
 </div>
+
 <div class="data-card">
+    <div class="data-card-header">
+        <div class="data-card-title-wrap">
+            <span class="data-card-title">All Registered Customers</span>
+            <span class="count-pill">{{ users.count }} Total</span>
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
-                <th>#</th>
-                <th>User</th>
-                <th>Email</th>
+                <th class="th-w60">#</th>
+                <th>Client Name</th>
+                <th>Email Address</th>
                 <th>Phone</th>
-                <th>City</th>
-                <th>Joined</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>City / Location</th>
+                <th>Registration Date</th>
+                <th>Account Status</th>
+                <th class="text-right">Actions</th>
             </tr>
         </thead>
         <tbody>
             {% for u in users %}
             <tr>
-                <td>{{ forloop.counter }}</td>
+                <td class="td-counter">{{ forloop.counter }}</td>
                 <td>
-                    <strong>{{ u.get_full_name|default:u.username }}</strong><br>
-                    <small class="user-handle">@{{ u.username }}</small>
+                    <div class="user-cell">
+                        <div class="user-avatar-sm">{{ u.username|first|upper }}</div>
+                        <div class="user-details">
+                            <strong>{{ u.get_full_name|default:u.username }}</strong>
+                            <span class="user-handle">@{{ u.username }}</span>
+                        </div>
+                    </div>
                 </td>
-                <td>{{ u.email }}</td>
-                <td>{{ u.phone|default:'-' }}</td>
-                <td>{{ u.city|default:'-' }}</td>
-                <td class="td-date">{{ u.date_joined|date:"M d, Y" }}</td>
+                <td class="td-muted">
+                    <i class="far fa-envelope table-icon-muted"></i>
+                    {{ u.email|default:'—' }}
+                </td>
+                <td class="td-muted">
+                    {% if u.phone %}
+                    <i class="fas fa-phone-alt table-icon-muted-sm"></i>
+                    {{ u.phone }}
+                    {% else %}
+                    <span class="empty-dash">—</span>
+                    {% endif %}
+                </td>
+                <td class="td-muted">
+                    {% if u.city %}
+                    <i class="fas fa-location-dot table-icon-gold"></i>
+                    {{ u.city }}
+                    {% else %}
+                    <span class="empty-dash">—</span>
+                    {% endif %}
+                </td>
+                <td class="td-date">
+                    <i class="far fa-calendar-alt"></i> {{ u.date_joined|date:"M d, Y" }}
+                </td>
                 <td>
                     <span class="badge {% if u.is_active %}badge-success{% else %}badge-danger{% endif %}">
+                        <span class="badge-dot"></span>
                         {% if u.is_active %}Active{% else %}Inactive{% endif %}
                     </span>
                 </td>
-                <td class="action-btns">
-                    <a href="{% url 'admin_user_edit' u.pk %}" class="btn btn-primary btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
-                    <a href="{% url 'admin_user_delete' u.pk %}" class="btn btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
+                <td class="text-right">
+                    <div class="action-btns action-btns-right">
+                        <a href="{% url 'admin_user_edit' u.pk %}" class="btn btn-primary btn-sm" title="Edit Customer Details">
+                            <i class="fas fa-pen-to-square"></i> <span>Edit</span>
+                        </a>
+                        <a href="{% url 'admin_user_delete' u.pk %}" class="btn btn-danger btn-sm" title="Delete Account">
+                            <i class="fas fa-trash-can"></i>
+                        </a>
+                    </div>
                 </td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="8" class="table-empty">No users found</td>
+                <td colspan="8" class="table-empty">
+                    <i class="fas fa-user-slash empty-icon"></i>
+                    <strong>No client accounts found</strong>
+                    <p class="empty-desc">Customer registrations will appear here once users sign up.</p>
+                </td>
             </tr>
             {% endfor %}
         </tbody>

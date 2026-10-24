@@ -1,21 +1,46 @@
 {# ════════ templates/admin_dashboard/confirm_delete.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
-{% block page_title %}Confirm Delete{% endblock %}
+
+{% block title %}Confirm Deletion - {{ obj }} - VITTAX Admin{% endblock %}
+{% block page_title %}Confirm Deletion{% endblock %}
+{% block page_subtitle %}Permanent removal confirmation for {{ type|lower }}{% endblock %}
+
 {% block content %}
 <div class="delete-dialog-container">
-  <div class="form-card delete-card">
-    <div class="delete-icon-wrapper">
-      <i class="fas fa-trash-alt"></i>
+    <div class="delete-card">
+        <div class="delete-icon-wrapper">
+            <i class="fas fa-trash-can"></i>
+        </div>
+
+        <div class="mb-3">
+            <span class="badge badge-danger">
+                <i class="fas fa-triangle-exclamation"></i> Permanent Action
+            </span>
+        </div>
+
+        <h2 class="delete-title">Delete {{ type }}?</h2>
+
+        <p class="delete-description">
+            Are you sure you want to permanently delete:
+            <br>
+            <strong class="delete-obj-pill">
+                "{{ obj }}"
+            </strong>
+            <br><br>
+            This action cannot be undone. All associated data will be removed from the system.
+        </p>
+
+        <div class="delete-actions">
+            <form method="post" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-trash-can"></i> <span>Yes, Delete {{ type }}</span>
+                </button>
+            </form>
+            <a href="javascript:history.back()" class="btn btn-outline">
+                <span>Cancel & Keep</span>
+            </a>
+        </div>
     </div>
-    <h2 class="delete-title">Delete {{ type }}?</h2>
-    <p class="delete-description">Are you sure you want to delete <strong>{{ obj }}</strong>? This action cannot be undone.</p>
-    <div class="delete-actions">
-      <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Yes, Delete</button>
-      </form>
-      <a href="javascript:history.back()" class="btn btn-outline">Cancel</a>
-    </div>
-  </div>
 </div>
 {% endblock %}

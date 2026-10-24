@@ -325,16 +325,39 @@ def logout_view(request):
 @login_required
 def profile_view(request):
     """User profile"""
+    form = ProfileUpdateForm(instance=request.user)
+
     if request.method == 'POST':
-        form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Profile updated successfully!')
-            return redirect('profile')
+        form_type = request.POST.get('form_type', 'profile')
+
+        if form_type == 'change_password':
+            current_pass = request.POST.get('current_password', '')
+            new_pass1 = request.POST.get('new_password1', '')
+            new_pass2 = request.POST.get('new_password2', '')
+
+            if not request.user.check_password(current_pass):
+                messages.error(request, 'Current password is incorrect.')
+            elif new_pass1 != new_pass2:
+                messages.error(request, 'New passwords do not match.')
+            elif len(new_pass1) < 8:
+                messages.error(request, 'Password must be at least 8 characters long.')
+            else:
+                from django.contrib.auth import update_session_auth_hash
+                request.user.set_password(new_pass1)
+                request.user.save()
+                update_session_auth_hash(request, request.user)
+                messages.success(request, 'Password changed successfully!')
+                return redirect('profile')
         else:
-            messages.error(request, 'Please fix the errors below.')
-    else:
-        form = ProfileUpdateForm(instance=request.user)
+            form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Profile updated successfully!')
+                return redirect('profile')
+            else:
+                for field, errs in form.errors.items():
+                    for err in errs:
+                        messages.error(request, f"{field.replace('_', ' ').capitalize()}: {err}")
 
     return render(request, 'customer_dashboard/profile.html', {
         'form': form,

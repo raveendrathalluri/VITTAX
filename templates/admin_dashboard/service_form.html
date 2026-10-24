@@ -1,71 +1,103 @@
 {# ════════ templates/admin_dashboard/service_form.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
-{% block page_title %}{{ action }} Service{% endblock %}
+
+{% block title %}{{ action }} Service - VITTAX Admin{% endblock %}
+{% block page_title %}{{ action }} Service Offering{% endblock %}
+{% block page_subtitle %}Configure service package details, pricing tier, and public website display{% endblock %}
+
 {% block content %}
 <div class="admin-form-container">
-  <div class="form-header-bar">
-    <a href="{% url 'admin_services' %}" class="btn btn-outline btn-sm"><i class="fas fa-arrow-left"></i> Back</a>
-    <h2 class="form-title">{{ action }} Service</h2>
-  </div>
-  <div class="form-card">
-    <form method="post">
-      {% csrf_token %}
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Service Name *</label>
-          <input name="name" type="text" class="form-control" value="{{ service.name|default:'' }}" required placeholder="e.g. ITR Filing">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Category *</label>
-          <select name="category" class="form-control" required>
-            <option value="">-- Select --</option>
-            <option value="Start_a_Business" {% if service.category == 'Start_a_Business' %}selected{% endif %}>Start a Business</option>
-            <option value="Registrations" {% if service.category == 'Registrations' %}selected{% endif %}>Registrations</option>
-            <option value="GST_Indirect_Tax" {% if service.category == 'GST_Indirect_Tax' %}selected{% endif %}>GST & Indirect Tax</option>
-            <option value="income_tax" {% if service.category == 'income_tax' %}selected{% endif %}>Income Tax</option>
-            <option value="mca_corporate" {% if service.category == 'mca_corporate' %}selected{% endif %}>MCA & Corporate</option>
-            <option value="accounting_payroll" {% if service.category == 'accounting_payroll' %}selected{% endif %}>Accounting & Payroll</option>
-            <option value="nri_international_services" {% if service.category == 'nri_international_services' %}selected{% endif %}>NRI & International Services</option>
-            <option value="virtual_cfo_advisory" {% if service.category == 'virtual_cfo_advisory' %}selected{% endif %}>Virtual CFO & Advisory</option>
-            <option value="other" {% if service.category == 'other' %}selected{% endif %}>Other</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Short Description *</label>
-        <input name="short_description" type="text" class="form-control" value="{{ service.short_description|default:'' }}" required placeholder="One-line description">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Full Description *</label>
-        <textarea name="description" class="form-control" required>{{ service.description|default:'' }}</textarea>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Price (₹) *</label>
-          <input name="price" type="number" min="0" step="0.01" class="form-control" value="{{ service.price|default:'0' }}" required>
-          <small class="form-hint">Use 0 for free services</small>
-        </div>
-        <div class="form-group">
-          <label class="form-label">FontAwesome Icon</label>
-          <input name="icon" type="text" class="form-control" value="{{ service.icon|default:'fas fa-file-alt' }}" placeholder="fas fa-file-alt">
-          <small class="form-hint">e.g. fas fa-file-invoice</small>
-        </div>
-      </div>
-      <div class="form-check-inline-group">
-        <label class="form-check">
-          <input type="checkbox" name="is_featured" {% if service.is_featured %}checked{% endif %}>
-          Mark as Featured
-        </label>
-        <label class="form-check">
-          <input type="checkbox" name="is_active" {% if service.is_active or action == 'Add' %}checked{% endif %}>
-          Active (visible on site)
-        </label>
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> {{ action }} Service</button>
-        <a href="{% url 'admin_services' %}" class="btn btn-outline">Cancel</a>
-      </div>
-    </form>
-  </div>
+    <div class="form-header-bar">
+        <a href="{% url 'admin_services' %}" class="btn btn-outline btn-sm">
+            <i class="fas fa-arrow-left"></i> <span>Back to Services</span>
+        </a>
+        <h2 class="form-title">{{ action }} Service Package</h2>
+    </div>
+
+    <div class="form-card">
+        <form method="post" novalidate>
+            {% csrf_token %}
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Service Title *</label>
+                    <input name="name" type="text" class="form-control" 
+                           value="{{ service.name|default:'' }}" required 
+                           placeholder="e.g. Private Limited Company Registration">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Category Grouping *</label>
+                    <select name="category" class="form-control font-semibold" required>
+                        <option value="">-- Select Category --</option>
+                        <option value="Start_a_Business" {% if service.category == 'Start_a_Business' %}selected{% endif %}>Start a Business</option>
+                        <option value="Registrations" {% if service.category == 'Registrations' %}selected{% endif %}>Registrations</option>
+                        <option value="GST_Indirect_Tax" {% if service.category == 'GST_Indirect_Tax' %}selected{% endif %}>GST & Indirect Tax</option>
+                        <option value="income_tax" {% if service.category == 'income_tax' %}selected{% endif %}>Income Tax</option>
+                        <option value="mca_corporate" {% if service.category == 'mca_corporate' %}selected{% endif %}>MCA & Corporate</option>
+                        <option value="accounting_payroll" {% if service.category == 'accounting_payroll' %}selected{% endif %}>Accounting & Payroll</option>
+                        <option value="nri_international_services" {% if service.category == 'nri_international_services' %}selected{% endif %}>NRI & International Services</option>
+                        <option value="virtual_cfo_advisory" {% if service.category == 'virtual_cfo_advisory' %}selected{% endif %}>Virtual CFO & Advisory</option>
+                        <option value="other" {% if service.category == 'other' %}selected{% endif %}>Other Services</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Short Summary (Headline) *</label>
+                <input name="short_description" type="text" class="form-control" 
+                       value="{{ service.short_description|default:'' }}" required 
+                       placeholder="A concise, high-impact one-liner displayed on service card preview">
+                <small class="form-hint">Brief summary shown in service catalog cards.</small>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Comprehensive Scope & Description *</label>
+                <textarea name="description" class="form-control" required 
+                          placeholder="Provide detailed breakdown of what is included, deliverables, timelines, and statutory inclusions...">{{ service.description|default:'' }}</textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Pricing in Rupees (₹) *</label>
+                    <input name="price" type="number" min="0" step="0.01" class="form-control input-price" 
+                           value="{{ service.price|default:'0' }}" required 
+                           placeholder="0.00">
+                    <small class="form-hint">Use 0 for free consultation services.</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">FontAwesome Icon Class</label>
+                    <input name="icon" type="text" class="form-control" 
+                           value="{{ service.icon|default:'fas fa-file-invoice' }}" 
+                           placeholder="fas fa-file-invoice">
+                    <small class="form-hint">e.g. <code>fas fa-building</code>, <code>fas fa-calculator</code>, <code>fas fa-receipt</code></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Visibility & Highlighting</label>
+                <div class="form-check-inline-group">
+                    <label class="form-check">
+                        <input type="checkbox" name="is_featured" {% if service.is_featured %}checked{% endif %}>
+                        <span><strong class="text-slate-800">Featured Service</strong> (Highlights with gold badge on website)</span>
+                    </label>
+                    <label class="form-check">
+                        <input type="checkbox" name="is_active" {% if service.is_active or action == 'Add' %}checked{% endif %}>
+                        <span><strong class="text-slate-800">Active Status</strong> (Visible to public customers)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> <span>{{ action }} Service</span>
+                </button>
+                <a href="{% url 'admin_services' %}" class="btn btn-outline">
+                    <span>Cancel</span>
+                </a>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}

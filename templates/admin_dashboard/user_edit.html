@@ -1,70 +1,111 @@
+{# ════════ admin_dashboard/user_edit.html ════════ #}
 {% extends 'admin_dashboard/base.html' %}
 
-{% block page_title %}Edit User{% endblock %}
-{% block page_subtitle %}Modify user account details{% endblock %}
+{% block title %}Edit Client - {{ edit_user.get_full_name|default:edit_user.username }} - VITTAX Admin{% endblock %}
+{% block page_title %}Edit Client Account{% endblock %}
+{% block page_subtitle %}Update personal details, contact credentials, and account permissions{% endblock %}
 
 {% block content %}
-<div class="data-card admin-form-container-card">
-
-    <div class="data-card-header">
-        <span class="data-card-title">Edit User</span>
+<div class="admin-form-container">
+    <div class="form-header-bar">
+        <a href="{% url 'admin_users' %}" class="btn btn-outline btn-sm">
+            <i class="fas fa-arrow-left"></i> <span>Back to Clients</span>
+        </a>
+        <h2 class="form-title">Edit Client Details</h2>
     </div>
 
-    <form method="post" class="admin-card-form">
-        {% csrf_token %}
-
-        <div class="form-grid-2col">
-
-            <div class="form-group">
-                <label class="form-label">First Name</label>
-                {{ form.first_name }}
+    <!-- Client Profile Mini Overview -->
+    <div class="data-card user-overview-card">
+        <div class="avatar-circle avatar-circle-lg">
+            {{ edit_user.username|first|upper }}
+        </div>
+        <div>
+            <div class="user-overview-name">
+                {{ edit_user.get_full_name|default:edit_user.username }}
             </div>
-
-            <div class="form-group">
-                <label class="form-label">Last Name</label>
-                {{ form.last_name }}
+            <div class="user-overview-meta">
+                <span><i class="fas fa-at text-primary"></i> {{ edit_user.username }}</span>
+                <span><i class="far fa-calendar-alt"></i> Joined {{ edit_user.date_joined|date:"M d, Y" }}</span>
+                <span>
+                    <span class="badge {% if edit_user.is_active %}badge-success{% else %}badge-danger{% endif %}">
+                        <span class="badge-dot"></span> {% if edit_user.is_active %}Active{% else %}Inactive{% endif %}
+                    </span>
+                </span>
             </div>
+        </div>
+    </div>
 
-            <div class="form-group form-col-full">
-                <label class="form-label">Username</label>
-                {{ form.username }}
-            </div>
+    <div class="form-card">
+        <form method="post" novalidate>
+            {% csrf_token %}
 
-            <div class="form-group form-col-full">
-                <label class="form-label">Email</label>
-                {{ form.email }}
-            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">First Name</label>
+                    <input type="text" name="first_name" class="form-control" 
+                           value="{{ edit_user.first_name|default:'' }}" placeholder="e.g. Rahul">
+                </div>
 
-            <div class="form-group">
-                <label class="form-label">Phone</label>
-                {{ form.phone }}
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">City</label>
-                {{ form.city }}
-            </div>
-
-            <div class="form-group form-col-full">
-                <label class="form-label">Status</label>
-                <div class="form-check">
-                    {{ form.is_active }}
-                    <span>Active Account</span>
+                <div class="form-group">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" name="last_name" class="form-control" 
+                           value="{{ edit_user.last_name|default:'' }}" placeholder="e.g. Sharma">
                 </div>
             </div>
 
-        </div>
+            <div class="form-group">
+                <label class="form-label">Username (System Identifier)</label>
+                <input type="text" name="username" class="form-control form-control-readonly" 
+                       value="{{ edit_user.username }}" readonly>
+                <small class="form-hint">Username is unique to the user and cannot be altered.</small>
+            </div>
 
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">
-                <i class="fas fa-save"></i> Save Changes
-            </button>
+            <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" name="email" class="form-control" 
+                       value="{{ edit_user.email|default:'' }}" required placeholder="client@example.com">
+            </div>
 
-            <a href="{% url 'admin_users' %}" class="btn btn-outline">
-                Cancel
-            </a>
-        </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" name="phone" class="form-control" 
+                           value="{{ edit_user.phone|default:'' }}" placeholder="+91 98765 43210">
+                </div>
 
-    </form>
+                <div class="form-group">
+                    <label class="form-label">City / Region</label>
+                    <input type="text" name="city" class="form-control" 
+                           value="{{ edit_user.city|default:'' }}" placeholder="e.g. Hyderabad">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">PAN Number (Tax Identifier)</label>
+                <input type="text" name="pan_number" class="form-control input-uppercase" 
+                       value="{{ edit_user.pan_number|default:'' }}" placeholder="e.g. ABCDE1234F">
+                <small class="form-hint">10-character Permanent Account Number.</small>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Account Access & Permissions</label>
+                <div class="form-check-inline-group">
+                    <label class="form-check">
+                        <input type="checkbox" name="is_active" {% if edit_user.is_active %}checked{% endif %}>
+                        <span><strong>Active Account</strong> (User can log in and submit service applications)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> <span>Save Changes</span>
+                </button>
+                <a href="{% url 'admin_users' %}" class="btn btn-outline">
+                    <span>Cancel</span>
+                </a>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}
